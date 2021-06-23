@@ -48,13 +48,19 @@ the solution and the difficulty
     e.g
     
     /**
-     * Write a method which accepts an array of String as an argument. In the implementation, 
-     * reverse the order of the array of Strings.  Also write a testng unit test that proves your
-     * implementation works.
+     * Implement a method with the following method signature:
+     * 
+     *     public void reverse( T[] inData, T[] outData )
+     * 
+     * The data in inData should be reversed and put in outData.  Create a testng unit test to prove
+     * your reverse works. You can expect inData and outData to be the same length. Also print both
+     * inData and outData to the console.
      *
      * Time Allocated: 10 minutes
      *
      * Difficulty: 0
+     * 
+     * @author John Dickerson - 23rd Jun 2021
      */
     
 Note: Please use sensible naming in the packaging:
