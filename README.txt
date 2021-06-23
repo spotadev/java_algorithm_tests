@@ -2,6 +2,14 @@
 java_algorithm_tests/README.txt
 ====================================================================================================
 
+This document describes how we should go about building up a library of Java Algorithms.  It is 
+common practise for companies like turing.com to choose devs on the basis of their raw algorithmic 
+java coding capability.  Turing.com takes on roughly 1% of all those who apply.
+
+At SpotADev we see it is possible to improve one's algorithmic coding ability with practise. 
+
+There are those however who see java algorithmic coding ability to be proportional to IQ. Let us
+change that and show that practise makes perfect.
 
 
 ====================================================================================================
