@@ -1,0 +1,160 @@
+====================================================================================================
+docs/big_o_notation/understanding_big_o_notation.txt
+====================================================================================================
+
+Here are what big O notations look like:
+
+    O(1)          - constant
+    O(log n)      - logarithmic
+    O(n)          - linear
+    O(n log n)    - linearithmic | loglinerar | quasilinear
+    O(n2)         - quadratic
+    O(c^n),c > 1  - exponential
+    
+The big O stands for Order of Magnitude.
+
+There are algorithmic operations that are performed on data sets.  These operations can become 
+slower as the data set gets bigger.  Other operations do not get slower if the data set gets bigger.
+
+
+Let us look at these different notations one by one.
+
+
+====================================================================================================
+O(1) - constant
+====================================================================================================
+
+An operation like popping the first or last item of a queue is no slower or faster if the queue is
+shorter or longer.
+
+Therefore the operation is constant.  
+
+O(1) - The number (1) symbolises being constant. A constant algorithm scales the best of all.
+
+if the queue has 1 element in it and it takes 1 nanosecond to take an element off the queue,
+then if the queue has 2 elements in the queue it will still take 1 nanosecond to take an element
+of the queue.
+
+Other example of constant time, could include using a hash function to find the index of an item in
+a data structure.
+  
+
+====================================================================================================
+O(log n) - logarithmic
+====================================================================================================
+
+Consider these values and their logs:
+
+1  - log 1 = 0
+2  - log 2 = 0.3
+3  - log 3 = 0.477
+4  - log 4 = 0.6
+5  - log 5 = 0.69
+6  - log 6 = 0.77
+
+Here you can see that if the algorithm takes 0.3 seconds to perform an operation on 2 items in a
+data set, that if we double the data set to 4, that it will take 0.6 seconds to perform it.
+
+You can see that if we double the data we do not double the time it takes the algorithm to do its
+thing.
+
+i.e. O(log n) is the next best scenario for scaling.
+
+The operation is logarithmic.  
+
+A binary search of sorted data is logarithmic.
+
+A binary search works as follows:
+
+    It narrows into the answer by halving.  Each step it halves the data set.
+      
+Let us say there are 100 numbers 1 to 99 and it needs to find 37.
+
+It starts by going to the middle of the list and finds 50 - it asks if 37 is bigger or less than 50.
+It is less than 50 so next it goes to 25 and asks if 37 is more or less than 25.
+
+It narrows down and finds 37 in a few hops.
+  
+Here you can see that the difference between 50 elements and 100 elements only results in one more
+halving.  This is actually better than logarithmic, but it is described as logarithmic.
+  
+    50 -> 25 -> 12 -> 6 -> 3 -> 1
+
+    100 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1
+
+Note that when n becomes big the number goes over 1.
+
+For example log 1000000 = 6 (for base 10).
+
+
+====================================================================================================
+O(n) - linear
+====================================================================================================
+
+1 - 1
+2 - 2
+3 - 3
+
+The time it takes to process the data set is directly proportional to the size of data set.
+
+For example finding an item in an unsorted list.
+
+
+====================================================================================================
+O(n log n) - linearithmic | loglinerar | quasilinear
+====================================================================================================
+
+dataset       (log n)    (1)           (n log n)
+
+2              0.3       2              0.6
+5              1.6       5              8
+10             1         10             10
+100            2         100            200
+1,000          3         1,000          3,000
+1,000,000      6         1,000,000      6,000,000
+
+You can see that for big data sets (n log n) is greater than (1).
+
+For smaller data sets you can see that (n log n) is smaller than (1)
+
+Algorithms:
+
+    Quick Sort (best and average case)
+
+    Merge Sort are roughly (n log n)
+
+Quick sort sorts the elements by comparing each element with an element called a pivot.
+
+Merge sort divides the array into 2 sub arrays again and again until one element is left.
+
+
+====================================================================================================
+O(n2) - quadratic
+====================================================================================================
+
+1    1
+2    4
+3    9
+4    16
+
+Here the algorithm becomes less efficient as the data set grows.  
+
+Algorithms:
+
+     Bubble sort (worst case)
+     
+     Quick sort (worst case)
+
+
+====================================================================================================
+O(c^n),c > 1  - exponential
+====================================================================================================
+
+2    2^2=4
+3    2^3=8
+4    2^4=16
+5    2^5=32
+
+Algorithms:
+
+    Optimal solution to travelling salesman problem

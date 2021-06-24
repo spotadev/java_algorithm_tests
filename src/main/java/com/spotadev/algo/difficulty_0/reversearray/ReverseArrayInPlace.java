@@ -19,7 +19,7 @@ package com.spotadev.algo.difficulty_0.reversearray;
  *     public void reverse( T[] inData )
  * 
  * The data in inData should be reversed. Create a testng unit test to prove your reverse works. 
- * Also print nData before and after the sort.  Also test arrays with odd and even length.
+ * Also print inData before and after the sort.  Also test arrays with odd and even length.
  *
  * Time Allocated: 10 minutes
  *
@@ -29,6 +29,15 @@ package com.spotadev.algo.difficulty_0.reversearray;
  */
 public class ReverseArrayInPlace<T> {
 
+    /**
+     * Given 1, 2, 3, 4, 5, 6
+     * 
+     * We swap as follows:
+     * 
+     *      6, 2, 3, 4, 5, 1
+     *      6, 5, 3, 4, 2, 1
+     *      6, 5, 4, 3, 2, 1
+     */
     public void reverse( T[] inData ) {
             
         int endIndex = inData.length - 1;
