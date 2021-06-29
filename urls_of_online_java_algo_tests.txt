@@ -2,5 +2,7 @@
 java_algorithm_tests/urls_of_online_java_algo_tests.txt
 ====================================================================================================
 
+https://www.baeldung.com/cs/category/algorithms
 
+https://www.google.com/search?q=java+interview+algorithm+questions
 
