@@ -19,7 +19,7 @@ package com.spotadev.algo.difficulty_5.sort.bubblesort;
  * public void bubbleSort(int[] array, int fromIndex, int toIndex)
  * 
  * The data in array should be sorted to a correct ascending or descending
- * order. Create a testng unit test to prove your reverse works. Print both
+ * order. Create a testng unit test to prove your bubble sort works. Print both
  * unsorted and sorted array to the console.
  *
  * Time Allocated: 20 minutes
