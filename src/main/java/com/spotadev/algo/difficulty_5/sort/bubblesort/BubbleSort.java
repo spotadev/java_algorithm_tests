@@ -99,19 +99,22 @@ import org.slf4j.LoggerFactory;
  *      End:
  *      {   6,   9,  11,  13,  16,   40,  42,  75, }
  *
- *  So for this we did 28 operations on a data set of 8:
+ *  So for this we did a minimum of 28 compare and at worst 28 swap operations on a data set of 8:
  *  
- *  Actually the exact big o notation of the algorithm is:  7 + 6 + 5 + 4 + 3 + 2 + 1 = 28
+ *  Actually the exact big o notation of the algorithm is:  2 * (7 + 6 + 5 + 4 + 3 + 2 + 1) = 56
  *  
  *  That is the same as:   
  *  
- *      ((n-1)n) / 2
+ *      ((n-1)n)
  *      
  *  However it is custom to add a big O before the actual formula:
  *  
- *     O (((n-1)n) / 2)
+ *     Worst case:  O ((n-1)n)      = 56
+ *     Best  case:  O ((n-1)n)/2)   = 28
  *     
- *  So this is more efficient than O(n^2) which would have been 84 instead of 28
+ *  So this is more efficient than O(n^2) which is quadratic.  Quadratic would have been 84 instead of 56
+ *
+ * However it is almost quadratic
  *
  * Time Allocated: 20 minutes
  *
