@@ -1,6 +1,25 @@
+/*
+    ================================================================================================
+    This code is part of java_algorith_tests which is an effort of SpotADev
+
+    java_algorith_tests is used for getting SpotADev devs up to speed so they can pass tests on
+    java algorithms.
+    
+    Copyright (C) 2021 java_algorith_tests
+
+    ================================================================================================
+    Author : John Dickerson
+    ================================================================================================
+*/
 package com.spotadev.algo.difficulty_5.sort.bubblesort;
 
 import java.util.Arrays;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
  * Implement a method with the following method signature:
@@ -16,54 +35,51 @@ import java.util.Arrays;
  * 
  * @author Kingsley Muturi - 29th June 2021
  */
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 public class BubbleSortTest {
-	private Logger logger = LoggerFactory.getLogger(BubbleSortTest.class);
-	private BubbleSort bubbleSort;
 
-	// method to make output array to be readable and understandable
-	private String show(int[] array) {
-		StringBuilder sb = new StringBuilder("{");
+    private Logger logger = LoggerFactory.getLogger( BubbleSortTest.class );
+    private BubbleSort bubbleSort;
 
-		for (int someInt : array) {
+    // method to make output array to be readable and understandable
+    private String show( int[] array ) {
 
-			sb.append(someInt).append(", ");
-		}
+        StringBuilder sb = new StringBuilder( "{" );
 
-		sb.append("}");
-		return sb.toString();
-	}
+        for ( int someInt : array ) {
 
-	@BeforeClass
-	public void setUp() {
+            sb.append( someInt ).append( ", " );
+        }
 
-		bubbleSort = new BubbleSort();
-	}
+        sb.append( "}" );
+        return sb.toString();
+    }
 
-	@Test
-	public void bubbleSortTest() {
 
-		// This is unsorted array
-		int[] someArray = new int[] { 16, 13, 42, 11, 9, 6, 75, 40 };
+    @BeforeClass
+    public void setUp() {
 
-		// This is the expected array after using bubble sort method
-		int[] expected = new int[] { 6, 9, 11, 13, 16, 40, 42, 75 };
+        bubbleSort = new BubbleSort();
+    }
 
-		logger.info(show(someArray));
 
-		// sorting values in the array using the bubble sort method
-		bubbleSort.bubbleSort(someArray, 0, someArray.length);
+    @Test
+    public void bubbleSortTest() {
 
-		// show the sorted array using bubble sort
-		logger.info(show(someArray));
+        // This is unsorted array
+        int[] someArray = new int[] { 16, 13, 42, 11, 9, 6, 75, 40 };
 
-		// compare if the output is equal to the expected sorted array.
-		Assert.assertTrue(Arrays.equals(someArray, expected));
-	}
+        // This is the expected array after using bubble sort method
+        int[] expected = new int[] { 6, 9, 11, 13, 16, 40, 42, 75 };
+
+        logger.info( show( someArray ) );
+
+        // sorting values in the array using the bubble sort method
+        bubbleSort.bubbleSort( someArray, 0, someArray.length );
+
+        // show the sorted array using bubble sort
+        logger.info( show( someArray ) );
+
+        // compare if the output is equal to the expected sorted array.
+        Assert.assertTrue( Arrays.equals( someArray, expected ) );
+    }
 }

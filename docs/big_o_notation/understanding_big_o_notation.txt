@@ -158,3 +158,14 @@ O(c^n),c > 1  - exponential
 Algorithms:
 
     Optimal solution to travelling salesman problem
+
+
+====================================================================================================
+Resources
+====================================================================================================
+
+https://en.wikipedia.org/wiki/Algorithmic_efficiency
+
+https://en.wikipedia.org/wiki/Big_O_notation
+
+https://leetcode.com/problemset/all
