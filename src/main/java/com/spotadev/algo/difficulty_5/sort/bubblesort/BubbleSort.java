@@ -111,7 +111,7 @@ import org.slf4j.LoggerFactory;
  *  
  *     O (((n-1)n) / 2)
  *     
- *  So this is more efficient than n^2 which would have been 84 instead of 28
+ *  So this is more efficient than O(n^2) which would have been 84 instead of 28
  *
  * Time Allocated: 20 minutes
  *
