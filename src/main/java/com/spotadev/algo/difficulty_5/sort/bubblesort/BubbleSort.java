@@ -149,7 +149,7 @@ public class BubbleSort {
 
         for ( int i = toIndex - 1; i > fromIndex; i-- ) {
             
-            // boolean to help break the loop if the "if" in the for loop below is not accesses as 
+            // boolean to help break the loop if the "if" in the for loop below is not accessed as 
             // isSorted will remain true
             boolean isSorted = true;
 
