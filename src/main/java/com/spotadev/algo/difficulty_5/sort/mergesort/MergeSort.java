@@ -16,7 +16,7 @@ package com.spotadev.algo.difficulty_5.sort.mergesort;
 /**
  * Implement two methods with the following method signatures:
  * 
- *     public Comparable[] bubbleSort(Comparable[] list)
+ *     public Comparable[] mergeSort(Comparable[] list)
  *     private static void merge(Comparable[] first, Comparable[] second, Comparable[] result)
  * 
  * The data in array should be sorted to a correct ascending or descending order. Create a testng unit test to prove
@@ -50,7 +50,16 @@ package com.spotadev.algo.difficulty_5.sort.mergesort;
  *  { 5, 34, 62, 89 } and { 17, 28, 46 }
  *  then finally:
  *  { 5, 17, 28, 34, 46, 62, 89 }
- *   
+ *  
+ *  The big O notation of the algorithm is O (n*log n) in all cases i.e best, worst, average.
+ *  
+ *  This is because whenever we divide a number into half in every step, 
+ *  it can be represented using a logarithmic function, which is log n 
+ *  and the number of steps can be represented by log n + 1(at most)
+ *  
+ *  Also, we perform a single step operation to find out the middle of any sub array, i.e. O(1).
+ *  And to merge the sub arrays, made by dividing the original array of n elements, a running time of O(n) will be required.
+ *  Hence the total time for mergeSort function will become n(log n + 1), which gives us a time complexity of O(n*log n).
  *  
  *
  * Time Allocated: 25 minutes

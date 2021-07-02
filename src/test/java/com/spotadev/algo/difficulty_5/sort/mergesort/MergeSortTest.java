@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 /**
  * Implement two methods with the following method signatures:
  * 
- *     public Comparable[] bubbleSort(Comparable[] list)
+ *     public Comparable[] mergeSort(Comparable[] list)
  *     private static void merge(Comparable[] first, Comparable[] second, Comparable[] result)
  * 
  * The data in array should be sorted to a correct ascending or descending order. Create a testng unit test to prove
