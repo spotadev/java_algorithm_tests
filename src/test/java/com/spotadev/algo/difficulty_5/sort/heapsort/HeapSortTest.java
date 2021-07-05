@@ -1,17 +1,12 @@
-/*
-    ================================================================================================
-    This code is part of java_algorith_tests which is an effort of SpotADev
-
-    java_algorith_tests is used for getting SpotADev devs up to speed so they can pass tests on
-    java algorithms.
-    
-    Copyright (C) 2021 java_algorith_tests
-
-    ================================================================================================
-    Author : John Dickerson
-    ================================================================================================
-*/
 package com.spotadev.algo.difficulty_5.sort.heapsort;
+
+import java.util.Arrays;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 
 /**
  * Implement a method with the following method signature:
@@ -209,18 +204,17 @@ package com.spotadev.algo.difficulty_5.sort.heapsort;
  *                         
  *   Now to the big O notation for this algorithm:
  *   
- *   Heap Sort has O(n*log n) time complexities for all the cases ( best case, average case, and worst case).
+ *   Heap Sort has O(nlog n) time complexities for all the cases ( best case, average case, and worst case).
  *   Let us understand the reason why. The height of a complete binary tree containing n elements is log n
  *   As we have seen earlier, to fully heapify an element whose subtrees are already max-heaps, 
  *   we need to keep comparing the element with its left and right children and pushing it downwards until it reaches a point where both its children are smaller than it.
  *   In the worst case scenario, we will need to move an element from the root to the leaf node making a multiple of log(n) comparisons and swaps.
- *   When building the max heap, we do that for n/2 elements so the worst case complexity of the build_heap step is n/2*log n ~ n*log n.
+ *   When building the max heap, we do that for n/2 elements so the worst case complexity of the build_heap step is n/2*log n ~ nlog n.
  *   when we exchange the root element with the last element and heapify the root element, for each element, this again takes log n worst time because we might have to bring the element all the way from the root to the leaf.
  *   Since we repeat this n times, the heapsort step is also nlog n.
- *   Since building max heap and heap sort steps are executed one after another, the algorithmic complexity is not multiplied and it remains in the order of n*log n.
+ *   Since building max heap and heap sort steps are executed one after another, the algorithmic complexity is not multiplied and it remains in the order of nlog n.
  *   
- *   Hence time complexity of O(n*log n) for all cases.
- *    
+ *   Hence time complexity of O(nlog n) for all cases.
  *                    
  * Time Allocated: 20 minutes
  *
@@ -229,51 +223,47 @@ package com.spotadev.algo.difficulty_5.sort.heapsort;
  * @author Kingsley Muturi - 5th July 2021
  */
 
-public class HeapSort {
+public class HeapSortTest {
+	private Logger logger = LoggerFactory.getLogger(HeapSortTest.class);
+    private HeapSort heapSort;
+    
+    @BeforeClass
+	public void setUp() {
+		heapSort = new HeapSort();
+	}
+    
+    // method to make output array to be readable and understandable
+    private String show( int[] array ) {
 
-    public void heapSort(int[] array) {
-        int size = array.length;
+        StringBuilder sb = new StringBuilder( "{" );
 
-        // Build heap
-        for (int i = size / 2 - 1; i >= 0; i--)
-            heapify(array, size, i);
+        for ( int someInt : array ) {
 
-        // One by one extract (Max) an element from heap and
-        // replace it with the last element in the array
-        for (int i=size-1; i>=0; i--) {
-
-            //arrA[0] is a root of the heap and is the max element in heap
-            int x = array[0];
-            array[0] = array[i];
-            array[i] = x;
-
-            // call max heapify on the reduced heap
-            heapify(array, i, 0);
+            sb.append( someInt ).append( ", " );
         }
+
+        sb.append( "}" );
+        return sb.toString();
     }
-
-    // To heapify a subtree with node i
-    void heapify(int array[], int heapSize, int i) {
-        int largest = i; // Initialize largest as root
-        int leftChildIdx  = 2*i + 1; // left = 2*i + 1
-        int rightChildIdx  = 2*i + 2; // right = 2*i + 2
-
-        // If left child is larger than root
-        if (leftChildIdx  < heapSize && array[leftChildIdx ] > array[largest])
-            largest = leftChildIdx ;
-
-        // If right child is larger than largest so far
-        if (rightChildIdx  < heapSize && array[rightChildIdx ] > array[largest])
-            largest = rightChildIdx ;
-
-        // If largest is not root
-        if (largest != i) {
-            int swap = array[i];
-            array[i] = array[largest];
-            array[largest] = swap;
-
-            // Recursive call to  heapify the sub-tree
-            heapify(array, heapSize, largest);
-        }
+    
+    @Test
+	public void heapSortTest() {
+    	//The array to be sorted
+    	int[] unsortedArray = new int[] { 16, 12, 54, 37, 8, 2, 7 };
+    	
+    	//The expected sorted array
+    	int[] expectedSort = new int[] { 2, 7, 8, 12, 16, 37, 54 };
+    	
+    	//showing the unsorted array on testng
+        logger.info( show(unsortedArray));
+        
+        //calling the heap sort function
+        heapSort.heapSort(unsortedArray);
+        
+        //showing the sorted array
+        logger.info( show(unsortedArray));
+        
+        //comparing if the output is equal to the sorted array
+        Assert.assertTrue( Arrays.equals( unsortedArray, expectedSort));
     }
 }
