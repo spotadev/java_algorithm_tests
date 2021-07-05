@@ -1,17 +1,13 @@
-/*
-    ================================================================================================
-    This code is part of java_algorith_tests which is an effort of SpotADev
-
-    java_algorith_tests is used for getting SpotADev devs up to speed so they can pass tests on
-    java algorithms.
-    
-    Copyright (C) 2021 java_algorith_tests
-
-    ================================================================================================
-    Author : John Dickerson
-    ================================================================================================
-*/
 package com.spotadev.algo.difficulty_5.sort.quicksort;
+
+
+import java.util.Arrays;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 
 /**
  * Implement a method with the following method signature:
@@ -120,57 +116,47 @@ package com.spotadev.algo.difficulty_5.sort.quicksort;
  * @author Kingsley Muturi - 29th June 2021
  */
 
-public class QuickSort {
-	public void quickSort(int[] arr, int low, int high) 
-    {
-        //-- error handling
-        if (arr == null || arr.length == 0){
-            return;
+public class QuickSortTest {
+	private Logger logger = LoggerFactory.getLogger(QuickSortTest.class);
+    private QuickSort quickSort;
+    
+    @BeforeClass
+	public void setUp() {
+		quickSort = new QuickSort();
+	}
+    
+    // method to make output array to be readable and understandable
+    private String show( int[] array ) {
+
+        StringBuilder sb = new StringBuilder( "{" );
+
+        for ( int someInt : array ) {
+
+            sb.append( someInt ).append( ", " );
         }
-        if (low >= high){
-            return;
-        }
- 
-        //Get the pivot element from the middle of the list
-        int middle = low + (high - low) / 2;
-        int pivot = arr[middle];
- 
-        // make left < pivot and right > pivot
-        int i = low, j = high;
-        while (i <= j) 
-        {
-            //Check until all values on left side array are lower than pivot
-            while (arr[i] < pivot) 
-            {
-                i++;
-            }
-            //Check until all values on left side array are greater than pivot
-            while (arr[j] > pivot) 
-            {
-                j--;
-            }
-            //Now compare values from both side of lists to see if they need swapping 
-            //After swapping move the iterator on both lists
-            if (i <= j) 
-            {
-                swap (arr, i, j);
-                i++;
-                j--;
-            }
-        }
-        //Do same operation as above recursively to sort two sub arrays
-        if (low < j){
-            quickSort(arr, low, j);
-        }
-        if (high > i){
-            quickSort(arr, i, high);
-        }
+
+        sb.append( "}" );
+        return sb.toString();
     }
-     
-    public static void swap (int[] array, int x, int y)
-    {
-        int temp = array[x];
-        array[x] = array[y];
-        array[y] = temp;
+    
+    @Test
+	public void heapSortTest() {
+    	//The array to be sorted
+    	int[] unsortedArray = new int[] { 14, 21, 5, 62, 1, 12, 7 };
+    	
+    	//The expected sorted array
+    	int[] expectedSort = new int[] { 1, 5, 7, 12, 14, 21, 62 };
+    	
+    	//showing the unsorted array on testng
+        logger.info( show(unsortedArray));
+        
+        //calling the heap sort function
+        quickSort.quickSort(unsortedArray, 0, unsortedArray.length -1);
+        
+        //showing the sorted array
+        logger.info( show(unsortedArray));
+        
+        //comparing if the output is equal to the sorted array
+        Assert.assertTrue( Arrays.equals( unsortedArray, expectedSort));
     }
 }
