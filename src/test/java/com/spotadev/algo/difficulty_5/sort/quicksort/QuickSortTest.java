@@ -182,22 +182,22 @@ public class QuickSortTest {
     @Test
     public void heapSortTest() {
 
-        //The array to be sorted
+        // The array to be sorted
         int[] unsortedArray = new int[] { 14, 21, 5, 62, 1, 12, 7 };
 
-        //The expected sorted array
+        // The expected sorted array
         int[] expectedSort = new int[] { 1, 5, 7, 12, 14, 21, 62 };
 
-        //showing the unsorted array on testng
+        // showing the unsorted array on testng
         logger.info( show( unsortedArray ) );
 
-        //calling the heap sort function
+        // calling the heap sort function
         quickSort.quickSort( unsortedArray, 0, unsortedArray.length - 1 );
 
-        //showing the sorted array
+        // showing the sorted array
         logger.info( show( unsortedArray ) );
 
-        //comparing if the output is equal to the sorted array
+        // comparing if the output is equal to the sorted array
         Assert.assertTrue( Arrays.equals( unsortedArray, expectedSort ) );
     }
 }

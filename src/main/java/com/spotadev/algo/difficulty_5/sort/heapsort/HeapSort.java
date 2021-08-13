@@ -313,7 +313,7 @@ public class HeapSort {
         // replace it with the last element in the array
         for ( int i = size - 1; i >= 0; i-- ) {
 
-            //arrA[0] is a root of the heap and is the max element in heap
+            // arrA[0] is a root of the heap and is the max element in heap
             int x = array[0];
             array[0] = array[i];
             array[i] = x;

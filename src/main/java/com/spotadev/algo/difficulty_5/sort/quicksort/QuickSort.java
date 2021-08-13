@@ -143,7 +143,7 @@ public class QuickSort {
 
     public void quickSort( int[] arr, int low, int high ) {
 
-        //-- error handling
+        // -- error handling
         if ( arr == null || arr.length == 0 ) {
 
             return;
@@ -154,7 +154,7 @@ public class QuickSort {
             return;
         }
 
-        //Get the pivot element from the middle of the list
+        // Get the pivot element from the middle of the list
         int middle = low + ( high - low ) / 2;
         int pivot = arr[middle];
 
@@ -163,20 +163,20 @@ public class QuickSort {
 
         while ( i <= j ) {
 
-            //Check until all values on left side array are lower than pivot
+            // Check until all values on left side array are lower than pivot
             while ( arr[i] < pivot ) {
 
                 i++;
             }
 
-            //Check until all values on left side array are greater than pivot
+            // Check until all values on left side array are greater than pivot
             while ( arr[j] > pivot ) {
 
                 j--;
             }
 
-            //Now compare values from both side of lists to see if they need swapping 
-            //After swapping move the iterator on both lists
+            // Now compare values from both side of lists to see if they need swapping 
+            // After swapping move the iterator on both lists
             if ( i <= j ) {
 
                 swap( arr, i, j );
@@ -185,7 +185,7 @@ public class QuickSort {
             }
         }
 
-        //Do same operation as above recursively to sort two sub arrays
+        // Do same operation as above recursively to sort two sub arrays
         if ( low < j ) {
 
             quickSort( arr, low, j );
