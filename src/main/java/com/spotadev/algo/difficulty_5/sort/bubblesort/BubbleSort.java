@@ -139,6 +139,7 @@ public class BubbleSort {
         return sb.toString();
     }
 
+
     /*
      * bubble sort method taking in an array and two integers of the index to start sorting from 
      * and index to which the array is to be sorted.
@@ -148,7 +149,7 @@ public class BubbleSort {
         int tempInt;
 
         for ( int i = toIndex - 1; i > fromIndex; i-- ) {
-            
+
             // boolean to help break the loop if the "if" in the for loop below is not accessed as 
             // isSorted will remain true
             boolean isSorted = true;

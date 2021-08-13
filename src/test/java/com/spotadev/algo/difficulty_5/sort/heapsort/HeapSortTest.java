@@ -1,3 +1,16 @@
+/*
+    ================================================================================================
+    This code is part of java_algorith_tests which is an effort of SpotADev
+
+    java_algorith_tests is used for getting SpotADev devs up to speed so they can pass tests on
+    java algorithms.
+    
+    Copyright (C) 2021 java_algorith_tests
+
+    ================================================================================================
+    Author : John Dickerson
+    ================================================================================================
+*/
 package com.spotadev.algo.difficulty_5.sort.heapsort;
 
 import java.util.Arrays;
@@ -5,8 +18,8 @@ import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
  * Implement a method with the following method signature:
@@ -222,16 +235,18 @@ import org.testng.annotations.BeforeClass;
  * 
  * @author Kingsley Muturi - 5th July 2021
  */
-
 public class HeapSortTest {
-	private Logger logger = LoggerFactory.getLogger(HeapSortTest.class);
+
+    private Logger logger = LoggerFactory.getLogger( HeapSortTest.class );
     private HeapSort heapSort;
-    
+
     @BeforeClass
-	public void setUp() {
-		heapSort = new HeapSort();
-	}
-    
+    public void setUp() {
+
+        heapSort = new HeapSort();
+    }
+
+
     // method to make output array to be readable and understandable
     private String show( int[] array ) {
 
@@ -245,25 +260,27 @@ public class HeapSortTest {
         sb.append( "}" );
         return sb.toString();
     }
-    
+
+
     @Test
-	public void heapSortTest() {
-    	//The array to be sorted
-    	int[] unsortedArray = new int[] { 16, 12, 54, 37, 8, 2, 7 };
-    	
-    	//The expected sorted array
-    	int[] expectedSort = new int[] { 2, 7, 8, 12, 16, 37, 54 };
-    	
-    	//showing the unsorted array on testng
-        logger.info( show(unsortedArray));
-        
+    public void heapSortTest() {
+
+        //The array to be sorted
+        int[] unsortedArray = new int[] { 16, 12, 54, 37, 8, 2, 7 };
+
+        //The expected sorted array
+        int[] expectedSort = new int[] { 2, 7, 8, 12, 16, 37, 54 };
+
+        //showing the unsorted array on testng
+        logger.info( show( unsortedArray ) );
+
         //calling the heap sort function
-        heapSort.heapSort(unsortedArray);
-        
+        heapSort.heapSort( unsortedArray );
+
         //showing the sorted array
-        logger.info( show(unsortedArray));
-        
+        logger.info( show( unsortedArray ) );
+
         //comparing if the output is equal to the sorted array
-        Assert.assertTrue( Arrays.equals( unsortedArray, expectedSort));
+        Assert.assertTrue( Arrays.equals( unsortedArray, expectedSort ) );
     }
 }
