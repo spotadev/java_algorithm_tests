@@ -15,18 +15,22 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.difficulty_3.median2sortedarrays;
+package com.spotadev.algo.difficulty_3.median2sortedarraysduplicatesremoved;
 
 import java.util.Arrays;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
- * See:
+ * VARIANT of:
  * 
  *      https://leetcode.com/problems/median-of-two-sorted-arrays/
  * 
  * Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+ * 
+ * When you add the arrays together, remove duplicates.
+ *
+ * ( The variant is that the merged array has no duplicates )
  *
  * The overall run time complexity should be O(log (m+n)).
  * 
@@ -54,7 +58,7 @@ import java.util.TreeSet;
  * 
  * @author John Dickerson - 4 Feb 2022
  */
-public class Median2SortedArrays {
+public class Median2SortedArraysDuplicatesRemoved {
 
     public double findMedianUsingThirdArray( int[] nums1, int[] nums2 ) {
 
@@ -68,25 +72,43 @@ public class Median2SortedArrays {
 
             if ( nums1[i] < nums2[j] ) {
 
-                merged[k++] = nums1[i++];
+                if ( k == 0 || merged[k - 1] != nums1[i] ) {
+
+                    merged[k++] = nums1[i];
+                }
+
+                i++;
             }
             else {
+                if ( k == 0 || merged[k - 1] != nums2[j] ) {
 
-                merged[k++] = nums2[j++];
+                    merged[k++] = nums2[j];
+                }
+
+                j++;
             }
         }
 
         // Store remaining elements of first array
         while ( i < nums1Length ) {
 
-            merged[k++] = nums1[i++];
+            if ( k == 0 || merged[k - 1] != nums1[i] ) {
+
+                merged[k++] = nums1[i];
+            }
+
+            i++;
         }
 
         // Store remaining elements of second array
         while ( j < nums2Length ) {
 
-            merged[k++] = nums2[j++];
+            if ( k == 0 || merged[k - 1] != nums2[j] ) {
 
+                merged[k++] = nums2[j];
+            }
+
+            j++;
         }
 
         // work out median
