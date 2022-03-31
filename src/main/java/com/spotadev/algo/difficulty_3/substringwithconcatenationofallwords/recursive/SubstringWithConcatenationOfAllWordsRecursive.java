@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords;
+package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.recursive;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,6 +60,14 @@ import java.util.TreeSet;
  *             
  *             (iii) This means we do not have to try all possible combinations.  We can also do
  *                   some optimisations like group words by what letter they start with etc.
+ *                   
+ *     Problem with this solution:
+ *     
+ *         It used recursion so when given a massive data set it threw java.lang.StackOverflowError
+ *         
+ *         See SubstringWithConcatenationOfAllWords.findSubstringTest_scenario_4() for test that 
+ *         threw StackOverflowError.    Note that on leetcode.com it passed 174 tests before failing
+ *         the 175th test.  All in all there are 176 tests.
  * 
  * QUESTION:
  * 
@@ -129,7 +137,7 @@ import java.util.TreeSet;
  *
  * @author John Dickerson - 7 Feb 2022
  */
-public class SubstringWithConcatenationOfAllWords {
+public class SubstringWithConcatenationOfAllWordsRecursive {
 
     // Key   = first letter of word
     // Value = list of words which start with that letter
@@ -176,7 +184,7 @@ public class SubstringWithConcatenationOfAllWords {
             return;
         }
 
-        Character letterChar = s.toCharArray()[currentIndex];
+        Character letterChar = s.charAt( currentIndex );
         SortedSet<String> words = dictionary.get( letterChar.toString() );
 
         if ( words != null ) {

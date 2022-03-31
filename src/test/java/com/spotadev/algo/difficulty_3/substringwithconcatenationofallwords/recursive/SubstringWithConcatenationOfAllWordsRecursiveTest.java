@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords;
+package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.recursive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,23 +26,25 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.recursive.SubstringWithConcatenationOfAllWordsRecursive;
+
 /**
  * https://leetcode.com/problems/substring-with-concatenation-of-all-words/
  * 
  * 
  * @author John Dickerson - 9 Feb 2022
  */
-public class SubstringWithConcatenationOfAllWordsTest {
+public class SubstringWithConcatenationOfAllWordsRecursiveTest {
 
     public Logger logger =
-            LoggerFactory.getLogger( SubstringWithConcatenationOfAllWordsTest.class );
+            LoggerFactory.getLogger( SubstringWithConcatenationOfAllWordsRecursiveTest.class );
 
-    private SubstringWithConcatenationOfAllWords substringWithConcatenationOfAllWords;
+    private SubstringWithConcatenationOfAllWordsRecursive substringWithConcatenationOfAllWordsRecursive;
 
     @BeforeClass
     public void setUp() {
 
-        substringWithConcatenationOfAllWords = new SubstringWithConcatenationOfAllWords();
+        substringWithConcatenationOfAllWordsRecursive = new SubstringWithConcatenationOfAllWordsRecursive();
     }
 
 
@@ -51,7 +53,7 @@ public class SubstringWithConcatenationOfAllWordsTest {
 
         String[] words = { "foo", "bar" };
         String s = "barfoothefoobarman";
-        List<Integer> indexes = substringWithConcatenationOfAllWords.findSubstring( s, words );
+        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s, words );
         List<Integer> expectedIndexes = new ArrayList<>();
         expectedIndexes.add( 0 );
         expectedIndexes.add( 9 );
@@ -66,7 +68,7 @@ public class SubstringWithConcatenationOfAllWordsTest {
 
         String[] words = { "word", "good", "best", "word" };
         String s = "wordgoodgoodgoodbestword";
-        List<Integer> indexes = substringWithConcatenationOfAllWords.findSubstring( s, words );
+        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s, words );
         List<Integer> expectedIndexes = new ArrayList<>();
         logger.info( "indexes = " + indexes );
         logger.info( "expectedIndexes = " + expectedIndexes );
@@ -79,7 +81,7 @@ public class SubstringWithConcatenationOfAllWordsTest {
 
         String[] words = { "foo", "bar" };
         String s = "foobarfoobar";
-        List<Integer> indexes = substringWithConcatenationOfAllWords.findSubstring( s, words );
+        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s, words );
         List<Integer> expectedIndexes = new ArrayList<>();
         expectedIndexes.add( 0 );
         expectedIndexes.add( 3 );
@@ -95,7 +97,7 @@ public class SubstringWithConcatenationOfAllWordsTest {
 
         String[] words = { "a", "a" };
         String s = "aaa";
-        List<Integer> indexes = substringWithConcatenationOfAllWords.findSubstring( s, words );
+        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s, words );
         List<Integer> expectedIndexes = new ArrayList<>();
         expectedIndexes.add( 0 );
         expectedIndexes.add( 1 );
@@ -164,7 +166,7 @@ public class SubstringWithConcatenationOfAllWordsTest {
                         "kelwuqsgkyoekaroptuvekfvmtxtqshcwsztkrzwrpabqrrhnlerxjojemcxel";
 
         Long nanoStart = System.nanoTime();
-        List<Integer> indexes = substringWithConcatenationOfAllWords.findSubstring( s, words );
+        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s, words );
         Long nanoEnd = System.nanoTime();
 
         Long elapsedTimeSeconds = ( nanoEnd - nanoStart ) / 1000000000;
@@ -555,8 +557,11 @@ public class SubstringWithConcatenationOfAllWordsTest {
                 "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a",
                 "a", "a", "a", "a", "a" };
 
+        logger.info( "size of string = " + s.length() );
+        logger.info( "number words = " + words.length );
+
         Long nanoStart = System.nanoTime();
-        List<Integer> indexes = substringWithConcatenationOfAllWords.findSubstring( s, words );
+        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s, words );
         Long nanoEnd = System.nanoTime();
 
         Long elapsedTimeSeconds = ( nanoEnd - nanoStart ) / 1000000000;
