@@ -27,6 +27,8 @@ import java.util.TreeSet;
 /**
  * OVERVIEW:
  * 
+ *     https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+ * 
  *     This question is about searching for a match in a String for lots of combinations of some
  *     words.
  *     
@@ -52,8 +54,10 @@ import java.util.TreeSet;
  *         calculating all possible combinations in advance we do:
  *         
  *             (i)   Search for one of the words
+ *             
  *             (ii)  If we find the word then we search if the characters on the end of the word are
  *                   the start of another word.
+ *             
  *             (iii) This means we do not have to try all possible combinations.  We can also do
  *                   some optimisations like group words by what letter they start with etc.
  * 
@@ -129,7 +133,7 @@ public class SubstringWithConcatenationOfAllWords {
 
     // Key   = first letter of word
     // Value = list of words which start with that letter
-    private Map<String, List<String>> dictionary = new HashMap<>();
+    private Map<String, SortedSet<String>> dictionary = new HashMap<>();
     private List<String> allWords = new ArrayList<>();
 
     private void populateWordsByStartingLetter( String[] words ) {
@@ -137,11 +141,11 @@ public class SubstringWithConcatenationOfAllWords {
         for ( String word : words ) {
 
             String startingLetter = word.substring( 0, 1 );
-            List<String> wordList = dictionary.get( startingLetter );
+            SortedSet<String> wordList = dictionary.get( startingLetter );
 
             if ( wordList == null ) {
 
-                wordList = new ArrayList<>();
+                wordList = new TreeSet<>();
                 dictionary.put( startingLetter, wordList );
             }
 
@@ -151,73 +155,60 @@ public class SubstringWithConcatenationOfAllWords {
     }
 
 
-    private Boolean wordInRemainingWords( String word, List<String> remainingWords ) {
-
-        Boolean found = Boolean.FALSE;
-
-        for ( String remainingWord : remainingWords ) {
-
-            if ( remainingWord.equals( word ) ) {
-
-                found = Boolean.TRUE;
-                break;
-            }
-        }
-
-        return found;
-    }
-
-
-    private List<String> removeWordAndClone( String word, List<String> remainingWords ) {
-
-        List<String> clonedRemainingWords = new ArrayList<>( remainingWords );
-        clonedRemainingWords.remove( word );
-        return clonedRemainingWords;
-    }
-
-
-    private void addMatchIfFound(
-            String s,
-            String letter,
-            int startIndex,
-            int currentIndex,
+    private void callRecursively(
             SortedSet<Integer> indexesOfMatches,
-            List<String> remainingWords ) {
+            List<String> remainingWords, int startIndexIn, int currentIndexIn,
+            String matchedWord, String s ) {
 
-        if ( remainingWords.size() == 0 ) {
+        int startIndex = startIndexIn;
+        int currentIndex = currentIndexIn + matchedWord.length();
+        addIndexes( indexesOfMatches, remainingWords, startIndex, currentIndex, s );
+    }
 
-            indexesOfMatches.add( startIndex );
+
+    private void addIndexes(
+            SortedSet<Integer> indexesOfMatches,
+            List<String> remainingWordsIn,
+            int startIndex, int currentIndex, String s ) {
+
+        if ( currentIndex > ( s.length() - 1 ) ) {
+
+            return;
         }
-        else {
 
-            if ( letter != null ) {
+        Character letterChar = s.toCharArray()[currentIndex];
+        SortedSet<String> words = dictionary.get( letterChar.toString() );
 
-                List<String> wordList = dictionary.get( letter );
+        if ( words != null ) {
 
-                if ( wordList != null ) {
+            // check if we match on a word 
+            for ( String word : words ) {
 
-                    for ( String word : wordList ) {
+                List<String> remainingWords = new ArrayList<>( remainingWordsIn );
 
-                        if ( currentIndex <= s.length() && s.indexOf( word, currentIndex ) != -1 ) {
+                int endIndex = currentIndex + word.length();
 
-                            if ( wordInRemainingWords( word, remainingWords ) ) {
+                if ( endIndex < ( s.length() + 1 ) ) {
 
-                                List<String> newRemainingWords =
-                                        removeWordAndClone( word, remainingWords );
+                    String match = s.substring( currentIndex, endIndex );
 
-                                int newCurrentIndex = currentIndex + word.length();
+                    if ( word.equals( match ) && remainingWords.contains( word ) ) {
 
-                                String newLetter = null;
+                        remainingWords.remove( word );
 
-                                if ( newCurrentIndex + 1 == s.length() ) {
+                        if ( remainingWords.size() == 0 ) {
 
-                                    newLetter = s.substring( newCurrentIndex, newCurrentIndex + 1 );
-                                }
+                            indexesOfMatches.add( startIndex );
+                        }
+                        else {
 
-                                addMatchIfFound(
-                                        s, newLetter, startIndex, newCurrentIndex,
-                                        indexesOfMatches, newRemainingWords );
-                            }
+                            callRecursively(
+                                    indexesOfMatches,
+                                    remainingWords,
+                                    startIndex,
+                                    currentIndex,
+                                    word,
+                                    s );
                         }
                     }
                 }
@@ -234,14 +225,11 @@ public class SubstringWithConcatenationOfAllWords {
         // Start from left and progress to right.  For each letter check if we have a word in the
         // dictionary which starts with that letter.  If we do check if the whole word is there.
         // If the whole word is there - call a method to check the sequence.
-        char[] letters = s.toCharArray();
-        int index = 0;
 
-        for ( char letter : letters ) {
+        for ( int i = 0; i < s.length(); i++ ) {
 
             List<String> remainingWords = new ArrayList<>( allWords );
-            addMatchIfFound( s, letter + "", index, index, indexesOfMatches, remainingWords );
-            index++;
+            addIndexes( indexesOfMatches, remainingWords, i, i, s );
         }
 
         return new ArrayList<>( indexesOfMatches );
