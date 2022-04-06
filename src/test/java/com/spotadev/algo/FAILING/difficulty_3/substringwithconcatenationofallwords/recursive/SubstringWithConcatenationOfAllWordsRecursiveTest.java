@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.recursive;
+package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.recursive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +25,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.recursive.SubstringWithConcatenationOfAllWordsRecursive;
 
 /**
  * https://leetcode.com/problems/substring-with-concatenation-of-all-words/

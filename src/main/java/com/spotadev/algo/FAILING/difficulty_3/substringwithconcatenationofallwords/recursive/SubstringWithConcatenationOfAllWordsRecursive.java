@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.recursive;
+package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.recursive;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,6 +25,9 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
+ * 
+ * NOTE this solution is FAILING the last test case with all the a's in them.
+ * 
  * OVERVIEW:
  * 
  *     https://leetcode.com/problems/substring-with-concatenation-of-all-words/

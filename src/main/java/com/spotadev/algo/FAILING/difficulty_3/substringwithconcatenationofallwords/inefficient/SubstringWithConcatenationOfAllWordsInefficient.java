@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.inefficient;
+package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.inefficient;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -24,6 +24,8 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
+ * https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+ * 
  * WHY THIS SOLUTION is SHIT:
  * 
  *     This solution works well for a few words but does not scale well.  The Constraints in the 
