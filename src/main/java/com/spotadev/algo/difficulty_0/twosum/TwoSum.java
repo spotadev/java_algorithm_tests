@@ -20,8 +20,8 @@ package com.spotadev.algo.difficulty_0.twosum;
 /**
  * https://leetcode.com/problems/two-sum/submissions/
  * 
- * Runtime: 84 ms, faster than 21.12% of Java online submissions for Two Sum.
- * Memory Usage: 42.2 MB, less than 93.00% of Java online submissions for Two Sum.
+ *     Runtime: 84 ms, faster than 21.12% of Java online submissions for Two Sum.
+ *     Memory Usage: 42.2 MB, less than 93.00% of Java online submissions for Two Sum.
  * 
  * Given an array of integers nums and an integer target, return indices of the two numbers such 
  * that they add up to target.
@@ -46,6 +46,17 @@ package com.spotadev.algo.difficulty_0.twosum;
  *
  *    Input: nums = [3,3], target = 6
  *    Output: [0,1]
+ *    
+ * Constraints:
+ * 
+ *    2 <= nums.length <= 10^4
+ *    -109 <= nums[i] <= 10^9
+ *    -109 <= target <= 10^9
+ *
+ * Only one valid answer exists.
+ *  
+ * 
+ * Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  * 
  * @author John Dickerson - 16 Apr 2022
  */
