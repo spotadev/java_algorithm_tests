@@ -15,10 +15,12 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.theory.generate.combinations.array;
+package com.spotadev.theory.algo.difficulty_5.generate.combinations.array;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.spotadev.theory.algo.difficulty_5.generate.combinations.array.GenerateCustomCombinationsForArray;
 
 /**
  * @author John Dickerson - 5 Apr 2022

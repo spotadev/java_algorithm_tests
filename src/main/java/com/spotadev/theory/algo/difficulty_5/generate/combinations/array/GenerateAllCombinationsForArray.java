@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.theory.generate.combinations.array;
+package com.spotadev.theory.algo.difficulty_5.generate.combinations.array;
 
 import java.util.ArrayList;
 import java.util.List;
