@@ -15,12 +15,12 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.theory.generate.alluniquecombination.array;
+package com.spotadev.theory.generate.combinations.array;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GenerateAllUniqueCombinationsForArray {
+public class GenerateCustomCombinationsForArray {
 
     /**
      * Given:
@@ -39,12 +39,19 @@ public class GenerateAllUniqueCombinationsForArray {
      *      2  2
      *      2  3
      *      3  3
+     *      
+     * This solution of nested "for loops" is only for returning a combination of 2 elements from a
+     * set of 4 elements. This code cannot work for any size of combination from any size set. The
+     * 2 for loops harcode this solution to return a combination of 2 items.
+     * 
+     * Note also that here we have stuff like [0,0] which is strictly not a combination of availble
+     * elements - this example is a custom combination with its own rules - came from an amazon
+     * interview problem.
      * 
      * @author John Dickerson - 5 Apr 2022
      */
-    public static int[][] getAllUniquePairCombinations() {
+    public static int[][] getCustomCombinations( int[] data ) {
 
-        int[] data = { 0, 1, 2, 3 };
         int n = data.length;
         List<int[]> arrays = new ArrayList<>();
 
@@ -58,10 +65,5 @@ public class GenerateAllUniqueCombinationsForArray {
         }
 
         return arrays.toArray( new int[arrays.size()][] );
-    }
-
-
-    public static void printAllCombinations() {
-
     }
 }

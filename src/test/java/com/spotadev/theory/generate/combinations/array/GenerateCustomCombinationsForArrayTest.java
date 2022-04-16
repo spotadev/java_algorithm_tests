@@ -15,7 +15,7 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.theory.generate.alluniquecombination.array;
+package com.spotadev.theory.generate.combinations.array;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,13 +23,15 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 5 Apr 2022
  */
-public class GenerateAllUniqueCombinationsForArrayTest {
+public class GenerateCustomCombinationsForArrayTest {
 
     @Test
-    public void getAllUniquePairCombinations() {
+    public void getCustomCombinations() {
+
+        int[] data = { 0, 1, 2, 3 };
 
         int[][] pairCombinations =
-                GenerateAllUniqueCombinationsForArray.getAllUniquePairCombinations();
+                GenerateCustomCombinationsForArray.getCustomCombinations( data );
 
         Assert.assertEquals( pairCombinations.length, 10 );
         Assert.assertEquals( pairCombinations[0], new int[] { 0, 0 } );
@@ -42,12 +44,5 @@ public class GenerateAllUniqueCombinationsForArrayTest {
         Assert.assertEquals( pairCombinations[7], new int[] { 2, 2 } );
         Assert.assertEquals( pairCombinations[8], new int[] { 2, 3 } );
         Assert.assertEquals( pairCombinations[9], new int[] { 3, 3 } );
-    }
-
-
-    @Test
-    public void printAllCombinations() {
-
-        GenerateAllUniqueCombinationsForArray.printAllCombinations();
     }
 }
