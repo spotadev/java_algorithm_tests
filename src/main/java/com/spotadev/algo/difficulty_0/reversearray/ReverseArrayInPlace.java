@@ -39,15 +39,15 @@ public class ReverseArrayInPlace<T> {
      *      6, 5, 4, 3, 2, 1
      */
     public void reverse( T[] inData ) {
-            
+
         int endIndex = inData.length - 1;
-        
-        for ( int i=0; i<inData.length; i++ ) {
-            
+
+        for ( int i = 0; i < inData.length; i++ ) {
+
             if ( endIndex > i ) {
-            
-                T temp = inData[ endIndex ];
-                inData[ endIndex ] = inData[ i ];
+
+                T temp = inData[endIndex];
+                inData[endIndex] = inData[i];
                 inData[i] = temp;
                 endIndex--;
             }

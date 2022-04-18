@@ -31,12 +31,12 @@ package com.spotadev.algo.difficulty_0.reversearray;
 public class ReverseArray<T> {
 
     public void reverse( T[] inData, T[] outData ) {
-        
+
         int endIndex = inData.length - 1;
-        
-        for ( int i=0; i<inData.length; i++ ) {
-            
-            outData[ endIndex ] = inData[ i ];
+
+        for ( int i = 0; i < inData.length; i++ ) {
+
+            outData[endIndex] = inData[i];
             endIndex--;
         }
     }
