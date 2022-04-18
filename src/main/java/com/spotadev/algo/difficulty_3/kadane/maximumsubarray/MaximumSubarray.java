@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.difficulty_0.maximumsubarray;
+package com.spotadev.algo.difficulty_3.kadane.maximumsubarray;
 
 /**
  * https://leetcode.com/problems/maximum-subarray/
