@@ -17,18 +17,56 @@
 */
 package com.spotadev.algo.difficulty_0.maximumsubarray;
 
- 
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 /**
  * @author John Dickerson - 18 Apr 2022
  */
 public class MaximumSubarrayTest {
 
-    /**
-     * 
-     */
-    public MaximumSubarrayTest() {
+    private MaximumSubarray maximumSubarray;
 
-        // TODO Auto-generated constructor stub
+    @BeforeClass
+    public void setUp() {
+
+        maximumSubarray = new MaximumSubarray();
     }
 
+
+    @Test
+    public void maxSubArrayTest_1() {
+
+        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        int max = maximumSubarray.maxSubArray( nums );
+        Assert.assertEquals( max, 6 );
+    }
+
+
+    @Test
+    public void maxSubArrayTest_2() {
+
+        int[] nums = { 1 };
+        int max = maximumSubarray.maxSubArray( nums );
+        Assert.assertEquals( max, 1 );
+    }
+
+
+    @Test
+    public void maxSubArrayTest_3() {
+
+        int[] nums = { 5, 4, -1, 7, 8 };
+        int max = maximumSubarray.maxSubArray( nums );
+        Assert.assertEquals( max, 23 );
+    }
+
+
+    @Test
+    public void maxSubArrayTest_4() {
+
+        int[] nums = { -1 };
+        int max = maximumSubarray.maxSubArray( nums );
+        Assert.assertEquals( max, -1 );
+    }
 }
