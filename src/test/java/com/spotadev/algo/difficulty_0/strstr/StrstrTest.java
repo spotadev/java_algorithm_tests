@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.difficulty_0;
+package com.spotadev.algo.difficulty_0.strstr;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
