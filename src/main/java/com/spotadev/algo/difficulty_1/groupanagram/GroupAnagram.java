@@ -20,6 +20,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * https://leetcode.com/problems/group-anagrams/
+ * 
+ *     Your runtime beats 93.50 % of java submissions.
+ *     Your memory usage beats 96.57 % of java submissions.
+ * 
  * Given an array of strings strs, group the anagrams together. You can return the answer in 
  * any order.
  * 

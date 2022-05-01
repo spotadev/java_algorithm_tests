@@ -16,8 +16,11 @@ package com.spotadev.algo.difficulty_0.removeduplicatesfromsortedarray;
 /**
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  * 
- *     Runtime: 1 ms, faster than 85.62% of Java online submissions for Remove Duplicates from Sorted Array.
- *     Memory Usage: 43.8 MB, less than 93.32% of Java online submissions for Remove Duplicates from Sorted Array.
+ *     Runtime: 1 ms, faster than 85.62% of Java online submissions for Remove Duplicates from 
+ *     Sorted Array.
+ *     
+ *     Memory Usage: 43.8 MB, less than 93.32% of Java online submissions for Remove Duplicates 
+ *     from Sorted Array.
  * 
  * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such 
  * that each unique element appears only once. The relative order of the elements should be kept 

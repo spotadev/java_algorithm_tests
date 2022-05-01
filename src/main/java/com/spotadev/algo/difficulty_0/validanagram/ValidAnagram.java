@@ -16,6 +16,11 @@ package com.spotadev.algo.difficulty_0.validanagram;
 import java.util.Arrays;
 
 /**
+ * https://leetcode.com/problems/valid-anagram/
+ * 
+ *     Your runtime beats 53.62 % of java submissions.
+ *     Your memory usage beats 30.82 % of java submissions.
+ * 
  * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
  * 
  * An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 

@@ -14,6 +14,11 @@
 package com.spotadev.algo.difficulty_1.productofarrayexceptself;
 
 /**
+ * https://leetcode.com/problems/product-of-array-except-self
+ * 
+ *     Your runtime beats 77.22 % of java submissions.
+ *     Your memory usage beats 74.86 % of java submissions.
+ * 
  * Given an integer array nums, return an array answer such that answer[i] is equal to the product 
  * of all the elements of nums except nums[i].
  * 

@@ -17,11 +17,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://leetcode.com/problems/contains-duplicate/
+ * 
+ *     Runtime: 6 ms, faster than 94.83% of Java online submissions for Contains Duplicate.
+ *     Memory Usage: 54.7 MB, less than 88.35% of Java online submissions for Contains Duplicate.
+ * 
  * Given an integer array nums, return true if any value appears at least twice in the array, 
  * and return false if every element is distinct.
- * 
- * Runtime: 6 ms, faster than 94.83% of Java online submissions for Contains Duplicate.
- * Memory Usage: 54.7 MB, less than 88.35% of Java online submissions for Contains Duplicate.
  * 
  * Example 1:
  * 

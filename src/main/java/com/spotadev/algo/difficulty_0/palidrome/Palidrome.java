@@ -14,7 +14,6 @@
 package com.spotadev.algo.difficulty_0.palidrome;
 
 /**
- *
  * https://leetcode.com/problems/palindrome-number
  * 
  *     Runtime: 13 ms, faster than 59.91% of Java online submissions for Palindrome Number.
