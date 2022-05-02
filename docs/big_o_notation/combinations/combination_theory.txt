@@ -1,0 +1,121 @@
+====================================================================================================
+Combination theory
+====================================================================================================
+
+Let us say you want to get combinations of 3 elements from a set with n elements you could use a
+O(n^3) solution of 3 nested loops:
+
+    public static void main( String[] args ) {
+
+        int n[] = { 1, 2, 3, 4, 5, 6 };
+
+        for ( int i = 0; i < n.length; i++ ) {
+
+            for ( int j = i + 1; j < n.length; j++ ) {
+
+                for ( int k = j + 1; k < n.length; k++ ) {
+
+                    System.out.println( n[i] + " " + n[j] + " " + n[k] );
+                }
+            }
+        }
+    }
+    
+Gives output:
+
+    1 2 3
+    1 2 4
+    1 2 5
+    1 2 6
+    1 3 4
+    1 3 5
+    1 3 6
+    1 4 5
+    1 4 6
+    1 5 6
+    2 3 4
+    2 3 5
+    2 3 6
+    2 4 5
+    2 4 6
+    2 5 6
+    3 4 5
+    3 4 6
+    3 5 6
+    4 5 6
+
+Note that there are no duplicates.  Notice also that each nested loop uses the starting index of the 
+outer loop plus 1.
+
+If you wanted all permutations including duplicates you would not have added 1 to the start index of
+each nested loop.
+
+
+====================================================================================================
+Combinations with sum
+====================================================================================================
+
+Sum problems are like:
+
+    Show all combinations of 3 elements for a set of n elements, where the sum of each combination
+    is blah.
+    
+    You could work this out by first of all generating all combinations using 3 nested loops and
+    then testing each combination to see if the combination meets the total of blah.  This would 
+    give O(n3) performance which will fail leetcode performance tests.
+    
+    The big Eureka thing to think of is:
+    
+        Sort the set BEFORE processing.
+        
+        Sort has best case performance of:
+        
+            O(n log n) for divide and conquer quick sort
+            
+        And worst case scenario of:
+        
+            O(n^2)
+            
+        So with the sum problems if you can reduce O(n^3) to O(n^2) with a pre sort the performance 
+        is:
+        
+            Pre sorted:      
+                Best Case:
+                    O(n log n + n2)   ==> for n=10 =>  10 + 100 = 110
+                Worst Case:
+                    O(n2 + n2)        ==> for n=10 =>  100 + 100 = 200 
+                    
+            Not pre sorted:  O(n^3)   ==> for n=10 =>  1000
+            
+            With just n=10 we have made it 5 times faster in worst case and 9 times faster for best
+            case.
+
+So in order to optimise sum problems on combinations START with a sorted list.
+
+Then use left and right pointers.  See below.
+
+Let us learn this stepwise
+
+    (i) Get sum of combination without pre sorting:
+    
+        https://leetcode.com/problems/two-sum/
+        om.spotadev.algo.difficulty_0.twosum.TwoSum
+        
+    (ii) Get sum of 2 element combination WITH pre sorting:
+    
+        https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+        com.spotadev.algo.difficulty_1.twosumsorted.TowSumSorted
+        
+        Look at second video for Sorted 2Sum:
+        
+            https://leetcode.com/problems/3sum/discuss/1999248/100-Optimal-Solution-Explained
+    
+    (iii) Get sum of 3 element combination WITH pre sorting.
+      
+          https://leetcode.com/problems/3sum/
+          com.spotadev.algo.difficulty_1.threesum.ThreeSum
+          
+          In this solution we sort the array before commencing. We use left and right pointers.
+          
+          We reduce performance from O(n^3) solution to O( n log n + log^2)
+
