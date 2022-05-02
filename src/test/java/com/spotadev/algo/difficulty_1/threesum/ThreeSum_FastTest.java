@@ -25,12 +25,12 @@ import org.testng.annotations.Test;
  */
 public class ThreeSum_FastTest {
 
-    private ThreeSum_Slow threeSum;
+    private ThreeSum_Fast threeSum;
 
     @BeforeClass
     public void setUp() {
 
-        threeSum = new ThreeSum_Slow();
+        threeSum = new ThreeSum_Fast();
     }
 
 
@@ -73,7 +73,7 @@ public class ThreeSum_FastTest {
 
         List<List<Integer>> lists = threeSum.threeSum( new int[] { -1, 0, 1, 2, -1, -4 } );
         String visualRepresentation = createVisualRepresentation( lists );
-        Assert.assertEquals( visualRepresentation, "[[-1,0,1],[-1,-1,2]]" );
+        Assert.assertEquals( visualRepresentation, "[[-1,-1,2],[-1,0,1]]" );
     }
 
 
@@ -92,5 +92,23 @@ public class ThreeSum_FastTest {
         List<List<Integer>> lists = threeSum.threeSum( new int[] { 0 } );
         String visualRepresentation = createVisualRepresentation( lists );
         Assert.assertEquals( visualRepresentation, "[]" );
+    }
+
+
+    @Test
+    public void threeSumTest_4() {
+
+        List<List<Integer>> lists = threeSum.threeSum( new int[] { 0, 0, 0, 0 } );
+        String visualRepresentation = createVisualRepresentation( lists );
+        Assert.assertEquals( visualRepresentation, "[[0,0,0]]" );
+    }
+
+
+    @Test
+    public void threeSumTest_5() {
+
+        List<List<Integer>> lists = threeSum.threeSum( new int[] { -2, 0, 1, 1, 2 } );
+        String visualRepresentation = createVisualRepresentation( lists );
+        Assert.assertEquals( visualRepresentation, "[[-2,0,2],[-2,1,1]]" );
     }
 }
