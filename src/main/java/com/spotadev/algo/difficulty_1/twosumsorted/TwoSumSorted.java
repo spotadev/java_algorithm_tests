@@ -16,6 +16,12 @@ package com.spotadev.algo.difficulty_1.twosumsorted;
 /**
  * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
  * 
+ *     Runtime: 3 ms, faster than 30.22% of Java online submissions for 
+ *     Two Sum II - Input Array Is Sorted.
+ *     
+ *     Memory Usage: 49.7 MB, less than 62.77% of Java online submissions for 
+ *     Two Sum II - Input Array Is Sorted.
+ * 
  * Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, 
  * find two numbers such that they add up to a specific target number. Let these two numbers be 
  * numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
@@ -54,21 +60,44 @@ package com.spotadev.algo.difficulty_1.twosumsorted;
  *     -1000 <= target <= 1000
  *     The tests are generated such that there is exactly one solution.
  *     
- * Note this problem introduces the concept that you can can move from O(n2) to O(n) with 
- * combinations by sorting a list first and using left and right pointers for generating 
- * combinations that depend on the data.
+ * JD Note: 
  * 
- * Knowledge of this solution is required to convert Three Sum problem from O(n3) to O(n2)
- * See:
+ *    This problem introduces the concept that you can can move from O(n2) to O(n) with 
+ *    combinations by sorting a list first and using left and right pointers for generating 
+ *    combinations that depend on the data.
  * 
- *     
+ *    Knowledge of this solution is required to convert Three Sum problem from O(n3) to O(n2)
+ *    See:
+ * 
+ *       https://leetcode.com/problems/3sum/
+ *       com.spotadev.algo.difficulty_1.threesum.ThreeSum_Fast
  * 
  * @author John Dickerson - 16 Apr 2022
  */
 public class TwoSumSorted {
 
-    // @Todo
-    public int[] twoSum( int[] nums, int target ) {
+    public int[] twoSum( int[] numbers, int target ) {
+
+        int leftIndex = 0;
+        int rightIndex = numbers.length - 1;
+
+        while ( leftIndex < rightIndex ) {
+
+            int sum = numbers[leftIndex] + numbers[rightIndex];
+
+            if ( sum > target ) {
+
+                rightIndex--;
+            }
+            else if ( sum < target ) {
+
+                leftIndex++;
+            }
+            else {
+
+                return new int[] { ++leftIndex, ++rightIndex };
+            }
+        }
 
         return new int[] {};
     }
