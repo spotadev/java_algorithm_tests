@@ -113,9 +113,13 @@ Let us learn this stepwise
     (iii) Get sum of 3 element combination WITH pre sorting.
       
           https://leetcode.com/problems/3sum/
-          com.spotadev.algo.difficulty_1.threesum.ThreeSum
+          com.spotadev.algo.difficulty_1.threesum.ThreeSum_Fast
           
           In this solution we sort the array before commencing. We use left and right pointers.
           
           We reduce performance from O(n^3) solution to O( n log n + log^2)
+          
+          Note the slow solution has O(n^3):
+          
+              com.spotadev.algo.difficulty_1.threesum.ThreeSum_Slow
 

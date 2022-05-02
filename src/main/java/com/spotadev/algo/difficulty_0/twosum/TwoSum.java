@@ -14,7 +14,7 @@
 package com.spotadev.algo.difficulty_0.twosum;
 
 /**
- * https://leetcode.com/problems/two-sum/submissions/
+ * https://leetcode.com/problems/two-sum/
  * 
  *     Runtime: 84 ms, faster than 21.12% of Java online submissions for Two Sum.
  *     Memory Usage: 42.2 MB, less than 93.00% of Java online submissions for Two Sum.
