@@ -18,11 +18,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * https://leetcode.com/problems/valid-palindrome/
  * 
- * Short and slow solution
- * 
- *     Runtime: 930 ms, faster than 10.25% of Java online submissions for Valid Palindrome.
- *     Memory Usage: 45.8 MB, less than 26.62% of Java online submissions for Valid Palindrome.
- * 
  * Optimised Solution
  * 
  *     Runtime: 5 ms, faster than 65.46% of Java online submissions for Valid Palindrome.
@@ -60,39 +55,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 
  * @author John Dickerson - 2 May 2022
  */
-public class ValidPalindrome {
-
-    // =============================================================================================
-    //  Short and slow solution below - it was very easy and quick to implement, but is on the 
-    //  slow side
-
-    //    public boolean isPalindrome( String s ) {
-    //
-    //        s = s.replaceAll( "[^a-zA-Z0-9]", "" );
-    //        s = s.toLowerCase();
-    //
-    //        if ( s.equals( "" ) ) {
-    //
-    //            return true;
-    //        }
-    //
-    //        int length = s.length();
-    //        int midway = length / 2;
-    //        int y = length - 1;
-    //        char[] chars = s.toCharArray();
-    //
-    //        for ( int i = 0; i < midway; i++ ) {
-    //
-    //            if ( chars[i] != chars[y] ) {
-    //
-    //                return false;
-    //            }
-    //
-    //            y--;
-    //        }
-    //
-    //        return true;
-    //    }
+public class ValidPalindrome_Fast {
 
     // =============================================================================================
     //  Optimised Solution Below ===================================================================

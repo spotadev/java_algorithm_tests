@@ -20,14 +20,14 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 2 May 2022
  */
-public class ValidPalindromeTest {
+public class ValidPalindrome_SlowTest {
 
-    private ValidPalindrome validPalindrome;
+    private ValidPalindrome_Slow validPalindrome;
 
     @BeforeClass
     public void setUp() {
 
-        validPalindrome = new ValidPalindrome();
+        validPalindrome = new ValidPalindrome_Slow();
     }
 
 
