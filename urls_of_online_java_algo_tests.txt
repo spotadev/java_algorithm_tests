@@ -2,7 +2,20 @@
 java_algorithm_tests/urls_of_online_java_algo_tests.txt
 ====================================================================================================
 
-https://www.baeldung.com/cs/category/algorithms
+Best:
 
-https://www.google.com/search?q=java+interview+algorithm+questions
+    https://neetcode.io/
+    
+    https://leetcode.com/
+    
+    http://hackerrank.com/
 
+Others:
+
+    https://www.baeldung.com/cs/category/algorithms
+    
+    https://www.google.com/search?q=java+interview+algorithm+questions
+    
+    http://lintcode.com/
+
+    https://projecteuler.net/archives
