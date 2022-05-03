@@ -6,6 +6,10 @@ Best:
 
     https://neetcode.io/
     
+        Note there is a youtube channel of all blind 75 solutions:
+        
+             https://www.youtube.com/watch?v=KLlXCFG5TnA&list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf
+    
     https://leetcode.com/
     
     http://hackerrank.com/
@@ -19,3 +23,5 @@ Others:
     http://lintcode.com/
 
     https://projecteuler.net/archives
+    
+    https://www.code-recipe.com/
