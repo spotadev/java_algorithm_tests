@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.FAILING.difficulty_0.sqrt;
+package com.spotadev.algo.difficulty_0.sqrt;
 
 /**
  * Given a non-negative integer x, compute and return the square root of x.

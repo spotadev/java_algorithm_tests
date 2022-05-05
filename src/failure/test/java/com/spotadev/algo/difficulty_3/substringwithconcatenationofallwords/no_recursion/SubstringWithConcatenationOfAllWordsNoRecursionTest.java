@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.recursive;
+package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.no_recursion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,24 +22,26 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.no_recursion.SubstringWithConcatenationOfAllWordsNoRecursion;
+
 /**
  * https://leetcode.com/problems/substring-with-concatenation-of-all-words/
  * 
  * 
  * @author John Dickerson - 9 Feb 2022
  */
-public class SubstringWithConcatenationOfAllWordsRecursiveTest {
+public class SubstringWithConcatenationOfAllWordsNoRecursionTest {
 
     public Logger logger =
-            LoggerFactory.getLogger( SubstringWithConcatenationOfAllWordsRecursiveTest.class );
+            LoggerFactory.getLogger( SubstringWithConcatenationOfAllWordsNoRecursionTest.class );
 
-    private SubstringWithConcatenationOfAllWordsRecursive substringWithConcatenationOfAllWordsRecursive;
+    private SubstringWithConcatenationOfAllWordsNoRecursion substringWithConcatenationOfAllWordsNoRecursion;
 
     @BeforeClass
     public void setUp() {
 
-        substringWithConcatenationOfAllWordsRecursive =
-                new SubstringWithConcatenationOfAllWordsRecursive();
+        substringWithConcatenationOfAllWordsNoRecursion =
+                new SubstringWithConcatenationOfAllWordsNoRecursion();
     }
 
 
@@ -48,7 +50,7 @@ public class SubstringWithConcatenationOfAllWordsRecursiveTest {
 
         String[] words = { "foo", "bar" };
         String s = "barfoothefoobarman";
-        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s,
+        List<Integer> indexes = substringWithConcatenationOfAllWordsNoRecursion.findSubstring( s,
                 words );
         List<Integer> expectedIndexes = new ArrayList<>();
         expectedIndexes.add( 0 );
@@ -64,7 +66,7 @@ public class SubstringWithConcatenationOfAllWordsRecursiveTest {
 
         String[] words = { "word", "good", "best", "word" };
         String s = "wordgoodgoodgoodbestword";
-        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s,
+        List<Integer> indexes = substringWithConcatenationOfAllWordsNoRecursion.findSubstring( s,
                 words );
         List<Integer> expectedIndexes = new ArrayList<>();
         logger.info( "indexes = " + indexes );
@@ -78,8 +80,9 @@ public class SubstringWithConcatenationOfAllWordsRecursiveTest {
 
         String[] words = { "foo", "bar" };
         String s = "foobarfoobar";
-        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s,
-                words );
+
+        List<Integer> indexes =
+                substringWithConcatenationOfAllWordsNoRecursion.findSubstring( s, words );
         List<Integer> expectedIndexes = new ArrayList<>();
         expectedIndexes.add( 0 );
         expectedIndexes.add( 3 );
@@ -95,11 +98,15 @@ public class SubstringWithConcatenationOfAllWordsRecursiveTest {
 
         String[] words = { "a", "a" };
         String s = "aaa";
-        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s,
-                words );
+
+        List<Integer> indexes =
+                substringWithConcatenationOfAllWordsNoRecursion.findSubstring( s, words );
+
         List<Integer> expectedIndexes = new ArrayList<>();
         expectedIndexes.add( 0 );
         expectedIndexes.add( 1 );
+        logger.info( "indexes = " + indexes );
+        logger.info( "expectedIndexes = " + expectedIndexes );
         Assert.assertEquals( indexes, expectedIndexes );
     }
 
@@ -165,7 +172,7 @@ public class SubstringWithConcatenationOfAllWordsRecursiveTest {
                         "kelwuqsgkyoekaroptuvekfvmtxtqshcwsztkrzwrpabqrrhnlerxjojemcxel";
 
         Long nanoStart = System.nanoTime();
-        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s,
+        List<Integer> indexes = substringWithConcatenationOfAllWordsNoRecursion.findSubstring( s,
                 words );
         Long nanoEnd = System.nanoTime();
 
@@ -561,7 +568,7 @@ public class SubstringWithConcatenationOfAllWordsRecursiveTest {
         logger.info( "number words = " + words.length );
 
         Long nanoStart = System.nanoTime();
-        List<Integer> indexes = substringWithConcatenationOfAllWordsRecursive.findSubstring( s,
+        List<Integer> indexes = substringWithConcatenationOfAllWordsNoRecursion.findSubstring( s,
                 words );
         Long nanoEnd = System.nanoTime();
 

@@ -11,13 +11,13 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.FAILING.difficulty_0.sqrt;
+package com.spotadev.algo.difficulty_0.sqrt;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.FAILING.difficulty_0.sqrt.Sqrt;
+import com.spotadev.algo.difficulty_0.sqrt.Sqrt;
 
 /**
  * @author John Dickerson - 21 Apr 2022

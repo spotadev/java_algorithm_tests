@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.no_recursion;
+package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.no_recursion;
 
 import java.util.List;
 

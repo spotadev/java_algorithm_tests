@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.inefficient;
+package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.inefficient;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

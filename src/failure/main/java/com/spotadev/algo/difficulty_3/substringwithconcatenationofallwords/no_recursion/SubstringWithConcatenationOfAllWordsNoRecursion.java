@@ -11,9 +11,11 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.FAILING.difficulty_3.substringwithconcatenationofallwords.recursive;
+package com.spotadev.algo.difficulty_3.substringwithconcatenationofallwords.no_recursion;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +24,7 @@ import java.util.TreeSet;
 
 /**
  * 
- * NOTE this solution is FAILING the last test case with all the a's in them.
+ * NOTE: Not all test cases are passing.
  * 
  * OVERVIEW:
  * 
@@ -59,14 +61,6 @@ import java.util.TreeSet;
  *             
  *             (iii) This means we do not have to try all possible combinations.  We can also do
  *                   some optimisations like group words by what letter they start with etc.
- *                   
- *     Problem with this solution:
- *     
- *         It used recursion so when given a massive data set it threw java.lang.StackOverflowError
- *         
- *         See SubstringWithConcatenationOfAllWords.findSubstringTest_scenario_4() for test that 
- *         threw StackOverflowError.    Note that on leetcode.com it passed 174 tests before failing
- *         the 175th test.  All in all there are 176 tests.
  * 
  * QUESTION:
  * 
@@ -136,12 +130,14 @@ import java.util.TreeSet;
  *
  * @author John Dickerson - 7 Feb 2022
  */
-public class SubstringWithConcatenationOfAllWordsRecursive {
+public class SubstringWithConcatenationOfAllWordsNoRecursion {
 
     // Key   = first letter of word
     // Value = list of words which start with that letter
     private Map<String, SortedSet<String>> dictionary = new HashMap<>();
     private List<String> allWords = new ArrayList<>();
+    private SortedSet<Integer> indexesOfMatches = new TreeSet<>();
+    private Deque<Job> jobs = new ArrayDeque<>();
 
     private void populateWordsByStartingLetter( String[] words ) {
 
@@ -162,60 +158,46 @@ public class SubstringWithConcatenationOfAllWordsRecursive {
     }
 
 
-    private void callRecursively(
-            SortedSet<Integer> indexesOfMatches,
-            List<String> remainingWords, int startIndexIn, int currentIndexIn,
-            String matchedWord, String s ) {
+    private void startJobReading( String s, String[] words ) {
 
-        int startIndex = startIndexIn;
-        int currentIndex = currentIndexIn + matchedWord.length();
-        addIndexes( indexesOfMatches, remainingWords, startIndex, currentIndex, s );
-    }
+        while ( !jobs.isEmpty() ) {
 
+            Job job = jobs.pollFirst();
 
-    private void addIndexes(
-            SortedSet<Integer> indexesOfMatches,
-            List<String> remainingWordsIn,
-            int startIndex, int currentIndex, String s ) {
+            if ( job.currentIndex < ( s.length() - 1 ) ) {
 
-        if ( currentIndex > ( s.length() - 1 ) ) {
+                Character letterChar = s.charAt( job.currentIndex );
+                SortedSet<String> dictionaryWords = dictionary.get( letterChar.toString() );
 
-            return;
-        }
+                if ( dictionaryWords != null ) {
 
-        Character letterChar = s.charAt( currentIndex );
-        SortedSet<String> words = dictionary.get( letterChar.toString() );
+                    for ( String dictionaryWord : dictionaryWords ) {
 
-        if ( words != null ) {
+                        List<String> remainingWords = job.remainingWords;
+                        int endIndex = job.currentIndex + dictionaryWord.length();
 
-            // check if we match on a word 
-            for ( String word : words ) {
+                        if ( endIndex < ( s.length() + 1 ) ) {
 
-                List<String> remainingWords = new ArrayList<>( remainingWordsIn );
+                            String match = s.substring( job.currentIndex, endIndex );
 
-                int endIndex = currentIndex + word.length();
+                            if ( dictionaryWord.equals( match ) && remainingWords.contains(
+                                    dictionaryWord ) ) {
 
-                if ( endIndex < ( s.length() + 1 ) ) {
+                                remainingWords.remove( dictionaryWord );
 
-                    String match = s.substring( currentIndex, endIndex );
+                                if ( remainingWords.size() == 0 ) {
 
-                    if ( word.equals( match ) && remainingWords.contains( word ) ) {
+                                    indexesOfMatches.add( job.startIndex );
+                                    System.out.println( "found match at index: " + job.startIndex );
+                                }
+                                else {
+                                    int startIndex = job.startIndex;
+                                    int currentIndex = job.currentIndex + dictionaryWord.length();
 
-                        remainingWords.remove( word );
-
-                        if ( remainingWords.size() == 0 ) {
-
-                            indexesOfMatches.add( startIndex );
-                        }
-                        else {
-
-                            callRecursively(
-                                    indexesOfMatches,
-                                    remainingWords,
-                                    startIndex,
-                                    currentIndex,
-                                    word,
-                                    s );
+                                    jobs.addFirst(
+                                            new Job( remainingWords, startIndex, currentIndex ) );
+                                }
+                            }
                         }
                     }
                 }
@@ -226,7 +208,6 @@ public class SubstringWithConcatenationOfAllWordsRecursive {
 
     public List<Integer> findSubstring( String s, String[] words ) {
 
-        SortedSet<Integer> indexesOfMatches = new TreeSet<>();
         populateWordsByStartingLetter( words );
 
         // Start from left and progress to right.  For each letter check if we have a word in the
@@ -236,7 +217,10 @@ public class SubstringWithConcatenationOfAllWordsRecursive {
         for ( int i = 0; i < s.length(); i++ ) {
 
             List<String> remainingWords = new ArrayList<>( allWords );
-            addIndexes( indexesOfMatches, remainingWords, i, i, s );
+
+            jobs.addLast( new Job( remainingWords, i, i ) );
+
+            startJobReading( s, words );
         }
 
         return new ArrayList<>( indexesOfMatches );
