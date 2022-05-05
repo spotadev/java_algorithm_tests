@@ -17,7 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.difficulty_1.twosumsorted.TwoSumSorted;
+import com.spotadev.algo.blind75.twopointers.medium.twosumsorted.TwoSumSorted;
 
 /**
  * @author John Dickerson - 2 May 2022

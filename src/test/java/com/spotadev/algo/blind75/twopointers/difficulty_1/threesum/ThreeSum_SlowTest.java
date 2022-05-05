@@ -20,7 +20,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.difficulty_1.threesum.ThreeSum_Slow;
+import com.spotadev.algo.blind75.twopointers.medium.threesum.ThreeSum_Slow;
 
 /**
  * @author John Dickerson - 2 May 2022

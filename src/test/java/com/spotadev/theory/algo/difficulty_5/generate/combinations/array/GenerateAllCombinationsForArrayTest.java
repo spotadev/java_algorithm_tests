@@ -18,6 +18,8 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.spotadev.algo.theory.generate.combinations.array.GenerateAllCombinationsForArray;
+
 /**
  * @author John Dickerson - 5 Apr 2022
  */

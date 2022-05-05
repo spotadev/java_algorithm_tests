@@ -17,7 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.difficulty_1.containerwithmostwater.ContainerWithMostWater;
+import com.spotadev.algo.blind75.twopointers.medium.containerwithmostwater.ContainerWithMostWater;
 
 /**
  * @author John Dickerson - 3 May 2022
