@@ -17,8 +17,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.binarysearch.medium.searchinrotatedsortedarray.SearchInRotatedSortedArray;
-
 /**
  * @author John Dickerson - 5 May 2022
  */
@@ -53,6 +51,14 @@ public class SearchInRotatedSortedArrayTest {
     public void searchTest_3() {
 
         int result = searchInRotatedSortedArray.search( new int[] { 1 }, 0 );
+        Assert.assertEquals( result, -1 );
+    }
+
+
+    @Test
+    public void searchTest_4() {
+
+        int result = searchInRotatedSortedArray.search( new int[] { 5, 1, 3 }, 2 );
         Assert.assertEquals( result, -1 );
     }
 }

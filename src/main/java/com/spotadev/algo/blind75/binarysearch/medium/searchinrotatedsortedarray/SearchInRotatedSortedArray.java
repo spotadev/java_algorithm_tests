@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.binarysearch.medium.searchinrotatedsortedarray
 /**
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
  * 
+ *     Runtime: 1 ms, faster than 61.49% of Java online submissions for Search in Rotated Sorted Array.
+ *     Memory Usage: 42.4 MB, less than 57.41% of Java online submissions for Search in Rotated Sorted Array.
+ * 
  * There is an integer array nums sorted in ascending order (with distinct values).
  * 
  * Prior to being passed to your function, nums is possibly rotated at an unknown pivot 
@@ -57,6 +60,36 @@ public class SearchInRotatedSortedArray {
 
     public int search( int[] nums, int target ) {
 
+        int left = 0;
+        int right = nums.length - 1;
+
+        while ( left <= right ) {
+            int mid = ( left + right ) / 2;
+            if ( nums[mid] == target ) {
+                return mid;
+            }
+
+            // Search in left portion
+            if ( nums[left] <= nums[mid] ) {
+                if ( target > nums[mid] || target < nums[left] ) {
+                    left = mid + 1;
+                }
+                else {
+                    right = mid - 1;
+                }
+            }
+            // Search in right portion
+            else {
+                if ( target > nums[right] || target < nums[mid] ) {
+                    // go to left
+                    right = mid - 1;
+                }
+                else {
+                    left = mid + 1;
+                }
+
+            }
+        }
         return -1;
     }
 }
