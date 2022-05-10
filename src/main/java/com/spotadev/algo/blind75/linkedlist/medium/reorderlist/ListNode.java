@@ -11,30 +11,37 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.easy.mergetwolists;
+package com.spotadev.algo.blind75.linkedlist.medium.reorderlist;
 
 /**
- * @author John Dickerson - 18 Apr 2022
+ * @author John Dickerson - 6 May 2022
  */
 public class ListNode {
 
-    public int val;
-    public ListNode next;
+    int val;
+    ListNode next;
 
-    public ListNode() {
+    ListNode() {
 
     }
 
 
-    public ListNode( int val ) {
+    ListNode( int val ) {
 
         this.val = val;
     }
 
 
-    public ListNode( int val, ListNode next ) {
+    ListNode( int val, ListNode next ) {
 
         this.val = val;
         this.next = next;
+    }
+
+
+    @Override
+    public String toString() {
+
+        return "ListNode [val=" + val + "]";
     }
 }

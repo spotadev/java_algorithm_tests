@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.easy.mergetwolists;
+package com.spotadev.algo.blind75.linkedlist.easy.mergetwolists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,6 @@ import java.util.List;
 import org.junit.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.easy.mergetwolists.ListNode;
-import com.spotadev.algo.easy.mergetwolists.MergeTwoLists;
 
 /**
  * @author John Dickerson - 17 Apr 2022

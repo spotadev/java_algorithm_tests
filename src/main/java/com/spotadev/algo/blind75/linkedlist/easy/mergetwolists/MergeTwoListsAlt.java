@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.easy.mergetwolists;
+package com.spotadev.algo.blind75.linkedlist.easy.mergetwolists;
 
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists
@@ -50,7 +50,7 @@ package com.spotadev.algo.easy.mergetwolists;
  * 
  * @author John Dickerson - 17 Apr 2022
  */
-public class MergeTwoLists {
+public class MergeTwoListsAlt {
 
     public ListNode mergeTwoLists( ListNode list1, ListNode list2 ) {
 
