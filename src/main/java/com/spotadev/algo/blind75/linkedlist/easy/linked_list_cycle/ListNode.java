@@ -11,50 +11,30 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.hard.merge_k_sorted_lists;
+package com.spotadev.algo.blind75.linkedlist.easy.linked_list_cycle;
 
 /**
- * @author John Dickerson - 5 Feb 2022
+ * @author John Dickerson - 18 Apr 2022
  */
 public class ListNode {
 
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode() {
+    public ListNode() {
 
     }
 
 
-    ListNode( int val ) {
+    public ListNode( int val ) {
 
         this.val = val;
     }
 
 
-    ListNode( int val, ListNode next ) {
+    public ListNode( int val, ListNode next ) {
 
         this.val = val;
         this.next = next;
-    }
-
-
-    @Override
-    public String toString() {
-
-        StringBuilder sb = new StringBuilder();
-        sb.append( val );
-
-        if ( next != null ) {
-
-            sb.append( ", " );
-
-            if ( next != null ) {
-
-                sb.append( next.toString() );
-            }
-        }
-
-        return sb.toString();
     }
 }

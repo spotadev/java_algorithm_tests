@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.hard.merge_k_sorted_lists;
+package com.spotadev.algo.blind75.linkedlist.hard.merge_k_sorted_lists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,6 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.hard.merge_k_sorted_lists.ListNode;
-import com.spotadev.algo.hard.merge_k_sorted_lists.MergeKSortedLists;
 
 /**
  * @author John Dickerson - 6 Feb 2022

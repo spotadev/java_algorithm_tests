@@ -11,12 +11,13 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.hard.merge_k_sorted_lists;
+package com.spotadev.algo.blind75.linkedlist.hard.merge_k_sorted_lists;
 
 /**
- * Taken from:
- * 
- *      https://leetcode.com/problems/merge-k-sorted-lists/
+ * https://leetcode.com/problems/merge-k-sorted-lists/
+ *      
+ *      Runtime: 352 ms, faster than 6.75% of Java online submissions for Merge k Sorted Lists.
+ *      Memory Usage: 47.1 MB, less than 56.21% of Java online submissions for Merge k Sorted Lists.     
  * 
  * This is the node class:
  * 
