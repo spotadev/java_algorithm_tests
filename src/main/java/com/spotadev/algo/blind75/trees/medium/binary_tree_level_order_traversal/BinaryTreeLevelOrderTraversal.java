@@ -11,37 +11,42 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
+package com.spotadev.algo.blind75.trees.medium.binary_tree_level_order_traversal;
+
+import java.util.List;
 
 /**
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ * https://leetcode.com/problems/binary-tree-level-order-traversal/
  * 
- * Given the root of a binary tree, return its maximum depth.
- * 
- * A binary tree's maximum depth is the number of nodes along the longest path from the root 
- * node down to the farthest leaf node. 
+ * Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., 
+ * from left to right, level by level).
  * 
  * Example 1:
  * 
  *     Input: root = [3,9,20,null,null,15,7]
- *     Output: 3
+ *     Output: [[3],[9,20],[15,7]]
  * 
  * Example 2:
  * 
- *     Input: root = [1,null,2]
- *     Output: 2
+ *     Input: root = [1]
+ *     Output: [[1]]
  * 
+ * Example 3:
+ * 
+ *     Input: root = []
+ *     Output: []
+ *  
  * Constraints:
  * 
- *     The number of nodes in the tree is in the range [0, 104].
- *     -100 <= Node.val <= 100
+ *     The number of nodes in the tree is in the range [0, 2000].
+ *     -1000 <= Node.val <= 1000
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class MaximumDepthOfBinaryTree {
+public class BinaryTreeLevelOrderTraversal {
 
-    public int maxDepth( TreeNode root ) {
+    public List<List<Integer>> levelOrder( TreeNode root ) {
 
-        return -1;
+        return null;
     }
 }

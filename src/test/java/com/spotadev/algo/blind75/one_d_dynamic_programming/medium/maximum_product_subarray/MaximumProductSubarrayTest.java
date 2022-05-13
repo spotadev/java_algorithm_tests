@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.maximum_product_subarray;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class MaximumProductSubarrayTest {
 
-    private ImplementTrie implementTrie;
+    private MaximumProductSubarray maximumProductSubarray;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        maximumProductSubarray = new MaximumProductSubarray();
     }
 
 
     @Test
-    public void testingTest() {
+    public void maxProductTest() {
 
+        int[] nums = {};
+        int max = maximumProductSubarray.maxProduct( nums );
     }
 }

@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.medium.construct_binary_tree_from_preorder_and_inorder_traversal;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,25 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class ConstructBinaryTreeFromPreorderAndInorderTraversalTest {
 
-    private ImplementTrie implementTrie;
+    private ConstructBinaryTreeFromPreorderAndInorderTraversal constructBinaryTreeFromPreorderAndInorderTraversal;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        constructBinaryTreeFromPreorderAndInorderTraversal =
+                new ConstructBinaryTreeFromPreorderAndInorderTraversal();
     }
 
 
     @Test
-    public void testingTest() {
+    public void buildTreeTest() {
 
+        int[] preorder = new int[] {};
+        int[] inorder = new int[] {};
+
+        TreeNode node =
+                constructBinaryTreeFromPreorderAndInorderTraversal.buildTree( preorder, inorder );
     }
 }

@@ -11,7 +11,9 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.backtracking.medium.combination_sum;
+
+import java.util.List;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +21,22 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class CombinationSumTest {
 
-    private ImplementTrie implementTrie;
+    private CombinationSum combinationSum;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        combinationSum = new CombinationSum();
     }
 
 
     @Test
-    public void testingTest() {
+    public void combinationSumTest() {
 
+        int[] candidates = new int[] {};
+        int target = -1;
+        List<List<Integer>> sum = combinationSum.combinationSum( candidates, 0 );
     }
 }

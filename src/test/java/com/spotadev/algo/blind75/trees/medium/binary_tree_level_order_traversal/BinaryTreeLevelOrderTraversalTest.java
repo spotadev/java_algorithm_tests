@@ -11,27 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.medium.binary_tree_level_order_traversal;
+
+import java.util.List;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
+ * 
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class BinaryTreeLevelOrderTraversalTest {
 
-    private ImplementTrie implementTrie;
+    private BinaryTreeLevelOrderTraversal binaryTreeLevelOrderTraversal;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        binaryTreeLevelOrderTraversal = new BinaryTreeLevelOrderTraversal();
     }
 
 
     @Test
-    public void testingTest() {
+    public void levelOrderTest() {
 
+        TreeNode root = null;
+        List<List<Integer>> levelOrder = binaryTreeLevelOrderTraversal.levelOrder( root );
     }
 }

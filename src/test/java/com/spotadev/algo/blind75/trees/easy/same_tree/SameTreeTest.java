@@ -11,27 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.easy.same_tree;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class SameTreeTest {
 
-    private ImplementTrie implementTrie;
+    private SameTree sameTree;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        sameTree = new SameTree();
     }
 
 
     @Test
-    public void testingTest() {
+    public void isSameTreeTest() {
 
+        TreeNode p = null;
+        TreeNode q = null;
+        boolean isSameTree = sameTree.isSameTree( p, q );
+        Assert.assertTrue( isSameTree );
     }
 }

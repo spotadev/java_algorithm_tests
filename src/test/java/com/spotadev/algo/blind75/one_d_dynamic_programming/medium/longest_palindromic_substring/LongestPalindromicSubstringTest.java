@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.longest_palindromic_substring;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class LongestPalindromicSubstringTest {
 
-    private ImplementTrie implementTrie;
+    private LongestPalindromicSubstring longestPalindromicSubstring;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        longestPalindromicSubstring = new LongestPalindromicSubstring();
     }
 
 
     @Test
-    public void testingTest() {
+    public void longestPalindromeTest() {
 
+        String s = null;
+        String result = longestPalindromicSubstring.longestPalindrome( null );
     }
 }

@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.graphs.medium.graph_valid_tree;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,22 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class GraphValidTreeTest {
 
-    private ImplementTrie implementTrie;
+    private GraphValidTree graphValidTree;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        graphValidTree = new GraphValidTree();
     }
 
 
     @Test
-    public void testingTest() {
+    public void validTreeTest() {
 
+        int n = -1;
+        int[][] edges = new int[][] {};
+        boolean validTree = graphValidTree.validTree( n, edges );
     }
 }

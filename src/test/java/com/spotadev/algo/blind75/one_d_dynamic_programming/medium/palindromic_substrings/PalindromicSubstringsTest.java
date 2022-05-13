@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.palindromic_substrings;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class PalindromicSubstringsTest {
 
-    private ImplementTrie implementTrie;
+    private PalindromicSubstrings palindromicSubstrings;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        palindromicSubstrings = new PalindromicSubstrings();
     }
 
 
     @Test
-    public void testingTest() {
+    public void countSubstringsTest() {
 
+        String s = null;
+        int count = palindromicSubstrings.countSubstrings( null );
     }
 }

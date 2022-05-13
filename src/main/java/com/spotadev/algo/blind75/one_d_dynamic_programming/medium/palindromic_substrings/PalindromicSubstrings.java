@@ -11,36 +11,39 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.palindromic_substrings;
 
 /**
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ * https://leetcode.com/problems/palindromic-substrings/
  * 
- * Given the root of a binary tree, return its maximum depth.
+ * Given a string s, return the number of palindromic substrings in it.
  * 
- * A binary tree's maximum depth is the number of nodes along the longest path from the root 
- * node down to the farthest leaf node. 
+ * A string is a palindrome when it reads the same backward as forward.
+ * 
+ * A substring is a contiguous sequence of characters within the string.
  * 
  * Example 1:
  * 
- *     Input: root = [3,9,20,null,null,15,7]
+ *     Input: s = "abc"
  *     Output: 3
+ *     Explanation: Three palindromic strings: "a", "b", "c".
  * 
  * Example 2:
  * 
- *     Input: root = [1,null,2]
- *     Output: 2
- * 
+ *     Input: s = "aaa"
+ *     Output: 6
+ *     Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+ *  
  * Constraints:
  * 
- *     The number of nodes in the tree is in the range [0, 104].
- *     -100 <= Node.val <= 100
+ *     1 <= s.length <= 1000
+ *     s consists of lowercase English letters.
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class MaximumDepthOfBinaryTree {
+public class PalindromicSubstrings {
 
-    public int maxDepth( TreeNode root ) {
+    public int countSubstrings( String s ) {
 
         return -1;
     }

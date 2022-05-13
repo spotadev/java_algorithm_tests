@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.easy.lowest_common_ancestor_of_a_binary_search_tree;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,25 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class LowestCommonAncestorOfABinarySearchTreeTest {
 
-    private ImplementTrie implementTrie;
+    private LowestCommonAncestorOfABinarySearchTree lowestCommonAncestorOfABinarySearchTree;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        lowestCommonAncestorOfABinarySearchTree = new LowestCommonAncestorOfABinarySearchTree();
     }
 
 
     @Test
-    public void testingTest() {
+    public void lowestCommonAncestorTest() {
 
+        TreeNode root = null;
+        TreeNode p = null;
+        TreeNode q = null;
+
+        TreeNode lowestCommonAncestor =
+                lowestCommonAncestorOfABinarySearchTree.lowestCommonAncestor( root, p, q );
     }
 }

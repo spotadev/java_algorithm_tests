@@ -11,37 +11,39 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
+package com.spotadev.algo.blind75.trees.easy.invert_binary_tree;
 
 /**
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ * https://leetcode.com/problems/invert-binary-tree/
  * 
- * Given the root of a binary tree, return its maximum depth.
- * 
- * A binary tree's maximum depth is the number of nodes along the longest path from the root 
- * node down to the farthest leaf node. 
+ * Given the root of a binary tree, invert the tree, and return its root.
  * 
  * Example 1:
  * 
- *     Input: root = [3,9,20,null,null,15,7]
- *     Output: 3
+ *     Input: root = [4,2,7,1,3,6,9]
+ *     Output: [4,7,2,9,6,3,1]
  * 
  * Example 2:
  * 
- *     Input: root = [1,null,2]
- *     Output: 2
+ *     Input: root = [2,1,3]
+ *     Output: [2,3,1]
+ * 
+ * Example 3:
+ * 
+ *     Input: root = []
+ *     Output: []
  * 
  * Constraints:
  * 
- *     The number of nodes in the tree is in the range [0, 104].
+ *     The number of nodes in the tree is in the range [0, 100].
  *     -100 <= Node.val <= 100
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class MaximumDepthOfBinaryTree {
+public class InvertBinaryTree {
 
-    public int maxDepth( TreeNode root ) {
+    public TreeNode invertTree( TreeNode root ) {
 
-        return -1;
+        return null;
     }
 }

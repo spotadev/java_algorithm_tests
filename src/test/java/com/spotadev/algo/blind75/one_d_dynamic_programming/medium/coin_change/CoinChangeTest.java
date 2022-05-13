@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.coin_change;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,22 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class CoinChangeTest {
 
-    private ImplementTrie implementTrie;
+    private CoinChange coinChange;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        coinChange = new CoinChange();
     }
 
 
     @Test
-    public void testingTest() {
+    public void coinChange() {
 
+        int[] coins = {};
+        int amount = -1;
+        int change = coinChange.coinChange( coins, amount );
     }
 }

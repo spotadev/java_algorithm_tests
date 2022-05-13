@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.easy.climbing_stairs;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class ClimbingStairsTest {
 
-    private ImplementTrie implementTrie;
+    private ClimbingStairs climbingStairs;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        climbingStairs = new ClimbingStairs();
     }
 
 
     @Test
-    public void testingTest() {
+    public void climbStairsTest() {
 
+        int n = -1;
+        int result = climbingStairs.climbStairs( 0 );
     }
 }

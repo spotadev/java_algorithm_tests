@@ -11,27 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.word_break;
+
+import java.util.List;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 14 May 2022
  */
-public class ImplementTrieTest {
+public class WordBreakTest {
 
-    private ImplementTrie implementTrie;
+    private WordBreak wordBreak;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        wordBreak = new WordBreak();
     }
 
 
     @Test
-    public void testingTest() {
+    public void wordBreakTest() {
 
+        String s = null;
+        List<String> wordDic = null;
+        boolean resuly = wordBreak.wordBreak( s, wordDic );
     }
 }

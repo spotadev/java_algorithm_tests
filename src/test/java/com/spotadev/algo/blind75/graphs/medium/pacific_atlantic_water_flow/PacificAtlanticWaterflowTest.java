@@ -11,7 +11,9 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.graphs.medium.pacific_atlantic_water_flow;
+
+import java.util.List;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +21,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class PacificAtlanticWaterflowTest {
 
-    private ImplementTrie implementTrie;
+    private PacificAtlanticWaterflow pacificAtlanticWaterflow;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        pacificAtlanticWaterflow = new PacificAtlanticWaterflow();
     }
 
 
     @Test
-    public void testingTest() {
+    public void pacificAtlanticTest() {
 
+        int[][] heights = new int[][] {};
+        List<List<Integer>> result = pacificAtlanticWaterflow.pacificAtlantic( heights );
     }
 }

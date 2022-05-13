@@ -11,27 +11,27 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.easy.invert_binary_tree;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class InvertBinaryTreeTest {
 
-    private ImplementTrie implementTrie;
+    private InvertBinaryTree invertBinaryTree;
 
-    @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        invertBinaryTree = new InvertBinaryTree();
     }
 
 
     @Test
-    public void testingTest() {
+    public void invertTreeTree() {
 
+        TreeNode node = null;
+        TreeNode result = invertBinaryTree.invertTree( node );
     }
 }

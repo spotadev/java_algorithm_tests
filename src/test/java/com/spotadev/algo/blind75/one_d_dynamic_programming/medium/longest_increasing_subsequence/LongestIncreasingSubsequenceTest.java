@@ -11,27 +11,29 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.longest_increasing_subsequence;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 14 May 2022
  */
-public class ImplementTrieTest {
+public class LongestIncreasingSubsequenceTest {
 
-    private ImplementTrie implementTrie;
+    private LongestIncreasingSubsequence longestIncreasingSubsequence;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        longestIncreasingSubsequence = new LongestIncreasingSubsequence();
     }
 
 
     @Test
-    public void testingTest() {
+    public void lengthOfLISTest() {
 
+        int[] nums = new int[] {};
+        int length = longestIncreasingSubsequence.lengthOfLIS( nums );
     }
 }

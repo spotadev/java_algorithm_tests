@@ -13,9 +13,29 @@
 */
 package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
 
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 /**
  * @author John Dickerson - 13 May 2022
  */
 public class MaximumDepthOfBinaryTreeTest {
 
+    private MaximumDepthOfBinaryTree maximumDepthOfBinaryTree;
+
+    @BeforeClass
+    public void setUp() {
+
+        maximumDepthOfBinaryTree = new MaximumDepthOfBinaryTree();
+    }
+
+
+    @Test
+    public void maxDepthTest() {
+
+        TreeNode node = null;
+        int maxDepth = maximumDepthOfBinaryTree.maxDepth( node );
+        Assert.assertEquals( maxDepth, 0 );
+    }
 }

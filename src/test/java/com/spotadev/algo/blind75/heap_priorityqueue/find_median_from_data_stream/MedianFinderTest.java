@@ -11,22 +11,24 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.heap_priorityqueue.find_median_from_data_stream;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.MedianFinder;
+
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class MedianFinderTest {
 
-    private ImplementTrie implementTrie;
+    private MedianFinder medianFinder;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        medianFinder = new MedianFinder();
     }
 
 

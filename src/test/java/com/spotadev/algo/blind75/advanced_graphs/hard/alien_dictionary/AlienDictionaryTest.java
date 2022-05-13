@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.advanced_graphs.hard.alien_dictionary;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class AlienDictionaryTest {
 
-    private ImplementTrie implementTrie;
+    private AlienDictionary alienDictionary;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        alienDictionary = new AlienDictionary();
     }
 
 
     @Test
-    public void testingTest() {
+    public void alienOrderTest() {
 
+        String[] words = new String[] {};
+        String result = alienDictionary.alienOrder( words );
     }
 }

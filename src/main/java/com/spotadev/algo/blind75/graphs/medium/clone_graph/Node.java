@@ -11,27 +11,36 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.graphs.medium.clone_graph;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class Node {
 
-    private ImplementTrie implementTrie;
+    public int val;
+    public List<Node> neighbors;
 
-    @BeforeClass
-    public void setUp() {
+    public Node() {
 
-        implementTrie = new ImplementTrie();
+        val = 0;
+        neighbors = new ArrayList<Node>();
     }
 
 
-    @Test
-    public void testingTest() {
+    public Node( int _val ) {
 
+        val = _val;
+        neighbors = new ArrayList<Node>();
+    }
+
+
+    public Node( int _val, ArrayList<Node> _neighbors ) {
+
+        val = _val;
+        neighbors = _neighbors;
     }
 }

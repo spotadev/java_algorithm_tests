@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.house_robber2;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class HouseRobber2Test {
 
-    private ImplementTrie implementTrie;
+    private HouseRobber2 houseRobber2;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        houseRobber2 = new HouseRobber2();
     }
 
 
     @Test
-    public void testingTest() {
+    public void robTest() {
 
+        int[] nums = {};
+        int results = houseRobber2.rob( nums );
     }
 }

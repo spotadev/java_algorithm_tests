@@ -11,27 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+package com.spotadev.algo.blind75.trees.easy.subtree_of_another_tree;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class TreeNode {
 
-    private ImplementTrie implementTrie;
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-    @BeforeClass
-    public void setUp() {
+    TreeNode() {
 
-        implementTrie = new ImplementTrie();
     }
 
 
-    @Test
-    public void testingTest() {
+    TreeNode( int val ) {
 
+        this.val = val;
+    }
+
+
+    TreeNode( int val, TreeNode left, TreeNode right ) {
+
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }

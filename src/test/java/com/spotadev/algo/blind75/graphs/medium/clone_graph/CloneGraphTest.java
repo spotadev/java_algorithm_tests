@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.graphs.medium.clone_graph;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class CloneGraphTest {
 
-    private ImplementTrie implementTrie;
+    private CloneGraph cloneGraph;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        cloneGraph = new CloneGraph();
     }
 
 
     @Test
-    public void testingTest() {
+    public void cloneGraphTest() {
 
+        Node node = null;
+        Node cloned = cloneGraph.cloneGraph( node );
     }
 }

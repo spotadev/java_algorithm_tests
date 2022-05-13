@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.serialize_and_deserialize_binary_tree;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,19 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class CodecTest {
 
-    private ImplementTrie implementTrie;
+    private Codec codec;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        codec = new Codec();
     }
 
 
     @Test
-    public void testingTest() {
+    public void serializeDeserializeTest() {
 
     }
 }

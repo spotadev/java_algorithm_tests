@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.tries.medium.design_add_and_search_words_data_structure;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,14 +19,14 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class WordDictionaryTest {
 
-    private ImplementTrie implementTrie;
+    private WordDictionary wordDictionary;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        wordDictionary = new WordDictionary();
     }
 
 

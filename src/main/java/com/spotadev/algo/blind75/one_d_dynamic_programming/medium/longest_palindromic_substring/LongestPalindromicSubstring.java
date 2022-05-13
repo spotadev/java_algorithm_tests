@@ -11,37 +11,35 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.longest_palindromic_substring;
 
 /**
- * https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ * https://leetcode.com/problems/longest-palindromic-substring/
  * 
- * Given the root of a binary tree, return its maximum depth.
- * 
- * A binary tree's maximum depth is the number of nodes along the longest path from the root 
- * node down to the farthest leaf node. 
+ * Given a string s, return the longest palindromic substring in s.
  * 
  * Example 1:
  * 
- *     Input: root = [3,9,20,null,null,15,7]
- *     Output: 3
+ *     Input: s = "babad"
+ *     Output: "bab"
+ *     Explanation: "aba" is also a valid answer.
  * 
  * Example 2:
  * 
- *     Input: root = [1,null,2]
- *     Output: 2
+ *     Input: s = "cbbd"
+ *     Output: "bb"
  * 
  * Constraints:
  * 
- *     The number of nodes in the tree is in the range [0, 104].
- *     -100 <= Node.val <= 100
+ *     1 <= s.length <= 1000
+ *     s consist of only digits and English letters.
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class MaximumDepthOfBinaryTree {
+public class LongestPalindromicSubstring {
 
-    public int maxDepth( TreeNode root ) {
+    public String longestPalindrome( String s ) {
 
-        return -1;
+        return null;
     }
 }

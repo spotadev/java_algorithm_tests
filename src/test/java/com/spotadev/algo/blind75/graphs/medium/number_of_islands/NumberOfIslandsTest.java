@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.graphs.medium.number_of_islands;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class NumberOfIslandsTest {
 
-    private ImplementTrie implementTrie;
+    private NumberOfIslands numberOfIslands;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        numberOfIslands = new NumberOfIslands();
     }
 
 
     @Test
-    public void testingTest() {
+    public void numIslandsTest() {
 
+        char[][] grid = new char[][] {};
+        int numIsIslands = numberOfIslands.numIslands( grid );
     }
 }

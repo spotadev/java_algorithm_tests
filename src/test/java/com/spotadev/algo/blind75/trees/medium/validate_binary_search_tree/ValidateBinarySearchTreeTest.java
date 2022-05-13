@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.medium.validate_binary_search_tree;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,21 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class ValidateBinarySearchTreeTest {
 
-    private ImplementTrie implementTrie;
+    private ValidateBinarySearchTree validateBinarySearchTree;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        validateBinarySearchTree = new ValidateBinarySearchTree();
     }
 
 
     @Test
-    public void testingTest() {
+    public void isValidBSTTest() {
 
+        TreeNode root = null;
+        boolean valid = validateBinarySearchTree.isValidBST( root );
     }
 }

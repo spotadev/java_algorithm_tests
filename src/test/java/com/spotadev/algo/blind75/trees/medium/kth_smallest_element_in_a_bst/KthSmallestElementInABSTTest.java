@@ -11,27 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.medium.kth_smallest_element_in_a_bst;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class KthSmallestElementInABSTTest {
 
-    private ImplementTrie implementTrie;
+    private KthSmallestElementInABST kthSmallestElementInABST;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        kthSmallestElementInABST = new KthSmallestElementInABST();
     }
 
 
     @Test
-    public void testingTest() {
+    public void kthSmallest() {
+
+        TreeNode root = null;
+        int smallest = kthSmallestElementInABST.kthSmallest( root, 0 );
+        Assert.assertEquals( smallest, 0 );
 
     }
 }

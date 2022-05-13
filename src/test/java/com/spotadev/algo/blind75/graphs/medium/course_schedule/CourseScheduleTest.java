@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.graphs.medium.course_schedule;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,22 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class CourseScheduleTest {
 
-    private ImplementTrie implementTrie;
+    private CourseSchedule courseSchedule;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        courseSchedule = new CourseSchedule();
     }
 
 
     @Test
-    public void testingTest() {
+    public void canFinishTest() {
 
+        int numCourses = -1;
+        int[][] prerequisites = new int[][] {};
+        boolean canFinish = courseSchedule.canFinish( numCourses, prerequisites );
     }
 }

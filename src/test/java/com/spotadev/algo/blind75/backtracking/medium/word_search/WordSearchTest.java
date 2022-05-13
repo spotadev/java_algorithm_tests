@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.backtracking.medium.word_search;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,19 +19,22 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class WordSearchTest {
 
-    private ImplementTrie implementTrie;
+    private WordSearch wordSearch;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        wordSearch = new WordSearch();
     }
 
 
     @Test
-    public void testingTest() {
+    public void existTest() {
 
+        char[][] board = new char[][] {};
+        String word = null;
+        boolean exist = wordSearch.exist( board, word );
     }
 }

@@ -11,27 +11,30 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.two_d_dynamic_programming.medium.unique_paths;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 14 May 2022
  */
-public class ImplementTrieTest {
+public class UniquePathsTest {
 
-    private ImplementTrie implementTrie;
+    private UniquePaths uniquePaths;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        uniquePaths = new UniquePaths();
     }
 
 
     @Test
-    public void testingTest() {
+    public void uniquePathsTest() {
 
+        int m = -1;
+        int n = -1;
+        int unique = uniquePaths.uniquePaths( m, n );
     }
 }

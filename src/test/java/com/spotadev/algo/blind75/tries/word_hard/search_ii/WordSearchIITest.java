@@ -11,27 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.tries.word_hard.search_ii;
 
-import org.testng.annotations.BeforeClass;
+import java.util.List;
+
 import org.testng.annotations.Test;
+
+import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchII;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class WordSearchIITest {
 
-    private ImplementTrie implementTrie;
+    private WordSearchII wordSearchII;
 
-    @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        wordSearchII = new WordSearchII();
     }
 
 
     @Test
-    public void testingTest() {
+    public void findWordsTest() {
 
+        char[][] board = new char[][] {};
+        String[] words = new String[] {};
+        List<String> searchWords = wordSearchII.findWords( board, words );
     }
 }

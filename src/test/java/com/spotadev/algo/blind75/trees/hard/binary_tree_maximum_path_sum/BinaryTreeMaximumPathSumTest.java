@@ -11,27 +11,31 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.trees.hard.binary_tree_maximum_path_sum;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ImplementTrieTest {
+public class BinaryTreeMaximumPathSumTest {
 
-    private ImplementTrie implementTrie;
+    private BinaryTreeMaximumPathSum binaryTreeMaximumPathSum;
 
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie();
+        binaryTreeMaximumPathSum = new BinaryTreeMaximumPathSum();
     }
 
 
     @Test
-    public void testingTest() {
+    public void maxPathSumTest() {
 
+        TreeNode root = null;
+        int maxPathSum = binaryTreeMaximumPathSum.maxPathSum( root );
+        Assert.assertEquals( maxPathSum, 0 );
     }
 }
