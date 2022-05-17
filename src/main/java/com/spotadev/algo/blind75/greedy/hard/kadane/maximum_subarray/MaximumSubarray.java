@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.hard.kadane.maximum_subarray;
+package com.spotadev.algo.blind75.greedy.hard.kadane.maximum_subarray;
 
 /**
  * https://leetcode.com/problems/maximum-subarray/
@@ -47,6 +47,7 @@ package com.spotadev.algo.hard.kadane.maximum_subarray;
  *     1 <= nums.length <= 10^5
  *     -104 <= nums[i] <= 10^4
  * 
+ * I upgraded this from easy to hard as it depends on knowing kadane's algo.
  * 
  * @author John Dickerson - 18 Apr 2022
  */

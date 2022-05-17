@@ -15,13 +15,13 @@
     Author : John Dickerson
     ========================================================================================
 */
-package com.spotadev.algo.hard.kadane.maximum_subarray;
+package com.spotadev.algo.blind75.greedy.hard.kadane.maximum_subarray;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.hard.kadane.maximum_subarray.MaximumSubarray;
+import com.spotadev.algo.blind75.greedy.hard.kadane.maximum_subarray.MaximumSubarray;
 
 /**
  * @author John Dickerson - 18 Apr 2022
