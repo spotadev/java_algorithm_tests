@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.math_geometry.medium.rotate_image;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=fMSJSS7eO1w
+ * 
  * https://leetcode.com/problems/rotate-image/
  * 
  * You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees 

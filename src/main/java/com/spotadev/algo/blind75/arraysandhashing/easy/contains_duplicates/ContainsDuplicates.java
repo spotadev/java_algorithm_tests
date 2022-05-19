@@ -17,6 +17,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=3OamzN90kPg
+ * 
  * https://leetcode.com/problems/contains-duplicate/
  * 
  *     Runtime: 6 ms, faster than 94.83% of Java online submissions for Contains Duplicate.

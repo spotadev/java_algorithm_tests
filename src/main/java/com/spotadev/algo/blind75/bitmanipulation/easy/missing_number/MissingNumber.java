@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.bitmanipulation.easy.missing_number;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=WnPLSRLSANE
+ * 
  * https://leetcode.com/problems/missing-number/
  * 
  * Given an array nums containing n distinct numbers in the range [0, n], return the only number 

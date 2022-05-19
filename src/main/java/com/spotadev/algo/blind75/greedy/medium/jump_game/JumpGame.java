@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.greedy.medium.jump_game;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=Yan0cv2cLy8
+ * 
  * https://leetcode.com/problems/jump-game/
  * 
  * You are given an integer array nums. You are initially positioned at the array's first index, 

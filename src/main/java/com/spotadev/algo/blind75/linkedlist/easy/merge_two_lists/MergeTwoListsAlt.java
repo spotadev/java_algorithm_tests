@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.linkedlist.easy.merge_two_lists;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=XIdigk956u0
+ * 
  * https://leetcode.com/problems/merge-two-sorted-lists
  * 
  *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Merge Two Sorted Lists.

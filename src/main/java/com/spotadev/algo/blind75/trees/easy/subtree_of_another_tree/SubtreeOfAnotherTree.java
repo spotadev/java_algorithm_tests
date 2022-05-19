@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.easy.subtree_of_another_tree;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=E36O5SWp-LE
+ * 
  * https://leetcode.com/problems/subtree-of-another-tree/
  * 
  * Given the roots of two binary trees root and subRoot, return true if there is a subtree of root 

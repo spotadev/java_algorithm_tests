@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.longest_increasing_subsequence;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=cjWnW0hdF1Y
+ * 
  * https://leetcode.com/problems/longest-increasing-subsequence/
  * 
  * Given an integer array nums, return the length of the longest strictly increasing subsequence.

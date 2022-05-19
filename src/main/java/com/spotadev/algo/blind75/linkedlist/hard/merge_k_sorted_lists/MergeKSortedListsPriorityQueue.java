@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.linkedlist.hard.merge_k_sorted_lists;
 import java.util.PriorityQueue;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=q5a5OiGbT6Q
+ * 
  * https://leetcode.com/problems/merge-k-sorted-lists/
  * 
  *     Runtime: 9 ms, faster than 37.63% of Java online submissions for Merge k Sorted Lists.

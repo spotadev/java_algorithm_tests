@@ -17,6 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=q5a5OiGbT6Q
+ * 
  * https://leetcode.com/problems/merge-k-sorted-lists/
  * 
  *     Runtime: 4 ms, faster than 83.58% of Java online submissions for Merge k Sorted Lists.

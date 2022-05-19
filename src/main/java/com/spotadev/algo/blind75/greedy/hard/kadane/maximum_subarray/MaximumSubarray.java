@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.greedy.hard.kadane.maximum_subarray;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=5WZl3MMT0Eg
+ * 
  * https://leetcode.com/problems/maximum-subarray/
  * 
  *     Runtime: 1 ms, faster than 100.00% of Java online submissions for Maximum Subarray.

@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.advanced_graphs.hard.alien_dictionary;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=6kTZYvNNyps
+ * 
  * https://www.lintcode.com/problem/892/
  * 
  * Description

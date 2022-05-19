@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=hTM3phVI6YQ&lc=UgxUajmaDDsmZ5Tp0U54AaABAg
+ * 
  * https://leetcode.com/problems/maximum-depth-of-binary-tree/
  * 
  * Given the root of a binary tree, return its maximum depth.

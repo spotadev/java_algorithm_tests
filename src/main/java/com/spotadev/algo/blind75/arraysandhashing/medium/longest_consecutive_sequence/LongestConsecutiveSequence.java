@@ -18,6 +18,9 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=P6RZZMu_maU
+ * 
  * https://leetcode.com/problems/longest-consecutive-sequence
  * 
  *     Runtime: 76 ms, faster than 43.04% of Java online submissions for Longest Consecutive 

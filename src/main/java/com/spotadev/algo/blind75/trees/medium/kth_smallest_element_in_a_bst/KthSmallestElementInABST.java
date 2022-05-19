@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.medium.kth_smallest_element_in_a_bst;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=5LUXSvjmGCw
+ * 
  * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
  * 
  * Given the root of a binary search tree, and an integer k, return the kth smallest value 

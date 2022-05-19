@@ -17,6 +17,9 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=gBTe7lFR3vc
+ * 
  * https://leetcode.com/problems/linked-list-cycle/
  * 
  *     Your runtime beats 6.16 % of java submissions.

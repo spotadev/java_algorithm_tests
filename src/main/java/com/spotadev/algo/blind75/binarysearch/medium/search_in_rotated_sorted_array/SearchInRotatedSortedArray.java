@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.binarysearch.medium.search_in_rotated_sorted_array;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=U8XENwh8Oy8
+ * 
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
  * 
  *     Runtime: 1 ms, faster than 61.49% of Java online submissions for Search in Rotated Sorted Array.
@@ -64,17 +67,23 @@ public class SearchInRotatedSortedArray {
         int right = nums.length - 1;
 
         while ( left <= right ) {
+
             int mid = ( left + right ) / 2;
+
             if ( nums[mid] == target ) {
+
                 return mid;
             }
 
             // Search in left portion
             if ( nums[left] <= nums[mid] ) {
+
                 if ( target > nums[mid] || target < nums[left] ) {
+
                     left = mid + 1;
                 }
                 else {
+
                     right = mid - 1;
                 }
             }

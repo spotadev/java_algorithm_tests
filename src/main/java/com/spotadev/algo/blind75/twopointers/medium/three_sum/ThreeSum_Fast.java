@@ -21,6 +21,9 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=jzZsG8n2R9A
+ * 
  * https://leetcode.com/problems/3sum/
  * 
  *     Runtime: 601 ms, faster than 16.21% of Java online submissions for 3Sum.

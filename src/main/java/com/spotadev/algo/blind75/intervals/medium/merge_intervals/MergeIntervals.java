@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.intervals.medium.merge_intervals;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=44H3cEC2fFM
+ * 
  * https://leetcode.com/problems/merge-intervals/
  * 
  * Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, 

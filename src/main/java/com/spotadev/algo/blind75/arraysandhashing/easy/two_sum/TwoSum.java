@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.arraysandhashing.easy.two_sum;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=KLlXCFG5TnA
+ * 
  * https://leetcode.com/problems/two-sum/
  * 
  *     Runtime: 84 ms, faster than 21.12% of Java online submissions for Two Sum.

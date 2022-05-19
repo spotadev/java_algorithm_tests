@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.hard.binary_tree_maximum_path_sum;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=Hr5cWUld4vU
+ * 
  * https://leetcode.com/problems/binary-tree-maximum-path-sum/
  * 
  * A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence 

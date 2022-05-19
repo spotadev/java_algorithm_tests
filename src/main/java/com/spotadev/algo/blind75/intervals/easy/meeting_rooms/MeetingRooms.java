@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.intervals.easy.meeting_rooms;
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=PaJxqZVPhbg
+ * 
  * https://www.lintcode.com/problem/920/
  * 
  * Given an array of meeting time intervals consisting of start and end times 

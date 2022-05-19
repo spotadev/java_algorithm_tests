@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.arraysandhashing.medium.product_of_array_except_self;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=bNvIQI2wAjk
+ * 
  * https://leetcode.com/problems/product-of-array-except-self
  * 
  *     Your runtime beats 77.22 % of java submissions.

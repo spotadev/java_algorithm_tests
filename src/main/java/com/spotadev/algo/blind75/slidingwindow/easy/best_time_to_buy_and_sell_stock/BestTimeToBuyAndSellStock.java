@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.slidingwindow.easy.best_time_to_buy_and_sell_stock;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=1pkOgXD63yU
+ * 
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
  * 
  *     Runtime: 2 ms, faster than 84.21% of Java online submissions for Best Time to Buy and Sell 

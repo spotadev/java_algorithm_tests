@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.easy.same_tree;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=vRbbcKXCxOw
+ * 
  * https://leetcode.com/problems/same-tree/
  * 
  * Given the roots of two binary trees p and q, write a function to check if they are the same or 

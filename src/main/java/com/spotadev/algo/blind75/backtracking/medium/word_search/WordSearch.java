@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.backtracking.medium.word_search;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=pfiQ_PS1g8E
+ * 
  * https://leetcode.com/problems/word-search/
  * 
  * Given an m x n grid of characters board and a string word, return true if word exists in the 

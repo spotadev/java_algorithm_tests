@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.word_break;
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=Sx9NNgInc3A
+ * 
  * https://leetcode.com/problems/word-break/
  * 
  * Given a string s and a dictionary of strings wordDict, return true if s can be segmented into 

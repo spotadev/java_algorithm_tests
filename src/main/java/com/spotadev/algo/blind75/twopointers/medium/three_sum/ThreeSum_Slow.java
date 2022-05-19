@@ -20,6 +20,9 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=jzZsG8n2R9A
+ * 
  * https://leetcode.com/problems/3sum/
  * 
  * Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such 

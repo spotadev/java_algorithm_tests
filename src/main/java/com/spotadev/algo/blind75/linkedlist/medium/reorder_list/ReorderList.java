@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.linkedlist.medium.reorder_list;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=S5bfdUTrKLM
+ * 
  * https://leetcode.com/problems/reorder-list/
  * 
  *     Runtime: 1 ms, faster than 99.94% of Java online submissions for Reorder List.

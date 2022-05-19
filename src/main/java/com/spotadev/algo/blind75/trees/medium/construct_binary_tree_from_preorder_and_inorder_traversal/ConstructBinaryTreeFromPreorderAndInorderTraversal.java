@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.medium.construct_binary_tree_from_preorder_and_inorder_traversal;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=ihj4IQGZ2zc
+ * 
  * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  * 
  * Given two integer arrays preorder and inorder where preorder is the preorder traversal of a 

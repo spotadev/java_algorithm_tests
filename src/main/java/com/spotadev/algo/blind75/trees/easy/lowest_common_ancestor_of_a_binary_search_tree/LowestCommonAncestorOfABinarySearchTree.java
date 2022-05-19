@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.easy.lowest_common_ancestor_of_a_binary_search_tree;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=gs2LMfuOR9k
+ * 
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * 
  * Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes 

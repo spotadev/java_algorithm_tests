@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.maximum_product_subarray;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=lXVy6YWFcRM
+ * 
  * https://leetcode.com/problems/maximum-product-subarray/
  * 
  * Given an integer array nums, find a contiguous non-empty subarray within the array that has 

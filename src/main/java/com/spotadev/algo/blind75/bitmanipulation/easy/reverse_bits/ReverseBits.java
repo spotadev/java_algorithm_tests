@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.bitmanipulation.easy.reverse_bits;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=UcoN6UjAI64
+ * 
  * https://leetcode.com/problems/reverse-bits/
  * 
  * Reverse bits of a given 32 bits unsigned integer.

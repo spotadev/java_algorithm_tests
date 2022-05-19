@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.trees.medium.binary_tree_level_order_traversal
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=6ZnyEApgFYg
+ * 
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
  * 
  * Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., 

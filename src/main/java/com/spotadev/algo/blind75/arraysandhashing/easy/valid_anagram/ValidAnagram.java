@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.arraysandhashing.easy.valid_anagram;
 import java.util.Arrays;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=9UtInBqnCgA
+ * 
  * https://leetcode.com/problems/valid-anagram/
  * 
  *     Your runtime beats 53.62 % of java submissions.

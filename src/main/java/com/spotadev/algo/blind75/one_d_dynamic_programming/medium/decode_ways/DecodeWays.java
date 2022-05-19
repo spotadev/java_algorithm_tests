@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.decode_ways;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=6aEyTjOwlJU
+ * 
  * https://leetcode.com/problems/decode-ways/
  * 
  * A message containing letters from A-Z can be encoded into numbers using the following mapping:

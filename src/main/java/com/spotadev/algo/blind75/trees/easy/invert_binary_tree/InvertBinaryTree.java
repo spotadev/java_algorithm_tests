@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.easy.invert_binary_tree;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=OnSn2XEQ4MY
+ * 
  * https://leetcode.com/problems/invert-binary-tree/
  * 
  * Given the root of a binary tree, invert the tree, and return its root.

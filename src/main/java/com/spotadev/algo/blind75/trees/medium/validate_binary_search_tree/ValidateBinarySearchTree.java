@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.trees.medium.validate_binary_search_tree;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=s6ATEkipzow
+ * 
  * https://leetcode.com/problems/validate-binary-search-tree/
  * 
  * Given the root of a binary tree, determine if it is a valid binary search tree (BST).

@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.binarysearch.medium.find_minimum_in_rotated_sorted_array;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=nIVW4P8b1VA
+ * 
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  * 
  *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Find Minimum in 

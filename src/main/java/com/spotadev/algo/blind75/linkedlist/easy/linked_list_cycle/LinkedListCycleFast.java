@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.linkedlist.easy.linked_list_cycle;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=gBTe7lFR3vc
+ * 
  * https://leetcode.com/problems/linked-list-cycle/
  * 
  *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Linked List Cycle.

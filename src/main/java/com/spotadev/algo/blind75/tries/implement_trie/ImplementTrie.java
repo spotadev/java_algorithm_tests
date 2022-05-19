@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.tries.implement_trie;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=oobqoCJlHA0
+ * 
  * https://leetcode.com/problems/implement-trie-prefix-tree/
  * 
  * A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store 

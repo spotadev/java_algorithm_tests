@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.palindromic_substrings;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=4RACzI5-du8
+ * 
  * https://leetcode.com/problems/palindromic-substrings/
  * 
  * Given a string s, return the number of palindromic substrings in it.

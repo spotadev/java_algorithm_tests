@@ -20,6 +20,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=vzdNOK2oB2E
+ * 
  * https://leetcode.com/problems/group-anagrams/
  * 
  *     Your runtime beats 93.50 % of java submissions.

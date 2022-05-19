@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.linkedlist.medium.remove_nth_node_from_end_of_list;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=XVuQxVej6y8
+ * 
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list
  * 
  *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Nth Node 

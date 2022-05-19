@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.easy.climbing_stairs;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=Y0lT9Fck7qI
+ * 
  * https://leetcode.com/problems/climbing-stairs/
  * 
  * You are climbing a staircase. It takes n steps to reach the top.

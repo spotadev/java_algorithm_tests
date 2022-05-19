@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.tries.medium.design_add_and_search_words_data_structure;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=BTf05gs_8iU
+ * 
  * https://leetcode.com/problems/design-add-and-search-words-data-structure/
  * 
  * Design a data structure that supports adding new words and finding if a string matches any 

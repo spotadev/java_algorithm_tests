@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.twopointers.easy.valid_palidrome;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=jJXJ16kPFWg
+ * 
  * https://leetcode.com/problems/valid-palindrome/
  * 
  * Short and slow solution

@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.house_robber;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=73r3KWiEvyk
+ * 
  * https://leetcode.com/problems/house-robber/
  * 
  * You are a professional robber planning to rob houses along a street. Each house has a certain 

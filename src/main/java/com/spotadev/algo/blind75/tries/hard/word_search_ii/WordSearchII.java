@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.tries.hard.word_search_ii;
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=asbcE9mZz_U
+ * 
  * https://leetcode.com/problems/word-search-ii/
  * 
  * Given an m x n board of characters and a list of strings words, return all words on the board.

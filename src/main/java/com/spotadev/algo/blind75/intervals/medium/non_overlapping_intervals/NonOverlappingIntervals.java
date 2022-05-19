@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.intervals.medium.non_overlapping_intervals;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=nONCGxWoUfM
+ * 
  * https://leetcode.com/problems/non-overlapping-intervals/
  * 
  * Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum 

@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.linkedlist.easy.reverse_linked_list;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=G0_I-ZF0S38
+ * 
  * https://leetcode.com/problems/reverse-linked-list/
  * 
  *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.

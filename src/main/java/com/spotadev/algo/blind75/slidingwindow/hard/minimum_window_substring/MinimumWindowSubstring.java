@@ -17,8 +17,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * https://leetcode.com/problems/minimum-window-substring/submissions/
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=jSto0O4AJbM&feature=youtu.be
  * 
+ * https://leetcode.com/problems/minimum-window-substring/submissions/
  * 
  *       Runtime: 32 ms, faster than 25.25% of Java online submissions for Minimum Window Substring.
  *       Memory Usage: 44 MB, less than 62.10% of Java online submissions for Minimum Window Substring.

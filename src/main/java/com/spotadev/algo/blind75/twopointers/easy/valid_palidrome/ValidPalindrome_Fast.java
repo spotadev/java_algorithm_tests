@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.twopointers.easy.valid_palidrome;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=jJXJ16kPFWg
+ * 
  * https://leetcode.com/problems/valid-palindrome/
  * 
  * Optimised Solution

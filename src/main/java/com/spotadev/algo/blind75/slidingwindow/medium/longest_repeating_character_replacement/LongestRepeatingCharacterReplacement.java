@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=gqXU1UyA8pk
+ * 
  * https://leetcode.com/problems/longest-repeating-character-replacement/
  * 
  *     Runtime: 19 ms, faster than 42.01% of Java online submissions for Longest 

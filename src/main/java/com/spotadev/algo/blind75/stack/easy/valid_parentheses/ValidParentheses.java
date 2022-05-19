@@ -17,6 +17,9 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=WTzjTskDFMg
+ * 
  * https://leetcode.com/problems/valid-parentheses/
  * 
  *      Runtime: 1 ms, faster than 99.45% of Java online submissions for Valid Parentheses.

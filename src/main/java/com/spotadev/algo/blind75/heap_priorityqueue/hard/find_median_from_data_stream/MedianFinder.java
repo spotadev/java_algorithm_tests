@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=itmhHWaHupI
+ * 
  * https://leetcode.com/problems/find-median-from-data-stream/
  * 
  * The median is the middle value in an ordered integer list. If the size of the list is even, 

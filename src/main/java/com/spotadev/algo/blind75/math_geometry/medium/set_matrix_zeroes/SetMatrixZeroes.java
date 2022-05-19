@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.math_geometry.medium.set_matrix_zeroes;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=T41rL0L3Pnw
+ * 
  * https://leetcode.com/problems/set-matrix-zeroes/
  * 
  * Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.

@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=B1k_sxOSgv8
+ * 
  * https://www.lintcode.com/problem/659/
  * 
  *      Did not submit cos did not want to sing up

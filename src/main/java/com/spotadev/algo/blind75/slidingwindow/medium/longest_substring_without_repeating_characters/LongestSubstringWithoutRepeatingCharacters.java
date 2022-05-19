@@ -17,6 +17,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=wiGpQwVHdE0
+ * 
  * https://leetcode.com/problems/longest-substring-without-repeating-characters
  * 
  *     Runtime: 12 ms, faster than 48.79% of Java online submissions for Longest Substring Without 

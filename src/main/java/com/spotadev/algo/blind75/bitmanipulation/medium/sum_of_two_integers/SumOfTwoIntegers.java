@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.bitmanipulation.medium.sum_of_two_integers;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=gVUrDV4tZfY
+ * 
  * https://leetcode.com/problems/sum-of-two-integers/
  * 
  * Given two integers a and b, return the sum of the two integers without using the operators 

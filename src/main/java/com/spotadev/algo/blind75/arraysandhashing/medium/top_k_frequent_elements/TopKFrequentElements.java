@@ -23,6 +23,9 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=YPTqKIgVk-k
+ * 
  * https://leetcode.com/problems/top-k-frequent-elements
  * 
  *     Your runtime beats 36.05 % of java submissions

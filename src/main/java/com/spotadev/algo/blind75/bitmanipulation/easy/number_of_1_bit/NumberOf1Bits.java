@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=5Km3utixwZs
+ * 
  * https://leetcode.com/problems/number-of-1-bits/
  * 
  * Write a function that takes an unsigned integer and returns the number of '1' bits it has 

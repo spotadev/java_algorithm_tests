@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.backtracking.medium.combination_sum;
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=GBKI9VSKdGg
+ * 
  * https://leetcode.com/problems/combination-sum/
  * 
  * Given an array of distinct integers candidates and a target integer target, return a list of 

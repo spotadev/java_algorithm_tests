@@ -16,6 +16,9 @@ package com.spotadev.algo.blind75.trees.serialize_and_deserialize_binary_tree;
 import javax.swing.tree.TreeNode;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=u4JAi2JJhI8
+ * 
  * https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
  * 
  * Serialization is the process of converting a data structure or object into a sequence of bits 

@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.coin_change;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=H9bfqozjoqs
+ * 
  * https://leetcode.com/problems/coin-change/
  * 
  * You are given an integer array coins representing coins of different denominations and an 

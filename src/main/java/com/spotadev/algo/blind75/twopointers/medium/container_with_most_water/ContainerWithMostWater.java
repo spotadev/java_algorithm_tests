@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.twopointers.medium.container_with_most_water;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=UuiTKBwPgAo
+ * 
  * https://leetcode.com/problems/container-with-most-water
  * 
  *     Runtime: 5 ms, faster than 42.77% of Java online submissions for Container With Most Water.

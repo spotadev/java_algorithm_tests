@@ -14,6 +14,9 @@
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.longest_palindromic_substring;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=XYQecbcd6_c
+ * 
  * https://leetcode.com/problems/longest-palindromic-substring/
  * 
  * Given a string s, return the longest palindromic substring in s.

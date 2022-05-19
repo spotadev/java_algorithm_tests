@@ -14,6 +14,8 @@
 package com.spotadev.algo.blind75.bitmanipulation.easy.counting_bits;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=RyBM56RIWrM
  * 
  * https://leetcode.com/problems/counting-bits/
  * 

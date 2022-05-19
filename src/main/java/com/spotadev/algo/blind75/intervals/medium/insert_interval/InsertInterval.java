@@ -14,6 +14,8 @@
 package com.spotadev.algo.blind75.intervals.medium.insert_interval;
 
 /**
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=A8NUOmlwOlM&feature=youtu.be
  * 
  * https://leetcode.com/problems/insert-interval/
  * 
