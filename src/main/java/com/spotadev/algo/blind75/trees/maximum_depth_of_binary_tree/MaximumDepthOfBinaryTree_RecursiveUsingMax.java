@@ -19,6 +19,12 @@ package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
  * 
  * https://leetcode.com/problems/maximum-depth-of-binary-tree/
  * 
+ *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Maximum Depth of Binary 
+ *     Tree.
+ * 
+ *     Memory Usage: 42.7 MB, less than 66.76% of Java online submissions for Maximum Depth of 
+ *     Binary Tree.
+ * 
  * Given the root of a binary tree, return its maximum depth.
  * 
  * A binary tree's maximum depth is the number of nodes along the longest path from the root 
@@ -26,10 +32,17 @@ package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
  * 
  * Example 1:
  * 
+ *                  3
+ *             9         20
+ *                    15      7
+ * 
  *     Input: root = [3,9,20,null,null,15,7]
  *     Output: 3
  * 
  * Example 2:
+ * 
+ *                  1
+ *                       2
  * 
  *     Input: root = [1,null,2]
  *     Output: 2
@@ -41,10 +54,16 @@ package com.spotadev.algo.blind75.trees.maximum_depth_of_binary_tree;
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class MaximumDepthOfBinaryTree {
+public class MaximumDepthOfBinaryTree_RecursiveUsingMax {
 
-    public int maxDepth( TreeNode root ) {
+    public int maxDepth( TreeNode node ) {
 
-        return -1;
+        if ( node == null ) {
+
+            return 0;
+        }
+
+        int max = 1 + Math.max( maxDepth( node.left ), maxDepth( node.right ) );
+        return max;
     }
 }

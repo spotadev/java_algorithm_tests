@@ -19,6 +19,11 @@ package com.spotadev.algo.blind75.trees.easy.subtree_of_another_tree;
  * 
  * https://leetcode.com/problems/subtree-of-another-tree/
  * 
+ *     Runtime: 4 ms, faster than 47.03% of Java online submissions for Subtree of Another Tree.
+ *     
+ *     Memory Usage: 46.6 MB, less than 39.39% of Java online submissions for Subtree of 
+ *     Another Tree.
+ * 
  * Given the roots of two binary trees root and subRoot, return true if there is a subtree of root 
  * with the same structure and node values of subRoot and false otherwise.
  * 
@@ -27,10 +32,20 @@ package com.spotadev.algo.blind75.trees.easy.subtree_of_another_tree;
  * 
  * Example 1:
  * 
+ *              3
+ *           4      5          4
+ *        1     2           1     2
+ * 
  *     Input: root = [3,4,5,1,2], subRoot = [4,1,2]
  *     Output: true
  * 
  * Example 2:
+ * 
+ *                3                    4
+ *            4       5             1      2
+ *         1      2 
+ *         
+ *             0
  * 
  *     Input: root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
  *     Output: false
@@ -46,8 +61,39 @@ package com.spotadev.algo.blind75.trees.easy.subtree_of_another_tree;
  */
 public class SubtreeOfAnotherTree {
 
-    public boolean isSubtree( TreeNode root, TreeNode subRoot ) {
+    private Boolean isSameTree( TreeNode p, TreeNode q ) {
+
+        if ( p == null && q == null ) {
+
+            return true;
+        }
+
+        if ( p != null && q != null && p.val == q.val ) {
+
+            return isSameTree( p.left, q.left ) && isSameTree( p.right, q.right );
+        }
 
         return false;
+    }
+
+
+    public boolean isSubtree( TreeNode root, TreeNode subRoot ) {
+
+        if ( subRoot == null ) {
+
+            return true;
+        }
+
+        if ( root == null ) {
+
+            return false;
+        }
+
+        if ( isSameTree( root, subRoot ) ) {
+
+            return true;
+        }
+
+        return isSubtree( root.left, subRoot ) || isSubtree( root.right, subRoot );
     }
 }

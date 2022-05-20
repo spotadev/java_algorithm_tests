@@ -19,6 +19,9 @@ package com.spotadev.algo.blind75.trees.easy.same_tree;
  * 
  * https://leetcode.com/problems/same-tree/
  * 
+ *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Same Tree.
+ *     Memory Usage: 41.8 MB, less than 27.81% of Java online submissions for Same Tree.
+ * 
  * Given the roots of two binary trees p and q, write a function to check if they are the same or 
  * not.
  * 
@@ -51,6 +54,16 @@ public class SameTree {
 
     public boolean isSameTree( TreeNode p, TreeNode q ) {
 
-        return false;
+        if ( p == null && q == null ) {
+
+            return true;
+        }
+
+        if ( ( p == null || q == null ) || ( p.val != q.val ) ) {
+
+            return false;
+        }
+
+        return isSameTree( p.left, q.left ) && isSameTree( p.right, q.right );
     }
 }
