@@ -19,6 +19,12 @@ package com.spotadev.algo.blind75.trees.easy.lowest_common_ancestor_of_a_binary_
  * 
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * 
+ *    Runtime: 5 ms, faster than 78.72% of Java online submissions for Lowest Common Ancestor of 
+ *    a Binary Search Tree.
+ *    
+ *    Memory Usage: 50.7 MB, less than 6.67% of Java online submissions for Lowest Common Ancestor 
+ *    of a Binary Search Tree.
+ * 
  * Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes 
  * in the BST.
  * 
@@ -28,11 +34,21 @@ package com.spotadev.algo.blind75.trees.easy.lowest_common_ancestor_of_a_binary_
  * 
  * Example 1: 
  * 
+ *            6
+ *        2       8
+ *      0   4    7    9
+ *         3  5    
+ * 
  *     Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
  *     Output: 6
  *     Explanation: The LCA of nodes 2 and 8 is 6.
  *
  * Example 2:
+ * 
+ *              6
+ *          2         8
+ *       0    4    7     9
+ *          3    5    
  *
  *     Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
  *     Output: 2
@@ -58,6 +74,20 @@ public class LowestCommonAncestorOfABinarySearchTree {
 
     public TreeNode lowestCommonAncestor( TreeNode root, TreeNode p, TreeNode q ) {
 
-        return null;
+        while ( true ) {
+
+            if ( p.val < root.val && q.val < root.val ) {
+
+                root = root.left;
+            }
+            else if ( p.val > root.val && q.val > root.val ) {
+
+                root = root.right;
+            }
+            else {
+
+                return root;
+            }
+        }
     }
 }

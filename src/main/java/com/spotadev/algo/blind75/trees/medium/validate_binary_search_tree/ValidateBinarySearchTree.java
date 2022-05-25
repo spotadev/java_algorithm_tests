@@ -19,6 +19,12 @@ package com.spotadev.algo.blind75.trees.medium.validate_binary_search_tree;
  * 
  * https://leetcode.com/problems/validate-binary-search-tree/
  * 
+ *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Validate Binary 
+ *     Search Tree.
+ *     
+ *     Memory Usage: 41.7 MB, less than 94.36% of Java online submissions for Validate Binary 
+ *     Search Tree.
+ * 
  * Given the root of a binary tree, determine if it is a valid binary search tree (BST).
  * 
  * A valid BST is defined as follows:
@@ -29,14 +35,31 @@ package com.spotadev.algo.blind75.trees.medium.validate_binary_search_tree;
  * 
  * Example 1:
  * 
+ *           2
+ *         1   3
+ * 
  *     Input: root = [2,1,3]
  *     Output: true
  * 
  * Example 2:
  * 
+ *         5
+ *       1    4  
+ *          3   6
+ * 
  *     Input: root = [5,1,4,null,null,3,6]
  *     Output: false
  *     Explanation: The root node's value is 5 but its right child's value is 4.
+ * 
+ * Example 3:
+ * 
+ *         5
+ *      3      7   
+ *           4   8
+ *          
+ *      Input: [5,3,7,null,null,4,8]     
+ *      Output: false   
+ *      Explanation: 4 should have been more than 5 
  * 
  * Constraints:
  * 
@@ -47,8 +70,24 @@ package com.spotadev.algo.blind75.trees.medium.validate_binary_search_tree;
  */
 public class ValidateBinarySearchTree {
 
+    private boolean isValid( TreeNode node, Integer left, Integer right ) {
+
+        if ( node == null ) {
+
+            return true;
+        }
+
+        if ( ( left != null && node.val <= left ) || ( right != null && node.val >= right ) ) {
+
+            return false;
+        }
+
+        return isValid( node.left, left, node.val ) && isValid( node.right, node.val, right );
+    }
+
+
     public boolean isValidBST( TreeNode root ) {
 
-        return false;
+        return isValid( root, Integer.MIN_VALUE, Integer.MAX_VALUE );
     }
 }

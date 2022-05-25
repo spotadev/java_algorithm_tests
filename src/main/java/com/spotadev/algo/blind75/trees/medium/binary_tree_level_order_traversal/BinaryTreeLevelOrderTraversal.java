@@ -13,6 +13,7 @@
 */
 package com.spotadev.algo.blind75.trees.medium.binary_tree_level_order_traversal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,15 +22,25 @@ import java.util.List;
  * 
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
  * 
+ *     Runtime: 1 ms, faster than 84.66% of Java online submissions for Binary Tree Level Order 
+ *     Traversal.
+ *     
+ *     Memory Usage: 43.4 MB, less than 59.56% of Java online submissions for Binary Tree Level 
+ *     Order Traversal.
+ * 
  * Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., 
  * from left to right, level by level).
  * 
  * Example 1:
  * 
+ *          3
+ *       9      20
+ *           15     7   
+ * 
  *     Input: root = [3,9,20,null,null,15,7]
  *     Output: [[3],[9,20],[15,7]]
  * 
- * Example 2:
+ * Example 2:   
  * 
  *     Input: root = [1]
  *     Output: [[1]]
@@ -48,8 +59,46 @@ import java.util.List;
  */
 public class BinaryTreeLevelOrderTraversal {
 
+    private void updateLevelCount(
+            TreeNode node, int level, List<List<Integer>> nodes ) {
+
+        List<Integer> nodesInLevel;
+
+        if ( ( nodes.size() - 1 ) < level ) {
+
+            nodesInLevel = new ArrayList<>();
+            nodes.add( nodesInLevel );
+        }
+        else {
+
+            nodesInLevel = nodes.get( level );
+        }
+
+        nodesInLevel.add( node.val );
+
+        level++;
+
+        if ( node.left != null ) {
+
+            updateLevelCount( node.left, level, nodes );
+        }
+
+        if ( node.right != null ) {
+
+            updateLevelCount( node.right, level, nodes );
+        }
+    }
+
+
     public List<List<Integer>> levelOrder( TreeNode root ) {
 
-        return null;
+        if ( root == null ) {
+
+            return new ArrayList<List<Integer>>();
+        }
+
+        List<List<Integer>> nodes = new ArrayList<>();
+        updateLevelCount( root, 0, nodes );
+        return nodes;
     }
 }
