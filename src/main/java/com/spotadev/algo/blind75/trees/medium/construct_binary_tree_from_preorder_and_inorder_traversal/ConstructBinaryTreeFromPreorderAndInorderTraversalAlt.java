@@ -13,19 +13,17 @@
 */
 package com.spotadev.algo.blind75.trees.medium.construct_binary_tree_from_preorder_and_inorder_traversal;
 
-import java.util.Arrays;
-
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=ihj4IQGZ2zc
  * 
  * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  * 
- *     Runtime: 16 ms, faster than 7.80% of Java online submissions for Construct Binary Tree 
+ *     Runtime: 1 ms, faster than 99.91% of Java online submissions for Construct Binary Tree 
  *     from Preorder and Inorder Traversal.
  *     
- *     Memory Usage: 91.9 MB, less than 5.02% of Java online submissions for Construct Binary Tree 
- *     from Preorder and Inorder Traversal.
+ *     Memory Usage: 44.2 MB, less than 57.84% of Java online submissions for Construct Binary 
+ *     Tree from Preorder and Inorder Traversal.
  * 
  * Given two integer arrays preorder and inorder where preorder is the preorder traversal of a 
  * binary tree and inorder is the inorder traversal of the same tree, construct and return the 
@@ -55,71 +53,34 @@ import java.util.Arrays;
  *     preorder is guaranteed to be the preorder traversal of the tree.
  *     inorder is guaranteed to be the inorder traversal of the tree.
  * 
+ * This solution came from the fastest solution on leetcode - I have not taken time to understand 
+ * it.
+ * 
  * @author John Dickerson - 13 May 2022
  */
-public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
+public class ConstructBinaryTreeFromPreorderAndInorderTraversalAlt {
 
-    private int getMidIndex( int start, int[] inorder ) {
+    private TreeNode buildTree( int[] preorder, int[] pre, int[] inorder, int[] in, int max ) {
 
-        for ( int i = 0; i < inorder.length; i++ ) {
+        if ( pre[0] == preorder.length || in[0] == inorder.length || inorder[in[0]] == max ) {
 
-            if ( inorder[i] == start ) {
-
-                return i;
-            }
+            return null;
         }
 
-        return -1;
-    }
-
-
-    // start is the index 
-    // end is one after the index
-    private int[] getRange( int[] array, int start, int end ) {
-
-        if ( !( end > start ) ) {
-
-            return new int[] {};
-        }
-
-        return Arrays.copyOfRange( array, start, end );
-    }
-
-
-    private void debug( String message, int[] array ) {
-
-        StringBuilder sb = new StringBuilder( message );
-        sb.append( " [" );
-
-        for ( int i : array ) {
-
-            sb.append( i + ", " );
-        }
-
-        sb.append( "]" );
-        System.out.println( sb.toString() );
+        TreeNode root = new TreeNode( preorder[pre[0]] );
+        pre[0]++;
+        root.left = buildTree( preorder, pre, inorder, in, root.val );
+        in[0]++;
+        root.right = buildTree( preorder, pre, inorder, in, max );
+        return root;
     }
 
 
     public TreeNode buildTree( int[] preorder, int[] inorder ) {
 
-        if ( preorder.length == 0 ) {
+        int[] pre = { 0 };
+        int[] in = { 0 };
 
-            return null;
-        }
-
-        int start = preorder[0];
-        TreeNode node = new TreeNode( start );
-        int mid = getMidIndex( start, inorder );
-
-        node.left = buildTree(
-                getRange( preorder, 1, mid + 1 ),
-                getRange( inorder, 0, mid ) );
-
-        node.right = buildTree(
-                getRange( preorder, mid + 1, preorder.length ),
-                getRange( inorder, mid + 1, inorder.length ) );
-
-        return node;
+        return buildTree( preorder, pre, inorder, in, Integer.MAX_VALUE );
     }
 }

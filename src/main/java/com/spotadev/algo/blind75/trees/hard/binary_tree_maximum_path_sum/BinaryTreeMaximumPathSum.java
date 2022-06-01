@@ -19,6 +19,12 @@ package com.spotadev.algo.blind75.trees.hard.binary_tree_maximum_path_sum;
  * 
  * https://leetcode.com/problems/binary-tree-maximum-path-sum/
  * 
+ *     Runtime: 1 ms, faster than 93.99% of Java online submissions for Binary Tree Maximum Path 
+ *     Sum.
+ *     
+ *     Memory Usage: 46.8 MB, less than 69.68% of Java online submissions for Binary Tree Maximum 
+ *     Path Sum.
+ * 
  * A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence 
  * has an edge connecting them. A node can only appear in the sequence at most once. Note that the 
  * path does not need to pass through the root.
@@ -28,6 +34,8 @@ package com.spotadev.algo.blind75.trees.hard.binary_tree_maximum_path_sum;
  * Given the root of a binary tree, return the maximum path sum of any non-empty path.
  * 
  * Example 1:
+ *             1
+ *          2     3
  * 
  *     Input: root = [1,2,3]
  *     Output: 6
@@ -35,21 +43,59 @@ package com.spotadev.algo.blind75.trees.hard.binary_tree_maximum_path_sum;
  * 
  * Example 2:
  * 
+ *            -10
+ *       9           20
+ *               15       7 
+ * 
  *     Input: root = [-10,9,20,null,null,15,7]
  *     Output: 42
  *     Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
  *  
  * Constraints:
  * 
- *     The number of nodes in the tree is in the range [1, 3 * 104].
+ *     The number of nodes in the tree is in the range [1, 3 * 10^4].
  *     -1000 <= Node.val <= 1000
  * 
  * @author John Dickerson - 13 May 2022
  */
 public class BinaryTreeMaximumPathSum {
 
+    /**
+     *            -10
+     *       9           20
+     *               15       7 
+     *               
+     *   Consider that when we start with -10 the max is max of left and max of right:
+     *   
+     *        9 => -10 => 20 => 15
+     *        
+     *   The method returns the max of it can achieve from by going left or right
+     *   
+     *   However the max count is updated internally
+     *   
+     *   We are using an array for a single value to path by reference. We could have used 
+     *   AtomicInteger but that would have involved getters and setters.
+     */
+    public int maxPathSum( TreeNode node, int[] max ) {
+
+        if ( node == null ) {
+
+            return 0;
+        }
+
+        int leftMax = maxPathSum( node.left, max );
+        int rightMax = maxPathSum( node.right, max );
+        leftMax = Math.max( leftMax, 0 );
+        rightMax = Math.max( rightMax, 0 );
+        max[0] = Math.max( max[0], node.val + leftMax + rightMax );
+        return node.val + Math.max( leftMax, rightMax );
+    }
+
+
     public int maxPathSum( TreeNode root ) {
 
-        return -1;
+        int[] max = new int[] { root.val };
+        maxPathSum( root, max );
+        return max[0];
     }
 }

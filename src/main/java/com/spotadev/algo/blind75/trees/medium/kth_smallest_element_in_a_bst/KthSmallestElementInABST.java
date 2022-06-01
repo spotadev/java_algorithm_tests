@@ -13,21 +13,39 @@
 */
 package com.spotadev.algo.blind75.trees.medium.kth_smallest_element_in_a_bst;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=5LUXSvjmGCw
  * 
  * https://leetcode.com/problems/kth-smallest-element-in-a-bst/
  * 
+ *     Runtime: 1 ms, faster than 60.70% of Java online submissions for Kth Smallest Element in a 
+ *     BST.
+ *     
+ *     Memory Usage: 45.7 MB, less than 19.12% of Java online submissions for Kth Smallest Element 
+ *     in a BST.
+ * 
  * Given the root of a binary search tree, and an integer k, return the kth smallest value 
  * (1-indexed) of all the values of the nodes in the tree.
  * 
  * Example 1:
  * 
+ *               3
+ *            1     4
+ *               2    
+ * 
  *     Input: root = [3,1,4,null,2], k = 1
  *     Output: 1
  * 
  * Example 2:
+ * 
+ *                 5
+ *            3         6
+ *         2       4
+ *     1             
  * 
  *     Input: root = [5,3,6,2,4,null,null,1], k = 3
  *     Output: 3
@@ -46,6 +64,31 @@ package com.spotadev.algo.blind75.trees.medium.kth_smallest_element_in_a_bst;
 public class KthSmallestElementInABST {
 
     public int kthSmallest( TreeNode root, int k ) {
+
+        TreeNode current = root;
+        Deque<TreeNode> queue = new LinkedList<>();
+
+        while ( current != null || !queue.isEmpty() ) {
+
+            // go down left tree
+            while ( current != null ) {
+
+                queue.addFirst( current );
+                current = current.left;
+            }
+
+            // now consume off queue
+            current = queue.pollFirst();
+            k--;
+
+            if ( k == 0 ) {
+
+                return current.val;
+            }
+
+            // go down the right side now
+            current = current.right;
+        }
 
         return -1;
     }

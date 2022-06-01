@@ -19,6 +19,12 @@ package com.spotadev.algo.blind75.tries.medium.design_add_and_search_words_data_
  * 
  * https://leetcode.com/problems/design-add-and-search-words-data-structure/
  * 
+ *     Runtime: 830 ms, faster than 69.33% of Java online submissions for Design Add and Search 
+ *     Words Data Structure.
+ * 
+ *     Memory Usage: 79.8 MB, less than 98.80% of Java online submissions for Design Add and Search 
+ *     Words Data Structure.
+ * 
  * Design a data structure that supports adding new words and finding if a string matches any 
  * previously added string.
  * 
@@ -70,20 +76,106 @@ package com.spotadev.algo.blind75.tries.medium.design_add_and_search_words_data_
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class WordDictionary {
+public class DesignAddAndSearchWordsDataStructure {
 
-    public WordDictionary() {
+    class Node {
 
+        Node[] children = new Node[26];
+        boolean isLastCharacter = false;
+        char letter;
+
+        @Override
+        public String toString() {
+
+            return "Node [isLastCharacter=" + isLastCharacter + ", letter=" + letter + "]";
+        }
+
+
+        Node() {
+
+        }
+
+
+        Node( char letter ) {
+
+            this.letter = letter;
+        }
+    }
+
+    private Node rootNode;
+
+    public DesignAddAndSearchWordsDataStructure() {
+
+        rootNode = new Node();
     }
 
 
     public void addWord( String word ) {
 
+        Node node = rootNode;
+        int code;
+
+        for ( char c : word.toCharArray() ) {
+
+            code = c - 'a';
+
+            if ( node.children[code] == null ) {
+
+                node.children[code] = new Node( c );
+            }
+
+            node = node.children[code];
+        }
+
+        node.isLastCharacter = true;
+    }
+
+
+    private boolean search( String word, Node node ) {
+
+        int code;
+
+        for ( int i = 0; i < word.length(); i++ ) {
+
+            char c = word.charAt( i );
+
+            if ( c == '.' ) {
+
+                for ( Node childNode : node.children ) {
+
+                    if ( childNode != null ) {
+
+                        String wordFragment = word.substring( i + 1 );
+                        boolean found = search( wordFragment, childNode );
+
+                        if ( found ) {
+
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
+            }
+            else {
+                code = c - 'a';
+
+                if ( node.children[code] == null ) {
+
+                    return false;
+                }
+
+                node = node.children[code];
+            }
+        }
+
+        return node.isLastCharacter;
     }
 
 
     public boolean search( String word ) {
 
-        return false;
+        Node node = rootNode;
+        return search( word, node );
     }
 }

@@ -32,11 +32,39 @@ public class KthSmallestElementInABSTTest {
 
 
     @Test
-    public void kthSmallest() {
+    public void kthSmallest_1() {
 
-        TreeNode root = null;
-        int smallest = kthSmallestElementInABST.kthSmallest( root, 0 );
-        Assert.assertEquals( smallest, 0 );
+        TreeNode root = new TreeNode( 3 );
+        TreeNode node_1 = new TreeNode( 1 );
+        TreeNode node_4 = new TreeNode( 4 );
+        TreeNode node_2 = new TreeNode( 2 );
 
+        root.left = node_1;
+        root.right = node_4;
+        node_1.right = node_2;
+
+        int smallest = kthSmallestElementInABST.kthSmallest( root, 1 );
+        Assert.assertEquals( smallest, 1 );
+    }
+
+
+    @Test
+    public void kthSmallest_2() {
+
+        TreeNode root = new TreeNode( 5 );
+        TreeNode node_3 = new TreeNode( 3 );
+        TreeNode node_6 = new TreeNode( 6 );
+        TreeNode node_2 = new TreeNode( 2 );
+        TreeNode node_4 = new TreeNode( 4 );
+        TreeNode node_1 = new TreeNode( 1 );
+
+        root.left = node_3;
+        root.right = node_6;
+        node_3.left = node_2;
+        node_3.right = node_4;
+        node_2.left = node_1;
+
+        int smallest = kthSmallestElementInABST.kthSmallest( root, 3 );
+        Assert.assertEquals( smallest, 3 );
     }
 }

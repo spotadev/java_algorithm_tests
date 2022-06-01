@@ -13,6 +13,7 @@
 */
 package com.spotadev.algo.blind75.tries.implement_trie;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -33,5 +34,11 @@ public class ImplementTrieTest {
     @Test
     public void testingTest() {
 
+        implementTrie.insert( "apple" );
+        Assert.assertTrue( implementTrie.search( "apple" ) );
+        Assert.assertFalse( implementTrie.search( "app" ) );
+        Assert.assertTrue( implementTrie.startsWith( "app" ) );
+        implementTrie.insert( "app" );
+        Assert.assertTrue( implementTrie.search( "app" ) );
     }
 }

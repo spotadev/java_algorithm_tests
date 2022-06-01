@@ -18,6 +18,12 @@ package com.spotadev.algo.blind75.tries.implement_trie;
  * https://www.youtube.com/watch?v=oobqoCJlHA0
  * 
  * https://leetcode.com/problems/implement-trie-prefix-tree/
+ *     
+ *     Runtime: 67 ms, faster than 37.24% of Java online submissions for Implement Trie 
+ *     (Prefix Tree).
+ *     
+ *     Memory Usage: 68.9 MB, less than 33.73% of Java online submissions for Implement 
+ *     Trie (Prefix Tree).
  * 
  * A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store 
  * and retrieve keys in a dataset of strings. There are various applications of this data structure, 
@@ -70,24 +76,87 @@ package com.spotadev.algo.blind75.tries.implement_trie;
  */
 public class ImplementTrie {
 
+    class Node {
+
+        Node[] children = new Node[26];
+        boolean isLastLetter = false;
+    }
+
+    private Node rootNode;
+
     public ImplementTrie() {
 
+        rootNode = new Node();
     }
 
 
     public void insert( String word ) {
 
+        Node node = rootNode;
+        int code;
+
+        for ( char c : word.toCharArray() ) {
+
+            code = c - 'a';
+
+            if ( node.children[code] == null ) {
+
+                node.children[code] = new Node();
+            }
+
+            node = node.children[code];
+        }
+
+        node.isLastLetter = true;
     }
 
 
     public boolean search( String word ) {
 
-        return false;
+        Node node = rootNode;
+        int code;
+
+        for ( char c : word.toCharArray() ) {
+
+            code = c - 'a';
+
+            if ( node.children[code] == null ) {
+
+                return false;
+            }
+
+            node = node.children[code];
+        }
+
+        return node.isLastLetter;
     }
 
 
     public boolean startsWith( String prefix ) {
 
-        return false;
+        Node node = rootNode;
+        int code;
+
+        for ( char c : prefix.toCharArray() ) {
+
+            code = c - 'a';
+
+            if ( node.children[code] == null ) {
+
+                return false;
+            }
+
+            node = node.children[code];
+        }
+
+        return true;
+    }
+
+
+    public static void main( String[] args ) {
+
+        int code = 'a' - 97;
+
+        System.out.println( code + "" );
     }
 }

@@ -20,15 +20,15 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ConstructBinaryTreeFromPreorderAndInorderTraversalTest {
+public class ConstructBinaryTreeFromPreorderAndInorderTraversalAltTest {
 
-    private ConstructBinaryTreeFromPreorderAndInorderTraversal constructBinaryTreeFromPreorderAndInorderTraversal;
+    private ConstructBinaryTreeFromPreorderAndInorderTraversalAlt constructBinaryTreeFromPreorderAndInorderTraversal;
 
     @BeforeClass
     public void setUp() {
 
         constructBinaryTreeFromPreorderAndInorderTraversal =
-                new ConstructBinaryTreeFromPreorderAndInorderTraversal();
+                new ConstructBinaryTreeFromPreorderAndInorderTraversalAlt();
     }
 
 

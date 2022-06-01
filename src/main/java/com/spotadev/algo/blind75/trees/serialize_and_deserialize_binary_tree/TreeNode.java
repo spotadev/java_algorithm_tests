@@ -13,25 +13,30 @@
 */
 package com.spotadev.algo.blind75.trees.serialize_and_deserialize_binary_tree;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class CodecTest {
+public class TreeNode {
 
-    private Codec codec;
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-    @BeforeClass
-    public void setUp() {
+    TreeNode() {
 
-        codec = new Codec();
     }
 
 
-    @Test
-    public void serializeDeserializeTest() {
+    TreeNode( int val ) {
 
+        this.val = val;
+    }
+
+
+    TreeNode( int val, TreeNode left, TreeNode right ) {
+
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
