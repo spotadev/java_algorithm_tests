@@ -13,6 +13,7 @@
 */
 package com.spotadev.algo.blind75.backtracking.medium.word_search;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -31,10 +32,49 @@ public class WordSearchTest {
 
 
     @Test
-    public void existTest() {
+    public void existTest_1() {
 
-        char[][] board = new char[][] {};
-        String word = null;
+        char[][] board = new char[][] {
+
+                { 'A', 'B', 'C', 'E' },
+                { 'S', 'F', 'C', 'S' },
+                { 'A', 'D', 'E', 'E' }
+        };
+
+        String word = "ABCCED";
         boolean exist = wordSearch.exist( board, word );
+        Assert.assertTrue( exist );
+    }
+
+
+    @Test
+    public void existTest_2() {
+
+        char[][] board = new char[][] {
+
+                { 'A', 'B', 'C', 'E' },
+                { 'S', 'F', 'C', 'S' },
+                { 'A', 'D', 'E', 'E' }
+        };
+
+        String word = "SEE";
+        boolean exist = wordSearch.exist( board, word );
+        Assert.assertTrue( exist );
+    }
+
+
+    @Test
+    public void existTest_3() {
+
+        char[][] board = new char[][] {
+
+                { 'A', 'B', 'C', 'E' },
+                { 'S', 'F', 'C', 'S' },
+                { 'A', 'D', 'E', 'E' }
+        };
+
+        String word = "ABCB";
+        boolean exist = wordSearch.exist( board, word );
+        Assert.assertFalse( exist );
     }
 }
