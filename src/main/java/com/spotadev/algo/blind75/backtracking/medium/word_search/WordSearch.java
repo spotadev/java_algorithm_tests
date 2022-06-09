@@ -13,14 +13,15 @@
 */
 package com.spotadev.algo.blind75.backtracking.medium.word_search;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=pfiQ_PS1g8E
  * 
  * https://leetcode.com/problems/word-search/
+ * 
+ *     Runtime: 248 ms, faster than 20.84% of Java online submissions for Word Search.
+ * 
+ *     Memory Usage: 117.3 MB, less than 15.62% of Java online submissions for Word Search.
  * 
  * Given an m x n grid of characters board and a string word, return true if word exists in the 
  * grid.
@@ -55,69 +56,22 @@ import java.util.Set;
  *    
  * @author John Dickerson - 13 May 2022
  */
-public class WordSearch {
-
-    class Coordinate {
-
-        private int row;
-        private int column;
-
-        Coordinate( int row, int column ) {
-
-            this.row = row;
-            this.column = column;
-        }
-
-
-        @Override
-        public String toString() {
-
-            return "Coordinate [row=" + row + ", column=" + column + "]";
-        }
-
-
-        @Override
-        public int hashCode() {
-
-            final int prime = 31;
-            int result = 1;
-            result = prime * result + column;
-            result = prime * result + row;
-            return result;
-        }
-
-
-        @Override
-        public boolean equals( Object obj ) {
-
-            if ( this == obj )
-                return true;
-            if ( obj == null )
-                return false;
-            if ( getClass() != obj.getClass() )
-                return false;
-            Coordinate other = ( Coordinate )obj;
-            if ( column != other.column )
-                return false;
-            if ( row != other.row )
-                return false;
-            return true;
-        }
-    }
+public class WordSearch implements WordSearchApi {
 
     boolean findWord( int row, int column, String word, char[][] board,
-            int numberRows, int numberColumns, Set<Coordinate> usedCoordinates ) {
+            int numberRows, int numberColumns, boolean[][] usedCoordinates ) {
 
-        Coordinate coordinate = new Coordinate( row, column );
-
-        if ( usedCoordinates.contains( coordinate ) ) {
+        if ( usedCoordinates[row][column] ) {
 
             return false;
         }
 
-        usedCoordinates.add( coordinate );
-
         if ( board[row][column] == word.charAt( 0 ) ) {
+
+            // System.out.println(
+            //         "Found " + word.substring( 0, 1 ) + " at " + row + " : " + column );
+
+            usedCoordinates[row][column] = true;
 
             if ( word.length() == 1 ) {
 
@@ -125,47 +79,40 @@ public class WordSearch {
             }
 
             String newWord = word.substring( 1 );
+            boolean foundNorth = false, foundSouth = false, foundWest = false, foundEast = false;
 
             // go north
             if ( row > 0 ) {
 
-                boolean foundNorth = findWord( row - 1, column, newWord, board,
-                        numberRows, numberColumns, usedCoordinates );
-
-                if ( foundNorth )
-                    return true;
+                foundNorth = findWord( row - 1, column, newWord, board, numberRows, numberColumns,
+                        usedCoordinates );
             }
 
             // go south
             if ( row < ( numberRows - 1 ) ) {
 
-                boolean foundSouth = findWord( row + 1, column, newWord, board,
-                        numberRows, numberColumns, usedCoordinates );
-
-                if ( foundSouth )
-                    return true;
+                foundSouth = findWord( row + 1, column, newWord, board, numberRows, numberColumns,
+                        usedCoordinates );
             }
 
             // go west
             if ( column > 0 ) {
 
-                boolean foundWest =
-                        findWord( row, column - 1, newWord, board,
-                                numberRows, numberColumns, usedCoordinates );
-
-                if ( foundWest )
-                    return true;
+                foundWest =
+                        findWord( row, column - 1, newWord, board, numberRows, numberColumns,
+                                usedCoordinates );
             }
 
             // go east
             if ( column < ( numberColumns - 1 ) ) {
 
-                boolean foundEast = findWord( row, column + 1, newWord, board,
-                        numberRows, numberColumns, usedCoordinates );
-
-                if ( foundEast )
-                    return true;
+                foundEast = findWord( row, column + 1, newWord, board, numberRows, numberColumns,
+                        usedCoordinates );
             }
+
+            boolean found = foundNorth || foundSouth || foundWest || foundEast;
+            usedCoordinates[row][column] = false;
+            return found;
         }
 
         return false;
@@ -176,7 +123,7 @@ public class WordSearch {
 
         int numberRows = board.length;
         int numberColumns = board[0].length;
-        Set<Coordinate> usedCoordinates = new HashSet<>();
+        boolean[][] usedCoordinates = new boolean[numberRows][numberColumns];
 
         if ( word == null || word.length() == 0 ) {
             return true;
@@ -186,7 +133,7 @@ public class WordSearch {
 
             for ( int column = 0; column < board[0].length; column++ ) {
 
-                usedCoordinates.clear();
+                // System.out.println( row + " : " + column );
 
                 boolean found =
                         findWord( row, column, word, board, numberRows, numberColumns,

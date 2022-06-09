@@ -11,50 +11,54 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.word_hard.search_ii;
+package com.spotadev.algo.blind75.backtracking.medium.word_search;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchII;
-
 /**
  * @author John Dickerson - 13 May 2022
  */
-@Test
-public class WordSearchIITest extends AbstractWordSearchIITest {
+public class OptimisedWordSearchTest extends AbstractWordSearchTest {
 
     @BeforeClass
     public void setUp() {
 
-        wordSearchII = new WordSearchII();
+        wordSearch = new WordSearch();
     }
 
 
     @Test
-    public void findWordsTest_1() {
+    public void existTest_1() {
 
-        super.findWordsTest_1();
+        super.existTest_1();
     }
 
 
     @Test
-    public void findWordsTest_2() {
+    public void existTest_2() {
 
-        super.findWordsTest_2();
+        super.existTest_2();
     }
 
 
     @Test
-    public void findWordsTest_3() {
+    public void existTest_3() {
 
-        super.findWordsTest_3();
+        super.existTest_3();
     }
 
 
     @Test
-    public void findWordsTest_4() {
+    public void existTest_4() {
 
-        super.findWordsTest_4();
+        super.existTest_4();
+    }
+
+
+    @Test
+    public void existTest_5() {
+
+        super.existTest_5();
     }
 }

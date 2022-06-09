@@ -14,22 +14,14 @@
 package com.spotadev.algo.blind75.backtracking.medium.word_search;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 9 Jun 2022
  */
-public class WordSearchTest extends AbstractWordSearchTest {
+public abstract class AbstractWordSearchTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected WordSearchApi wordSearch;
 
-        wordSearch = new WordSearch();
-    }
-
-
-    @Test
     public void existTest_1() {
 
         char[][] board = new char[][] {
@@ -45,7 +37,6 @@ public class WordSearchTest extends AbstractWordSearchTest {
     }
 
 
-    @Test
     public void existTest_2() {
 
         char[][] board = new char[][] {
@@ -61,7 +52,6 @@ public class WordSearchTest extends AbstractWordSearchTest {
     }
 
 
-    @Test
     public void existTest_3() {
 
         char[][] board = new char[][] {
@@ -77,7 +67,6 @@ public class WordSearchTest extends AbstractWordSearchTest {
     }
 
 
-    @Test
     public void existTest_4() {
 
         char[][] board = new char[][] {
@@ -92,7 +81,6 @@ public class WordSearchTest extends AbstractWordSearchTest {
     }
 
 
-    @Test
     public void existTest_5() {
 
         char[][] board = new char[][] {
