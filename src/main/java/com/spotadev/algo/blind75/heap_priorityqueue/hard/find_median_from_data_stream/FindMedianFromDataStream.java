@@ -13,11 +13,20 @@
 */
 package com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream;
 
+import java.util.Collections;
+import java.util.PriorityQueue;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=itmhHWaHupI
  * 
  * https://leetcode.com/problems/find-median-from-data-stream/
+ * 
+ *     Runtime: 171 ms, faster than 55.23% of Java online submissions for Find Median from Data 
+ *     Stream.
+ *     
+ *     Memory Usage: 121.1 MB, less than 60.83% of Java online submissions for Find Median from 
+ *     Data Stream.
  * 
  * The median is the middle value in an ordered integer list. If the size of the list is even, 
  * there is no middle value and the median is the mean of the two middle values.
@@ -74,20 +83,48 @@ package com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class MedianFinder {
+public class FindMedianFromDataStream implements FindMedianFromDataStreamAPI {
 
-    public MedianFinder() {
+    PriorityQueue<Integer> left = new PriorityQueue<>( Collections.reverseOrder() );
+    PriorityQueue<Integer> right = new PriorityQueue<>();
 
+    public FindMedianFromDataStream() {
+
+        left = new PriorityQueue<>( Collections.reverseOrder() );
+        right = new PriorityQueue<>();
     }
 
 
     public void addNum( int num ) {
 
+        left.add( num );
+
+        // if left side is more than 1 bigger than right move left to right
+        if ( left.size() - right.size() > 1 ) {
+
+            right.add( left.poll() );
+        }
+
+        // if last value on left is bigger than first value on right swap them
+        Integer leftPeek = left.peek();
+        Integer rightPeek = right.peek();
+
+        if ( leftPeek != null && rightPeek != null && leftPeek > rightPeek ) {
+
+            right.add( left.poll() );
+            left.add( right.poll() );
+        }
     }
 
 
     public double findMedian() {
 
-        return -1;
+        // if sizes are same
+        if ( left.size() - right.size() == 0 ) {
+
+            return ( ( double )left.peek() + ( double )right.peek() ) / 2;
+        }
+
+        return left.peek();
     }
 }

@@ -11,29 +11,15 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.heap_priorityqueue.find_median_from_data_stream;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.MedianFinder;
+package com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 10 Jun 2022
  */
-public class MedianFinderTest {
+public interface FindMedianFromDataStreamAPI {
 
-    private MedianFinder medianFinder;
-
-    @BeforeClass
-    public void setUp() {
-
-        medianFinder = new MedianFinder();
-    }
+    void addNum( int num );
 
 
-    @Test
-    public void testingTest() {
-
-    }
+    double findMedian();
 }
