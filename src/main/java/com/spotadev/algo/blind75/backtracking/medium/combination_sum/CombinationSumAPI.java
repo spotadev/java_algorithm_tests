@@ -13,39 +13,12 @@
 */
 package com.spotadev.algo.blind75.backtracking.medium.combination_sum;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import java.util.List;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 11 Jun 2022
  */
-public class CombinationSumTest extends AbstractCombinationSumTest {
+public interface CombinationSumAPI {
 
-    @BeforeClass
-    public void setUp() {
-
-        combinationSum = new CombinationSum();
-    }
-
-
-    @Test
-    public void combinationSumTest_1() {
-
-        super.combinationSumTest_1();
-
-    }
-
-
-    @Test
-    public void combinationSumTest_2() {
-
-        super.combinationSumTest_2();
-    }
-
-
-    @Test
-    public void combinationSumTest_3() {
-
-        super.combinationSumTest_3();
-    }
+    List<List<Integer>> combinationSum( int[] candidates, int target );
 }

@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.backtracking.medium.combination_sum;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -20,6 +22,10 @@ import java.util.List;
  * https://www.youtube.com/watch?v=GBKI9VSKdGg
  * 
  * https://leetcode.com/problems/combination-sum/
+ * 
+ * Runtime: 14 ms, faster than 13.16% of Java online submissions for Combination Sum.
+ * 
+ * Memory Usage: 45.4 MB, less than 25.35% of Java online submissions for Combination Sum.
  * 
  * Given an array of distinct integers candidates and a target integer target, return a list of 
  * all unique combinations of candidates where the chosen numbers sum to target. You may return the 
@@ -60,10 +66,43 @@ import java.util.List;
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class CombinationSum {
+public class CombinationSum implements CombinationSumAPI {
 
+    private void dfs( List<Integer> current, int index, int[] candidates, int total, int target,
+            List<List<Integer>> result ) {
+
+        if ( total == target ) {
+
+            List<Integer> temp = new ArrayList<>( current );
+            Collections.sort( temp );
+            result.add( temp );
+            return;
+        }
+
+        if ( index >= candidates.length || total > target ) {
+            return;
+        }
+
+        current.add( 0, candidates[index] );
+        dfs( current, index, candidates, total + candidates[index], target, result );
+        current.remove( 0 );
+        dfs( current, ++index, candidates, total, target, result );
+    }
+
+
+    /**
+     *                        2
+     *                 2,2           []
+     *         2,2,2        2,2    3     []
+     *   2,2,2,2   2,2,2     
+     *          2,2,2,3   2,2,2  
+     *   
+     */
     public List<List<Integer>> combinationSum( int[] candidates, int target ) {
 
-        return null;
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> current = new ArrayList<>();
+        dfs( current, 0, candidates, 0, target, result );
+        return result;
     }
 }

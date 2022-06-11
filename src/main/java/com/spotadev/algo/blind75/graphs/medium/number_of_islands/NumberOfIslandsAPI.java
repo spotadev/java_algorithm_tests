@@ -13,31 +13,10 @@
 */
 package com.spotadev.algo.blind75.graphs.medium.number_of_islands;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 11 Jun 2022
  */
-public class NumberOfIslandsTest extends AbstractNumberOfIslandsTest {
+public interface NumberOfIslandsAPI {
 
-    @BeforeClass
-    public void setUp() {
-
-        numberOfIslands = new NumberOfIslands();
-    }
-
-
-    @Test
-    public void numIslandsTest_1() {
-
-        super.numIslandsTest_1();
-    }
-
-
-    @Test
-    public void numIslandsTest_2() {
-
-        super.numIslandsTest_2();
-    }
+    int numIslands( char[][] grid );
 }
