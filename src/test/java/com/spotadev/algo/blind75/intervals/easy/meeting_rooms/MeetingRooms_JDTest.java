@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.intervals.easy.meeting_rooms;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 19 May 2022
  */
-public class MeetingRooms_JDTest {
-
-    private MeetingRoomAPI meetingRooms;
+public class MeetingRooms_JDTest extends AbstractMeetingRoomsTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,7 +31,6 @@ public class MeetingRooms_JDTest {
     @Test
     public void canAttendMeetingsTest() {
 
-        List<Interval> intervals = new ArrayList<>();
-        meetingRooms.canAttendMeetings( intervals );
+        super.canAttendMeetingsTest();
     }
 }

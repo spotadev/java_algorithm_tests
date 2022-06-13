@@ -13,15 +13,12 @@
 */
 package com.spotadev.algo.blind75.greedy.medium.jump_game;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
 /**
  * @author John Dickerson - 15 May 2022
  */
-public class JumpGame_JDTest {
-
-    private JumpGameAPI jumpGame;
+public class JumpGame_JDTest extends AbstractJumpGameTest {
 
     @BeforeClass
     public void setUp() {
@@ -32,8 +29,6 @@ public class JumpGame_JDTest {
 
     public void canJumpTest_1() {
 
-        int[] nums = {};
-        boolean canJump = jumpGame.canJump( nums );
-        Assert.assertTrue( canJump );
+        super.canJumpTest_1();
     }
 }

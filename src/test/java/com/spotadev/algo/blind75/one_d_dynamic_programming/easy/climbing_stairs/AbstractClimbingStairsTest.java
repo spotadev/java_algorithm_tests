@@ -11,33 +11,18 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.graphs.medium.pacific_atlantic_water_flow;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.easy.climbing_stairs;
 
 /**
  * @author John Dickerson - 13 Jun 2022
  */
-public class aTest extends AbstractPacificAtlanticWaterflowTest {
+public class AbstractClimbingStairsTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected ClimbingStairsAPI climbingStairs;
 
-        pacificAtlanticWaterflow = new a();
-    }
+    public void climbStairsTest() {
 
-
-    @Test
-    public void pacificAtlanticTest_1() {
-
-        super.pacificAtlanticTest_1();
-    }
-
-
-    @Test
-    public void pacificAtlanticTest_2() {
-
-        super.pacificAtlanticTest_2();
+        int n = -1;
+        int result = climbingStairs.climbStairs( 0 );
     }
 }

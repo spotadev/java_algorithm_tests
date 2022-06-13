@@ -13,19 +13,13 @@
 */
 package com.spotadev.algo.blind75.graphs.medium.clone_graph;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class CloneGraph_JDTest {
-
-    private CloneGraphAPI cloneGraph;
+public class CloneGraph_JDTest extends AbstractCloneGraphTest {
 
     @BeforeClass
     public void setUp() {
@@ -37,71 +31,20 @@ public class CloneGraph_JDTest {
     @Test
     public void cloneGraphTest_1() {
 
-        Node node1 = new Node( 1 );
-        Node node2 = new Node( 2 );
-        Node node3 = new Node( 3 );
-        Node node4 = new Node( 4 );
-
-        List<Node> node1Neighbours = new ArrayList<>();
-        node1Neighbours.add( node2 );
-        node1Neighbours.add( node4 );
-        node1.neighbors = node1Neighbours;
-
-        List<Node> node2Neighbours = new ArrayList<>();
-        node2Neighbours.add( node1 );
-        node2Neighbours.add( node3 );
-        node2.neighbors = node2Neighbours;
-
-        List<Node> node3Neighbours = new ArrayList<>();
-        node3Neighbours.add( node2 );
-        node3Neighbours.add( node4 );
-        node3.neighbors = node3Neighbours;
-
-        List<Node> node4Neighbours = new ArrayList<>();
-        node4Neighbours.add( node1 );
-        node4Neighbours.add( node3 );
-        node4.neighbors = node4Neighbours;
-
-        Node clonedNode1 = cloneGraph.cloneGraph( node1 );
-        Assert.assertEquals( clonedNode1.val, 1 );
-        Assert.assertTrue( clonedNode1 != node1 );
-        Assert.assertEquals( clonedNode1.neighbors.get( 0 ).val, 2 );
-        Assert.assertEquals( clonedNode1.neighbors.get( 1 ).val, 4 );
-
-        Node clonedNode4 = clonedNode1.neighbors.get( 1 );
-        Assert.assertEquals( clonedNode4.val, 4 );
-        Assert.assertTrue( clonedNode4 != node4 );
-        Assert.assertEquals( clonedNode4.neighbors.get( 0 ).val, 1 );
-        Assert.assertEquals( clonedNode4.neighbors.get( 1 ).val, 3 );
-
-        Node clonedNode3 = clonedNode4.neighbors.get( 1 );
-        Assert.assertEquals( clonedNode3.val, 3 );
-        Assert.assertTrue( clonedNode3 != node3 );
-        Assert.assertEquals( clonedNode3.neighbors.get( 0 ).val, 2 );
-        Assert.assertEquals( clonedNode3.neighbors.get( 1 ).val, 4 );
-
-        Node clonedNode2 = clonedNode3.neighbors.get( 0 );
-        Assert.assertEquals( clonedNode2.val, 2 );
-        Assert.assertTrue( clonedNode2 != node2 );
-        Assert.assertEquals( clonedNode2.neighbors.get( 0 ).val, 1 );
-        Assert.assertEquals( clonedNode2.neighbors.get( 1 ).val, 3 );
+        super.cloneGraphTest_1();
     }
 
 
     @Test
     public void cloneGraphTest_2() {
 
-        Node node1 = new Node( 1 );
-        Node clonedNode1 = cloneGraph.cloneGraph( node1 );
-        Assert.assertEquals( clonedNode1.val, 1 );
-        Assert.assertTrue( clonedNode1 != node1 );
+        super.cloneGraphTest_2();
     }
 
 
     @Test
     public void cloneGraphTest_3() {
 
-        Node clonedNode1 = cloneGraph.cloneGraph( null );
-        Assert.assertNull( clonedNode1 );
+        super.cloneGraphTest_3();
     }
 }

@@ -13,12 +13,12 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.easy.counting_bits;
 
+import org.testng.annotations.Test;
+
 /**
  * @author John Dickerson - 19 May 2022
  */
-public class CountingBits_JDTest {
-
-    private CountingBitsAPI countingBits;
+public class CountingBits_JDTest extends AbstractCountingBitsTest {
 
     public void setUp() {
 
@@ -26,9 +26,9 @@ public class CountingBits_JDTest {
     }
 
 
+    @Test
     public void countBitsTests() {
 
-        int n = -1;
-        int[] result = countingBits.countBits( n );
+        super.countBitsTests();
     }
 }

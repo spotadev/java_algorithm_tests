@@ -13,20 +13,13 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.medium.top_k_frequent_elements;
 
-import java.util.Arrays;
-
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.arraysandhashing.medium.top_k_frequent_elements.TopKFrequentElements_JD;
 
 /**
  * @author John Dickerson - 30 Apr 2022
  */
-public class TopKFrequentElements_JDTest {
-
-    private TopKFrequentElementsAPI topKFrequentElements;
+public class TopKFrequentElements_JDTest extends AbstractTopKFrequentElementsTest {
 
     @BeforeClass
     public void setUp() {
@@ -38,15 +31,13 @@ public class TopKFrequentElements_JDTest {
     @Test
     public void topKFrequentTest_1() {
 
-        int[] mostFrequent = topKFrequentElements.topKFrequent( new int[] { 1, 1, 1, 2, 2, 3 }, 2 );
-        Assert.assertTrue( Arrays.equals( mostFrequent, new int[] { 1, 2 } ) );
+        super.topKFrequentTest_1();
     }
 
 
     @Test
     public void topKFrequentTest_2() {
 
-        int[] mostFrequent = topKFrequentElements.topKFrequent( new int[] { 1 }, 1 );
-        Assert.assertTrue( Arrays.equals( mostFrequent, new int[] { 1 } ) );
+        super.topKFrequentTest_2();
     }
 }

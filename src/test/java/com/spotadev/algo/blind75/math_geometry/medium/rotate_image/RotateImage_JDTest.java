@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 19 May 2022
  */
-public class RotateImage_JDTest {
-
-    private RotateImageAPI rotateImage;
+public class RotateImage_JDTest extends AbstractRotateImageTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class RotateImage_JDTest {
     @Test
     public void rotateTest() {
 
-        int[][] matrix = new int[][] {};
-        rotateImage.rotate( null );
+        super.rotateTest();
     }
 }

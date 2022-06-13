@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 17 May 2022
  */
-public class NonOverlappingIntervals_JDTest {
-
-    private NonOverlappingIntervalsAPI nonOverlappingIntervals;
+public class NonOverlappingIntervals_JDTest extends AbstractNonOverlappingIntervalTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class NonOverlappingIntervals_JDTest {
     @Test
     public void eraseOverlapIntervalsTest() {
 
-        int[][] intervals = {};
-        int result = nonOverlappingIntervals.eraseOverlapIntervals( null );
+        super.eraseOverlapIntervalsTest();
     }
 }

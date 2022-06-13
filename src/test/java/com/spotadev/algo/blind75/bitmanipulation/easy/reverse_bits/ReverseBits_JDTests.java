@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 19 May 2022
  */
-public class ReverseBits_JDTests {
-
-    private ReverseBitsAPI reverseBits;
+public class ReverseBits_JDTests extends AbstractReverseBitsTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class ReverseBits_JDTests {
     @Test
     public void reverseBits() {
 
-        int n = -1;
-        int result = reverseBits.reverseBits( n );
+        super.reverseBits();
     }
 }

@@ -13,19 +13,13 @@
 */
 package com.spotadev.algo.blind75.linkedlist.easy.reverse_linked_list;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.linkedlist.easy.reverse_linked_list.ListNode;
-import com.spotadev.algo.blind75.linkedlist.easy.reverse_linked_list.ReverseLinkedList_JD;
 
 /**
  * @author John Dickerson - 6 May 2022
  */
-public class ReverseLinkedList_JDTest {
-
-    private ReverseLinkedListAPI reverseLinkedList;
+public class ReverseLinkedList_JDTest extends AbstractReverseLinkedListTest {
 
     @BeforeClass
     public void setUp() {
@@ -34,63 +28,23 @@ public class ReverseLinkedList_JDTest {
     }
 
 
-    private ListNode createListNode( int[] array ) {
-
-        ListNode dummy = new ListNode();
-        ListNode lastNode = dummy;
-
-        for ( int number : array ) {
-
-            ListNode listNode = new ListNode( number );
-            lastNode.next = listNode;
-            lastNode = listNode;
-        }
-
-        return dummy.next;
-    }
-
-
-    private void assertTrue( ListNode listNode, int[] expected ) {
-
-        for ( int number : expected ) {
-
-            if ( listNode == null ) {
-
-                Assert.fail( "Missing expected values" );
-            }
-
-            Assert.assertEquals( listNode.val, number );
-            listNode = listNode.next;
-        }
-    }
-
-
     @Test
     public void reverseListTest_1() {
 
-        ListNode resultListNode =
-                reverseLinkedList.reverseList( createListNode( new int[] { 1, 2, 3, 4, 5 } ) );
-
-        assertTrue( resultListNode, new int[] { 5, 4, 3, 2, 1 } );
+        super.reverseListTest_1();
     }
 
 
     @Test
     public void reverseListTest_2() {
 
-        ListNode resultListNode =
-                reverseLinkedList.reverseList( createListNode( new int[] { 1, 2 } ) );
-
-        assertTrue( resultListNode, new int[] { 2, 1 } );
+        super.reverseListTest_2();
     }
 
 
     @Test
     public void reverseListTest_3() {
 
-        ListNode resultListNode =
-                reverseLinkedList.reverseList( createListNode( new int[] {} ) );
-
-        assertTrue( resultListNode, new int[] {} );
+        super.reverseListTest_3();
     }
 }

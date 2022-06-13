@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.medium.longest_consecutive_sequence;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.arraysandhashing.medium.longest_consecutive_sequence.LongestConsecutiveSequence_JD;
 
 /**
  * @author John Dickerson - 2 May 2022
  */
-public class LongestConsecutiveSequence_JDTest {
-
-    private LongestConsecutiveSequenceAPI longestConsecutiveSequence;
+public class LongestConsecutiveSequence_JDTest extends AbstractLongestConsecutiveSequenceTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,30 +31,20 @@ public class LongestConsecutiveSequence_JDTest {
     @Test
     public void longestConsecutiveTest_1() {
 
-        int longest =
-                longestConsecutiveSequence.longestConsecutive( new int[] { 100, 4, 200, 1, 3, 2 } );
-
-        Assert.assertEquals( longest, 4 );
+        super.longestConsecutiveTest_1();
     }
 
 
     @Test
     public void longestConsecutiveTest_2() {
 
-        int longest =
-                longestConsecutiveSequence.longestConsecutive( new int[] { 0, 3, 7, 2, 5, 8, 4, 6,
-                        0, 1 } );
-
-        Assert.assertEquals( longest, 9 );
+        super.longestConsecutiveTest_2();
     }
 
 
     @Test
     public void longestConsecutiveTest_3() {
 
-        int longest =
-                longestConsecutiveSequence.longestConsecutive( new int[] {} );
-
-        Assert.assertEquals( longest, 0 );
+        super.longestConsecutiveTest_3();
     }
 }

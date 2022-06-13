@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.binarysearch.medium.search_in_rotated_sorted_array;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.binarysearch.medium.search_in_rotated_sorted_array.SearchInRotatedSortedArray_JD;
 
 /**
  * @author John Dickerson - 5 May 2022
  */
-public class SearchInRotatedSortedArray_JDTest {
-
-    private SearchInRotatedSortedArrayAPI searchInRotatedSortedArray;
+public class SearchInRotatedSortedArray_JDTest extends AbstractSearchInRotatedSortedArrayTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,31 +31,27 @@ public class SearchInRotatedSortedArray_JDTest {
     @Test
     public void searchTest_1() {
 
-        int result = searchInRotatedSortedArray.search( new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0 );
-        Assert.assertEquals( result, 4 );
+        super.searchTest_1();
     }
 
 
     @Test
     public void searchTest_2() {
 
-        int result = searchInRotatedSortedArray.search( new int[] { 4, 5, 6, 7, 0, 1, 2 }, 3 );
-        Assert.assertEquals( result, -1 );
+        super.searchTest_2();
     }
 
 
     @Test
     public void searchTest_3() {
 
-        int result = searchInRotatedSortedArray.search( new int[] { 1 }, 0 );
-        Assert.assertEquals( result, -1 );
+        super.searchTest_3();
     }
 
 
     @Test
     public void searchTest_4() {
 
-        int result = searchInRotatedSortedArray.search( new int[] { 5, 1, 3 }, 2 );
-        Assert.assertEquals( result, -1 );
+        super.searchTest_4();
     }
 }

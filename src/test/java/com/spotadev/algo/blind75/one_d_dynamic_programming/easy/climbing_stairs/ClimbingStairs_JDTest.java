@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class ClimbingStairs_JDTest {
-
-    private ClimbingStairsAPI climbingStairs;
+public class ClimbingStairs_JDTest extends AbstractClimbingStairsTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class ClimbingStairs_JDTest {
     @Test
     public void climbStairsTest() {
 
-        int n = -1;
-        int result = climbingStairs.climbStairs( 0 );
+        super.climbStairsTest();
     }
 }

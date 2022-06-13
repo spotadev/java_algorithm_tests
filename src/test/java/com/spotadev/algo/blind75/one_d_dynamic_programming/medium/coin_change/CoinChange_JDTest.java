@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class CoinChange_JDTest {
-
-    private CoinChangeAPI coinChange;
+public class CoinChange_JDTest extends AbstractCoinChangeTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,8 +31,6 @@ public class CoinChange_JDTest {
     @Test
     public void coinChange() {
 
-        int[] coins = {};
-        int amount = -1;
-        int change = coinChange.coinChange( coins, amount );
+        super.coinChange();
     }
 }

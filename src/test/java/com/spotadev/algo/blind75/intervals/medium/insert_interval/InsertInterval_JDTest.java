@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 15 May 2022
  */
-public class InsertInterval_JDTest {
-
-    private InsertIntervalAPI insertInterval;
+public class InsertInterval_JDTest extends AbstractInsertIntervalTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,8 +31,6 @@ public class InsertInterval_JDTest {
     @Test
     public void insertTest() {
 
-        int[][] intervals = {};
-        int[] newInterval = {};
-        int[][] result = insertInterval.insert( intervals, newInterval );
+        super.insertTest();
     }
 }

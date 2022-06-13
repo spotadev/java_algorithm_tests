@@ -16,18 +16,17 @@ package com.spotadev.algo.blind75.heap_priorityqueue.find_median_from_data_strea
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.FindMedianFromDataStream_FastestLeetCode;
+import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.FindMedianFromDataStream_JD;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class FastestLeetCodeFindMedianFromDataStreamTest extends
-        AbstractFindMedianFromDataStreamTest {
+public class FindMedianFromDataStream_JDTest extends AbstractFindMedianFromDataStreamTest {
 
     @BeforeClass
     public void setUp() {
 
-        medianFinder = new FindMedianFromDataStream_FastestLeetCode();
+        medianFinder = new FindMedianFromDataStream_JD();
     }
 
 

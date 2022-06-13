@@ -13,16 +13,13 @@
 */
 package com.spotadev.algo.blind75.linkedlist.easy.linked_list_cycle;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 10 May 2022
  */
-public class LinkedListCycleFast_JDTest {
-
-    private LinkedListCycleFast_JD linkedListCycle;
+public class LinkedListCycleFast_JDTest extends AbstractNonOverlappingIntervalsTest {
 
     @BeforeClass
     public void setUp() {
@@ -31,61 +28,30 @@ public class LinkedListCycleFast_JDTest {
     }
 
 
-    private ListNode createNode( int pos, int... values ) {
-
-        ListNode dummy = new ListNode( -1 );
-        ListNode head = dummy;
-        ListNode loopBackNode = null;
-
-        for ( int i = 0; i < values.length; i++ ) {
-
-            head.next = new ListNode( values[i] );
-
-            if ( i == pos ) {
-
-                loopBackNode = head.next;
-            }
-
-            head = head.next;
-        }
-
-        head.next = loopBackNode;
-        return dummy.next;
-    }
-
-
     @Test
     public void hasCycleTest_1() {
 
-        ListNode head = createNode( 1, new int[] { 3, 2, 0, -4 } );
-        boolean hasCycle = linkedListCycle.hasCycle( head );
-        Assert.assertTrue( hasCycle );
+        super.hasCycleTest_1();
     }
 
 
     @Test
     public void hasCycleTest_2() {
 
-        ListNode head = createNode( 0, new int[] { 1, 2 } );
-        boolean hasCycle = linkedListCycle.hasCycle( head );
-        Assert.assertTrue( hasCycle );
+        super.hasCycleTest_2();
     }
 
 
     @Test
     public void hasCycleTest_3() {
 
-        ListNode head = createNode( -1, new int[] { 1 } );
-        boolean hasCycle = linkedListCycle.hasCycle( head );
-        Assert.assertFalse( hasCycle );
+        super.hasCycleTest_3();
     }
 
 
     @Test
     public void hasCycleTest_4() {
 
-        ListNode head = createNode( -1, new int[] { 1, 2 } );
-        boolean hasCycle = linkedListCycle.hasCycle( head );
-        Assert.assertFalse( hasCycle );
+        super.hasCycleTest_4();
     }
 }

@@ -13,21 +13,13 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.easy.encode_and_decode_strings;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.arraysandhashing.easy.encode_and_decode_strings.EncodeAndDecodeStrings_JD;
 
 /**
  * @author John Dickerson - 1 May 2022
  */
-public class EncodeAndDecodeStrings_JDTest {
-
-    private EncodeAndDecodeStringsAPI encodeAndDecodeStrings;
+public class EncodeAndDecodeStrings_JDTest extends AbstractEncodeAndDecodeStringsTest {
 
     @BeforeClass
     public void setUp() {
@@ -39,13 +31,6 @@ public class EncodeAndDecodeStrings_JDTest {
     @Test
     public void encodeDecodeTest() {
 
-        List<String> toEncode = new ArrayList<>();
-        toEncode.add( "Hello" );
-        toEncode.add( "World" );
-
-        String encoded = encodeAndDecodeStrings.encode( toEncode );
-        List<String> decoded = encodeAndDecodeStrings.decode( encoded );
-
-        Assert.assertTrue( toEncode.equals( decoded ) );
+        super.encodeDecodeTest();
     }
 }

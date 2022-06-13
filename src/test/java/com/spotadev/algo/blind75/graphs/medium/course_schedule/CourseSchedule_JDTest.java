@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class CourseSchedule_JDTest {
-
-    private CourseScheduleAPI courseSchedule;
+public class CourseSchedule_JDTest extends AbstractCourseScheduleTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,8 +31,6 @@ public class CourseSchedule_JDTest {
     @Test
     public void canFinishTest() {
 
-        int numCourses = -1;
-        int[][] prerequisites = new int[][] {};
-        boolean canFinish = courseSchedule.canFinish( numCourses, prerequisites );
+        super.canFinishTest();
     }
 }

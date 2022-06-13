@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 19 May 2022
  */
-public class SumOfTwoIntegers_JDTest {
-
-    private SumOfTwoIntegersAPI sumOfTwoIntegers;
+public class SumOfTwoIntegers_JDTest extends AbstractSumOfTwoIntegersTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,8 +31,6 @@ public class SumOfTwoIntegers_JDTest {
     @Test
     public void getSumTest() {
 
-        int a = -1;
-        int b = -1;
-        int result = sumOfTwoIntegers.getSum( a, b );
+        super.getSumTest();
     }
 }

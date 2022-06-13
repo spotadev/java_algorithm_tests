@@ -17,18 +17,13 @@
 */
 package com.spotadev.algo.blind75.greedy.hard.kadane.maximum_subarray;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.greedy.hard.kadane.maximum_subarray.MaximumSubarray_JD;
 
 /**
  * @author John Dickerson - 18 Apr 2022
  */
-public class MaximumSubarray_JDTest {
-
-    private MaximumSubarrayAPI maximumSubarray;
+public class MaximumSubarray_JDTest extends AbstractMaximumSubarrayTest {
 
     @BeforeClass
     public void setUp() {
@@ -40,35 +35,27 @@ public class MaximumSubarray_JDTest {
     @Test
     public void maxSubArrayTest_1() {
 
-        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-        int max = maximumSubarray.maxSubArray( nums );
-        Assert.assertEquals( max, 6 );
+        super.maxSubArrayTest_1();
     }
 
 
     @Test
     public void maxSubArrayTest_2() {
 
-        int[] nums = { 1 };
-        int max = maximumSubarray.maxSubArray( nums );
-        Assert.assertEquals( max, 1 );
+        super.maxSubArrayTest_2();
     }
 
 
     @Test
     public void maxSubArrayTest_3() {
 
-        int[] nums = { 5, 4, -1, 7, 8 };
-        int max = maximumSubarray.maxSubArray( nums );
-        Assert.assertEquals( max, 23 );
+        super.maxSubArrayTest_3();
     }
 
 
     @Test
     public void maxSubArrayTest_4() {
 
-        int[] nums = { -1 };
-        int max = maximumSubarray.maxSubArray( nums );
-        Assert.assertEquals( max, -1 );
+        super.maxSubArrayTest_4();
     }
 }

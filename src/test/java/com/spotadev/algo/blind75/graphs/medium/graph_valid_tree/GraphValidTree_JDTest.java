@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class GraphValidTree_JDTest {
-
-    private GraphValidTreeAPI graphValidTree;
+public class GraphValidTree_JDTest extends AbstractGraphValidTree {
 
     @BeforeClass
     public void setUp() {
@@ -33,8 +31,6 @@ public class GraphValidTree_JDTest {
     @Test
     public void validTreeTest() {
 
-        int n = -1;
-        int[][] edges = new int[][] {};
-        boolean validTree = graphValidTree.validTree( n, edges );
+        super.validTreeTest();
     }
 }

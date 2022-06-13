@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 17 May 2022
  */
-public class MergeIntervals_JDTest {
-
-    private MergeIntervalsAPI mergeIntervals;
+public class MergeIntervals_JDTest extends AbstractMergeIntervalsTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class MergeIntervals_JDTest {
     @Test
     public void mergeTest() {
 
-        int[][] intervals = new int[][] {};
-        int[][] result = mergeIntervals.merge( intervals );
+        super.mergeTest();
     }
 }

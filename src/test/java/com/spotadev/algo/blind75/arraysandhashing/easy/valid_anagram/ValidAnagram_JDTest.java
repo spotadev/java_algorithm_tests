@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.easy.valid_anagram;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.arraysandhashing.easy.valid_anagram.ValidAnagram_JD;
 
 /**
  * @author John Dickerson - 30 Apr 2022
  */
-public class ValidAnagram_JDTest {
-
-    private ValidAnagramAPI validAnagram;
+public class ValidAnagram_JDTest extends AbstractValidAnagramTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,15 +31,13 @@ public class ValidAnagram_JDTest {
     @Test
     public void isAnagramTest_1() {
 
-        boolean valid = validAnagram.isAnagram( "anagram", "nagaram" );
-        Assert.assertTrue( valid );
+        super.isAnagramTest_1();
     }
 
 
     @Test
     public void isAnagramTest_2() {
 
-        boolean valid = validAnagram.isAnagram( "rat", "cat" );
-        Assert.assertFalse( valid );
+        super.isAnagramTest_2();
     }
 }

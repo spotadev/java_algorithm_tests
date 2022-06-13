@@ -13,22 +13,24 @@
 */
 package com.spotadev.algo.blind75.math_geometry.medium.set_matrix_zeroes;
 
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 /**
  * @author John Dickerson - 19 May 2022
  */
-public class SetMatrixZeroes_JDTest {
+public class SetMatrixZeroes_JDTest extends AbstractSetMatrixZeroesTest {
 
-    private SetMatrixZeroesAPI setMatrixZeroes;
-
+    @BeforeClass
     public void setUp() {
 
         setMatrixZeroes = new SetMatrixZeroes_JD();
     }
 
 
+    @Test
     public void setZeroesTest() {
 
-        int[][] matrix = new int[][] {};
-        setMatrixZeroes.setZeroes( matrix );
+        super.setZeroesTest();
     }
 }

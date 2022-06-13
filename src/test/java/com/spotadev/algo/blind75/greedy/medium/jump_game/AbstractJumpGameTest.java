@@ -11,31 +11,21 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.math_geometry.medium.spiral_matrix;
+package com.spotadev.algo.blind75.greedy.medium.jump_game;
 
-import java.util.List;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 19 May 2022
+ * @author John Dickerson - 13 Jun 2022
  */
-public class SprialMatrixTest {
+public class AbstractJumpGameTest {
 
-    private SpiralMatrixAPI spiralMatrix;
+    protected JumpGameAPI jumpGame;
 
-    @BeforeClass
-    public void setUp() {
+    public void canJumpTest_1() {
 
-        spiralMatrix = new SpiralMatrix_JD();
-    }
-
-
-    @Test
-    public void spiralOrderTest() {
-
-        int[][] matrix = new int[][] {};
-        List<Integer> result = spiralMatrix.spiralOrder( matrix );
+        int[] nums = {};
+        boolean canJump = jumpGame.canJump( nums );
+        Assert.assertTrue( canJump );
     }
 }

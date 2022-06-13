@@ -11,28 +11,20 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.heap_priorityqueue.find_median_from_data_stream;
+package com.spotadev.algo.blind75.math_geometry.medium.spiral_matrix;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.FindMedianFromDataStream_JD;
+import java.util.List;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 13 Jun 2022
  */
-public class FindMedianFromDataStreamTest extends AbstractFindMedianFromDataStreamTest {
+public class AbstractSprialMatrixTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected SpiralMatrixAPI spiralMatrix;
 
-        medianFinder = new FindMedianFromDataStream_JD();
-    }
+    public void spiralOrderTest() {
 
-
-    @Test
-    public void testingTest() {
-
-        super.testingTest();
+        int[][] matrix = new int[][] {};
+        List<Integer> result = spiralMatrix.spiralOrder( matrix );
     }
 }

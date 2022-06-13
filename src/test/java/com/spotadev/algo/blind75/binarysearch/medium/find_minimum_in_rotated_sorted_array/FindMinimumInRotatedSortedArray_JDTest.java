@@ -13,18 +13,14 @@
 */
 package com.spotadev.algo.blind75.binarysearch.medium.find_minimum_in_rotated_sorted_array;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.binarysearch.medium.find_minimum_in_rotated_sorted_array.FindMinimumInRotatedSortedArray_JD;
 
 /**
  * @author John Dickerson - 5 May 2022
  */
-public class FindMinimumInRotatedSortedArray_JDTest {
-
-    private FindMinimumInRotatedSortedArrayAPI findMinimumInRotatedSortedArray;
+public class FindMinimumInRotatedSortedArray_JDTest extends
+        AbstractFindMinimumInRotatedSortedArrayTest {
 
     @BeforeClass
     public void setup() {
@@ -36,31 +32,27 @@ public class FindMinimumInRotatedSortedArray_JDTest {
     @Test
     public void findMinTest_1() {
 
-        int min = findMinimumInRotatedSortedArray.findMin( new int[] { 3, 4, 5, 1, 2 } );
-        Assert.assertEquals( min, 1 );
+        super.findMinTest_1();
     }
 
 
     @Test
     public void findMinTest_2() {
 
-        int min = findMinimumInRotatedSortedArray.findMin( new int[] { 4, 5, 6, 7, 0, 1, 2 } );
-        Assert.assertEquals( min, 0 );
+        super.findMinTest_2();
     }
 
 
     @Test
     public void findMinTest_3() {
 
-        int min = findMinimumInRotatedSortedArray.findMin( new int[] { 11, 13, 15, 17 } );
-        Assert.assertEquals( min, 11 );
+        super.findMinTest_3();
     }
 
 
     @Test
     public void findMinTest_4() {
 
-        int min = findMinimumInRotatedSortedArray.findMin( new int[] { 4, 5, 1, 2, 3 } );
-        Assert.assertEquals( min, 1 );
+        super.findMinTest_4();
     }
 }

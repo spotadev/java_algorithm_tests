@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.medium.product_of_array_except_self;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.arraysandhashing.medium.product_of_array_except_self.ProductOfArrayExceptSelf_JD;
 
 /**
  * @author John Dickerson - 1 May 2022
  */
-public class ProductOfArrayExceptSelf_JDTest {
-
-    private ProductOfArrayExceptSelfAPI productOfArrayExceptSelf;
+public class ProductOfArrayExceptSelf_JDTest extends AbstractProductOfArrayExceptSelfTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,31 +31,27 @@ public class ProductOfArrayExceptSelf_JDTest {
     @Test
     public void productExceptSelfTest_1() {
 
-        int[] result = productOfArrayExceptSelf.productExceptSelf( new int[] { 1, 2, 3, 4 } );
-        Assert.assertEquals( result, new int[] { 24, 12, 8, 6 } );
+        super.productExceptSelfTest_1();
     }
 
 
     @Test
     public void productExceptSelfTest_2() {
 
-        int[] result = productOfArrayExceptSelf.productExceptSelf( new int[] { -1, 1, 0, -3, 3 } );
-        Assert.assertEquals( result, new int[] { 0, 0, 9, 0, 0 } );
+        super.productExceptSelfTest_2();
     }
 
 
     @Test
     public void productExceptSelfTest_3() {
 
-        int[] result = productOfArrayExceptSelf.productExceptSelf( new int[] { 1, 1, 0, -3, 3 } );
-        Assert.assertEquals( result, new int[] { 0, 0, -9, 0, 0 } );
+        super.productExceptSelfTest_3();
     }
 
 
     @Test
     public void productExceptSelfTest_4() {
 
-        int[] result = productOfArrayExceptSelf.productExceptSelf( new int[] { 9, 0, -2 } );
-        Assert.assertEquals( result, new int[] { 0, -18, 0 } );
+        super.productExceptSelfTest_4();
     }
 }

@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.easy.contains_duplicates;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.arraysandhashing.easy.contains_duplicates.ContainsDuplicates_JD;
 
 /**
  * @author John Dickerson - 30 Apr 2022
  */
-public class ContainsDuplicates_JDTest {
-
-    private ContainsDuplicatesAPI containsDuplicates;
+public class ContainsDuplicates_JDTest extends AbstractContainsDuplicatesTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,29 +31,20 @@ public class ContainsDuplicates_JDTest {
     @Test
     public void containsDuplicateTest_1() {
 
-        boolean hasDuplicates =
-                containsDuplicates.containsDuplicate( new int[] { 1, 2, 3, 1 } );
-
-        Assert.assertTrue( hasDuplicates );
+        super.containsDuplicateTest_1();
     }
 
 
     @Test
     public void containsDuplicateTest_2() {
 
-        boolean hasDuplicates =
-                containsDuplicates.containsDuplicate( new int[] { 1, 2, 3, 4 } );
-
-        Assert.assertFalse( hasDuplicates );
+        super.containsDuplicateTest_2();
     }
 
 
     @Test
     public void containsDuplicateTest_3() {
 
-        boolean hasDuplicates =
-                containsDuplicates.containsDuplicate( new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 } );
-
-        Assert.assertTrue( hasDuplicates );
+        super.containsDuplicateTest_3();
     }
 }
