@@ -15,7 +15,7 @@ package com.spotadev.algo.blind75.heap_priorityqueue.find_median_from_data_strea
 
 import org.testng.Assert;
 
-import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.FindMedianFromDataStream;
+import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.FindMedianFromDataStream_JD;
 import com.spotadev.algo.blind75.heap_priorityqueue.hard.find_median_from_data_stream.FindMedianFromDataStreamAPI;
 
 /**
@@ -39,7 +39,7 @@ public abstract class AbstractFindMedianFromDataStreamTest {
             switch ( command ) {
 
                 case "MedianFinder":
-                    medianFinder = new FindMedianFromDataStream();
+                    medianFinder = new FindMedianFromDataStream_JD();
                     break;
 
                 case "addNum":

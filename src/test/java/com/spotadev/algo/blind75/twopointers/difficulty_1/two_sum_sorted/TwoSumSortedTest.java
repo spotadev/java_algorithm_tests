@@ -17,19 +17,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.medium.two_sum_sorted.TwoSumSorted;
+import com.spotadev.algo.blind75.twopointers.medium.two_sum_sorted.TwoSumSorted_JD;
+import com.spotadev.algo.blind75.twopointers.medium.two_sum_sorted.TwoSumSortedAPI;
 
 /**
  * @author John Dickerson - 2 May 2022
  */
 public class TwoSumSortedTest {
 
-    private TwoSumSorted twoSumSorted;
+    private TwoSumSortedAPI twoSumSorted;
 
     @BeforeClass
     public void setUp() {
 
-        twoSumSorted = new TwoSumSorted();
+        twoSumSorted = new TwoSumSorted_JD();
     }
 
 

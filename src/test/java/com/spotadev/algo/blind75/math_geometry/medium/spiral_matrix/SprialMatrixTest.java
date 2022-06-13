@@ -23,12 +23,12 @@ import org.testng.annotations.Test;
  */
 public class SprialMatrixTest {
 
-    private SpiralMatrix spiralMatrix;
+    private SpiralMatrixAPI spiralMatrix;
 
     @BeforeClass
     public void setUp() {
 
-        spiralMatrix = new SpiralMatrix();
+        spiralMatrix = new SpiralMatrix_JD();
     }
 
 

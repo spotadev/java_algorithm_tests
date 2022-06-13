@@ -17,19 +17,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.medium.container_with_most_water.ContainerWithMostWater;
+import com.spotadev.algo.blind75.twopointers.medium.container_with_most_water.ContainerWithMostWater_JD;
+import com.spotadev.algo.blind75.twopointers.medium.container_with_most_water.ContainerWithMostWaterAPI;
 
 /**
  * @author John Dickerson - 3 May 2022
  */
 public class ContainerWithMostWaterTest {
 
-    private ContainerWithMostWater containerWithMostWater;
+    private ContainerWithMostWaterAPI containerWithMostWater;
 
     @BeforeClass
     public void setUp() {
 
-        containerWithMostWater = new ContainerWithMostWater();
+        containerWithMostWater = new ContainerWithMostWater_JD();
     }
 
 

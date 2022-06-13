@@ -15,19 +15,20 @@ package com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bits;
 
 import org.testng.annotations.BeforeClass;
 
-import com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit.NumberOf1Bits;
+import com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit.NumberOf1Bits_JD;
+import com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit.NumberOf1BitsAPI;
 
 /**
  * @author John Dickerson - 19 May 2022
  */
 public class NumberOf1BitsTest {
 
-    private NumberOf1Bits numberOf1Bits;
+    private NumberOf1BitsAPI numberOf1Bits;
 
     @BeforeClass
     public void setUp() {
 
-        numberOf1Bits = new NumberOf1Bits();
+        numberOf1Bits = new NumberOf1Bits_JD();
     }
 
 

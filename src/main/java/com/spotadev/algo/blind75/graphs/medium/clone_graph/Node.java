@@ -43,4 +43,11 @@ public class Node {
         val = _val;
         neighbors = _neighbors;
     }
+
+
+    @Override
+    public String toString() {
+
+        return "Node [val=" + val + "]";
+    }
 }

@@ -20,19 +20,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.medium.three_sum.ThreeSum_Slow;
+import com.spotadev.algo.blind75.twopointers.medium.three_sum.ThreeSumAPI;
+import com.spotadev.algo.blind75.twopointers.medium.three_sum.ThreeSum_Slow_JD;
 
 /**
  * @author John Dickerson - 2 May 2022
  */
 public class ThreeSum_SlowTest {
 
-    private ThreeSum_Slow threeSum;
+    private ThreeSumAPI threeSum;
 
     @BeforeClass
     public void setUp() {
 
-        threeSum = new ThreeSum_Slow();
+        threeSum = new ThreeSum_Slow_JD();
     }
 
 

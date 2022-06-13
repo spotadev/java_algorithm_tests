@@ -16,7 +16,7 @@ package com.spotadev.algo.blind75.tries.word_hard.search_ii;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchII;
+import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchII_JD;
 
 /**
  * @author John Dickerson - 13 May 2022
@@ -27,7 +27,7 @@ public class WordSearchIITest extends AbstractWordSearchIITest {
     @BeforeClass
     public void setUp() {
 
-        wordSearchII = new WordSearchII();
+        wordSearchII = new WordSearchII_JD();
     }
 
 
