@@ -13,36 +13,39 @@
 */
 package com.spotadev.algo.blind75.slidingwindow.medium.longest_substring_without_repeating_characters;
 
-import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 3 May 2022
+ * @author John Dickerson - 14 Jun 2022
  */
-public class LongestSubstringWithoutRepeatingCharacters_JDTest extends
-        AbstractLongestSubstringWithoutRepeatingCharactersTest {
+public abstract class AbstractLongestSubstringWithoutRepeatingCharactersTest {
 
-    @BeforeClass
-    public void setUp() {
-
-        longestSubstringWithoutRepeatingCharacters =
-                new LongestSubstringWithoutRepeatingCharacters_JD();
-    }
-
+    protected LongestSubstringWithoutRepeatingCharactersAPI longestSubstringWithoutRepeatingCharacters;
 
     public void lengthOfLongestSubstringTest_1() {
 
-        super.lengthOfLongestSubstringTest_1();
+        int longest =
+                longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring( "abcabcbb" );
+
+        Assert.assertEquals( longest, 3 );
     }
 
 
     public void lengthOfLongestSubstringTest_2() {
 
-        super.lengthOfLongestSubstringTest_2();
+        int longest =
+                longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring( "bbbbb" );
+
+        Assert.assertEquals( longest, 1 );
     }
 
 
     public void lengthOfLongestSubstringTest_3() {
 
-        super.lengthOfLongestSubstringTest_3();
+        int longest =
+                longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring( "pwwkew" );
+
+        Assert.assertEquals( longest, 3 );
     }
+
 }

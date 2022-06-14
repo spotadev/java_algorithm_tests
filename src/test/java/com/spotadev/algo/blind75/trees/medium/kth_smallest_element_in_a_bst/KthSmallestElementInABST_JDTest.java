@@ -13,16 +13,13 @@
 */
 package com.spotadev.algo.blind75.trees.medium.kth_smallest_element_in_a_bst;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class KthSmallestElementInABST_JDTest {
-
-    private KthSmallestElementInABSTAPI kthSmallestElementInABST;
+public class KthSmallestElementInABST_JDTest extends AbstractKthSmallestElementInABSTTest {
 
     @BeforeClass
     public void setUp() {
@@ -34,37 +31,13 @@ public class KthSmallestElementInABST_JDTest {
     @Test
     public void kthSmallest_1() {
 
-        TreeNode root = new TreeNode( 3 );
-        TreeNode node_1 = new TreeNode( 1 );
-        TreeNode node_4 = new TreeNode( 4 );
-        TreeNode node_2 = new TreeNode( 2 );
-
-        root.left = node_1;
-        root.right = node_4;
-        node_1.right = node_2;
-
-        int smallest = kthSmallestElementInABST.kthSmallest( root, 1 );
-        Assert.assertEquals( smallest, 1 );
+        super.kthSmallest_1();
     }
 
 
     @Test
     public void kthSmallest_2() {
 
-        TreeNode root = new TreeNode( 5 );
-        TreeNode node_3 = new TreeNode( 3 );
-        TreeNode node_6 = new TreeNode( 6 );
-        TreeNode node_2 = new TreeNode( 2 );
-        TreeNode node_4 = new TreeNode( 4 );
-        TreeNode node_1 = new TreeNode( 1 );
-
-        root.left = node_3;
-        root.right = node_6;
-        node_3.left = node_2;
-        node_3.right = node_4;
-        node_2.left = node_1;
-
-        int smallest = kthSmallestElementInABST.kthSmallest( root, 3 );
-        Assert.assertEquals( smallest, 3 );
+        super.kthSmallest_2();
     }
 }

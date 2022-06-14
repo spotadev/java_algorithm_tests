@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class MaximumProductSubarray_JDTest {
-
-    private MaximumProductSubarrayAPI maximumProductSubarray;
+public class MaximumProductSubarray_JDTest extends AbstractMaximumProductSubarrayTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class MaximumProductSubarray_JDTest {
     @Test
     public void maxProductTest() {
 
-        int[] nums = {};
-        int max = maximumProductSubarray.maxProduct( nums );
+        super.maxProductTest();
     }
 }

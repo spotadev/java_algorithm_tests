@@ -11,26 +11,11 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.palindromic_substrings;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+package com.spotadev.algo.blind75.tries.implement_trie;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 14 Jun 2022
  */
-public class PalindromicSubstrings_JDTest extends AbstractPalindromicSubstringsTest {
+public abstract class AbstractImplementTrieTest {
 
-    @BeforeClass
-    public void setUp() {
-
-        palindromicSubstrings = new PalindromicSubstrings_JD();
-    }
-
-
-    @Test
-    public void countSubstringsTest() {
-
-        super.countSubstringsTest();
-    }
 }

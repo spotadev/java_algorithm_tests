@@ -13,17 +13,13 @@
 */
 package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.word_break;
 
-import java.util.List;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 14 May 2022
  */
-public class WordBreak_JDTest {
-
-    private WordBreakAPI wordBreak;
+public class WordBreak_JDTest extends AbstractWordBreakTest {
 
     @BeforeClass
     public void setUp() {
@@ -35,8 +31,6 @@ public class WordBreak_JDTest {
     @Test
     public void wordBreakTest() {
 
-        String s = null;
-        List<String> wordDic = null;
-        boolean resuly = wordBreak.wordBreak( s, wordDic );
+        super.wordBreakTest();
     }
 }

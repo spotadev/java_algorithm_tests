@@ -13,31 +13,26 @@
 */
 package com.spotadev.algo.blind75.slidingwindow.easy.best_time_to_buy_and_sell_stock;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 3 May 2022
+ * @author John Dickerson - 14 Jun 2022
  */
-public class BestTimeToBuyAndSellStock_JDTest extends AbstractBestTimeToBuyAndSellStockTest {
+public abstract class AbstractBestTimeToBuyAndSellStockTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected BestTimeToBuyAndSellStockAPI bestTimeToBuyAndSellStock;
 
-        bestTimeToBuyAndSellStock = new BestTimeToBuyAndSellStock_JD();
-    }
-
-
-    @Test
     public void maxProfitTest_1() {
 
-        super.maxProfitTest_1();
+        int profit = bestTimeToBuyAndSellStock.maxProfit( new int[] { 7, 1, 5, 3, 6, 4 } );
+        Assert.assertEquals( profit, 5 );
     }
 
 
-    @Test
     public void maxProfitTest_2() {
 
-        super.maxProfitTest_2();
+        int profit = bestTimeToBuyAndSellStock.maxProfit( new int[] { 7, 6, 4, 3, 1 } );
+        Assert.assertEquals( profit, 0 );
     }
+
 }

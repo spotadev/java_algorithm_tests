@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 14 May 2022
  */
-public class LongestIncreasingSubsequence_JDTest {
-
-    private LongestIncreasingSubsequenceAPI longestIncreasingSubsequence;
+public class LongestIncreasingSubsequence_JDTest extends AbstractLongestIncreasingSubsequenceTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class LongestIncreasingSubsequence_JDTest {
     @Test
     public void lengthOfLISTest() {
 
-        int[] nums = new int[] {};
-        int length = longestIncreasingSubsequence.lengthOfLIS( nums );
+        super.lengthOfLISTest();
     }
 }

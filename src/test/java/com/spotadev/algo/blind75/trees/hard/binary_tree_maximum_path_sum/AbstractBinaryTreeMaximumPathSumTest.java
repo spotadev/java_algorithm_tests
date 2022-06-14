@@ -14,24 +14,14 @@
 package com.spotadev.algo.blind75.trees.hard.binary_tree_maximum_path_sum;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 14 Jun 2022
  */
-public class BinaryTreeMaximumPathSum_JDTest extends AbstractBinaryTreeMaximumPathSumTest {
+public abstract class AbstractBinaryTreeMaximumPathSumTest {
 
-    private BinaryTreeMaximumPathSumAPI binaryTreeMaximumPathSum;
+    protected BinaryTreeMaximumPathSumAPI binaryTreeMaximumPathSum;
 
-    @BeforeClass
-    public void setUp() {
-
-        binaryTreeMaximumPathSum = new BinaryTreeMaximumPathSum_JD();
-    }
-
-
-    @Test
     public void maxPathSumTest() {
 
         TreeNode root = new TreeNode( 1 );
@@ -44,7 +34,6 @@ public class BinaryTreeMaximumPathSum_JDTest extends AbstractBinaryTreeMaximumPa
     }
 
 
-    @Test
     public void maxPathSumTest_2() {
 
         TreeNode root = new TreeNode( -10 );
@@ -61,7 +50,6 @@ public class BinaryTreeMaximumPathSum_JDTest extends AbstractBinaryTreeMaximumPa
     }
 
 
-    @Test
     public void maxPathSumTest_3() {
 
         TreeNode root = new TreeNode( -3 );

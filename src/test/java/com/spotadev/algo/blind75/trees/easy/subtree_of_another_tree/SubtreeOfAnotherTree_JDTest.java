@@ -13,16 +13,13 @@
 */
 package com.spotadev.algo.blind75.trees.easy.subtree_of_another_tree;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class SubtreeOfAnotherTree_JDTest {
-
-    private SubtreeOfAnotherTreeAPI subtreeOfAnotherTree;
+public class SubtreeOfAnotherTree_JDTest extends AbstractSubtreeOfAnotherTreeTest {
 
     @BeforeClass
     public void setUp() {
@@ -34,43 +31,13 @@ public class SubtreeOfAnotherTree_JDTest {
     @Test
     public void isSubtreeTest_1() {
 
-        TreeNode root = new TreeNode( 3 );
-
-        TreeNode node_4 = new TreeNode( 4 );
-        node_4.left = new TreeNode( 1 );
-        node_4.right = new TreeNode( 2 );
-        root.left = node_4;
-
-        root.right = new TreeNode( 5 );
-
-        TreeNode subRoot = new TreeNode( 4 );
-        subRoot.left = new TreeNode( 1 );
-        subRoot.right = new TreeNode( 2 );
-
-        boolean isSubtree = subtreeOfAnotherTree.isSubtree( root, subRoot );
-        Assert.assertTrue( isSubtree );
+        super.isSubtreeTest_1();
     }
 
 
     @Test
     public void isSubtreeTest_2() {
 
-        TreeNode root = new TreeNode( 3 );
-
-        TreeNode node_4 = new TreeNode( 4 );
-        node_4.left = new TreeNode( 1 );
-        TreeNode node_2 = new TreeNode( 2 );
-        node_2.left = new TreeNode( 0 );
-        node_4.right = node_2;
-        root.left = node_4;
-
-        root.right = new TreeNode( 5 );
-
-        TreeNode subRoot = new TreeNode( 4 );
-        subRoot.left = new TreeNode( 1 );
-        subRoot.right = new TreeNode( 2 );
-
-        boolean isSubtree = subtreeOfAnotherTree.isSubtree( root, subRoot );
-        Assert.assertFalse( isSubtree );
+        super.isSubtreeTest_2();
     }
 }

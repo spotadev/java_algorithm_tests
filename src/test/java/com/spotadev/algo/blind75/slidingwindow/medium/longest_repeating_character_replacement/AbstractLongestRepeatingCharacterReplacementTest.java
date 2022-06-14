@@ -13,32 +13,25 @@
 */
 package com.spotadev.algo.blind75.slidingwindow.medium.longest_repeating_character_replacement;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 3 May 2022
+ * @author John Dickerson - 14 Jun 2022
  */
-public class LongestRepeatingCharacterReplacement_JDTest extends
-        AbstractLongestRepeatingCharacterReplacementTest {
+public abstract class AbstractLongestRepeatingCharacterReplacementTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected LongestRepeatingCharacterReplacementAPI longestRepeatingCharacterReplacement;
 
-        longestRepeatingCharacterReplacement = new LongestRepeatingCharacterReplacement_JD();
-    }
-
-
-    @Test
     public void characterReplacementTest_1() {
 
-        super.characterReplacementTest_1();
+        int longest = longestRepeatingCharacterReplacement.characterReplacement( "ABAB", 2 );
+        Assert.assertEquals( longest, 4 );
     }
 
 
-    @Test
     public void characterReplacementTest_2() {
 
-        super.characterReplacementTest_2();
+        int longest = longestRepeatingCharacterReplacement.characterReplacement( "AABABBA", 1 );
+        Assert.assertEquals( longest, 4 );
     }
 }

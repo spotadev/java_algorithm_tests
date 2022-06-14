@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class HouseRobber_JDTest {
-
-    private HouseRobberAPI houseRobber;
+public class HouseRobber_JDTest extends AbstractHouseRobberTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class HouseRobber_JDTest {
     @Test
     public void robTest() {
 
-        int[] nums = new int[] {};
-        houseRobber.rob( nums );
+        super.robTest();
     }
 }

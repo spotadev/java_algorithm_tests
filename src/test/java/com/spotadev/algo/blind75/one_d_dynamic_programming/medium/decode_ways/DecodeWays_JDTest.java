@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class DecodeWays_JDTest {
-
-    private DecodeWaysAPI decodeWays;
+public class DecodeWays_JDTest extends AbstractDecodeWaysTest {
 
     @BeforeClass
     public void setUp() {

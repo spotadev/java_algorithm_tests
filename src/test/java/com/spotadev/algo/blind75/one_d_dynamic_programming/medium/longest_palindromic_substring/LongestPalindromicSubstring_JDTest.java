@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 13 May 2022
  */
-public class LongestPalindromicSubstring_JDTest {
-
-    private LongestPalindromicSubstringAPI longestPalindromicSubstring;
+public class LongestPalindromicSubstring_JDTest extends AbstractLongestPalindromicSubstringTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +31,6 @@ public class LongestPalindromicSubstring_JDTest {
     @Test
     public void longestPalindromeTest() {
 
-        String s = null;
-        String result = longestPalindromicSubstring.longestPalindrome( null );
+        super.longestPalindromeTest();
     }
 }

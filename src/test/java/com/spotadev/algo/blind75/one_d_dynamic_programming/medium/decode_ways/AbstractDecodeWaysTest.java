@@ -11,40 +11,18 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.trees.easy.same_tree;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.decode_ways;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 13 Jun 2022
  */
-public class SameTree_JDTest extends AbstractSameTreeTest {
+public abstract class AbstractDecodeWaysTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected DecodeWaysAPI decodeWays;
 
-        sameTree = new SameTree_JD();
-    }
+    public void numDecodingsTest() {
 
-
-    @Test
-    public void isSameTreeTest_1() {
-
-        super.isSameTreeTest_1();
-    }
-
-
-    @Test
-    public void isSameTreeTest_2() {
-
-        super.isSameTreeTest_2();
-    }
-
-
-    @Test
-    public void isSameTreeTest_3() {
-
-        super.isSameTreeTest_3();
+        String s = null;
+        int numberDecodings = decodeWays.numDecodings( s );
     }
 }

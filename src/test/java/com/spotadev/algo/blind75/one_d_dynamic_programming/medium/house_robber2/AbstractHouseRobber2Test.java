@@ -11,40 +11,18 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.trees.easy.same_tree;
-
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+package com.spotadev.algo.blind75.one_d_dynamic_programming.medium.house_robber2;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 13 Jun 2022
  */
-public class SameTree_JDTest extends AbstractSameTreeTest {
+public abstract class AbstractHouseRobber2Test {
 
-    @BeforeClass
-    public void setUp() {
+    protected HouseRobber2API houseRobber2;
 
-        sameTree = new SameTree_JD();
-    }
+    public void robTest() {
 
-
-    @Test
-    public void isSameTreeTest_1() {
-
-        super.isSameTreeTest_1();
-    }
-
-
-    @Test
-    public void isSameTreeTest_2() {
-
-        super.isSameTreeTest_2();
-    }
-
-
-    @Test
-    public void isSameTreeTest_3() {
-
-        super.isSameTreeTest_3();
+        int[] nums = {};
+        int results = houseRobber2.rob( nums );
     }
 }
