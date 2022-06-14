@@ -13,19 +13,15 @@
 */
 package com.spotadev.algo.blind75.twopointers.difficulty_1.container_with_most_water;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.spotadev.algo.blind75.twopointers.medium.container_with_most_water.ContainerWithMostWater_JD;
-import com.spotadev.algo.blind75.twopointers.medium.container_with_most_water.ContainerWithMostWaterAPI;
 
 /**
  * @author John Dickerson - 3 May 2022
  */
-public class ContainerWithMostWaterTest {
-
-    private ContainerWithMostWaterAPI containerWithMostWater;
+public class ContainerWithMostWaterTest extends AbstractContainerWithMostWaterTest {
 
     @BeforeClass
     public void setUp() {
@@ -37,15 +33,13 @@ public class ContainerWithMostWaterTest {
     @Test
     public void maxAreaTest_1() {
 
-        int max = containerWithMostWater.maxArea( new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 } );
-        Assert.assertEquals( max, 49 );
+        super.maxAreaTest_1();
     }
 
 
     @Test
     public void maxAreaTest_2() {
 
-        int max = containerWithMostWater.maxArea( new int[] { 1, 1 } );
-        Assert.assertEquals( max, 1 );
+        super.maxAreaTest_2();
     }
 }

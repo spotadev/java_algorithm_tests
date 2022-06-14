@@ -11,24 +11,22 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.two_d_dynamic_programming.medium.longest_common_subsequence;
 
 import org.testng.Assert;
 
 /**
  * @author John Dickerson - 14 Jun 2022
  */
-public abstract class AbstractImplementTrieTest {
+public abstract class AbstractLongestCommonSubsequenceTest {
 
-    protected ImplementTrieAPI implementTrie;
+    protected LongestCommonSubsequenceAPI longestCommonSubsequence;
 
-    public void testingTest() {
+    public void longestCommonSubsequenceTest() {
 
-        implementTrie.insert( "apple" );
-        Assert.assertTrue( implementTrie.search( "apple" ) );
-        Assert.assertFalse( implementTrie.search( "app" ) );
-        Assert.assertTrue( implementTrie.startsWith( "app" ) );
-        implementTrie.insert( "app" );
-        Assert.assertTrue( implementTrie.search( "app" ) );
+        String text1 = null;
+        String text2 = null;
+        int result = longestCommonSubsequence.longestCommonSubsequence( text1, text2 );
+        Assert.assertEquals( result, -1 );
     }
 }

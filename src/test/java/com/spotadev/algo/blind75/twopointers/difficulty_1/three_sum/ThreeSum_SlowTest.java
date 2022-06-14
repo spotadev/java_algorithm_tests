@@ -13,22 +13,15 @@
 */
 package com.spotadev.algo.blind75.twopointers.difficulty_1.three_sum;
 
-import java.util.Iterator;
-import java.util.List;
-
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.twopointers.medium.three_sum.ThreeSumAPI;
 import com.spotadev.algo.blind75.twopointers.medium.three_sum.ThreeSum_Slow_JD;
 
 /**
  * @author John Dickerson - 2 May 2022
  */
-public class ThreeSum_SlowTest {
-
-    private ThreeSumAPI threeSum;
+public class ThreeSum_SlowTest extends AbstractThreeSumTest {
 
     @BeforeClass
     public void setUp() {
@@ -37,63 +30,37 @@ public class ThreeSum_SlowTest {
     }
 
 
-    private String createVisualRepresentation( List<List<Integer>> lists ) {
-
-        StringBuilder sb = new StringBuilder( "[" );
-        Iterator<List<Integer>> listsIterator = lists.iterator();
-
-        while ( listsIterator.hasNext() ) {
-
-            sb.append( "[" );
-            List<Integer> list = listsIterator.next();
-            Iterator<Integer> listIterator = list.iterator();
-
-            while ( listIterator.hasNext() ) {
-
-                Integer integer = listIterator.next();
-                sb.append( integer );
-
-                if ( listIterator.hasNext() ) {
-
-                    sb.append( "," );
-                }
-            }
-            sb.append( "]" );
-
-            if ( listsIterator.hasNext() ) {
-
-                sb.append( "," );
-            }
-        }
-
-        sb.append( "]" );
-        return sb.toString();
-    }
-
-
     @Test
     public void threeSumTest_1() {
 
-        List<List<Integer>> lists = threeSum.threeSum( new int[] { -1, 0, 1, 2, -1, -4 } );
-        String visualRepresentation = createVisualRepresentation( lists );
-        Assert.assertEquals( visualRepresentation, "[[-1,0,1],[-1,-1,2]]" );
+        super.threeSumTest_1();
     }
 
 
     @Test
     public void threeSumTest_2() {
 
-        List<List<Integer>> lists = threeSum.threeSum( new int[] {} );
-        String visualRepresentation = createVisualRepresentation( lists );
-        Assert.assertEquals( visualRepresentation, "[]" );
+        super.threeSumTest_2();
     }
 
 
     @Test
     public void threeSumTest_3() {
 
-        List<List<Integer>> lists = threeSum.threeSum( new int[] { 0 } );
-        String visualRepresentation = createVisualRepresentation( lists );
-        Assert.assertEquals( visualRepresentation, "[]" );
+        super.threeSumTest_3();
+    }
+
+
+    @Test
+    public void threeSumTest_4() {
+
+        super.threeSumTest_4();
+    }
+
+
+    @Test
+    public void threeSumTest_5() {
+
+        super.threeSumTest_5();
     }
 }

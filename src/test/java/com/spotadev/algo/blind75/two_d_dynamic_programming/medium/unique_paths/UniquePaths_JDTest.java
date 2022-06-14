@@ -19,9 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 14 May 2022
  */
-public class UniquePaths_JDTest {
-
-    private UniquePathsAPI uniquePaths;
+public class UniquePaths_JDTest extends AbstractUniquePathsTest {
 
     @BeforeClass
     public void setUp() {
@@ -33,8 +31,6 @@ public class UniquePaths_JDTest {
     @Test
     public void uniquePathsTest() {
 
-        int m = -1;
-        int n = -1;
-        int unique = uniquePaths.uniquePaths( m, n );
+        super.uniquePathsTest();
     }
 }

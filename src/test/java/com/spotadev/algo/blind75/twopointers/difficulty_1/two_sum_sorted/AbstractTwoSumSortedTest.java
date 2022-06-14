@@ -13,40 +13,34 @@
 */
 package com.spotadev.algo.blind75.twopointers.difficulty_1.two_sum_sorted;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.Assert;
 
-import com.spotadev.algo.blind75.twopointers.medium.two_sum_sorted.TwoSumSorted_JD;
+import com.spotadev.algo.blind75.twopointers.medium.two_sum_sorted.TwoSumSortedAPI;
 
 /**
- * @author John Dickerson - 2 May 2022
+ * @author John Dickerson - 14 Jun 2022
  */
-public class TwoSumSortedTest extends AbstractTwoSumSortedTest {
+public abstract class AbstractTwoSumSortedTest {
 
-    @BeforeClass
-    public void setUp() {
+    protected TwoSumSortedAPI twoSumSorted;
 
-        twoSumSorted = new TwoSumSorted_JD();
-    }
-
-
-    @Test
     public void twoSumTest_1() {
 
-        super.twoSumTest_1();
+        int[] indexes = twoSumSorted.twoSum( new int[] { 2, 7, 11, 15 }, 9 );
+        Assert.assertEquals( indexes, new int[] { 1, 2 } );
     }
 
 
-    @Test
     public void twoSumTest_2() {
 
-        super.twoSumTest_2();
+        int[] indexes = twoSumSorted.twoSum( new int[] { 2, 3, 4 }, 6 );
+        Assert.assertEquals( indexes, new int[] { 1, 3 } );
     }
 
 
-    @Test
     public void twoSumTest_3() {
 
-        super.twoSumTest_3();
+        int[] indexes = twoSumSorted.twoSum( new int[] { -1, 0 }, -1 );
+        Assert.assertEquals( indexes, new int[] { 1, 2 } );
     }
 }

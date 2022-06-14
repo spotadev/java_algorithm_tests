@@ -13,16 +13,13 @@
 */
 package com.spotadev.algo.blind75.two_d_dynamic_programming.medium.longest_common_subsequence;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 15 May 2022
  */
-public class LongestCommonSubsequence_JDTest {
-
-    private LongestCommonSubsequenceAPI longestCommonSubsequence;
+public class LongestCommonSubsequence_JDTest extends AbstractLongestCommonSubsequenceTest {
 
     @BeforeClass
     public void setUp() {
@@ -34,9 +31,6 @@ public class LongestCommonSubsequence_JDTest {
     @Test
     public void longestCommonSubsequenceTest() {
 
-        String text1 = null;
-        String text2 = null;
-        int result = longestCommonSubsequence.longestCommonSubsequence( text1, text2 );
-        Assert.assertEquals( result, -1 );
+        super.longestCommonSubsequenceTest();
     }
 }

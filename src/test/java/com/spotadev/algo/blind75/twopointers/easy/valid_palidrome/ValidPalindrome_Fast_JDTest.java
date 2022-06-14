@@ -13,18 +13,13 @@
 */
 package com.spotadev.algo.blind75.twopointers.easy.valid_palidrome;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.spotadev.algo.blind75.twopointers.easy.valid_palidrome.ValidPalindrome_Fast_JD;
 
 /**
  * @author John Dickerson - 2 May 2022
  */
-public class ValidPalindrome_Fast_JDTest {
-
-    private ValidPalindromeAPI validPalindrome;
+public class ValidPalindrome_Fast_JDTest extends AbstractValidPalindromeTest {
 
     @BeforeClass
     public void setUp() {
@@ -36,55 +31,48 @@ public class ValidPalindrome_Fast_JDTest {
     @Test
     public void isPalindromeTest_1() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( "A man, a plan, a canal: Panama" );
-        Assert.assertTrue( isPalindrome );
+        super.isPalindromeTest_1();
     }
 
 
     @Test
     public void isPalindromeTest_2() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( "race a car" );
-        Assert.assertFalse( isPalindrome );
+        super.isPalindromeTest_2();
     }
 
 
     @Test
     public void isPalindromeTest_3() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( " " );
-        Assert.assertTrue( isPalindrome );
+        super.isPalindromeTest_3();
     }
 
 
     @Test
     public void isPalindromeTest_4() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( ".," );
-        Assert.assertTrue( isPalindrome );
+        super.isPalindromeTest_4();
     }
 
 
     @Test
     public void isPalindromeTest_5() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( "0P" );
-        Assert.assertFalse( isPalindrome );
+        super.isPalindromeTest_5();
     }
 
 
     @Test
     public void isPalindromeTest_6() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( "0z;z   ; 0" );
-        Assert.assertTrue( isPalindrome );
+        super.isPalindromeTest_6();
     }
 
 
     @Test
     public void isPalindromeTest_7() {
 
-        boolean isPalindrome = validPalindrome.isPalindrome( "!!!::vrTTr::v!!!" );
-        Assert.assertTrue( isPalindrome );
+        super.isPalindromeTest_7();
     }
 }

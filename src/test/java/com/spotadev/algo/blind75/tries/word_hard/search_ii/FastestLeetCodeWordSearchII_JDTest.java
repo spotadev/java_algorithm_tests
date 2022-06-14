@@ -16,18 +16,18 @@ package com.spotadev.algo.blind75.tries.word_hard.search_ii;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchII_JD;
+import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchII_FastestLeetCode;
 
 /**
  * @author John Dickerson - 13 May 2022
  */
 @Test
-public class WordSearchIITest extends AbstractWordSearchIITest {
+public class FastestLeetCodeWordSearchII_JDTest extends AbstractWordSearchIITest {
 
     @BeforeClass
     public void setUp() {
 
-        wordSearchII = new WordSearchII_JD();
+        wordSearchII = new WordSearchII_FastestLeetCode();
     }
 
 

@@ -11,24 +11,29 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
+package com.spotadev.algo.blind75.twopointers.difficulty_1.container_with_most_water;
 
 import org.testng.Assert;
+
+import com.spotadev.algo.blind75.twopointers.medium.container_with_most_water.ContainerWithMostWaterAPI;
 
 /**
  * @author John Dickerson - 14 Jun 2022
  */
-public abstract class AbstractImplementTrieTest {
+public abstract class AbstractContainerWithMostWaterTest {
 
-    protected ImplementTrieAPI implementTrie;
+    protected ContainerWithMostWaterAPI containerWithMostWater;
 
-    public void testingTest() {
+    public void maxAreaTest_1() {
 
-        implementTrie.insert( "apple" );
-        Assert.assertTrue( implementTrie.search( "apple" ) );
-        Assert.assertFalse( implementTrie.search( "app" ) );
-        Assert.assertTrue( implementTrie.startsWith( "app" ) );
-        implementTrie.insert( "app" );
-        Assert.assertTrue( implementTrie.search( "app" ) );
+        int max = containerWithMostWater.maxArea( new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 } );
+        Assert.assertEquals( max, 49 );
+    }
+
+
+    public void maxAreaTest_2() {
+
+        int max = containerWithMostWater.maxArea( new int[] { 1, 1 } );
+        Assert.assertEquals( max, 1 );
     }
 }

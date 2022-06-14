@@ -11,24 +11,19 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.tries.implement_trie;
-
-import org.testng.Assert;
+package com.spotadev.algo.blind75.two_d_dynamic_programming.medium.unique_paths;
 
 /**
  * @author John Dickerson - 14 Jun 2022
  */
-public abstract class AbstractImplementTrieTest {
+public abstract class AbstractUniquePathsTest {
 
-    protected ImplementTrieAPI implementTrie;
+    protected UniquePathsAPI uniquePaths;
 
-    public void testingTest() {
+    public void uniquePathsTest() {
 
-        implementTrie.insert( "apple" );
-        Assert.assertTrue( implementTrie.search( "apple" ) );
-        Assert.assertFalse( implementTrie.search( "app" ) );
-        Assert.assertTrue( implementTrie.startsWith( "app" ) );
-        implementTrie.insert( "app" );
-        Assert.assertTrue( implementTrie.search( "app" ) );
+        int m = -1;
+        int n = -1;
+        int unique = uniquePaths.uniquePaths( m, n );
     }
 }
