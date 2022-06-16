@@ -20,7 +20,7 @@ import org.testng.Assert;
  */
 public abstract class AbstractWordSearchTest {
 
-    protected WordSearchApi wordSearch;
+    protected WordSearchAPI wordSearch;
 
     public void existTest_1() {
 

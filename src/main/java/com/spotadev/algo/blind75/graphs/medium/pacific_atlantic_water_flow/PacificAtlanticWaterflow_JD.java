@@ -17,7 +17,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * https://neetcode.io/
+ * 
+ * https://www.youtube.com/watch?v=s-VkcjHqkGI
+ * 
  * https://leetcode.com/problems/pacific-atlantic-water-flow/
+ * 
+ *    Runtime: 4 ms, faster than 98.54% of Java online submissions for Pacific Atlantic Water Flow.
+ *    
+ *    Memory Usage: 43.7 MB, less than 82.61% of Java online submissions for Pacific Atlantic 
+ *    Water Flow.
  * 
  * There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean. 
  * The Pacific Ocean touches the island's left and top edges, and the Atlantic Ocean touches 
@@ -79,142 +88,20 @@ import java.util.List;
  */
 public class PacificAtlanticWaterflow_JD implements PacificAtlanticWaterflowAPI {
 
-    private void checkForPacificWest(
-            int maxValue, int previousValue, int r, int c,
-            int[][] heights, boolean[][] reachesPacific, int numCols ) {
+    private void dfs(
+            int previousValue, int r, int c, int[][] heights, boolean[][] reachesSea,
+            int numRows, int numCols ) {
 
-        while ( c < numCols ) {
+        if ( r < 0 || c < 0 || r >= numRows || c >= numCols || heights[r][c] < previousValue
+                || reachesSea[r][c] )
+            return;
 
-            if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-
-                reachesPacific[r][c] = true;
-            }
-
-            if ( heights[r][c] > maxValue ) {
-
-                maxValue = heights[r][c];
-            }
-
-            previousValue = heights[r][c];
-            c++;
-        }
-
-        //        if ( c >= numCols )
-        //            return;
-        //
-        //        if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-        //
-        //            reachesPacific[r][c] = true;
-        //        }
-        //
-        //        if ( heights[r][c] > maxValue ) {
-        //
-        //            maxValue = heights[r][c];
-        //        }
-        //
-        //        checkForPacificWest( maxValue, heights[r][c], r, c + 1, heights, reachesPacific, numCols );
-    }
-
-
-    private void checkForAtlanticEast( int maxValue, int previousValue, int r, int c,
-            int[][] heights,
-            boolean[][] reachesAtlantic, int numCols ) {
-
-        while ( c >= 0 ) {
-
-            if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-
-                reachesAtlantic[r][c] = true;
-
-            }
-
-            if ( heights[r][c] > maxValue ) {
-
-                maxValue = heights[r][c];
-            }
-
-            previousValue = heights[r][c];
-            c--;
-        }
-
-        //        if ( c < 0 )
-        //            return;
-        //
-        //        if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-        //
-        //            reachesAtlantic[r][c] = true;
-        //
-        //        }
-        //
-        //        if ( heights[r][c] > maxValue ) {
-        //
-        //            maxValue = heights[r][c];
-        //        }
-        //
-        //        checkForAtlanticEast(
-        //                maxValue, heights[r][c], r, c - 1, heights, reachesAtlantic, numCols );
-    }
-
-
-    private void checkForPacificNorth( int maxValue, int previousValue, int r, int c,
-            int[][] heights,
-            boolean[][] reachesPacific, int numRows ) {
-
-        while ( r < numRows ) {
-
-            if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-
-                reachesPacific[r][c] = true;
-            }
-
-            if ( heights[r][c] > maxValue ) {
-
-                maxValue = heights[r][c];
-            }
-
-            previousValue = heights[r][c];
-            r++;
-        }
-
-        //        if ( r >= numRows )
-        //            return;
-        //
-        //        if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-        //
-        //            reachesPacific[r][c] = true;
-        //            checkForPacificNorth( heights[r][c], r + 1, c, heights, reachesPacific, numRows );
-        //        }
-    }
-
-
-    private void checkForAtlanticSouth( int maxValue, int previousValue, int r, int c,
-            int[][] heights,
-            boolean[][] reachesAtlantic, int numRows ) {
-
-        while ( r >= 0 ) {
-
-            if ( heights[r][c] >= previousValue && heights[r][c] >= maxValue ) {
-
-                reachesAtlantic[r][c] = true;
-            }
-
-            if ( heights[r][c] > maxValue ) {
-
-                maxValue = heights[r][c];
-            }
-
-            previousValue = heights[r][c];
-            r--;
-        }
-
-        //        if ( r < 0 )
-        //            return;
-
-        //        if ( heights[r][c] >= previousValue ) {
-        //
-        //            reachesAtlantic[r][c] = true;
-        //            checkForAtlanticSouth( heights[r][c], r - 1, c, heights, reachesAtlantic, numRows );
-        //        }
+        reachesSea[r][c] = true;
+        previousValue = heights[r][c];
+        dfs( previousValue, r + 1, c, heights, reachesSea, numRows, numCols );
+        dfs( previousValue, r - 1, c, heights, reachesSea, numRows, numCols );
+        dfs( previousValue, r, c + 1, heights, reachesSea, numRows, numCols );
+        dfs( previousValue, r, c - 1, heights, reachesSea, numRows, numCols );
     }
 
 
@@ -296,18 +183,24 @@ public class PacificAtlanticWaterflow_JD implements PacificAtlanticWaterflowAPI 
 
         for ( int r = 0; r < numRows; r++ ) {
 
+            // start west coast
             int c = 0;
-            checkForPacificWest( -1, -1, r, c, heights, reachesPacific, numCols );
+            dfs( -1, r, c, heights, reachesPacific, numRows, numCols );
+
+            // start east coast
             c = numCols - 1;
-            checkForAtlanticEast( -1, -1, r, c, heights, reachesAtlantic, numCols );
+            dfs( -1, r, c, heights, reachesAtlantic, numRows, numCols );
         }
 
         for ( int c = 0; c < numCols; c++ ) {
 
+            // start north
             int r = 0;
-            checkForPacificNorth( -1, -1, r, c, heights, reachesPacific, numRows );
+            dfs( -1, r, c, heights, reachesPacific, numRows, numCols );
+
+            // start south
             r = numRows - 1;
-            checkForAtlanticSouth( -1, -1, r, c, heights, reachesAtlantic, numRows );
+            dfs( -1, r, c, heights, reachesAtlantic, numRows, numCols );
         }
 
         debug( "Heights", heights );
@@ -331,7 +224,6 @@ public class PacificAtlanticWaterflow_JD implements PacificAtlanticWaterflowAPI 
 
         debug( "Reach both seas", reachesCombined );
         debug( "Results ", results );
-
         return results;
     }
 }

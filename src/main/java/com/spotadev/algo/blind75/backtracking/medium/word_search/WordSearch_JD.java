@@ -56,7 +56,7 @@ package com.spotadev.algo.blind75.backtracking.medium.word_search;
  *    
  * @author John Dickerson - 13 May 2022
  */
-public class WordSearch_JD implements WordSearchApi {
+public class WordSearch_JD implements WordSearchAPI {
 
     boolean findWord( int row, int column, String word, char[][] board,
             int numberRows, int numberColumns, boolean[][] usedCoordinates ) {

@@ -14,6 +14,7 @@
 package com.spotadev.algo.blind75.advanced_graphs.hard.alien_dictionary;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 May 2022
@@ -24,5 +25,12 @@ public class AlienDictionary_JDTest extends AbstractAlienDictionaryTest {
     public void setUp() {
 
         alienDictionary = new AlienDictionary_JD();
+    }
+
+
+    @Test
+    public void alienOrderTest() {
+
+        super.alienOrderTest();
     }
 }

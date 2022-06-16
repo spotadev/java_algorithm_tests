@@ -16,7 +16,7 @@ package com.spotadev.algo.blind75.backtracking.medium.word_search;
 /**
  * @author John Dickerson - 9 Jun 2022
  */
-public interface WordSearchApi {
+public interface WordSearchAPI {
 
     boolean exist( char[][] board, String word );
 }

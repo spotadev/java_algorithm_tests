@@ -55,7 +55,7 @@ package com.spotadev.algo.blind75.backtracking.medium.word_search;
  *    
  * @author John Dickerson - 13 May 2022
  */
-public class OptimisedWordSearch_JD implements WordSearchApi {
+public class OptimisedWordSearch_JD implements WordSearchAPI {
 
     // this is called pruning - it is reducing data that needs traversing
     private boolean failedEasyCases( int[] freqCountBoard, int[] freqCountWord,
