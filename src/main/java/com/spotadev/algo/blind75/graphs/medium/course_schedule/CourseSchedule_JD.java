@@ -13,8 +13,19 @@
 */
 package com.spotadev.algo.blind75.graphs.medium.course_schedule;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
+ * https://neetcode.io/
+ * 
+ * https://www.youtube.com/watch?v=EgI5nU9etnU
+ * 
  * https://leetcode.com/problems/course-schedule/
+ * 
+ *     Runtime: 5 ms, faster than 83.40% of Java online submissions for Course Schedule.
+ *     
+ *     Memory Usage: 47.3 MB, less than 69.44% of Java online submissions for Course Schedule.
  * 
  * There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. 
  * You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must 
@@ -52,9 +63,62 @@ package com.spotadev.algo.blind75.graphs.medium.course_schedule;
  */
 public class CourseSchedule_JD implements CourseScheduleAPI {
 
+    List<Integer>[] dependencies;
+    boolean[] visited = new boolean[2001];
+
+    private boolean completes( int i ) {
+
+        // means we have a loop
+        if ( visited[i] == true )
+            return false;
+
+        List<Integer> dependsOn = dependencies[i];
+
+        if ( dependsOn == null || ( dependsOn != null && dependsOn.size() == 0 ) )
+            return true;
+
+        visited[i] = true;
+
+        for ( Integer dependsOnI : dependsOn ) {
+
+            boolean completes = completes( dependsOnI );
+
+            if ( !completes )
+                return false;
+        }
+
+        visited[i] = false;
+        dependsOn.clear();
+        return true;
+    }
+
+
+    @SuppressWarnings( "unchecked" )
     @Override
     public boolean canFinish( int numCourses, int[][] prerequisites ) {
 
-        return false;
+        dependencies = new List[numCourses];
+
+        for ( int[] prerequisite : prerequisites ) {
+
+            List<Integer> dependsOn = dependencies[prerequisite[0]];
+
+            if ( dependsOn == null ) {
+                dependsOn = new ArrayList<Integer>();
+                dependencies[prerequisite[0]] = dependsOn;
+            }
+
+            dependsOn.add( prerequisite[1] );
+        }
+
+        for ( int i = 0; i < numCourses; i++ ) {
+
+            boolean completes = completes( i );
+
+            if ( !completes )
+                return false;
+        }
+
+        return true;
     }
 }

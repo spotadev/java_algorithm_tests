@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.graphs.medium.course_schedule;
 
+import org.testng.Assert;
+
 /**
  * @author John Dickerson - 13 Jun 2022
  */
@@ -20,10 +22,20 @@ public class AbstractCourseScheduleTest {
 
     protected CourseScheduleAPI courseSchedule;
 
-    public void canFinishTest() {
+    public void canFinishTest_1() {
 
-        int numCourses = -1;
-        int[][] prerequisites = new int[][] {};
+        int numCourses = 2;
+        int[][] prerequisites = new int[][] { { 1, 0 } };
         boolean canFinish = courseSchedule.canFinish( numCourses, prerequisites );
+        Assert.assertTrue( canFinish );
+    }
+
+
+    public void canFinishTest_2() {
+
+        int numCourses = 2;
+        int[][] prerequisites = new int[][] { { 1, 0 }, { 0, 1 } };
+        boolean canFinish = courseSchedule.canFinish( numCourses, prerequisites );
+        Assert.assertFalse( canFinish );
     }
 }

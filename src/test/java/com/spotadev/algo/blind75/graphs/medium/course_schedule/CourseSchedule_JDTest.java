@@ -29,8 +29,15 @@ public class CourseSchedule_JDTest extends AbstractCourseScheduleTest {
 
 
     @Test
-    public void canFinishTest() {
+    public void canFinishTest_1() {
 
-        super.canFinishTest();
+        super.canFinishTest_1();
+    }
+
+
+    @Test
+    public void canFinishTest_2() {
+
+        super.canFinishTest_2();
     }
 }
