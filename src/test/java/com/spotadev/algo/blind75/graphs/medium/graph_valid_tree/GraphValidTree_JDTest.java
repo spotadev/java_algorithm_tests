@@ -29,8 +29,22 @@ public class GraphValidTree_JDTest extends AbstractGraphValidTree {
 
 
     @Test
-    public void validTreeTest() {
+    public void validTreeTest_1() {
 
-        super.validTreeTest();
+        super.validTreeTest_1();
+    }
+
+
+    @Test
+    public void validTreeTest_2() {
+
+        super.validTreeTest_2();
+    }
+
+
+    @Test
+    public void validTreeTest_3() {
+
+        super.validTreeTest_3();
     }
 }

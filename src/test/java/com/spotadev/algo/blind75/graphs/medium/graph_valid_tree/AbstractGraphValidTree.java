@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.graphs.medium.graph_valid_tree;
 
+import org.testng.Assert;
+
 /**
  * @author John Dickerson - 13 Jun 2022
  */
@@ -20,10 +22,29 @@ public class AbstractGraphValidTree {
 
     protected GraphValidTreeAPI graphValidTree;
 
-    public void validTreeTest() {
+    public void validTreeTest_1() {
 
-        int n = -1;
-        int[][] edges = new int[][] {};
+        int n = 5;
+        int[][] edges = new int[][] { { 0, 1 }, { 0, 2 }, { 0, 3 }, { 1, 4 } };
         boolean validTree = graphValidTree.validTree( n, edges );
+        Assert.assertTrue( validTree );
+    }
+
+
+    public void validTreeTest_2() {
+
+        int n = 5;
+        int[][] edges = new int[][] { { 0, 1 }, { 1, 2 }, { 2, 3 }, { 1, 3 }, { 1, 4 } };
+        boolean validTree = graphValidTree.validTree( n, edges );
+        Assert.assertFalse( validTree );
+    }
+
+
+    public void validTreeTest_3() {
+
+        int n = 2;
+        int[][] edges = { { 1, 0 } };
+        boolean validTree = graphValidTree.validTree( n, edges );
+        Assert.assertTrue( validTree );
     }
 }
