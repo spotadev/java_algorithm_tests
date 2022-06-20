@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.arraysandhashing.easy.two_sum;
 
+import java.util.Arrays;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -51,6 +53,7 @@ public abstract class AbstractedTwoSumTest {
     public void twoSumTest_1() {
 
         int[] indexes = twoSum.twoSum( new int[] { 2, 7, 11, 15 }, 9 );
+        Arrays.sort( indexes );
         logger.info( debug( indexes ) );
         Assert.assertEquals( indexes, new int[] { 0, 1 } );
     }
@@ -59,6 +62,7 @@ public abstract class AbstractedTwoSumTest {
     public void twoSumTest_2() {
 
         int[] indexes = twoSum.twoSum( new int[] { 3, 3 }, 6 );
+        Arrays.sort( indexes );
         logger.info( debug( indexes ) );
         Assert.assertEquals( indexes, new int[] { 0, 1 } );
     }
@@ -67,6 +71,7 @@ public abstract class AbstractedTwoSumTest {
     public void twoSumTest_3() {
 
         int[] indexes = twoSum.twoSum( new int[] { 2, 5, 5, 11 }, 10 );
+        Arrays.sort( indexes );
         logger.info( debug( indexes ) );
         Assert.assertEquals( indexes, new int[] { 1, 2 } );
     }

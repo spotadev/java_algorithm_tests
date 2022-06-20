@@ -11,27 +11,12 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.advanced_graphs.hard.alien_dictionary;
-
-import org.testng.annotations.BeforeClass;
+package com.spotadev.algo.blind75.graphs.hard.alien_dictionary;
 
 /**
- * @author John Dickerson - 13 Jun 2022
- */
-public class AbstractAlienDictionaryTest {
+* @author John Dickerson - 13 Jun 2022
+*/
+public interface AlienDictionaryAPI {
 
-    protected AlienDictionaryAPI alienDictionary;
-
-    @BeforeClass
-    public void setUp() {
-
-        alienDictionary = new AlienDictionary_JD();
-    }
-
-
-    public void alienOrderTest() {
-
-        String[] words = new String[] {};
-        String result = alienDictionary.alienOrder( words );
-    }
+    String alienOrder( String[] words );
 }

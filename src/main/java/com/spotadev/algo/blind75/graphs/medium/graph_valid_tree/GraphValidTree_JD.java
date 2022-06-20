@@ -13,7 +13,6 @@
 */
 package com.spotadev.algo.blind75.graphs.medium.graph_valid_tree;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -130,8 +129,10 @@ public class GraphValidTree_JD implements GraphValidTreeAPI {
 
         for ( int[] edge : edges ) {
 
-            Arrays.sort( edge );
-            graph.get( edge[0] ).add( edge[1] );
+            int left = edge[0];
+            int right = edge[1];
+            graph.get( left ).add( right );
+            graph.get( right ).add( left );
         }
 
         return graph;

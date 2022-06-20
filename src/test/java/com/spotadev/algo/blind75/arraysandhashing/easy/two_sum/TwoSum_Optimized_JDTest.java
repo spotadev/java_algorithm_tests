@@ -11,26 +11,33 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.blind75.advanced_graphs.hard.alien_dictionary;
+package com.spotadev.algo.blind75.arraysandhashing.easy.two_sum;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 13 May 2022
+ * @author John Dickerson - 16 Apr 2022
  */
-public class AlienDictionary_JDTest extends AbstractAlienDictionaryTest {
+public class TwoSum_Optimized_JDTest extends AbstractedTwoSumTest {
 
     @BeforeClass
     public void setUp() {
 
-        alienDictionary = new AlienDictionary_JD();
+        twoSum = new TwoSum_Optimized_JD();
     }
 
 
     @Test
-    public void alienOrderTest() {
+    public void twoSumTest_1() {
 
-        super.alienOrderTest();
+        super.twoSumTest_1();
+    }
+
+
+    @Test
+    public void twoSumTest_2() {
+
+        super.twoSumTest_2();
     }
 }
