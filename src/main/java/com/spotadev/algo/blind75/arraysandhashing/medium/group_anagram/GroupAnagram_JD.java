@@ -56,6 +56,26 @@ import java.util.Map;
  */
 public class GroupAnagram_JD implements GroupAnagramAPI {
 
+    /**
+     * Time
+     * 
+     *     O( numberStrings *  lengthString log lengthString )
+     *     O( M * n log n )
+     *     
+     *     When we have a sort we have O( n log n ) 
+     *     
+     *     Here we are doing the sort for each word (M).
+     *     
+     * Space
+     * 
+     *     O( 2n ) ==> O(n)
+     * 
+     *     We have a Map of words. In worse case we have n key and n values.
+     *     
+     *     Space is proportional to n (linear).
+     *     
+     *     
+     */
     @Override
     public List<List<String>> groupAnagrams( String[] strs ) {
 

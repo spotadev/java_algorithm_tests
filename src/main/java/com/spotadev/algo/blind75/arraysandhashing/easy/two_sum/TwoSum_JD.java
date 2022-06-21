@@ -61,6 +61,21 @@ package com.spotadev.algo.blind75.arraysandhashing.easy.two_sum;
  */
 public class TwoSum_JD implements TwoSumAPI {
 
+    /**
+     * Time:  
+     * 
+     *      O(n2)
+     *      
+     *      We have 2 for loops which is O(n2)
+     * 
+     * Space: 
+     * 
+     *      O(n)
+     *      
+     *      We have input n  and output n which is O(2n) => O(n).  
+     *      
+     *      i.e. space is proportional to n (linear).
+     */
     @Override
     public int[] twoSum( int[] nums, int target ) {
 

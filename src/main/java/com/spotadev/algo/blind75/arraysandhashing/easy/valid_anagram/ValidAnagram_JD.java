@@ -51,6 +51,21 @@ import java.util.Arrays;
  */
 public class ValidAnagram_JD implements ValidAnagramAPI {
 
+    /**
+     * Time:  
+     * 
+     *     O(2 n log n) ==>  O(n log n)
+     * 
+     *     A sort is normally O(n log n) - here we are sorting 2 arrays
+     *     
+     *     Notice how in Big O(2n log n) is simplified to:  O(n log n)
+     * 
+     * Space: 
+     * 
+     *    O(2n)
+     *   
+     *    We need 2 arrays of s and t length 
+     */
     @Override
     public boolean isAnagram( String s, String t ) {
 

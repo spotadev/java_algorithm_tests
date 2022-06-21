@@ -64,6 +64,21 @@ import java.util.Map;
  */
 public class TwoSum_Optimized_JD implements TwoSumAPI {
 
+    /**
+     * Time:  
+     * 
+     *      O(n)
+     *      
+     *      Here we have only one for loop, so it is linear.
+     *      
+     * Space: 
+     * 
+     *      O(n)
+     *      
+     *      We have input array, a map and and output array:  O(3n) ==> O(n)
+     *      
+     *      Space requirements are proportional to n (linear).
+     */
     @Override
     public int[] twoSum( int[] nums, int target ) {
 

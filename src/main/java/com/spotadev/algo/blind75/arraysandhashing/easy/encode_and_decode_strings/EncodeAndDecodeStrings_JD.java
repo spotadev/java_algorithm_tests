@@ -51,11 +51,23 @@ import java.util.StringTokenizer;
  */
 public class EncodeAndDecodeStrings_JD implements EncodeAndDecodeStringsAPI {
 
+    /**
+     * Time:  
+     * 
+     *     O(n)
+     *     
+     *     We are iterating at worse through n strings
+     *     
+     * Space: 
+     * 
+     *     O(n)
+     *     
+     *     We are storing an array of length n
+     */
     @Override
     public String encode( List<String> strs ) {
 
         Iterator<String> iterator = strs.iterator();
-
         StringBuilder sb = new StringBuilder();
 
         while ( iterator.hasNext() ) {
@@ -72,6 +84,15 @@ public class EncodeAndDecodeStrings_JD implements EncodeAndDecodeStringsAPI {
     }
 
 
+    /**
+     * Time:  
+     * 
+     *      O(n)
+     * 
+     * Space: 
+     * 
+     *      O(n)
+     */
     @Override
     public List<String> decode( String str ) {
 

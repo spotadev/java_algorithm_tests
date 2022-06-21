@@ -53,6 +53,24 @@ import java.util.Set;
  */
 public class ContainsDuplicates_JD implements ContainsDuplicatesAPI {
 
+    /**
+     * Time:  
+     *    
+     *    O(n)
+     * 
+     *    In worse case we could cycle through all of n
+     * 
+     * Memory: 
+     * 
+     *     O(n)
+     * 
+     *     Sets use Arrays and the Array are pre-initialized with:
+     * 
+     *         8 byte header
+     *         4 byte size
+     *         Bytes for the type of each slot
+     *         Total bytes has to be multiple of 8 so padding bytes added if necessary
+     */
     @Override
     public boolean containsDuplicate( int[] nums ) {
 

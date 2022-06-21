@@ -1,0 +1,61 @@
+====================================================================================================
+docs/big_o_notation/understanding_big_o_notation_semantics.txt
+====================================================================================================
+
+Big O Notation looks like:
+
+    O(1)          - constant
+    O(log n)      - logarithmic
+    O(n)          - linear
+    O(n log n)    - linearithmic | loglinerar | quasilinear
+    O(n2)         - quadratic
+    O(c^n),c > 1  - exponential
+    
+The big O stands for Order of Magnitude.
+    
+There are 2 measurements of Big O:
+
+     * Time
+     * Space (memory)
+     
+Space is about how much memory you require for the algorithm with regards to the number of items
+in the data set.
+
+Apart from O(1) the Big O will depend on the size of the data.  
+
+For a given algorithm it is likely that there is a Best and Worst case scenario in terms of space 
+and time:
+
+    Big O is the upper bound (slowest)
+    Big Omega Ω is the lower bound (fastest)
+    Big Theta ϴ = exists if and only only if O = Ω
+
+Let us look at these different notations one by one.
+
+
+====================================================================================================
+O(1) - constant
+====================================================================================================
+
+If you have a single variable holding the length of the data set the size is O(1).
+
+If the data set is big or small you still only need fixed space:
+
+    int     4 bytes
+    long    8 bytes
+    float   4 bytes
+    double  8 bytes
+    
+====================================================================================================
+O(n) - linear
+====================================================================================================
+
+Every one-dimensional array has: 
+
+     * header of size 8 bytes
+     * 4 bytes for storing the size of the array
+     * then calculate the size of the type stored in each slot and multiple by number of elements
+     * finally the entire size of the array needs to be a multiple of 8 - add the missing bytes with
+        padding
+     
+Then as the array gets populated you need to calculate the size in bytes of each slot.

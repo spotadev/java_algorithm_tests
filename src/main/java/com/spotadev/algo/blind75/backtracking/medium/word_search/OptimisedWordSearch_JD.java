@@ -29,17 +29,30 @@ package com.spotadev.algo.blind75.backtracking.medium.word_search;
  * are horizontally or vertically neighboring. The same letter cell may not be used more than once.
  * 
  * Example 1:
+ *     
+ *     ["A","B","C","E"]
+ *     ["S","F","C","S"]
+ *     ["A","D","E","E"]             
  * 
  *     Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
  *     Output: true
  * 
  * Example 2:
  * 
+ *     ["A","B","C","E"]
+ *     ["S","F","C","S"]
+ *     ["S","F","C","S"]
+ *     ["A","D","E","E"]
+ *     
  *     Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
  *     Output: true
  * 
  * Example 3:
  * 
+ *     ["A","B","C","E"],
+ *     ["S","F","C","S"]
+ *     ["A","D","E","E"]
+ *     
  *     Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
  *     Output: false
  * 
@@ -166,6 +179,12 @@ public class OptimisedWordSearch_JD implements WordSearchAPI {
     }
 
 
+    /**
+     * Time:   O( w x h + dfs)
+     *         O( w x h + (4 * len(word)))
+     *         
+     * Space:  O( w * h )
+     */
     public boolean exist( char[][] board, String word ) {
 
         int numberRows = board.length;
