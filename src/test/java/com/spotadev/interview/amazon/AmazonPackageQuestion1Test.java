@@ -11,12 +11,24 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.karat.interview;
+package com.spotadev.interview.amazon;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
+import com.spotadev.interview.amazon.AmazonPackageQuestion1;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author John Dickerson - 4 Apr 2022
  */
-public interface KaratInterviewAPI {
+public class AmazonPackageQuestion1Test {
 
-    String findWord( String stringToCheck, String[] words );
+    @Test
+    public void solutionTest() {
+
+        List<Integer> packageWeights = new ArrayList<>();
+        AmazonPackageQuestion1.getHeaviestPackage( packageWeights );
+    }
 }

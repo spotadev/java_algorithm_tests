@@ -11,10 +11,12 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.karat.interview;
+package com.spotadev.interview.karat;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.spotadev.interview.karat.KaratInterview_JD;
 
 /**
  * @author John Dickerson - 23 Jun 2022

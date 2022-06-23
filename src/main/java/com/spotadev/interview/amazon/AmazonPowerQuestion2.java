@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.amazon.interview;
+package com.spotadev.interview.amazon;
 
 import java.util.List;
 

@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.karat.interview;
+package com.spotadev.interview.karat;
 
 import java.util.Arrays;
 

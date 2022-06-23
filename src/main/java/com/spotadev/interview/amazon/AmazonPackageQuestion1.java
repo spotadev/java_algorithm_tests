@@ -11,30 +11,20 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.amazon;
+package com.spotadev.interview.amazon;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.spotadev.amazon.interview.AmazonPowerQuestion2;
-
 /**
+ * 
+ * 
+ * 
  * @author John Dickerson - 4 Apr 2022
  */
-public class AmazonPowerQuestion2Test {
+public class AmazonPackageQuestion1 {
 
-    @Test
-    public void findTotalPower() {
+    public static long getHeaviestPackage( List<Integer> packageWeights ) {
 
-        List<Integer> powers = new ArrayList<>();
-        powers.add( 2 );
-        powers.add( 3 );
-        powers.add( 2 );
-        powers.add( 1 );
-        int total = AmazonPowerQuestion2.findTotalPower( powers );
-        Assert.assertEquals( total, 69 );
+        return -1;
     }
 }
