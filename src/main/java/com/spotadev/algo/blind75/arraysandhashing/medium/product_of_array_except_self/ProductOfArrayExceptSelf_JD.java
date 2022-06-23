@@ -28,11 +28,6 @@ package com.spotadev.algo.blind75.arraysandhashing.medium.product_of_array_excep
  * The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
  * 
  * You must write an algorithm that runs in O(n) time and without using the division operation.
- *  
- *     Runtime: 2 ms, faster than 77.22% of Java online submissions for Product of Array Except Self.
- *     
- *     Memory Usage: 51.1 MB, less than 74.86% of Java online submissions for Product of Array 
- *     Except Self.
  * 
  * Example 1:
  * 
