@@ -19,12 +19,12 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 26 Jun 2022
  */
-public class UndirectedGraph_JDTest extends AbstractUndirectedGraphTest {
+public class UndirectedGraph_MSTest extends AbstractUndirectedGraphTest {
 
     @BeforeClass
     public void setUp() {
 
-        this.undirectedGraph = new UndirectedGraph_JD();
+        this.undirectedGraph = new UndirectedGraph_MS();
     }
 
 

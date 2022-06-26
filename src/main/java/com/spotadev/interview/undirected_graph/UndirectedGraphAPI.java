@@ -13,10 +13,10 @@
 */
 package com.spotadev.interview.undirected_graph;
 
- 
 /**
  * @author John Dickerson - 26 Jun 2022
  */
 public interface UndirectedGraphAPI {
 
+    int sumOfAllEdges( int N, int[] A, int[] B );
 }

@@ -16,106 +16,145 @@ package com.spotadev.interview.undirected_graph;
 /**
  * This question came from:
  * 
- * An interview Miguel did
+ *     An interview Miguel did
+ *     
+ *     Ask Miguel for further details
+ *     
+ * You are given an undirected graph consisting of N vertices, numbered from 1 to N, and M edges.  
+ * The graph is described by two arrays, A and B, both of length M. A pair (A[K], B[K]) for K from
+ * 0 to M-1, describes an edge between vertex A[K] and vertex B[K].
  * 
- * Ask Miguel for further details
+ * Your task is to assign all values from the range [1..N] to the vertices of the graph, giving
+ * one number to each of the vertices. Do it in such a a way that the sum over all edges of the 
+ * values at the edges end points is maximal.
  * 
- * You are given an undirected graph consisting of N vertices, numbered from 1
- * to N, and M edges. The graph is descrived by two arrats, A and B, both of
- * length M. A pair (A[K], B[K]) for K from 0 to M-1, describes an edge between
- * vertex A[K] and vertex B[K].
+ * For example, given 
  * 
- * Your task is to assign all values from the range [1..N] to the vertices of
- * the graph, giving one number to each of the vertices. Do it in such a a way
- * that the sum over all edges of the values at the edges endpoints is maximal.
- * 
- * For example, given
- * 
- * N = 5, A = [ 2, 2, 1, 2 ] B = [ 1, 3, 4, 5 ]
- * 
+ *     N = 5, 
+ *     A = [ 2, 2, 1, 2 ]
+ *     B = [ 1, 3, 4, 4 ]
+ *     
  * the graph has four edges:
  * 
- * ( 2, 1 ) ( 2, 3 ) ( 1, 4 ) ( 2, 4 )
+ *     ( 2, 1 )
+ *     ( 2, 3 )
+ *     ( 1, 4 )
+ *     ( 2, 4 )
+ *     
+ * In order to obtain the maximum sum of weights, you can assign the following values to the 
+ * vertices:
  * 
- * In order to obtain the maximum sum of weights, you can assign the following
- * values to the vertices:
- * 
- * 3, 5, 2, 4, 1
- * 
+ *     3, 5, 2, 4, 1
+ *     
  * ( to vertices 1, 2, 3, 4, 5 respectively).
  * 
- * 5 val=1 1 val=3 \8 | |___ 2 val=5 _____3 val=2 7| | 7 4 val=4 /9
+ *                                        [5]val=1
+ *        [1]val=3___          
+ *           |       8
+ *           7       |___[2]val=5__7__[3]val=2
+ *           |       |              
+ *        [4]val=4__9
  * 
  * 
- * This way we obtain the sum of the values at all edge endpoints equal to:
+ * This way we obtain the sum of the values at all edge end points equal to:
  * 
- * 7 + 8 + 9 = 31
- * 
+ *     7 + 8 + 7 + 9 = 31
+ *
  * @author John Dickerson - 26 Jun 2022
  */
 public class UndirectedGraph_MS implements UndirectedGraphAPI {
-	static int maxSum;
 
-	static int getSum(int[] nums, int[] A, int[] B) {
-		int sum = 0;
-		for (int j = 1; j <= A.length; j++) {
-			for (int i = 0; i < A.length; i++) {
-				if (A[i] == j) {
-					sum = sum + nums[j - 1];
-				}
-				if (B[i] == j) {
-					sum = sum + nums[j - 1];
-				}
-			}
-		}
+    private int maxSum;
 
-		return sum;
-	}
+    private int getSum( int[] nums, int[] A, int[] B ) {
 
-	static void swap(int nums[], int l, int i) {
-		int temp = nums[l];
-		nums[l] = nums[i];
-		nums[i] = temp;
-	}
+        int sum = 0;
 
-	static void permutation(int[] nums, int l, int h, int[] A, int[] B) {
+        for ( int j = 1; j <= A.length; j++ ) {
 
-		if (l == h) {
-			int sum = getSum(nums, A, B);
-			maxSum = Math.max(sum, maxSum);
-			return;
-		}
+            for ( int i = 0; i < A.length; i++ ) {
 
-		for (int i = l; i <= h; i++) {
+                if ( A[i] == j ) {
 
-			swap(nums, l, i);
+                    sum = sum + nums[j - 1];
+                }
 
-			permutation(nums, l + 1, h, A, B);
+                if ( B[i] == j ) {
 
-			swap(nums, l, i);
-		}
-		return;
-	}
+                    sum = sum + nums[j - 1];
+                }
+            }
+        }
 
-	static void permute(int[] nums, int[] A, int[] B) {
+        return sum;
+    }
 
-		int x = nums.length - 1;
 
-		permutation(nums, 0, x, A, B);
-		return;
-	}
+    private void swap( int nums[], int l, int i ) {
 
-	public static void main(String[] args) {
-		int N = 5;
-		int A[] = { 2, 2, 1, 2 };
-		int B[] = { 1, 3, 4, 4 };
-		int[] nums = new int[A.length];
-		for (int i = (N - A.length) + 1; i <= N; i++) {
-			nums[i - ((N - A.length) + 1)] = i;
-		}
+        int temp = nums[l];
+        nums[l] = nums[i];
+        nums[i] = temp;
+    }
 
-		permute(nums, A, B);
-		System.out.println(maxSum);
 
-	}
+    private void permutation( int[] nums, int l, int h, int[] A, int[] B ) {
+
+        if ( l == h ) {
+            int sum = getSum( nums, A, B );
+            maxSum = Math.max( sum, maxSum );
+            return;
+        }
+
+        for ( int i = l; i <= h; i++ ) {
+
+            swap( nums, l, i );
+
+            permutation( nums, l + 1, h, A, B );
+
+            swap( nums, l, i );
+        }
+        return;
+    }
+
+
+    private void permute( int[] nums, int[] A, int[] B ) {
+
+        int x = nums.length - 1;
+
+        permutation( nums, 0, x, A, B );
+        return;
+    }
+
+
+    public int sumOfAllEdges( int N, int[] A, int[] B ) {
+
+        int[] nums = new int[A.length];
+
+        for ( int i = ( N - A.length ) + 1; i <= N; i++ ) {
+
+            nums[i - ( ( N - A.length ) + 1 )] = i;
+        }
+
+        permute( nums, A, B );
+
+        return maxSum;
+    }
+
+    //    public static void main( String[] args ) {
+    //
+    //        int N = 5;
+    //        int A[] = { 2, 2, 1, 2 };
+    //        int B[] = { 1, 3, 4, 4 };
+    //        int[] nums = new int[A.length];
+    //
+    //        for ( int i = ( N - A.length ) + 1; i <= N; i++ ) {
+    //
+    //            nums[i - ( ( N - A.length ) + 1 )] = i;
+    //        }
+    //
+    //        permute( nums, A, B );
+    //        System.out.println( maxSum );
+    //
+    //    }
 }
