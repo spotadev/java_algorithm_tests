@@ -18,6 +18,8 @@ package com.spotadev.interview.japanese_internship;
  * 
  *     An organisation that bridges students with japan internships (fully sponsored)
  *     
+ *     Ask Miguel for further details.
+ *     
  *     There was one hour to answer the question and nobody was looking at you while you did this.
  * 
  * Battleships is a game played on a rectangle board.  You are given a representation of such a 
