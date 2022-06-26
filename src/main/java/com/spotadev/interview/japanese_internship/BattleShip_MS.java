@@ -11,7 +11,7 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.miguel;
+package com.spotadev.interview.japanese_internship;
 
 /**
  * This question came from:
@@ -66,62 +66,89 @@ package com.spotadev.interview.miguel;
  *      
  * @author John Dickerson - 23 Jun 2022
  */
-public class BattleShip_JD implements BattleShipAPI {
+public class BattleShip_MS implements BattleShipAPI {
 
-    private char[][] getDataAsCharArrays( String[] rows ) {
+    private boolean isValidPosition( String[] B, int i, int j ) {
 
-        char[][] data = new char[rows.length][];
-
-        for ( int i = 0; i < rows.length; i++ ) {
-
-            data[i] = rows[i].toCharArray();
+        if ( i < 0 || j < 0 || i >= B.length || j >= B[i].length() || B[i].charAt( j ) == '.' ) {
+            return false;
         }
-
-        return data;
+        return true;
     }
 
 
-    private void dfs( int r, int c, String[] inProgress, char[][] data, Result result ) {
+    private int typeOfShip( String[] B, int i, int j ) {
 
-        if ( r < 0 || c < 0 || r >= data.length ||
-                c >= data[0].length ||
-                data[r][c] == '$' ) {
+        if ( B[i].charAt( j ) == '#' ) {
 
-            return;
+            B[i] = B[i].substring( 0, j ) + '.' + B[i].substring( j + 1 );
+            int top = 0;
+            int bottom = 0;
+            int left = 0;
+            int right = 0;
+
+            if ( isValidPosition( B, i - 1, j ) ) {
+                top = typeOfShip( B, i - 1, j );
+            }
+
+            if ( isValidPosition( B, i + 1, j ) ) {
+                bottom = typeOfShip( B, i + 1, j );
+            }
+
+            if ( isValidPosition( B, i, j - 1 ) ) {
+                left = typeOfShip( B, i, j - 1 );
+            }
+
+            if ( isValidPosition( B, i, j + 1 ) ) {
+                right = typeOfShip( B, i, j + 1 );
+            }
+
+            return 1 + top + bottom + left + right;
         }
 
-        Character square = data[r][c];
-        data[r][c] = '$';
+        return 0;
+    }
 
-        if ( square.charValue() != '.' ) {
 
-            inProgress[0] = inProgress[0] + square.toString();
+    private Result numberOfShips( String[] B ) {
 
-            dfs( r + 1, c, inProgress, data, result );
-            dfs( r - 1, c, inProgress, data, result );
-            dfs( r, c + 1, inProgress, data, result );
-            dfs( r, c - 1, inProgress, data, result );
+        int p = 0;
+        int s = 0;
+        int d = 0;
+        int sum = 0;
+
+        for ( int i = 0; i < B.length; i++ ) {
+
+            for ( int j = 0; j < B[i].length(); j++ ) {
+
+                if ( B[i].charAt( j ) == '#' ) {
+
+                    sum = typeOfShip( B, i, j );
+
+                    if ( sum == 1 ) {
+                        p++;
+                    }
+
+                    if ( sum == 2 ) {
+                        s++;
+                    }
+
+                    if ( sum == 3 ) {
+                        d++;
+                    }
+                }
+            }
         }
+
+        Result result = new Result( p, s, d );
+        return result;
     }
 
 
     @Override
     public Result getResult( String[] rows ) {
 
-        char[][] data = getDataAsCharArrays( rows );
-        Result result = new Result();
-        String[] inProgress = new String[1];
-
-        for ( int r = 0; r < data.length; r++ ) {
-
-            for ( int c = 0; c < data[0].length; c++ ) {
-
-                inProgress[0] = "";
-                dfs( r, c, inProgress, data, result );
-                result.setResult( inProgress[0] );
-            }
-        }
-
+        Result result = numberOfShips( rows );
         return result;
     }
 }

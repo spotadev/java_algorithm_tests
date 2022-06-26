@@ -11,12 +11,26 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.miguel;
+package com.spotadev.interview.japanese_internship;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 23 Jun 2022
  */
-public interface BattleShipAPI {
+public class BattleShip_JDTest extends AbstractBattleShipTest {
 
-    Result getResult( String[] rows );
+    @BeforeClass
+    public void setUp() {
+
+        battleShip = new BattleShip_MS();
+    }
+
+
+    @Test
+    public void getResultTest_1() {
+
+        super.getResultTest_1();
+    }
 }

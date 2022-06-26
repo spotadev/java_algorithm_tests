@@ -11,36 +11,26 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.miguel;
+package com.spotadev.interview.japanese_internship;
+
+import org.testng.Assert;
+
+import com.spotadev.interview.japanese_internship.BattleShipAPI;
+import com.spotadev.interview.japanese_internship.Result;
 
 /**
  * @author John Dickerson - 23 Jun 2022
  */
-public class Result {
+public class AbstractBattleShipTest {
 
-    int patrol = 0;
-    int submarine = 0;
-    int destroyer = 0;
+    BattleShipAPI battleShip;
 
-    void setResult( String inProgress ) {
+    public void getResultTest_1() {
 
-        System.out.println( "inProgress = " + inProgress );
-
-        int length = inProgress.length();
-
-        switch ( length ) {
-
-            case 1:
-                patrol++;
-                break;
-            case 2:
-                submarine++;
-                break;
-            case 3:
-                destroyer++;
-                break;
-            default:
-                break;
-        }
+        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
+        Result result = battleShip.getResult( rows );
+        Assert.assertEquals( result.patrol, 2 );
+        Assert.assertEquals( result.submarine, 1 );
+        Assert.assertEquals( result.destroyer, 2 );
     }
 }

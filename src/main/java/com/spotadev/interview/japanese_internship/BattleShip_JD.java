@@ -11,14 +11,14 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.miguel;
-
-import java.util.Arrays;
+package com.spotadev.interview.japanese_internship;
 
 /**
  * This question came from:
  * 
  *     An organisation that bridges students with japan internships (fully sponsored)
+ *     
+ *     Ask Miguel for further details.
  *     
  *     There was one hour to answer the question and nobody was looking at you while you did this.
  * 
@@ -68,79 +68,62 @@ import java.util.Arrays;
  *      
  * @author John Dickerson - 23 Jun 2022
  */
-public class BattleShip_MS implements BattleShipAPI {
+public class BattleShip_JD implements BattleShipAPI {
 
-    private static boolean isValidPosition(String[] B,int i,int j){
-        if(i<0 || j<0 || i>= B.length || j>=B[i].length() || B[i].charAt(j)=='.'){
-            return false;
-        }
-        return true;
-    }
-    private static int typeOfShip(String[] B, int i,int j){
-        if(B[i].charAt(j) == '#'){
-            B[i] = B[i].substring(0,j)+'.'+B[i].substring(j+1);
-            int top = 0;
-            int bottom = 0;
-            int left = 0;
-            int right = 0;
+    private char[][] getDataAsCharArrays( String[] rows ) {
 
-            if(isValidPosition(B,i-1,j)){
-                top = typeOfShip(B, i-1, j);
-            }
-            if(isValidPosition(B,i+1,j)){
-                bottom = typeOfShip(B, i+1, j);
-            }
-            if(isValidPosition(B,i,j-1)){
-                left = typeOfShip(B, i, j-1);
-            }
-            if(isValidPosition(B,i,j+1)){
-                right = typeOfShip(B, i, j+1);
-            }
-            return 1+top+bottom+left+right;
-        }
-        return 0;
-    }
+        char[][] data = new char[rows.length][];
 
-    private static int[] numberOfShips(String[] B) {
+        for ( int i = 0; i < rows.length; i++ ) {
 
-        int p = 0;
-        int s = 0;
-        int d = 0;
-        int sum = 0;
-
-        for(int i = 0; i < B.length; i++ ){
-            for(int j = 0; j < B[i].length();j++){
-                if(B[i].charAt(j) == '#'){
-                    sum = typeOfShip(B,i,j);
-                    if(sum == 1){
-                        p++;
-                    }
-                    if(sum == 2){
-                        s++;
-                    }
-                    if(sum == 3){
-                        d++;
-                    }
-                }
-            }
+            data[i] = rows[i].toCharArray();
         }
 
-        int[] ships = {p,s,d};
+        return data;
+    }
 
-        return ships;
+
+    private void dfs( int r, int c, String[] inProgress, char[][] data, Result result ) {
+
+        if ( r < 0 || c < 0 || r >= data.length ||
+                c >= data[0].length ||
+                data[r][c] == '$' ) {
+
+            return;
+        }
+
+        Character square = data[r][c];
+        data[r][c] = '$';
+
+        if ( square.charValue() != '.' ) {
+
+            inProgress[0] = inProgress[0] + square.toString();
+
+            dfs( r + 1, c, inProgress, data, result );
+            dfs( r - 1, c, inProgress, data, result );
+            dfs( r, c + 1, inProgress, data, result );
+            dfs( r, c - 1, inProgress, data, result );
+        }
     }
-    
-    public static void main(String[] args) {
-        String[] B = {"...","...","..."};
-        
-        int[] ships = numberOfShips(B);
-        System.out.println(Arrays.toString(ships));
+
+
+    @Override
+    public Result getResult( String[] rows ) {
+
+        char[][] data = getDataAsCharArrays( rows );
+        Result result = new Result();
+        String[] inProgress = new String[1];
+
+        for ( int r = 0; r < data.length; r++ ) {
+
+            for ( int c = 0; c < data[0].length; c++ ) {
+
+                inProgress[0] = "";
+                dfs( r, c, inProgress, data, result );
+                result.setResult( inProgress[0] );
+            }
+        }
+
+        return result;
     }
-	@Override
-	public Result getResult(String[] rows) {
-		Result result = new Result();
-		int[] ships = numberOfShips(rows);
-//		result.setResult(ships);
-		return null;
-	}
 }
