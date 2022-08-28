@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.remove_duplicates_array;
 
 /**
  * PROBLEM STATEMENT:

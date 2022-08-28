@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.first_non_repeating_character;
 
 /**
  * PROBLEM STATEMENT:

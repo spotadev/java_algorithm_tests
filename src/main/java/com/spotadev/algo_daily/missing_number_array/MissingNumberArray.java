@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.missing_number_array;
 
 /**
  * PROBLEM STATEMENT:

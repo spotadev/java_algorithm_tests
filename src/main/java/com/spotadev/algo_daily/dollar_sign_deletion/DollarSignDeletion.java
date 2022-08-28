@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.dollar_sign_deletion;
 
 /**
  * PROBLEM STATEMENT:

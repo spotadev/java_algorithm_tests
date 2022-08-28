@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.reverse_alphabetical;
 
 /**
  * Problem Statement:

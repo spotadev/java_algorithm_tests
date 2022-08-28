@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.is_anagram;
 /**
 Anagram definition: word or phrase formed by rearranging the letters of another,
  for instance, cinema is formed from  iceman.

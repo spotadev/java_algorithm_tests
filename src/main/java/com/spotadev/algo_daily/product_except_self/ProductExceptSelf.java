@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.product_except_self;
 
 /**
  * PROBLEM STATEMENT:

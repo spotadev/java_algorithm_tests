@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.fizz_buzz;
 
 /** Problem Statement:
  * Given a number in the form of integer n,

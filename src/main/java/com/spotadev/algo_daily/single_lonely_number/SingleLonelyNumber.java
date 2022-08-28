@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.single_lonely_number;
 
 /**
  * Problem Statement

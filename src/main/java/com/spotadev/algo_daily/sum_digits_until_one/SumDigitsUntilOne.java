@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.sum_digits_until_one;
 
 /**
  * PROBLEM STATEMENT:

@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.binarytree_inorder_traversal;
 
 /**
  * Problem Statement:

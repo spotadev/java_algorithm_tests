@@ -1,4 +1,4 @@
-package com.spotadev.algo_daily;
+package com.spotadev.algo_daily.least_missing_positive_number;
 
 /**
  * PROBLEM STATEMENT:
