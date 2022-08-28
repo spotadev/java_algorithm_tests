@@ -1,4 +1,4 @@
-package com.spotadev.algo.medium.search.binary;
+package com.spotadev.algo_daily;
 
 /**
  * PROBLEM STATEMENT:
