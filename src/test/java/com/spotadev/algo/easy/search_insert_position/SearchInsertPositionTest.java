@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.search_insert_position.SearchInsertPosition;
+import com.spotadev.algo.easy.search_insert_position.SearchInsertPosition_JD;
 
 /**
  * @author John Dickerson - 18 Apr 2022
  */
 public class SearchInsertPositionTest {
 
-    private SearchInsertPosition searchInsertPosition;
+    private SearchInsertPositionAPI searchInsertPosition;
 
     @BeforeClass
     public void setUp() {
 
-        searchInsertPosition = new SearchInsertPosition();
+        searchInsertPosition = new SearchInsertPosition_JD();
     }
 
 

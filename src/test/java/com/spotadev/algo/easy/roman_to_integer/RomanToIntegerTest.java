@@ -17,7 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.roman_to_integer.RomanToInteger;
+import com.spotadev.algo.easy.roman_to_integer.RomanToIntegerJD;
 
 /**
  * Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
@@ -76,12 +76,12 @@ import com.spotadev.algo.easy.roman_to_integer.RomanToInteger;
  */
 public class RomanToIntegerTest {
 
-    private RomanToInteger romanToInteger;
+    private RomanToIntegerAPI romanToInteger;
 
     @BeforeClass
     public void setUp() {
 
-        romanToInteger = new RomanToInteger();
+        romanToInteger = new RomanToIntegerJD();
     }
 
 

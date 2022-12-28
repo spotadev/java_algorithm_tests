@@ -19,7 +19,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.longest_common_prefix.LongestCommonPrefix;
+import com.spotadev.algo.easy.longest_common_prefix.LongestCommonPrefix_JD;
 
 /**
  * @author John Dickerson - 17 Apr 2022
@@ -28,12 +28,12 @@ public class LongestCommonPrefixTest {
 
     private Logger logger = LoggerFactory.getLogger( LongestCommonPrefixTest.class );
 
-    private LongestCommonPrefix longestCommonPrefix;
+    private LongestCommonPrefixAPI longestCommonPrefix;
 
     @BeforeClass
     public void setUp() {
 
-        longestCommonPrefix = new LongestCommonPrefix();
+        longestCommonPrefix = new LongestCommonPrefix_JD();
     }
 
 

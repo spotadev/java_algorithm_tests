@@ -24,7 +24,7 @@ public class ImplementTrie_APITest extends AbstractImplementTrieTest {
     @BeforeClass
     public void setUp() {
 
-        implementTrie = new ImplementTrie_API();
+        implementTrie = new ImplementTrie_JD();
     }
 
 

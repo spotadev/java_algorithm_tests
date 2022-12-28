@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.palidrome.Palidrome;
+import com.spotadev.algo.easy.palidrome.Palidrome_JD;
 
 /**
  * @author John Dickerson - 16 Apr 2022
  */
 public class PalidromeTest {
 
-    private Palidrome palidrome;
+    private PalidromeAPI palidrome;
 
     @BeforeClass
     public void setUp() {
 
-        palidrome = new Palidrome();
+        palidrome = new Palidrome_JD();
     }
 
 

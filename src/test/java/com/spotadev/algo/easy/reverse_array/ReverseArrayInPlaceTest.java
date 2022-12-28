@@ -21,7 +21,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.reverse_array.ReverseArrayInPlace;
+import com.spotadev.algo.easy.reverse_array.ReverseArrayInPlace_JD;
 
 /**
  * Implement a method with the following method signature:
@@ -41,7 +41,7 @@ public class ReverseArrayInPlaceTest {
     
     private Logger logger = LoggerFactory.getLogger( ReverseArrayInPlaceTest.class );
     
-    private ReverseArrayInPlace<String> reverseArrayInPlace;
+    private ReverseArrayInPlaceAPI<String> reverseArrayInPlace;
     
     private String debug( String[] array ) {
        
@@ -60,7 +60,7 @@ public class ReverseArrayInPlaceTest {
     @BeforeClass
     public void setUp() {
         
-        reverseArrayInPlace = new ReverseArrayInPlace<>();
+        reverseArrayInPlace = new ReverseArrayInPlace_JD<>();
     }
     
     @Test

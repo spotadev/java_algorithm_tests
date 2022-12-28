@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.strstr.Strstr;
+import com.spotadev.algo.easy.strstr.Strstr_JD;
 
 /**
  * @author John Dickerson - 18 Apr 2022
  */
 public class StrstrTest {
 
-    private Strstr strstr;
+    private StrstrAPI strstr;
 
     @BeforeClass
     public void setUp() {
 
-        strstr = new Strstr();
+        strstr = new Strstr_JD();
     }
 
 

@@ -19,8 +19,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.remove_duplicates_from_sorted_array.RemoveDuplicatesFromSortedArray;
-
 /**
  * @author John Dickerson - 18 Apr 2022
  */
@@ -28,12 +26,12 @@ public class RemoveDuplicatesFromSortedArrayTest {
 
     private Logger logger = LoggerFactory.getLogger( RemoveDuplicatesFromSortedArrayTest.class );
 
-    private RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray;
+    private RemoveDuplicatesFromSortedArrayAPI removeDuplicatesFromSortedArray;
 
     @BeforeClass
     public void setUp() {
 
-        removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
+        removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray_JD();
     }
 
 

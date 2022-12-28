@@ -71,7 +71,7 @@ import java.util.List;
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class WordSearchII_JD implements WordSearchIIApi {
+public class WordSearchII_JD implements WordSearchIIAPI {
 
     class Node {
 

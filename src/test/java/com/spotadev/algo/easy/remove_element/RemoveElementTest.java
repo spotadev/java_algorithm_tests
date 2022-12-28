@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.remove_element.RemoveElement;
+import com.spotadev.algo.easy.remove_element.RemoveElement_JD;
 
 /**
  * @author John Dickerson - 18 Apr 2022
  */
 public class RemoveElementTest {
 
-    private RemoveElement removeElement;
+    private RemoveElementAPI removeElement;
 
     @BeforeClass
     public void setUp() {
 
-        removeElement = new RemoveElement();
+        removeElement = new RemoveElement_JD();
     }
 
 

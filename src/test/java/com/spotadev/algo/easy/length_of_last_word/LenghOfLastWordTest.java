@@ -17,19 +17,17 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.length_of_last_word.LengthOfLastWord;
-
 /**
  * @author John Dickerson - 18 Apr 2022
  */
 public class LenghOfLastWordTest {
 
-    private LengthOfLastWord lengthOfLastWord;
+    private LengthOflastWordAPI lengthOfLastWord;
 
     @BeforeClass
     public void setUp() {
 
-        lengthOfLastWord = new LengthOfLastWord();
+        lengthOfLastWord = new LengthOfLastWord_JD();
     }
 
 

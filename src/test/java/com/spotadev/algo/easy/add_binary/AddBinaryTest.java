@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.add_binary.AddBinary;
+import com.spotadev.algo.easy.add_binary.AddBinary_JD;
 
 /**
  * @author John Dickerson - 19 Apr 2022
  */
 public class AddBinaryTest {
 
-    private AddBinary addBinary;
+    private AddBinaryAPI addBinary;
 
     @BeforeClass
     public void setUp() {
 
-        addBinary = new AddBinary();
+        addBinary = new AddBinary_JD();
     }
 
 

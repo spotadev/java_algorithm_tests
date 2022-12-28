@@ -68,7 +68,7 @@ import java.util.List;
  * 
  * @author John Dickerson - 13 May 2022
  */
-public class WordSearchII_FastestLeetCode implements WordSearchIIApi {
+public class WordSearchII_FastestLeetCode implements WordSearchIIAPI {
 
     private static final char HASH_TAG = '#';
     private Tree root = new Tree();

@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.hard.median_2_sorted_arrays.Median2SortedArrays;
+import com.spotadev.algo.hard.median_2_sorted_arrays.Median2SortedArrays_JD;
 
 /**
  * @author John Dickerson - 5 Feb 2022
  */
 public class Median2SortedArraysTest {
 
-    private Median2SortedArrays median2SortedArrays;
+    private Median2SortedArraysAPI median2SortedArrays;
 
     @BeforeClass
     public void setUp() {
 
-        median2SortedArrays = new Median2SortedArrays();
+        median2SortedArrays = new Median2SortedArrays_JD();
     }
 
 

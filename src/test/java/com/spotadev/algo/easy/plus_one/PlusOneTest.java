@@ -17,19 +17,19 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.spotadev.algo.easy.plus_one.PlusOne;
+import com.spotadev.algo.easy.plus_one.PlusOne_JD;
 
 /**
  * @author John Dickerson - 19 Apr 2022
  */
 public class PlusOneTest {
 
-    private PlusOne plusOne;
+    private PlusOneAPI plusOne;
 
     @BeforeClass
     public void setUp() {
 
-        plusOne = new PlusOne();
+        plusOne = new PlusOne_JD();
     }
 
 

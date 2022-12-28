@@ -19,14 +19,14 @@ import java.util.Set;
 
 import org.testng.Assert;
 
-import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchIIApi;
+import com.spotadev.algo.blind75.tries.hard.word_search_ii.WordSearchIIAPI;
 
 /**
  * @author John Dickerson - 8 Jun 2022
  */
 public abstract class AbstractWordSearchIITest {
 
-    protected WordSearchIIApi wordSearchII;
+    protected WordSearchIIAPI wordSearchII;
 
     public void findWordsTest_1() {
 
