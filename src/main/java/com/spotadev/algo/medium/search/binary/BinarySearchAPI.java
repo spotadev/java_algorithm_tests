@@ -11,23 +11,15 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
-
-import org.testng.Assert;
+package com.spotadev.algo.medium.search.binary;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * Write a binary search that returns the index of the number in an array.
+ * 
+ * @author johndickerson - 30 Dec 2022
  */
-public class AbstractBattleShipTest {
+public interface BinarySearchAPI {
 
-    protected BattleShipAPI battleShip;
+    int binarySearch( int[] arr, int value );
 
-    public void getResultTest_1() {
-
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
-    }
 }

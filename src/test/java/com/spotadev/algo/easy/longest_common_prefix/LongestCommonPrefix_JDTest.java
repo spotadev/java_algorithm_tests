@@ -11,61 +11,37 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.karat;
+package com.spotadev.algo.easy.longest_common_prefix;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-/**
- * @author John Dickerson - 23 Jun 2022
- */
-public class KaratInterview_JDTest extends AbstractKaratInterviewTest {
+public class LongestCommonPrefix_JDTest extends AbstractLongestCommonPrefixTest {
 
     @BeforeClass
     public void setUp() {
 
-        karatInterview = new KaratInterview_JD();
+        longestCommonPrefix = new LongestCommonPrefix_JD();
     }
 
 
     @Test
-    public void findWordtest_1() {
+    public void longestCommonPrefixTest_1() {
 
-        super.findWordtest_1();
+        super.longestCommonPrefixTest_1();
     }
 
 
     @Test
-    public void findWordtest_2() {
+    public void longestCommonPrefixTest_2() {
 
-        super.findWordtest_2();
+        super.longestCommonPrefixTest_2();
     }
 
-
-    @Test
-    public void findWordtest_3() {
-
-        super.findWordtest_3();
-    }
-
-
-    @Test
-    public void findWordtest_4() {
-
-        super.findWordtest_4();
-    }
-
-
-    @Test
-    public void findWordtest_5() {
-
-        super.findWordtest_5();
-    }
-
-
-    @Test
-    public void findWordtest_6() {
-
-        super.findWordtest_6();
-    }
+    //    public void longestCommonPrefixTest_3() {
+    //
+    //        String[] strs = null;
+    //        String prefix = longestCommonPrefix.longestCommonPrefix( strs );
+    //        Assert.assertEquals( prefix, "" );
+    //    }
 }

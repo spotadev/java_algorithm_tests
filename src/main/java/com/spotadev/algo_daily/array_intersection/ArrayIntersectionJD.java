@@ -11,23 +11,16 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
-
-import org.testng.Assert;
+package com.spotadev.algo_daily.array_intersection;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author John Dickerson - 1 Jan 2023
  */
-public class AbstractBattleShipTest {
+public class ArrayIntersectionJD implements ArrayIntersectionAPI {
 
-    protected BattleShipAPI battleShip;
+    @Override
+    public int[] intersection( int[] num1, int[] num2 ) {
 
-    public void getResultTest_1() {
-
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+        return null;
     }
 }

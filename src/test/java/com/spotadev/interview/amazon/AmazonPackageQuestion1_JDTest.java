@@ -11,23 +11,18 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.interview.amazon;
 
-import org.testng.Assert;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author John Dickerson - 5 Feb 2022
  */
-public class AbstractBattleShipTest {
+public class AmazonPackageQuestion1_JDTest extends AbstractAmazonPackageQuestion1Test {
 
-    protected BattleShipAPI battleShip;
+    @Test
+    public void solutionTest() {
 
-    public void getResultTest_1() {
-
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+        super.solutionTest();
     }
 }

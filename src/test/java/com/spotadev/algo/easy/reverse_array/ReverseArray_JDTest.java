@@ -11,23 +11,23 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.easy.reverse_array;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-/**
- * @author John Dickerson - 23 Jun 2022
- */
-public class AbstractBattleShipTest {
+public class ReverseArray_JDTest extends AbstractReverseArrayTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        reverseArray = new ReverseArray_JD<>();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void reverseTest() {
+
+        super.reverseTest();
     }
 }

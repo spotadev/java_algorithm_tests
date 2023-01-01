@@ -11,23 +11,33 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo_daily.array_intersection;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author John Dickerson - 1 Jan 2023
  */
-public class AbstractBattleShipTest {
+public class ArrayIntersection_JDTest extends AbstractArrayIntersectionTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        arrayIntersection = new ArrayIntersectionJD();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void intersection_1_Test() {
+
+        super.intersection_1_Test();
+    }
+
+
+    @Test
+    public void intersection_2_Test() {
+
+        super.intersection_2_Test();
     }
 }

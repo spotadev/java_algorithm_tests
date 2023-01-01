@@ -25,14 +25,14 @@ package com.spotadev.algo_daily.array_intersection;
  * Example 1
  * =========
  * 
- *     A = [1, 3, 4, 5 ] and B = [ 2, 3 ]
+ *     A = [1, 2, 3, 4, 5 ] and B = [ 2, 3 ]
  * 
  *     intersection( A, B ) --> [ 2, 3 ]
  *
  * Example 2
  * =========
  *
- *    num1 = [ 3, 5, 6, 7 ] amd num2 = [ 5, 6, 8 ]
+ *    num1 = [ 3, 5, 6, 7 ] and num2 = [ 5, 6, 8 ]
  *    intersection( num1, num2 ) ---> [ 5, 6 ]
  *
  *

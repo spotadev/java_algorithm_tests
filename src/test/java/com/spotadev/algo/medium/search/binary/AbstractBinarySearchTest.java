@@ -11,23 +11,21 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.medium.search.binary;
 
 import org.testng.Assert;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author johndickerson - 30 Dec 2022
  */
-public class AbstractBattleShipTest {
+public class AbstractBinarySearchTest {
 
-    protected BattleShipAPI battleShip;
+    protected BinarySearchAPI binarySearch;
 
-    public void getResultTest_1() {
+    public void binarySearchTest() {
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+        int[] numbers = { 10, 20, 30, 40, 50, 60 };
+        int result = binarySearch.binarySearch( numbers, 50 );
+        Assert.assertEquals( result, 4 );
     }
 }

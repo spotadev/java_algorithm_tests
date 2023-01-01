@@ -11,61 +11,40 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.karat;
+package com.spotadev.algo.medium.valid_sudoku;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author johndickerson - 30 Dec 2022
  */
-public class KaratInterview_JDTest extends AbstractKaratInterviewTest {
+public class ValidSudoku_JDTest extends AbstractValidSudokuTest {
 
     @BeforeClass
     public void setUp() {
 
-        karatInterview = new KaratInterview_JD();
+        validSudoku = new ValidSudoku();
     }
 
 
     @Test
-    public void findWordtest_1() {
+    public void isValidSudokuTest_1() {
 
-        super.findWordtest_1();
+        super.isValidSudokuTest_1();
     }
 
 
     @Test
-    public void findWordtest_2() {
+    public void isValidSudokuTest_2() {
 
-        super.findWordtest_2();
+        super.isValidSudokuTest_2();
     }
 
 
     @Test
-    public void findWordtest_3() {
+    public void isValidSudokuTest_3() {
 
-        super.findWordtest_3();
-    }
-
-
-    @Test
-    public void findWordtest_4() {
-
-        super.findWordtest_4();
-    }
-
-
-    @Test
-    public void findWordtest_5() {
-
-        super.findWordtest_5();
-    }
-
-
-    @Test
-    public void findWordtest_6() {
-
-        super.findWordtest_6();
+        super.isValidSudokuTest_3();
     }
 }

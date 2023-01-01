@@ -11,23 +11,26 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.hard.sort.quick_sort;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author johndickerson - 30 Dec 2022
  */
-public class AbstractBattleShipTest {
+public class QuickSort_KMTest extends AbstractQuickSortTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        quickSort = new QuickSort_KM();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void heapSortTest() {
+
+        super.heapSortTest();
     }
 }

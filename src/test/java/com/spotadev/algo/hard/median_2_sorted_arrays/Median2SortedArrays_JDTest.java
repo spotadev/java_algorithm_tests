@@ -11,23 +11,26 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.hard.median_2_sorted_arrays;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author johndickerson - 30 Dec 2022
  */
-public class AbstractBattleShipTest {
+public class Median2SortedArrays_JDTest extends AbstractMedian2SortedArraysTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        median2SortedArrays = new Median2SortedArrays_JD();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void findMedianUsingThirdArray_evenLengthMergedTest() {
+
+        super.findMedianUsingThirdArray_evenLengthMergedTest();
     }
 }

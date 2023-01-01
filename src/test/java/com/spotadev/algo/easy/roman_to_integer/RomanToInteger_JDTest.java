@@ -11,23 +11,40 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.easy.roman_to_integer;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author johndickerson - 30 Dec 2022
  */
-public class AbstractBattleShipTest {
+public class RomanToInteger_JDTest extends AbstractRomanToIntegerTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        romanToInteger = new RomanToIntegerJD();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void romanToIntTest_1() {
+
+        super.romanToIntTest_1();
+    }
+
+
+    @Test
+    public void romanToIntTest_2() {
+
+        super.romanToIntTest_2();
+    }
+
+
+    @Test
+    public void romanToIntTest_3() {
+
+        super.romanToIntTest_3();
     }
 }

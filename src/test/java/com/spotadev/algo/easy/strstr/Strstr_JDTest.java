@@ -11,23 +11,40 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.easy.strstr;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author johndickerson - 30 Dec 2022
  */
-public class AbstractBattleShipTest {
+public class Strstr_JDTest extends AbstractStrstrTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        strstr = new Strstr_JD();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void strStrTest_1() {
+
+        super.strStrTest_1();
+    }
+
+
+    @Test
+    public void strStrTest_2() {
+
+        super.strStrTest_2();
+    }
+
+
+    @Test
+    public void strStrTest_3() {
+
+        super.strStrTest_3();
     }
 }

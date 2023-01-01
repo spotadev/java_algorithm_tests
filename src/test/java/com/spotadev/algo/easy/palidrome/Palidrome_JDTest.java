@@ -11,23 +11,37 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.japanese_internship;
+package com.spotadev.algo.easy.palidrome;
 
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-/**
- * @author John Dickerson - 23 Jun 2022
- */
-public class AbstractBattleShipTest {
+public class Palidrome_JDTest extends AbstractPalidromeTest {
 
-    protected BattleShipAPI battleShip;
+    @BeforeClass
+    public void setUp() {
 
-    public void getResultTest_1() {
+        palidrome = new Palidrome_JD();
+    }
 
-        String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
-        Result result = battleShip.getResult( rows );
-        Assert.assertEquals( result.patrol, 2 );
-        Assert.assertEquals( result.submarine, 1 );
-        Assert.assertEquals( result.destroyer, 2 );
+
+    @Test
+    public void isPalindromeTest_1() {
+
+        super.isPalindromeTest_1();
+    }
+
+
+    @Test
+    public void isPalindromeTest_2() {
+
+        super.isPalindromeTest_2();
+    }
+
+
+    @Test
+    public void isPalindromeTest_3() {
+
+        super.isPalindromeTest_3();
     }
 }

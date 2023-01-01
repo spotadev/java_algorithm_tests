@@ -11,61 +11,47 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.interview.karat;
+package com.spotadev.algo.easy.add_binary;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 23 Jun 2022
+ * @author John Dickerson - 30 Dec 2022
  */
-public class KaratInterview_JDTest extends AbstractKaratInterviewTest {
+public class AddBinary_JDTest extends AbstractAddBinaryTest {
 
     @BeforeClass
     public void setUp() {
 
-        karatInterview = new KaratInterview_JD();
+        addBinary = new AddBinary_JD();
     }
 
 
     @Test
-    public void findWordtest_1() {
+    public void addBinaryTest_1() {
 
-        super.findWordtest_1();
+        super.addBinaryTest_1();
     }
 
 
     @Test
-    public void findWordtest_2() {
+    public void addBinaryTest_2() {
 
-        super.findWordtest_2();
+        super.addBinaryTest_2();
     }
 
 
     @Test
-    public void findWordtest_3() {
+    public void addBinaryTest_3() {
 
-        super.findWordtest_3();
+        super.addBinaryTest_3();
     }
 
 
     @Test
-    public void findWordtest_4() {
+    public void addBinaryTest_4() {
 
-        super.findWordtest_4();
-    }
-
-
-    @Test
-    public void findWordtest_5() {
-
-        super.findWordtest_5();
-    }
-
-
-    @Test
-    public void findWordtest_6() {
-
-        super.findWordtest_6();
+        super.addBinaryTest_4();
     }
 }
