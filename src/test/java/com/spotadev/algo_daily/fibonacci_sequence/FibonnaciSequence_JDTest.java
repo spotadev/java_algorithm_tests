@@ -11,17 +11,32 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.fibonacci_sequence;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class FibonnaciSequence_JDTest extends AbstractFibonnaciSequenceTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    @BeforeClass
+    public void setUp() {
 
-        return null;
+        fibonnaciSequenceAPI = new FibonnaciSequenceJD();
+    }
+
+
+    @Test
+    public void fibonacciSequence_1Test() {
+
+        super.fibonacciSequence_1Test();
+    }
+
+
+    public void fibonacciSequence_2Test() {
+
+        super.fibonacciSequence_2Test();
     }
 }

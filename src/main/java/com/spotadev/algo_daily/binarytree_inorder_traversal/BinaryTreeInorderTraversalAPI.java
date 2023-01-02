@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo_daily.binarytree_inorder_traversal;
 
+import java.util.List;
+
 /**
  * https://algodaily.com/challenges/binary-tree-inorder-traversal
  * 
@@ -52,4 +54,19 @@ package com.spotadev.algo_daily.binarytree_inorder_traversal;
  * @author Karema99 - 29 Aug 2022
  */
 public interface BinaryTreeInorderTraversalAPI {
+
+    class Node {
+
+        public int val;
+
+        public Node left;
+        public Node right;
+
+        public Node( int val ) {
+
+            this.val = val;
+        }
+    }
+
+    List<Integer> inorderTraversal( Node root );
 }

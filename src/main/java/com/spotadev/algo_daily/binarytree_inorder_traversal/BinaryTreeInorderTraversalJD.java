@@ -11,16 +11,18 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.binarytree_inorder_traversal;
+
+import java.util.List;
 
 /**
  * @author John Dickerson - 1 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class BinaryTreeInorderTraversalJD implements BinaryTreeInorderTraversalAPI {
 
     // @todo
     @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    public List<Integer> inorderTraversal( Node root ) {
 
         return null;
     }

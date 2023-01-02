@@ -7,7 +7,7 @@ import org.testng.Assert;
 /**
  * @author John Dickerson - 5 Feb 2022
  */
-public class AbstractArrayIntersectionTest {
+public abstract class AbstractArrayIntersectionTest {
 
     protected ArrayIntersectionAPI arrayIntersection;
 

@@ -11,17 +11,17 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.fizz_buzz;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class FizzBuzzJD implements FizzBuzzAPI {
 
-    // @todo
     @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    public String fizzBuzz( Integer num ) {
 
+        // TODO Auto-generated method stub
         return null;
     }
 }

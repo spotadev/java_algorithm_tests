@@ -29,4 +29,26 @@ package com.spotadev.algo_daily.implement_linked_list;
  * @author Karema99 - 29 Aug 2022
  */
 public interface LinkedListAPI {
+
+    class LinkedListNode {
+
+        public LinkedListNode next;
+        public int val;
+
+        public LinkedListNode( int val ) {
+
+            this.val = val;
+        }
+    }
+
+    void prepend( int newVal );
+
+
+    void append( int newVal );
+
+
+    LinkedListNode getHead();
+
+
+    LinkedListNode getTail();
 }

@@ -49,4 +49,6 @@ package com.spotadev.algo_daily.fast_minimum_rotated_array;
  * @author Karema99 - 29 Aug 2022
  */
 public interface FastMinimumRotatedArrayAPI {
+
+    int getMinimum( int[] nums );
 }

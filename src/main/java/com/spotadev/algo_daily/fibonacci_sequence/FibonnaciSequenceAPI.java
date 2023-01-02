@@ -41,4 +41,6 @@ package com.spotadev.algo_daily.fibonacci_sequence;
  * @author Karema99 - 29 Aug 2022
  */
 public interface FibonnaciSequenceAPI {
+
+    int fibonacciSequence( int n );
 }

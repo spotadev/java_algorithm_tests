@@ -38,4 +38,17 @@ package com.spotadev.algo_daily.grab_random_node;
  * @author Karema99 - 29 Aug 2022
  */
 public interface GrabRandomNodeAPI {
+
+    class LinkedListNode {
+
+        public LinkedListNode next;
+        public int val;
+
+        public LinkedListNode( int val ) {
+
+            this.val = val;
+        }
+    }
+
+    int fetchRandomNode( LinkedListNode headNode );
 }

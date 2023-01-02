@@ -39,4 +39,6 @@ package com.spotadev.algo_daily.first_non_repeating_character;
  *  @author Karema99 - 29 Aug 2022
  */
 public interface FirstNonRepeatingCharacterAPI {
+
+    char firstNonRepeat( String str );
 }

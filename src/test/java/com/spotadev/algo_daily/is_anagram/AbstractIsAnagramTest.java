@@ -11,17 +11,31 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.is_anagram;
+
+import static org.testng.Assert.assertEquals;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public abstract class AbstractIsAnagramTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    protected IsAnagramAPI isAnagram;
 
-        return null;
+    public void firstTest() {
+
+        assertEquals( isAnagram.isAnagram( "Mary", "Army" ), true );
+    }
+
+
+    public void secondTest() {
+
+        assertEquals( isAnagram.isAnagram( "cinema", "iceman" ), true );
+    }
+
+
+    public void thirdTest() {
+
+        assertEquals( isAnagram.isAnagram( "jake", "jay" ), false );
     }
 }

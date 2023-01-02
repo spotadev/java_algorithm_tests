@@ -20,10 +20,15 @@ package com.spotadev.algo_daily.least_missing_positive_number;
  * 
  *     e.g. [0, 3, -1, -2, 1], 
  *
- * if the arrays are sorted [-2, -1, 0, 1, 3,], there is a given range from the minimum to the 
- * maximum element, in this case range (-2, 3)
+ * Find the least missing positive number.
+ * 
+ *     [0, 3, -1, -2, 1] => [-2, -1, 0, 1, 3]
+ *     
+ * We can see that the positive numbers are 0, 1, 3 and that the least missing positive number is 2
  *
  * @author Karema99 - 29 Aug 2022
  */
 public interface LeastMissingPositiveNumberAPI {
+
+    int leastMissingPositive( int[] nums );
 }

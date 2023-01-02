@@ -11,17 +11,16 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.first_non_repeating_character;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class FirstNonRepeatingCharacterJD implements FirstNonRepeatingCharacterAPI {
 
-    // @todo
     @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    public char firstNonRepeat( String str ) {
 
-        return null;
+        return 0;
     }
 }

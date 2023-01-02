@@ -11,17 +11,21 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.first_non_repeating_character;
+
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public abstract class AbstractFirstNonRepeatingCharacterTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    protected FirstNonRepeatingCharacterAPI firstNonRepeatingCharacterAPI;
 
-        return null;
+    public void firstNonRepeat_1Test() {
+
+        String string = "asdfsdafdasfjdfsafnnunl";
+        char c = firstNonRepeatingCharacterAPI.firstNonRepeat( string );
+        Assert.assertEquals( c, 'j' );
     }
 }

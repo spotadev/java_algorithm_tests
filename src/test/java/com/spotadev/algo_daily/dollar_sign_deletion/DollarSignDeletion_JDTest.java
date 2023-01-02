@@ -11,17 +11,33 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.dollar_sign_deletion;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class DollarSignDeletion_JDTest extends AbstractDollarSignDeletionTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    @BeforeClass
+    public void setUp() {
 
-        return null;
+        dollarSignDeletionAPI = new DollarSignDeletionJD();
+    }
+
+
+    @Test
+    public void isDollarDeleteEqual_1Test() {
+
+        super.isDollarDeleteEqual_1Test();
+    }
+
+
+    @Test
+    public void getFinalStr_1Test() {
+
+        super.getFinalStr_1Test();
     }
 }

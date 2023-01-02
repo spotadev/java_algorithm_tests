@@ -11,17 +11,22 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.implement_hashmap;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class HashMapJD<K, V> implements HashMapAPI<K, V> {
 
-    // @todo
     @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    public V get( K key ) {
 
         return null;
+    }
+
+
+    @Override
+    public void put( K key, V value ) {
+
     }
 }

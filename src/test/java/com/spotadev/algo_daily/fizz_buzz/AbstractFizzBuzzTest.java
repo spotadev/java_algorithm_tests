@@ -11,17 +11,21 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.fizz_buzz;
+
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public abstract class AbstractFizzBuzzTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    protected FizzBuzzAPI fizzBuzz;
 
-        return null;
+    public void fizzBuzzTest() {
+
+        Integer num = 15;
+        String result = fizzBuzz.fizzBuzz( num );
+        Assert.assertEquals( result, "12fizz4buzzfizz78fizzbuzz11fizz1314fizzbuzz" );
     }
 }

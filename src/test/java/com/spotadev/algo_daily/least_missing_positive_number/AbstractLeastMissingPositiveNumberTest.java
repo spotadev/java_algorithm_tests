@@ -11,17 +11,21 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.least_missing_positive_number;
+
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class AbstractLeastMissingPositiveNumberTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    protected LeastMissingPositiveNumberAPI leastMissingPositiveNumber;
 
-        return null;
+    public void leastMissingPositiveTest() {
+
+        int[] numbers = { 0, 3, -1, -2, 1 };
+        int leastMissingPositiveNum = leastMissingPositiveNumber.leastMissingPositive( numbers );
+        Assert.assertEquals( leastMissingPositiveNum, 2 );
     }
 }

@@ -11,17 +11,35 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.implement_linked_list;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class LinkedListJD implements LinkedListAPI {
 
-    // @todo
     @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    public LinkedListNode getHead() {
 
         return null;
+    }
+
+
+    @Override
+    public LinkedListNode getTail() {
+
+        return null;
+    }
+
+
+    @Override
+    public void prepend( int newVal ) {
+
+    }
+
+
+    @Override
+    public void append( int newVal ) {
+
     }
 }

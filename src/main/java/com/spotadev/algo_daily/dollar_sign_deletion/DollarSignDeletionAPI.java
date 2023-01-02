@@ -14,7 +14,7 @@
 package com.spotadev.algo_daily.dollar_sign_deletion;
 
 /**
- * https://algodaily.com/users/sign_in?locked=true&type=course&slug=data-structures-and-algorithms
+ * https://algodaily.com/challenges/dollar-sign-deletion
  * 
  * Given an array of strings containing alphabetical characters and certain $ characters.
  * 
@@ -46,4 +46,9 @@ package com.spotadev.algo_daily.dollar_sign_deletion;
  * @author Karema99 - 29 Aug 2022
  */
 public interface DollarSignDeletionAPI {
+
+    boolean isDollarDeleteEqual( String[] array );
+
+
+    String getFinalStr( String str );
 }

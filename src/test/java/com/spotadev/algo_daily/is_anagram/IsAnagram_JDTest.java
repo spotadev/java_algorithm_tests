@@ -11,17 +11,40 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.is_anagram;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class IsAnagram_JDTest extends AbstractIsAnagramTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    @BeforeClass
+    public void setUp() {
 
-        return null;
+        isAnagram = new IsAnagramJD();
+    }
+
+
+    @Test
+    public void firstTest() {
+
+        super.firstTest();
+    }
+
+
+    @Test
+    public void secondTest() {
+
+        super.secondTest();
+    }
+
+
+    @Test
+    public void thirdTest() {
+
+        super.thirdTest();
     }
 }

@@ -11,17 +11,21 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.implement_hashmap;
+
+import org.testng.Assert;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public abstract class AbstractHashMapTest {
 
-    // @todo
-    @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    protected HashMapAPI<String, String> hashMap = new HashMapJD<>();
 
-        return null;
+    public void doTest() {
+
+        hashMap.put( "name", "JD" );
+        String name = hashMap.get( "name" );
+        Assert.assertEquals( name, "JD" );
     }
 }

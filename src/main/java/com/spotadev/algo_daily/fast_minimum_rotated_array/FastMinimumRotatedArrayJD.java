@@ -11,17 +11,17 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.array_intersection;
+package com.spotadev.algo_daily.fast_minimum_rotated_array;
 
 /**
- * @author John Dickerson - 1 Jan 2023
+ * @author John Dickerson - 2 Jan 2023
  */
-public class ArrayIntersectionJD implements ArrayIntersectionAPI {
+public class FastMinimumRotatedArrayJD implements FastMinimumRotatedArrayAPI {
 
     // @todo
     @Override
-    public int[] intersection( int[] num1, int[] num2 ) {
+    public int getMinimum( int[] nums ) {
 
-        return null;
+        return 0;
     }
 }

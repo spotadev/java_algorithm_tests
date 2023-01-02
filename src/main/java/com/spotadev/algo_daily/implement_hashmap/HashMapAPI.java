@@ -22,5 +22,10 @@ package com.spotadev.algo_daily.implement_hashmap;
  *
  * @author Karema99 - 29 Aug 2022
  */
-public interface HashMapAPI {
+public interface HashMapAPI<K, V> {
+
+    V get( K key );
+
+
+    void put( K key, V value );
 }

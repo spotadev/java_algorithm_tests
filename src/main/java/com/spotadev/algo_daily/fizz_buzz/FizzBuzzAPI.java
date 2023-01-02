@@ -35,4 +35,6 @@ package com.spotadev.algo_daily.fizz_buzz;
  * @author Karema99 - 29 Aug 2022
  */
 public interface FizzBuzzAPI {
+
+    String fizzBuzz( Integer num );
 }
