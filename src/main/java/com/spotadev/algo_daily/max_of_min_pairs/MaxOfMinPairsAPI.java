@@ -49,4 +49,6 @@ package com.spotadev.algo_daily.max_of_min_pairs;
  * @author Karema99 - 29 Aug 2022
  */
 public interface MaxOfMinPairsAPI {
+
+    int maxOfMinPairs( int[] nums );
 }

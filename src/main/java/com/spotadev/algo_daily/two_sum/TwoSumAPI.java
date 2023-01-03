@@ -49,4 +49,6 @@ package com.spotadev.algo_daily.two_sum;
  * @author Karema99 - 29 Aug 2022
  */
 public interface TwoSumAPI {
+
+    int[] twoSum( int[] arr, int goal );
 }

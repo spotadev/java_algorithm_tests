@@ -40,4 +40,6 @@ package com.spotadev.algo_daily.missing_number_unsorted_array;
  * @author Karema99 - 29 Aug 2022
  */
 public interface MissingNumberUnsortedArrayAPI {
+
+    int missingInUnsorted( int[] arr, int lowerBound, int upperBound );
 }

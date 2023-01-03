@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo_daily.missing_number_array;
 
+import java.util.List;
+
 /**
  * https://algodaily.com/challenges/find-missing-number-in-array
  * 
@@ -52,5 +54,5 @@ package com.spotadev.algo_daily.missing_number_array;
  */
 public interface MissingNumberArrayAPI {
 
-    int[] missingNumber( int[] arr );
+    List<Integer> missingNumber( int[] arr );
 }

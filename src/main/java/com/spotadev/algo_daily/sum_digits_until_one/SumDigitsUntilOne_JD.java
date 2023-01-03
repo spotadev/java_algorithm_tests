@@ -11,27 +11,16 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.product_except_self;
+package com.spotadev.algo_daily.sum_digits_until_one;
 
 /**
- * https://algodaily.com/challenges/product-except-self
- *
- * Given an array of integers return an output array such that each corresponding input's elements 
- * returns the product of the input array except itself
- *
- * Example
- * =======
- * 
- * [1, 2, 4, 16]  ==> [128, 64, 32, 8]
- * 
- * 128 = 2 x 4 16
- * 64  = 1 x 4 x 16
- * 32  = 1 x 2 x 16
- * 8   = 1 x 2 x 4
- * 
- * @author Karema99 - 29 Aug 2022
+ * @author John Dickerson - 3 Jan 2023
  */
-public interface ProductExceptSelfAPI {
+public class SumDigitsUntilOne_JD implements SumDigitsUntilOneAPI {
 
-    int[] productExceptSelf( int[] numArray );
+    @Override
+    public int sumDigits( int input ) {
+
+        return 0;
+    }
 }

@@ -13,25 +13,22 @@
 */
 package com.spotadev.algo_daily.product_except_self;
 
-/**
- * https://algodaily.com/challenges/product-except-self
- *
- * Given an array of integers return an output array such that each corresponding input's elements 
- * returns the product of the input array except itself
- *
- * Example
- * =======
- * 
- * [1, 2, 4, 16]  ==> [128, 64, 32, 8]
- * 
- * 128 = 2 x 4 16
- * 64  = 1 x 4 x 16
- * 32  = 1 x 2 x 16
- * 8   = 1 x 2 x 4
- * 
- * @author Karema99 - 29 Aug 2022
- */
-public interface ProductExceptSelfAPI {
+import java.util.Arrays;
 
-    int[] productExceptSelf( int[] numArray );
+import org.testng.Assert;
+
+/**
+ * @author John Dickerson - 3 Jan 2023
+ */
+public abstract class AbstractProductExceptSelfTest {
+
+    protected ProductExceptSelfAPI productExceptSelf;
+
+    public void productExceptSelfTest() {
+
+        int[] numArray = { 1, 2, 4, 16 };
+        int[] products = productExceptSelf.productExceptSelf( numArray );
+        int[] expectedProducts = { 128, 64, 32, 8 };
+        Assert.assertTrue( Arrays.equals( products, expectedProducts ) );
+    }
 }

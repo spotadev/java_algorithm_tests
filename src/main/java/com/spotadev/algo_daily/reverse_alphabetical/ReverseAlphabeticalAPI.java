@@ -40,4 +40,6 @@ package com.spotadev.algo_daily.reverse_alphabetical;
  * @author Karema99 - 29 Aug 2022
  */
 public interface ReverseAlphabeticalAPI {
+
+    String reverseOnlyAlphabetical( String input );
 }

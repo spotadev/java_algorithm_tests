@@ -52,4 +52,6 @@ package com.spotadev.algo_daily.sum_digits_until_one;
  */
 
 public interface SumDigitsUntilOneAPI {
+
+    int sumDigits( int input );
 }

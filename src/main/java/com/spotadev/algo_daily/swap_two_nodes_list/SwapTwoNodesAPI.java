@@ -57,4 +57,30 @@ package com.spotadev.algo_daily.swap_two_nodes_list;
  * @author Karema99 - 29 Aug 2022
  */
 public interface SwapTwoNodesAPI {
+
+    class LinkedListNode {
+
+        public LinkedListNode next;
+        public int val;
+
+        public LinkedListNode( int val ) {
+
+            this.val = val;
+        }
+
+
+        public String toString() {
+
+            String toReturn = val + "";
+
+            if ( next != null ) {
+
+                toReturn = toReturn + " => " + next.toString();
+            }
+
+            return toReturn;
+        }
+    }
+
+    LinkedListNode swapEveryTwo( LinkedListNode head );
 }

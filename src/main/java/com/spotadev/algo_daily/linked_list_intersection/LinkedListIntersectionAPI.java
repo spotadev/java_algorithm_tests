@@ -28,4 +28,78 @@ package com.spotadev.algo_daily.linked_list_intersection;
  * @author Karema99 - 29 Aug 2022
  */
 public interface LinkedListIntersectionAPI {
+
+    class LinkedListNode {
+
+        public LinkedListNode next;
+        public int val;
+
+        public LinkedListNode( int val ) {
+
+            this.val = val;
+        }
+
+
+        public String toString() {
+
+            String toReturn = val + "";
+
+            if ( next != null ) {
+
+                toReturn = toReturn + " -> ";
+                toReturn = toReturn + next.toString();
+            }
+
+            return toReturn;
+        }
+    }
+
+    class LinkedList {
+
+        LinkedListNode head;
+        LinkedListNode tail;
+
+        public LinkedList() {
+
+            this.head = null;
+            this.tail = null;
+        }
+
+
+        public void prepend( int newVal ) {
+
+            final LinkedListNode currentHead = this.head;
+            final LinkedListNode newNode = new LinkedListNode( newVal );
+            newNode.next = currentHead;
+            this.head = newNode;
+
+            if ( this.tail == null ) {
+                this.tail = newNode;
+            }
+        }
+
+
+        public void append( int newVal ) {
+
+            final LinkedListNode newNode = new LinkedListNode( newVal );
+
+            if ( this.head == null ) {
+
+                this.head = newNode;
+                this.tail = newNode;
+            }
+            else {
+                this.tail.next = newNode;
+                this.tail = newNode;
+            }
+        }
+
+
+        public String toString() {
+
+            return head.toString();
+        }
+    }
+
+    LinkedList getIntersection( LinkedList list1, LinkedList list2 );
 }
