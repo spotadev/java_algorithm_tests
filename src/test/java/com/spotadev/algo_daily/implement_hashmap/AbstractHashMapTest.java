@@ -20,12 +20,16 @@ import org.testng.Assert;
  */
 public abstract class AbstractHashMapTest {
 
-    protected HashMapAPI<String, String> hashMap = new HashMapJD<>();
+    protected HashMapAPI<Integer, String> hashMap;
 
     public void doTest() {
 
-        hashMap.put( "name", "JD" );
-        String name = hashMap.get( "name" );
-        Assert.assertEquals( name, "JD" );
+        hashMap.put( 1, "JD" );
+        hashMap.put( 101, "RK" );
+        String name1 = hashMap.get( 1 );
+        String name101 = hashMap.get( 101 );
+
+        Assert.assertEquals( name1, "JD" );
+        Assert.assertEquals( name101, "RK" );
     }
 }
