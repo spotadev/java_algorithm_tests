@@ -13,7 +13,7 @@
 */
 package com.spotadev.algo_daily.implement_linked_list;
 
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
  */
 public class LinkedList_JDTest extends AbstractLinkedListTest {
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp() {
 
         linkedList = new LinkedListJD();

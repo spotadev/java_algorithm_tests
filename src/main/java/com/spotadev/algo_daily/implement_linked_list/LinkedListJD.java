@@ -14,32 +14,83 @@
 package com.spotadev.algo_daily.implement_linked_list;
 
 /**
+ * https://algodaily.com/challenges/implement-a-linked-list
+ * 
+ * Implement a linked list from scratch
+ *
+ * Constraints
+ * 
+ *    The numbers in the node to be added are within the integer limits
+ * 
+ *    Time Complexity for prepending and appending operations: O(1)
+ * 
+ *    Space Complexity for appending and prepending: 0(1)
+ *    
  * @author John Dickerson - 2 Jan 2023
  */
 public class LinkedListJD implements LinkedListAPI {
 
+    private LinkedListNode head;
+
     @Override
     public LinkedListNode getHead() {
 
-        return null;
+        return head;
     }
 
 
     @Override
     public LinkedListNode getTail() {
 
-        return null;
+        if ( head.next == null ) {
+
+            return head;
+        }
+
+        LinkedListNode node = head;
+
+        while ( true ) {
+
+            if ( node.next == null ) {
+
+                return node;
+            }
+            else {
+                node = node.next;
+            }
+        }
     }
 
 
     @Override
     public void prepend( int newVal ) {
 
+        LinkedListNode node = new LinkedListNode( newVal );
+
+        if ( head == null ) {
+
+            head = node;
+        }
+        else {
+
+            node.next = head;
+            head = node;
+        }
     }
 
 
     @Override
     public void append( int newVal ) {
 
+        LinkedListNode node = new LinkedListNode( newVal );
+        LinkedListNode tail = getTail();
+
+        if ( tail == null ) {
+
+            head = node;
+        }
+        else {
+            tail.next = node;
+        }
     }
 }
