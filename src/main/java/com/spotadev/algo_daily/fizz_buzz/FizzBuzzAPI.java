@@ -21,7 +21,7 @@ package com.spotadev.algo_daily.fizz_buzz;
  *
  *     i)   If it's a multiple of 3, represent it as "fizz".
  *     ii)  If it's a multiple of 5, represent it as "buzz".
- *     iii) If it's a multiple of both 3 and 5, represent it as "fizzbuz".
+ *     iii) If it's a multiple of both 3 and 5, represent it as "fizzbuzz".
  *     iv)  If it's neither just return the number itself.
  *
  * Constraints:

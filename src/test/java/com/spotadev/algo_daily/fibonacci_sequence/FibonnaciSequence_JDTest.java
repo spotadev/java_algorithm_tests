@@ -35,6 +35,7 @@ public class FibonnaciSequence_JDTest extends AbstractFibonnaciSequenceTest {
     }
 
 
+    @Test
     public void fibonacciSequence_2Test() {
 
         super.fibonacciSequence_2Test();
