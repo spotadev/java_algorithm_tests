@@ -14,13 +14,15 @@
 package com.spotadev.algo_daily.array_intersection;
 
 /**
- * Similar to: https://algodaily.com/challenges/array-intersection/python
+ * https://algodaily.com/challenges/array-intersection/java
  * 
  * Write a function that takes two arrays as input and returns the intersection of the two arrays 
  * as output. Return the intersection of the two inputs in the form of an array.
  * 
  * An intersection of two sets A and B is consists of all elements found in A that are also belong 
  * to B.
+ * 
+ * All elements in the final result should be unique.
  *
  * Example 1
  * =========
@@ -51,5 +53,5 @@ package com.spotadev.algo_daily.array_intersection;
  */
 public interface ArrayIntersectionAPI {
 
-    int[] intersection( int[] num1, int[] num2 );
+    Integer[] intersection( int[] num1, int[] num2 );
 }

@@ -40,4 +40,11 @@ public class ArrayIntersection_JDTest extends AbstractArrayIntersectionTest {
 
         super.intersection_2_Test();
     }
+
+
+    @Test
+    public void intersection_3_Test() {
+
+        super.intersection_3_Test();
+    }
 }

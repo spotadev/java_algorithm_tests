@@ -62,13 +62,12 @@ public class AbstractBinaryTreeInorderTraversalTest {
 
         List<Integer> output = binaryTreeInorderTraversal.inorderTraversal( node4 );
 
-        Assert.assertEquals( output.get( 0 ).intValue(), 0 );
-        Assert.assertEquals( output.get( 1 ).intValue(), 1 );
-        Assert.assertEquals( output.get( 2 ).intValue(), 2 );
-        Assert.assertEquals( output.get( 3 ).intValue(), 3 );
-        Assert.assertEquals( output.get( 4 ).intValue(), 4 );
-        Assert.assertEquals( output.get( 5 ).intValue(), 5 );
-        Assert.assertEquals( output.get( 6 ).intValue(), 6 );
-        Assert.assertEquals( output.get( 7 ).intValue(), 7 );
+        Assert.assertEquals( output.get( 0 ).intValue(), 1 );
+        Assert.assertEquals( output.get( 1 ).intValue(), 2 );
+        Assert.assertEquals( output.get( 2 ).intValue(), 3 );
+        Assert.assertEquals( output.get( 3 ).intValue(), 4 );
+        Assert.assertEquals( output.get( 4 ).intValue(), 5 );
+        Assert.assertEquals( output.get( 5 ).intValue(), 6 );
+        Assert.assertEquals( output.get( 6 ).intValue(), 7 );
     }
 }
