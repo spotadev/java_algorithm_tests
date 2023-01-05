@@ -25,6 +25,16 @@ package com.spotadev.algo_daily.linked_list_intersection;
  *  
  *      7 => 8
  *      
+ * Constraints
+ * 
+ *     Length of the two linked lists <= 1000
+ *     
+ *     The nodes in the list will always contain integer values between -1000000000 and 1000000000
+ *     
+ *     Expected time complexity : O(n*m) (the lengths of the two lists)
+ * 
+ *     Expected space complexity : O(n)
+ *      
  * @author Karema99 - 29 Aug 2022
  */
 public interface LinkedListIntersectionAPI {

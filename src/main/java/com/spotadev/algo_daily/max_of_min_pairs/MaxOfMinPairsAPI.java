@@ -18,7 +18,7 @@ package com.spotadev.algo_daily.max_of_min_pairs;
  * 
  * Given an array of length 2*n (even length), that consists of random numbers,
  * 
- *     e.g [1, 3, 2, 6, 5, 2]
+ *     e.g [1, 3, 2, 6, 5, 4]
  * 
  * Create pairs out of these integers e.g. --> [[1, 3], [2, 6], [5, 4]]
  *
@@ -30,6 +30,10 @@ package com.spotadev.algo_daily.max_of_min_pairs;
  * 
  *     Input [3, 4, 2, 5] --> 6
  *     maximum sum of pairs is 6 = min(2, 3) + min(4, 5)
+ *     
+ *     min(3,4) + min(2,5) = 3 + 2 = 5 which is less than 6 so we do above instead.
+ *     
+ *     min(3,5) + min(4,2) = 3 + 2 = 5 which is less than 6 so we do above instead.
  *
  * Negative numbers may also be included
  *
@@ -40,11 +44,11 @@ package com.spotadev.algo_daily.max_of_min_pairs;
  * 
  *     Values range between -1000 and 1000
  *  
- *      Final answer will always be an integer value
+ *     Final answer will always be an integer value
  *
- *      Time Complexity: O (nlogn)
+ *     Time Complexity: O (n log n)
  *  
- *      Space Complexity: O(1
+ *     Space Complexity: O(1
  *      
  * @author Karema99 - 29 Aug 2022
  */

@@ -26,7 +26,14 @@ public abstract class AbstractLinkedListIntersectionTest {
 
     private LinkedList createLinkedList( int[] numbers ) {
 
-        return null;
+        LinkedList list = new LinkedList();
+
+        for ( int number : numbers ) {
+
+            list.append( number );
+        }
+
+        return list;
     }
 
 
