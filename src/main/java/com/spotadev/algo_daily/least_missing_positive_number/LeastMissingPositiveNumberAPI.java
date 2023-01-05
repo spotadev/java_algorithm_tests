@@ -26,6 +26,20 @@ package com.spotadev.algo_daily.least_missing_positive_number;
  *     
  * We can see that the positive numbers are 0, 1, 3 and that the least missing positive number is 2
  *
+ * Constraints
+ * 
+ *     Length of the array <= 100000
+ *     
+ *     The array can be empty
+ *     
+ *     The array will contain values between -100000 and 100000
+ *     
+ *     The final answer will always fit in the integer range
+ *     
+ *     Expected time complexity : O(n)
+ *     
+ *     Expected space complexity : O(1)
+ *     
  * @author Karema99 - 29 Aug 2022
  */
 public interface LeastMissingPositiveNumberAPI {

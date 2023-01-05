@@ -29,8 +29,22 @@ public class LeastMissingPositiveNumber_JDTest extends AbstractLeastMissingPosit
 
 
     @Test
-    public void leastMissingPositiveTest() {
+    public void leastMissingPositive_1Test() {
 
-        super.leastMissingPositiveTest();
+        super.leastMissingPositive_1Test();
+    }
+
+
+    @Test
+    public void leastMissingPositive_2Test() {
+
+        super.leastMissingPositive_2Test();
+    }
+
+
+    @Test
+    public void leastMissingPositive_3Test() {
+
+        super.leastMissingPositive_3Test();
     }
 }

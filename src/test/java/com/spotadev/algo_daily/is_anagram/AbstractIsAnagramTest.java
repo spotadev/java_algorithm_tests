@@ -22,6 +22,7 @@ public abstract class AbstractIsAnagramTest {
 
     protected IsAnagramAPI isAnagram;
 
+    // deals with case of mixed case
     public void firstTest() {
 
         assertEquals( isAnagram.isAnagram( "Mary", "Army" ), true );
@@ -37,5 +38,19 @@ public abstract class AbstractIsAnagramTest {
     public void thirdTest() {
 
         assertEquals( isAnagram.isAnagram( "jake", "jay" ), false );
+    }
+
+
+    // Deals with case of duplicate letters
+    public void fourthTest() {
+
+        assertEquals( isAnagram.isAnagram( "Naan", "Anna" ), true );
+    }
+
+
+    // Deals with case of identical strings - identical strings are not an anagram
+    public void fifthTest() {
+
+        assertEquals( isAnagram.isAnagram( "Anna", "Anna" ), false );
     }
 }

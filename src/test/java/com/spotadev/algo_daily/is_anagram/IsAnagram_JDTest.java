@@ -47,4 +47,18 @@ public class IsAnagram_JDTest extends AbstractIsAnagramTest {
 
         super.thirdTest();
     }
+
+
+    @Test
+    public void fourthTest() {
+
+        super.fourthTest();
+    }
+
+
+    @Test
+    public void fifthTest() {
+
+        super.fifthTest();
+    }
 }
