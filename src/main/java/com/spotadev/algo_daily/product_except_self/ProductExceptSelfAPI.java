@@ -29,6 +29,22 @@ package com.spotadev.algo_daily.product_except_self;
  * 32  = 1 x 2 x 16
  * 8   = 1 x 2 x 4
  * 
+ * Can you solve this in O(n) time without division?
+ * 
+ * Constraints
+ * 
+ *     Length of the array will be <= 100000
+ * 
+ *     The array can be empty
+ * 
+ *     The array will only contain non zero positive values
+ * 
+ *     The answer for each index will fit in the integer range
+ * 
+ *     Expected time complexity : O(n)
+ * 
+ *     Expected space complexity : O(n)
+ * 
  * @author Karema99 - 29 Aug 2022
  */
 public interface ProductExceptSelfAPI {

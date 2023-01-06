@@ -45,6 +45,9 @@ package com.spotadev.algo.blind75.arraysandhashing.medium.product_of_array_excep
  *    -30 <= nums[i] <= 30
  *    The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
  * 
+ * NOTE: See com.spotadev.algo_daily.product_except_self.ProductExceptSelf_JD for a shorter and
+ * better solution.
+ * 
  * @author John Dickerson - 1 May 2022
  */
 public class ProductOfArrayExceptSelf_JD implements ProductOfArrayExceptSelfAPI {

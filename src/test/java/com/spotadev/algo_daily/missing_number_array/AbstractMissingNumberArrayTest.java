@@ -24,7 +24,7 @@ public abstract class AbstractMissingNumberArrayTest {
 
     protected MissingNumberArrayAPI missingNumberArray;
 
-    public void missingNumberTest() {
+    public void missingNumber_1Test() {
 
         int[] numbers = { 1, 2, 4, 5, 7 };
         List<Integer> missingNumbers = missingNumberArray.missingNumber( numbers );

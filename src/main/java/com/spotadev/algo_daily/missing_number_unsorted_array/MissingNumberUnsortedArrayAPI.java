@@ -37,6 +37,18 @@ package com.spotadev.algo_daily.missing_number_unsorted_array;
  * Here's the challenge-- can you find the missing number in O(n) time? Can you do it WITHOUT 
  * sorting?
  * 
+ * Constraints
+ *  
+ *     Length of the array <= 10000
+ *     
+ *     The upper bound <= 10000
+ *     
+ *     The lower bound >= -10000
+ *     
+ *     Expected time complexity : O(n)
+ *     
+ *     Expected space complexity : O(1)
+ * 
  * @author Karema99 - 29 Aug 2022
  */
 public interface MissingNumberUnsortedArrayAPI {

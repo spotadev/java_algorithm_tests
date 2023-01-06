@@ -29,8 +29,9 @@ public class MissingNumberArray_JDTest extends AbstractMissingNumberArrayTest {
 
 
     @Test
-    public void missingNumberTest() {
+    public void missingNumber_1Test() {
 
-        super.missingNumberTest();
+        super.missingNumber_1Test();
+        ;
     }
 }
