@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo_daily.remove_duplicates_array;
 
+import java.util.List;
+
 /**
  * https://algodaily.com/challenges/uniqueness-of-arrays
  *
@@ -47,5 +49,5 @@ package com.spotadev.algo_daily.remove_duplicates_array;
  */
 public interface RemoveDuplicatesArrayAPI {
 
-    int[] unique( int[] arr );
+    List<Integer> unique( int[] arr );
 }

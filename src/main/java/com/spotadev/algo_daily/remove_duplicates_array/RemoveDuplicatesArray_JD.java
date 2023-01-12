@@ -13,6 +13,11 @@
 */
 package com.spotadev.algo_daily.remove_duplicates_array;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * https://algodaily.com/challenges/uniqueness-of-arrays
  *
@@ -48,8 +53,18 @@ package com.spotadev.algo_daily.remove_duplicates_array;
 public class RemoveDuplicatesArray_JD implements RemoveDuplicatesArrayAPI {
 
     @Override
-    public int[] unique( int[] arr ) {
+    public List<Integer> unique( int[] arr ) {
 
-        return null;
+        Set<Integer> passedValues = new LinkedHashSet<>();
+
+        for ( int i = 0; i < arr.length; i++ ) {
+
+            if ( !passedValues.contains( arr[i] ) ) {
+
+                passedValues.add( arr[i] );
+            }
+        }
+
+        return new ArrayList<>( passedValues );
     }
 }
