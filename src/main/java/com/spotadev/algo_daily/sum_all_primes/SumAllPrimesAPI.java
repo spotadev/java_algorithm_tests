@@ -29,7 +29,7 @@ package com.spotadev.algo_daily.sum_all_primes;
  *
  * Constraints
  * 
- *     n is always a non-zero positive integer
+ *     n will always be a non zero positive integer <= 100000
  * 
  *     Time Complexity: O(n log n)
  * 
@@ -37,7 +37,6 @@ package com.spotadev.algo_daily.sum_all_primes;
  *     
  * @author Karema99 - 29 Aug 2022
  */
-
 public interface SumAllPrimesAPI {
 
     int sumOfAllPrimes( int n );

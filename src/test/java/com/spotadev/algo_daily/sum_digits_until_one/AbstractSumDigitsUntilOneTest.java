@@ -18,7 +18,7 @@ import org.testng.Assert;
 /**
  * @author John Dickerson - 3 Jan 2023
  */
-public class AbstractSumDigitsUntilOneTest {
+public abstract class AbstractSumDigitsUntilOneTest {
 
     protected SumDigitsUntilOneAPI sumDigitsUntilOne;
 

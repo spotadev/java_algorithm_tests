@@ -43,7 +43,7 @@ public class AbstractSwapTwoNodesTest {
         LinkedListNode head = new LinkedListNode( 1 );
         createLinkedListNode( head, new int[] { 2, 3, 4 } );
         LinkedListNode swapped = swapTwoNodes.swapEveryTwo( head );
-        Assert.assertEquals( swapped, toString(), "2 -> 1 -> 4 -> 3" );
+        Assert.assertEquals( swapped.toString(), "2 -> 1 -> 4 -> 3" );
     }
 
 
@@ -55,7 +55,7 @@ public class AbstractSwapTwoNodesTest {
         LinkedListNode head = new LinkedListNode( 10 );
         createLinkedListNode( head, new int[] { 20, 50, 40 } );
         LinkedListNode swapped = swapTwoNodes.swapEveryTwo( head );
-        Assert.assertEquals( swapped, toString(), "20 -> 10 -> 40 -> 50" );
+        Assert.assertEquals( swapped.toString(), "20 -> 10 -> 40 -> 50" );
     }
 
 
@@ -67,6 +67,6 @@ public class AbstractSwapTwoNodesTest {
         LinkedListNode head = new LinkedListNode( 4 );
         createLinkedListNode( head, new int[] { 5, 6, 7 } );
         LinkedListNode swapped = swapTwoNodes.swapEveryTwo( head );
-        Assert.assertEquals( swapped, toString(), "5 -> 4 -> 7 -> 6" );
+        Assert.assertEquals( swapped.toString(), "5 -> 4 -> 7 -> 6" );
     }
 }

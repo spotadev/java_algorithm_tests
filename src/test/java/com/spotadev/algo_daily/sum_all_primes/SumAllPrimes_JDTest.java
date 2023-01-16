@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 /**
  * @author John Dickerson - 3 Jan 2023
  */
-public abstract class SumAllPrimes_JDTest extends AbstractSumAllPrimesTest {
+public class SumAllPrimes_JDTest extends AbstractSumAllPrimesTest {
 
     @BeforeClass
     public void setUp() {

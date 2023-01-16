@@ -75,7 +75,7 @@ public interface SwapTwoNodesAPI {
 
             if ( next != null ) {
 
-                toReturn = toReturn + " => " + next.toString();
+                toReturn = toReturn + " -> " + next.toString();
             }
 
             return toReturn;
