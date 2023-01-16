@@ -19,19 +19,17 @@ package com.spotadev.algo_daily.two_sum;
  * Given an array of integers, return the indices of the two numbers that add up to a specific 
  * given target number.
  * 
- * Given an array e.g. [1, 3, 6, 7, 9] and a target number say 10. Two numbers that add up to ten 
- * in the array and their indices respectively are [1 and 9] at indices 0 and 5.
+ * Given an array e.g. [ 1, 9, 13, 20, 47] and a target number say 10. Two numbers that add up to 
+ * ten in the array and their indices respectively are [0 and 1]
+ * 
+ * You may assume that each input would have exactly one solution. Additionally, you may not use 
+ * the same element twice towards the sum. 
  *
  * Examples
  * ========
  * 
- *     [2, 3, 4, 5, 5] target = 7 --> numbers: 2 and 5, indices: 0 and 4
- * 
- *     [1, 3, 5, 6, 2] target = 8 --> numbers: 5 and 3, indices: 1 and 2
- * 
- *     [2, 3, 6, 8, 9] target = 9 --> numbers: 6 and 3, indices: 0 and 1
- * 
- *     [9, 2, 4, 5, 6] target = 14 --> numbers: 5 and 9, indices: 0 and 4
+ *     1, 9, 13, 20, 47 add up to 10 => indexes: 0 and 1
+ *     [3, 2, 4, 1, 9  add up to 12  => indexes: 1 and 4
  *
  * Constraints
  * ===========

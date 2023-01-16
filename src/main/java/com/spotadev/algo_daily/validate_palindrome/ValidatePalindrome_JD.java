@@ -14,6 +14,33 @@
 package com.spotadev.algo_daily.validate_palindrome;
 
 /**
+ * https://algodaily.com/challenges/validate-palindrome
+ * 
+ * Given a string str, write a method that will return True if is a palindrome and False
+ * if it is not a palindrome.
+ * 
+ * palindrome definition: a word or phrase or sequence that reads the same backward as forward
+ *
+ * Examples
+ * ========
+ * 
+ *     'racecar' -> True
+ *     
+ *     'mum' -> True
+ * 
+ *     'horse' -> False
+ *
+ * Constraints
+ * ===========
+ * 
+ *     i) Length of the string <= 100000
+ * 
+ *     ii) The string will consist of ASCII characters (some or all)
+ * 
+ *     iii) Time complexity: O(n)
+ * 
+ *     iv) Space complexity: O(!)
+ *     
  * @author John Dickerson - 3 Jan 2023
  */
 public class ValidatePalindrome_JD implements ValidatePalindromeAPI {
@@ -21,6 +48,20 @@ public class ValidatePalindrome_JD implements ValidatePalindromeAPI {
     @Override
     public boolean isPalindrome( char[] str ) {
 
-        return false;
+        int leftIndex = 0;
+        int rightIndex = str.length - 1;
+
+        while ( leftIndex <= rightIndex ) {
+
+            if ( str[leftIndex] != str[rightIndex] ) {
+
+                return false;
+            }
+
+            leftIndex++;
+            rightIndex--;
+        }
+
+        return true;
     }
 }
