@@ -22,7 +22,7 @@ public class AbstractLeastMissingPositiveNumberTest {
 
     protected LeastMissingPositiveNumberAPI leastMissingPositiveNumber;
 
-    public void leastMissingPositive_1Test() {
+    void leastMissingPositive_1Test() {
 
         int[] numbers = { 0, 3, -1, -2, 1 };
         int leastMissingPositiveNum = leastMissingPositiveNumber.leastMissingPositive( numbers );
@@ -31,7 +31,7 @@ public class AbstractLeastMissingPositiveNumberTest {
 
 
     // empty array
-    public void leastMissingPositive_2Test() {
+    void leastMissingPositive_2Test() {
 
         int[] numbers = {};
         int leastMissingPositiveNum = leastMissingPositiveNumber.leastMissingPositive( numbers );
@@ -40,7 +40,7 @@ public class AbstractLeastMissingPositiveNumberTest {
 
 
     // no positives
-    public void leastMissingPositive_3Test() {
+    void leastMissingPositive_3Test() {
 
         int[] numbers = { -1, -4, -5 };
         int leastMissingPositiveNum = leastMissingPositiveNumber.leastMissingPositive( numbers );

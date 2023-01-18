@@ -22,7 +22,7 @@ public abstract class AbstractSumDigitsUntilOneTest {
 
     protected SumDigitsUntilOneAPI sumDigitsUntilOne;
 
-    public void sumDigits_1Test() {
+    void sumDigits_1Test() {
 
         int input = 49;
         int output = sumDigitsUntilOne.sumDigits( input );
@@ -30,7 +30,7 @@ public abstract class AbstractSumDigitsUntilOneTest {
     }
 
 
-    public void sumDigits_2Test() {
+    void sumDigits_2Test() {
 
         int input = 56;
         int output = sumDigitsUntilOne.sumDigits( input );

@@ -25,7 +25,7 @@ public abstract class AbstractSumAllPrimesTest {
     /**
      * 11 -> [2, 3, 5, 7, 11] --> output --> 28
      */
-    public void sumOfAllPrimes_1Test() {
+    void sumOfAllPrimes_1Test() {
 
         int n = 11;
         int expected = 28;
@@ -37,7 +37,7 @@ public abstract class AbstractSumAllPrimesTest {
     /**
      * 15 -> [2, 3, 5, 11, 13] --> output --> 41
      */
-    public void sumOfAllPrimes_2Test() {
+    void sumOfAllPrimes_2Test() {
 
         int n = 15;
         int expected = 41;
@@ -49,7 +49,7 @@ public abstract class AbstractSumAllPrimesTest {
     /**
      * 17 -> [2, 3, 5, 7, 11, 13, 17] --> output --> 58
      */
-    public void sumOfAllPrimes_3Test() {
+    void sumOfAllPrimes_3Test() {
 
         int n = 17;
         int expected = 58;

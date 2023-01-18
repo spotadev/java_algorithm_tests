@@ -23,33 +23,33 @@ public abstract class AbstractIsAnagramTest {
     protected IsAnagramAPI isAnagram;
 
     // deals with case of mixed case
-    public void firstTest() {
+    void firstTest() {
 
         assertEquals( isAnagram.isAnagram( "Mary", "Army" ), true );
     }
 
 
-    public void secondTest() {
+    void secondTest() {
 
         assertEquals( isAnagram.isAnagram( "cinema", "iceman" ), true );
     }
 
 
-    public void thirdTest() {
+    void thirdTest() {
 
         assertEquals( isAnagram.isAnagram( "jake", "jay" ), false );
     }
 
 
     // Deals with case of duplicate letters
-    public void fourthTest() {
+    void fourthTest() {
 
         assertEquals( isAnagram.isAnagram( "Naan", "Anna" ), true );
     }
 
 
     // Deals with case of identical strings - identical strings are not an anagram
-    public void fifthTest() {
+    void fifthTest() {
 
         assertEquals( isAnagram.isAnagram( "Anna", "Anna" ), false );
     }

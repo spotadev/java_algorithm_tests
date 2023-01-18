@@ -53,7 +53,7 @@ public class AbstractReverseArrayInPlaceTest {
     }
 
 
-    public void reverseTest() {
+    void reverseTest() {
 
         String[] inData1 = new String[] { "1", "2", "3", "4", "5", "6" };
         String[] expected1 = { "6", "5", "4", "3", "2", "1" };

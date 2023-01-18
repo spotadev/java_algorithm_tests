@@ -50,7 +50,7 @@ public abstract class AbstractedTwoSumTest {
     }
 
 
-    public void twoSumTest_1() {
+    void twoSumTest_1() {
 
         int[] indexes = twoSum.twoSum( new int[] { 2, 7, 11, 15 }, 9 );
         Arrays.sort( indexes );
@@ -59,7 +59,7 @@ public abstract class AbstractedTwoSumTest {
     }
 
 
-    public void twoSumTest_2() {
+    void twoSumTest_2() {
 
         int[] indexes = twoSum.twoSum( new int[] { 3, 3 }, 6 );
         Arrays.sort( indexes );
@@ -68,7 +68,7 @@ public abstract class AbstractedTwoSumTest {
     }
 
 
-    public void twoSumTest_3() {
+    void twoSumTest_3() {
 
         int[] indexes = twoSum.twoSum( new int[] { 2, 5, 5, 11 }, 10 );
         Arrays.sort( indexes );

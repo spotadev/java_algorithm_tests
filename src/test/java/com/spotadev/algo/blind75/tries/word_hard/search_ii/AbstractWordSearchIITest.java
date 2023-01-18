@@ -28,7 +28,7 @@ public abstract class AbstractWordSearchIITest {
 
     protected WordSearchIIAPI wordSearchII;
 
-    public void findWordsTest_1() {
+    void findWordsTest_1() {
 
         char[][] board = new char[][] {
                 { 'o', 'a', 'a', 'n' },
@@ -53,7 +53,7 @@ public abstract class AbstractWordSearchIITest {
     }
 
 
-    public void findWordsTest_2() {
+    void findWordsTest_2() {
 
         char[][] board = new char[][] {
                 { 'a', 'b' },
@@ -77,7 +77,7 @@ public abstract class AbstractWordSearchIITest {
     }
 
 
-    public void findWordsTest_3() {
+    void findWordsTest_3() {
 
         char[][] board = new char[][] {
                 { 'a' }
@@ -100,7 +100,7 @@ public abstract class AbstractWordSearchIITest {
     }
 
 
-    public void findWordsTest_4() {
+    void findWordsTest_4() {
 
         char[][] board = new char[][] {
                 { 'o', 'a', 'b', 'n' },

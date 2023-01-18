@@ -22,7 +22,7 @@ public abstract class AbstractLongestCommonSubsequenceTest {
 
     protected LongestCommonSubsequenceAPI longestCommonSubsequence;
 
-    public void longestCommonSubsequenceTest() {
+    void longestCommonSubsequenceTest() {
 
         String text1 = null;
         String text2 = null;

@@ -53,7 +53,7 @@ public abstract class AbstractReverseLinkedListTest {
     }
 
 
-    public void reverseListTest_1() {
+    void reverseListTest_1() {
 
         ListNode resultListNode =
                 reverseLinkedList.reverseList( createListNode( new int[] { 1, 2, 3, 4, 5 } ) );
@@ -62,7 +62,7 @@ public abstract class AbstractReverseLinkedListTest {
     }
 
 
-    public void reverseListTest_2() {
+    void reverseListTest_2() {
 
         ListNode resultListNode =
                 reverseLinkedList.reverseList( createListNode( new int[] { 1, 2 } ) );
@@ -71,7 +71,7 @@ public abstract class AbstractReverseLinkedListTest {
     }
 
 
-    public void reverseListTest_3() {
+    void reverseListTest_3() {
 
         ListNode resultListNode =
                 reverseLinkedList.reverseList( createListNode( new int[] {} ) );

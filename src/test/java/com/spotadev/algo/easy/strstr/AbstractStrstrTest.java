@@ -22,7 +22,7 @@ public class AbstractStrstrTest {
 
     protected StrstrAPI strstr;
 
-    public void strStrTest_1() {
+    void strStrTest_1() {
 
         String haystack = "hello";
         String needle = "ll";
@@ -31,7 +31,7 @@ public class AbstractStrstrTest {
     }
 
 
-    public void strStrTest_2() {
+    void strStrTest_2() {
 
         String haystack = "aaa";
         String needle = "aaaa";
@@ -40,7 +40,7 @@ public class AbstractStrstrTest {
     }
 
 
-    public void strStrTest_3() {
+    void strStrTest_3() {
 
         String haystack = "mississippi";
         String needle = "issipi";

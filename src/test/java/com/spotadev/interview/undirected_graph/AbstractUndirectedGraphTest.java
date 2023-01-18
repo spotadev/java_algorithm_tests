@@ -22,7 +22,7 @@ public abstract class AbstractUndirectedGraphTest {
 
     protected UndirectedGraphAPI undirectedGraph;
 
-    protected void sumOfAllEdgesTest_1() {
+    void sumOfAllEdgesTest_1() {
 
         int N = 5;
         int A[] = { 2, 2, 1, 2 };

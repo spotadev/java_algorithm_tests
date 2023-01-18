@@ -22,7 +22,7 @@ public abstract class AbstractReverseAlphabeticalTest {
 
     protected ReverseAlphabeticalAPI reverseAlphabetical;
 
-    public void reverseOnlyAlphabeticalTest() {
+    void reverseOnlyAlphabeticalTest() {
 
         String input = "sea!$hells3";
         String reversed = reverseAlphabetical.reverseOnlyAlphabetical( input );

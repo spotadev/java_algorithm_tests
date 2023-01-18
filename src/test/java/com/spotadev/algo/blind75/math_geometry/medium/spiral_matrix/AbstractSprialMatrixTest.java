@@ -22,7 +22,7 @@ public class AbstractSprialMatrixTest {
 
     protected SpiralMatrixAPI spiralMatrix;
 
-    public void spiralOrderTest() {
+    void spiralOrderTest() {
 
         int[][] matrix = new int[][] {};
         List<Integer> result = spiralMatrix.spiralOrder( matrix );

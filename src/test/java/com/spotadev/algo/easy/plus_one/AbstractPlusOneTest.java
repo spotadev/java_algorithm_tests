@@ -22,7 +22,7 @@ public abstract class AbstractPlusOneTest {
 
     protected PlusOneAPI plusOne;
 
-    public void plusOneTest_1() {
+    void plusOneTest_1() {
 
         int[] digits = new int[] { 1, 2, 3 };
         int[] incremented = plusOne.plusOne( digits );
@@ -30,7 +30,7 @@ public abstract class AbstractPlusOneTest {
     }
 
 
-    public void plusOneTest_2() {
+    void plusOneTest_2() {
 
         int[] digits = new int[] { 4, 3, 2, 1 };
         int[] incremented = plusOne.plusOne( digits );
@@ -38,7 +38,7 @@ public abstract class AbstractPlusOneTest {
     }
 
 
-    public void plusOneTest_3() {
+    void plusOneTest_3() {
 
         int[] digits = new int[] { 9 };
         int[] incremented = plusOne.plusOne( digits );
@@ -46,7 +46,7 @@ public abstract class AbstractPlusOneTest {
     }
 
 
-    public void plusOneTest_4() {
+    void plusOneTest_4() {
 
         int[] digits = new int[] { 9, 9, 9, 9 };
         int[] incremented = plusOne.plusOne( digits );
@@ -54,7 +54,7 @@ public abstract class AbstractPlusOneTest {
     }
 
 
-    public void plusOneTest_5() {
+    void plusOneTest_5() {
 
         int[] digits = new int[] { 8, 9, 9, 9 };
         int[] incremented = plusOne.plusOne( digits );

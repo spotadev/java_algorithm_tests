@@ -20,7 +20,7 @@ public class AbstractSetMatrixZeroesTest {
 
     protected SetMatrixZeroesAPI setMatrixZeroes;
 
-    public void setZeroesTest() {
+    void setZeroesTest() {
 
         int[][] matrix = new int[][] {};
         setMatrixZeroes.setZeroes( matrix );

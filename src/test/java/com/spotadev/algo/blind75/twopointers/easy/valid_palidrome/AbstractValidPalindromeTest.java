@@ -29,42 +29,42 @@ public abstract class AbstractValidPalindromeTest {
     }
 
 
-    public void isPalindromeTest_2() {
+    void isPalindromeTest_2() {
 
         boolean isPalindrome = validPalindrome.isPalindrome( "race a car" );
         Assert.assertFalse( isPalindrome );
     }
 
 
-    public void isPalindromeTest_3() {
+    void isPalindromeTest_3() {
 
         boolean isPalindrome = validPalindrome.isPalindrome( " " );
         Assert.assertTrue( isPalindrome );
     }
 
 
-    public void isPalindromeTest_4() {
+    void isPalindromeTest_4() {
 
         boolean isPalindrome = validPalindrome.isPalindrome( ".," );
         Assert.assertTrue( isPalindrome );
     }
 
 
-    public void isPalindromeTest_5() {
+    void isPalindromeTest_5() {
 
         boolean isPalindrome = validPalindrome.isPalindrome( "0P" );
         Assert.assertFalse( isPalindrome );
     }
 
 
-    public void isPalindromeTest_6() {
+    void isPalindromeTest_6() {
 
         boolean isPalindrome = validPalindrome.isPalindrome( "0z;z   ; 0" );
         Assert.assertTrue( isPalindrome );
     }
 
 
-    public void isPalindromeTest_7() {
+    void isPalindromeTest_7() {
 
         boolean isPalindrome = validPalindrome.isPalindrome( "!!!::vrTTr::v!!!" );
         Assert.assertTrue( isPalindrome );

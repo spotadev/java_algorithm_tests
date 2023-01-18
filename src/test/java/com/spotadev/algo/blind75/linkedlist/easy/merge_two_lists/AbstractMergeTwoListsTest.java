@@ -69,7 +69,7 @@ public abstract class AbstractMergeTwoListsTest {
     }
 
 
-    public void mergeTwoListsTest_1() {
+    void mergeTwoListsTest_1() {
 
         ListNode list1 = createNode( 1, 2, 4 );
         ListNode list2 = createNode( 1, 3, 4 );
@@ -79,7 +79,7 @@ public abstract class AbstractMergeTwoListsTest {
     }
 
 
-    public void mergeTwoListsTest_2() {
+    void mergeTwoListsTest_2() {
 
         ListNode list1 = createNode();
         ListNode list2 = createNode();
@@ -89,7 +89,7 @@ public abstract class AbstractMergeTwoListsTest {
     }
 
 
-    public void mergeTwoListsTest_3() {
+    void mergeTwoListsTest_3() {
 
         ListNode list1 = createNode();
         ListNode list2 = createNode( 0 );

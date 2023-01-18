@@ -22,7 +22,7 @@ public class AbstractMaxOfMinPairsTest {
 
     protected MaxOfMinPairsAPI maxOfMinPairs;
 
-    public void smallArrayTest() {
+    void smallArrayTest() {
 
         int[] numbers = { 3, 4, 2, 5 };
         int result = maxOfMinPairs.maxOfMinPairs( numbers );
@@ -32,7 +32,7 @@ public class AbstractMaxOfMinPairsTest {
     }
 
 
-    public void largeArrayTest() {
+    void largeArrayTest() {
 
         int[] numbers = { 1, 3, 2, 6, 5, 4 };
         int result = maxOfMinPairs.maxOfMinPairs( numbers );

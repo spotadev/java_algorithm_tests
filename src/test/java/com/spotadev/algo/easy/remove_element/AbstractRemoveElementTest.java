@@ -14,7 +14,6 @@
 package com.spotadev.algo.easy.remove_element;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 18 Apr 2022
@@ -32,8 +31,7 @@ public abstract class AbstractRemoveElementTest {
     }
 
 
-    @Test
-    public void removeElementTest_1() {
+    void removeElementTest_1() {
 
         int[] data = { 0, 1, 2, 2, 3, 0, 4, 2 };
         int k = removeElement.removeElement( data, 2 );

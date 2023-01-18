@@ -22,7 +22,7 @@ public class AbstractNumberOf1BitsTest {
 
     protected NumberOf1BitsAPI numberOf1Bits;
 
-    public void hammingWeightTest() {
+    void hammingWeightTest() {
 
         int n = -1;
         int result = numberOf1Bits.hammingWeight( 0 );

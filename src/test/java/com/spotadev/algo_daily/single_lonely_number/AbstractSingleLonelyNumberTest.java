@@ -22,7 +22,7 @@ public abstract class AbstractSingleLonelyNumberTest {
 
     protected SingleLonelyNumberAPI singleLonelyNumber;
 
-    public void lonelyNumber_1Test() {
+    void lonelyNumber_1Test() {
 
         int[] arr = { 1, 4, 7, 9, 4, 7, 1 };
         int result = singleLonelyNumber.lonelyNumber( arr );
@@ -31,7 +31,7 @@ public abstract class AbstractSingleLonelyNumberTest {
     }
 
 
-    public void lonelyNumber_2Test() {
+    void lonelyNumber_2Test() {
 
         int[] arr = { 4, 4, 6, 1, 3, 1, 3 };
         int result = singleLonelyNumber.lonelyNumber( arr );
@@ -40,7 +40,7 @@ public abstract class AbstractSingleLonelyNumberTest {
     }
 
 
-    public void lonelyNumber_3Test() {
+    void lonelyNumber_3Test() {
 
         int[] arr = { 3, 3, 9 };
         int result = singleLonelyNumber.lonelyNumber( arr );

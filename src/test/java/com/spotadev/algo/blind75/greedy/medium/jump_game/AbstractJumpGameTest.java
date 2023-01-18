@@ -22,7 +22,7 @@ public class AbstractJumpGameTest {
 
     protected JumpGameAPI jumpGame;
 
-    public void canJumpTest_1() {
+    void canJumpTest_1() {
 
         int[] nums = {};
         boolean canJump = jumpGame.canJump( nums );

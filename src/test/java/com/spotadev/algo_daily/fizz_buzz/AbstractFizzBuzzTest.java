@@ -22,7 +22,7 @@ public abstract class AbstractFizzBuzzTest {
 
     protected FizzBuzzAPI fizzBuzz;
 
-    public void fizzBuzzTest() {
+    void fizzBuzzTest() {
 
         Integer num = 15;
         String result = fizzBuzz.fizzBuzz( num );

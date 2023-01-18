@@ -51,7 +51,7 @@ public class AbstractRemoveDuplicatesFromSortedArrayTest {
     }
 
 
-    public void removeDuplicatesTest_1() {
+    void removeDuplicatesTest_1() {
 
         int[] data = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
         int numberElements = removeDuplicatesFromSortedArray.removeDuplicates( data );

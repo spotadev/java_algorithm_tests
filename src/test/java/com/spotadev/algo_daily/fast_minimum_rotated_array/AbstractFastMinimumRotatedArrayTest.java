@@ -22,7 +22,7 @@ public abstract class AbstractFastMinimumRotatedArrayTest {
 
     protected FastMinimumRotatedArrayAPI fastMinimumRotatedArrayAPI;
 
-    public void getMinimum_1Test() {
+    void getMinimum_1Test() {
 
         int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
         int minimum = fastMinimumRotatedArrayAPI.getMinimum( numbers );
@@ -30,7 +30,7 @@ public abstract class AbstractFastMinimumRotatedArrayTest {
     }
 
 
-    public void getMinimum_2Test() {
+    void getMinimum_2Test() {
 
         int[] numbers = { 4, 5, 1, 2, 3 };
         int minimum = fastMinimumRotatedArrayAPI.getMinimum( numbers );
@@ -38,7 +38,7 @@ public abstract class AbstractFastMinimumRotatedArrayTest {
     }
 
 
-    public void getMinimum_3Test() {
+    void getMinimum_3Test() {
 
         int[] numbers = { 5, 6, 7, 0, 1, 2, 3 };
         int minimum = fastMinimumRotatedArrayAPI.getMinimum( numbers );

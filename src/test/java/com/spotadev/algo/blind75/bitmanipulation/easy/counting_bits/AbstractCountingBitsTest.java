@@ -13,6 +13,10 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.easy.counting_bits;
 
+import java.util.Arrays;
+
+import org.testng.Assert;
+
 /**
  * @author John Dickerson - 13 Jun 2022
  */
@@ -20,9 +24,27 @@ public class AbstractCountingBitsTest {
 
     protected CountingBitsAPI countingBits;
 
-    public void countBitsTests() {
+    void countBits_2Test() {
 
-        int n = -1;
+        int n = 2;
         int[] result = countingBits.countBits( n );
+
+        Assert.assertTrue( Arrays.equals( result,
+                new int[] {
+                        0, 1, 1
+
+                } ) );
+    }
+
+
+    void countBits_5Test() {
+
+        int n = 5;
+        int[] result = countingBits.countBits( n );
+
+        Assert.assertTrue( Arrays.equals( result,
+                new int[] {
+                        0, 1, 1, 2, 1, 2
+                } ) );
     }
 }

@@ -22,7 +22,7 @@ public abstract class AbstractNumberOfIslandsTest {
 
     protected NumberOfIslandsAPI numberOfIslands;
 
-    public void numIslandsTest_1() {
+    void numIslandsTest_1() {
 
         char[][] grid = new char[][] {
                 { '1', '1', '1', '1', '0' },
@@ -35,7 +35,7 @@ public abstract class AbstractNumberOfIslandsTest {
     }
 
 
-    public void numIslandsTest_2() {
+    void numIslandsTest_2() {
 
         char[][] grid = new char[][] {
                 { '1', '1', '0', '0', '0' },

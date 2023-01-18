@@ -22,7 +22,7 @@ public class AbstractValidatePalindromeTest {
 
     protected ValidatePalindromeAPI validatePalindrome;
 
-    public void isPalindrome_1Test() {
+    void isPalindrome_1Test() {
 
         char[] input = "racecar".toCharArray();
         boolean isPalidrome = validatePalindrome.isPalindrome( input );
@@ -30,7 +30,7 @@ public class AbstractValidatePalindromeTest {
     }
 
 
-    public void isPalindrome_2Test() {
+    void isPalindrome_2Test() {
 
         char[] input = "mum".toCharArray();
         boolean isPalidrome = validatePalindrome.isPalindrome( input );
@@ -38,7 +38,7 @@ public class AbstractValidatePalindromeTest {
     }
 
 
-    public void isPalindrome_3Test() {
+    void isPalindrome_3Test() {
 
         char[] input = "horse".toCharArray();
         boolean isPalidrome = validatePalindrome.isPalindrome( input );

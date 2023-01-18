@@ -22,7 +22,7 @@ public abstract class AbstractMaximumDepthOfBinaryTreeTest {
 
     protected MaximumDepthOfBinaryTree_RecursiveUsingMax_JD maximumDepthOfBinaryTree;
 
-    public void maxDepthTest_1() {
+    void maxDepthTest_1() {
 
         TreeNode node_3 = new TreeNode( 3 );
         node_3.left = new TreeNode( 9 );
@@ -41,7 +41,7 @@ public abstract class AbstractMaximumDepthOfBinaryTreeTest {
     }
 
 
-    public void maxDepthTest_2() {
+    void maxDepthTest_2() {
 
         TreeNode node_1 = new TreeNode( 1 );
 

@@ -22,14 +22,14 @@ public abstract class AbstractLongestRepeatingCharacterReplacementTest {
 
     protected LongestRepeatingCharacterReplacementAPI longestRepeatingCharacterReplacement;
 
-    public void characterReplacementTest_1() {
+    void characterReplacementTest_1() {
 
         int longest = longestRepeatingCharacterReplacement.characterReplacement( "ABAB", 2 );
         Assert.assertEquals( longest, 4 );
     }
 
 
-    public void characterReplacementTest_2() {
+    void characterReplacementTest_2() {
 
         int longest = longestRepeatingCharacterReplacement.characterReplacement( "AABABBA", 1 );
         Assert.assertEquals( longest, 4 );

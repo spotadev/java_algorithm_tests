@@ -22,7 +22,7 @@ public abstract class AbstractLongestSubstringWithoutRepeatingCharactersTest {
 
     protected LongestSubstringWithoutRepeatingCharactersAPI longestSubstringWithoutRepeatingCharacters;
 
-    public void lengthOfLongestSubstringTest_1() {
+    void lengthOfLongestSubstringTest_1() {
 
         int longest =
                 longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring( "abcabcbb" );
@@ -31,7 +31,7 @@ public abstract class AbstractLongestSubstringWithoutRepeatingCharactersTest {
     }
 
 
-    public void lengthOfLongestSubstringTest_2() {
+    void lengthOfLongestSubstringTest_2() {
 
         int longest =
                 longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring( "bbbbb" );
@@ -40,7 +40,7 @@ public abstract class AbstractLongestSubstringWithoutRepeatingCharactersTest {
     }
 
 
-    public void lengthOfLongestSubstringTest_3() {
+    void lengthOfLongestSubstringTest_3() {
 
         int longest =
                 longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring( "pwwkew" );

@@ -23,7 +23,7 @@ public abstract class AbstractMeetingRoomsIITest {
 
     protected MeetingRoomsIIAPI meetingRoomsII;
 
-    public void minMeetingRoomsTest() {
+    void minMeetingRoomsTest() {
 
         List<Interval> intervals = new ArrayList<>();
         meetingRoomsII.minMeetingRooms( intervals );

@@ -22,7 +22,7 @@ public abstract class AbstractNumberConnectedComponentsInAnUndirectedGraphTest {
 
     protected NumberConnectedComponentsInAnUndirectedGraphAPI numberConnectedComponentsInAnUndirectedGraph;
 
-    public void countComponentsTest_1() {
+    void countComponentsTest_1() {
 
         int[][] edges = { { 0, 1 }, { 1, 2 }, { 3, 4 } };
         int n = 5;
@@ -36,7 +36,7 @@ public abstract class AbstractNumberConnectedComponentsInAnUndirectedGraphTest {
      *       1    4   5     7
      *       2             8  9
      */
-    public void countComponentsTest_2() {
+    void countComponentsTest_2() {
 
         int[][] edges = { { 0, 1 }, { 1, 2 }, { 3, 4 }, { 3, 5 }, { 6, 7 }, { 7, 8 }, { 7, 9 } };
         int n = 10;

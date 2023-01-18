@@ -14,7 +14,6 @@
 package com.spotadev.algo.blind75.graphs.hard.alien_dictionary;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 
 /**
  * @author John Dickerson - 13 Jun 2022
@@ -23,14 +22,7 @@ public class AbstractAlienDictionaryTest {
 
     protected AlienDictionaryAPI alienDictionary;
 
-    @BeforeClass
-    public void setUp() {
-
-        alienDictionary = new AlienDictionary_JD();
-    }
-
-
-    public void alienOrderTest_1() {
+    void alienOrderTest_1() {
 
         String[] words = new String[] { "wrt", "wrf", "er", "ett", "rftt" };
         String result = alienDictionary.alienOrder( words );
@@ -38,7 +30,7 @@ public class AbstractAlienDictionaryTest {
     }
 
 
-    public void alienOrderTest_2() {
+    void alienOrderTest_2() {
 
         String[] words = new String[] { "z", "x" };
         String result = alienDictionary.alienOrder( words );
@@ -52,7 +44,7 @@ public class AbstractAlienDictionaryTest {
      *     y   z
      *     x   
      */
-    public void alienOrderTest_3() {
+    void alienOrderTest_3() {
 
         String[] words = new String[] { "zy", "zx" };
         String result = alienDictionary.alienOrder( words );
@@ -60,7 +52,7 @@ public class AbstractAlienDictionaryTest {
     }
 
 
-    public void alienOrderTest_4() {
+    void alienOrderTest_4() {
 
         String[] words = new String[] { "ab", "adc" };
         String result = alienDictionary.alienOrder( words );

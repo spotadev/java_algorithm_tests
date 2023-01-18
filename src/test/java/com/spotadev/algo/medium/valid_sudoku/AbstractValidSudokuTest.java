@@ -22,7 +22,7 @@ public class AbstractValidSudokuTest {
 
     protected ValidSudoku validSudoku;
 
-    public void isValidSudokuTest_1() {
+    void isValidSudokuTest_1() {
 
         boolean valid = validSudoku.isValidSudoku(
                 new char[][] {
@@ -41,7 +41,7 @@ public class AbstractValidSudokuTest {
     }
 
 
-    public void isValidSudokuTest_2() {
+    void isValidSudokuTest_2() {
 
         boolean valid = validSudoku.isValidSudoku(
                 new char[][] {
@@ -60,7 +60,7 @@ public class AbstractValidSudokuTest {
     }
 
 
-    public void isValidSudokuTest_3() {
+    void isValidSudokuTest_3() {
 
         boolean valid = validSudoku.isValidSudoku(
                 new char[][] {

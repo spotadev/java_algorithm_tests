@@ -20,7 +20,7 @@ public class AbstractClimbingStairsTest {
 
     protected ClimbingStairsAPI climbingStairs;
 
-    public void climbStairsTest() {
+    void climbStairsTest() {
 
         int n = -1;
         int result = climbingStairs.climbStairs( 0 );

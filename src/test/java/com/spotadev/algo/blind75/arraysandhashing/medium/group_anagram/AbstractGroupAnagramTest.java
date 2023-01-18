@@ -26,7 +26,7 @@ public abstract class AbstractGroupAnagramTest {
 
     protected GroupAnagramAPI groupAnagram;
 
-    public void groupAnagramsTest_1() {
+    void groupAnagramsTest_1() {
 
         List<List<String>> groups =
                 groupAnagram.groupAnagrams(
@@ -79,7 +79,7 @@ public abstract class AbstractGroupAnagramTest {
     }
 
 
-    public void groupAnagramsTest_2() {
+    void groupAnagramsTest_2() {
 
         List<List<String>> groups =
                 groupAnagram.groupAnagrams(
@@ -90,7 +90,7 @@ public abstract class AbstractGroupAnagramTest {
     }
 
 
-    public void groupAnagramsTest_3() {
+    void groupAnagramsTest_3() {
 
         List<List<String>> groups =
                 groupAnagram.groupAnagrams(

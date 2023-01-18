@@ -13,6 +13,7 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.easy.counting_bits;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
@@ -20,6 +21,7 @@ import org.testng.annotations.Test;
  */
 public class CountingBits_JDTest extends AbstractCountingBitsTest {
 
+    @BeforeClass
     public void setUp() {
 
         countingBits = new CountingBits_JD();
@@ -27,8 +29,15 @@ public class CountingBits_JDTest extends AbstractCountingBitsTest {
 
 
     @Test
-    public void countBitsTests() {
+    public void countBits_2Test() {
 
-        super.countBitsTests();
+        super.countBits_2Test();
+    }
+
+
+    @Test
+    public void countBits_5Test() {
+
+        super.countBits_5Test();
     }
 }

@@ -39,7 +39,7 @@ public abstract class AbstractSerlializeDeserializeBinaryTreeTest {
     }
 
 
-    public void serializeDeserializeTest() {
+    void serializeDeserializeTest() {
 
         TreeNode root = new TreeNode( 1 );
         TreeNode node_2 = new TreeNode( 2 );

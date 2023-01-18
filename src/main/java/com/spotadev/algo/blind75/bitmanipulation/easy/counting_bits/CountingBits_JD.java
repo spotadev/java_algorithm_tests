@@ -60,9 +60,66 @@ package com.spotadev.algo.blind75.bitmanipulation.easy.counting_bits;
  */
 public class CountingBits_JD implements CountingBitsAPI {
 
+    private int count1s( int number ) {
+
+        // let us say number is 23:
+        // 16 + 0 + 4 + 2 + 1 = 23
+        // 1    0   1   1   1
+
+        // indexes count from right. x is the number e.g 23
+
+        // 1 0 1 1 1
+        // 0 0 0 0 1 
+        // 0 0 0 0 1 => not 0 so we have a 1 in index 0
+
+        // 1 0 1 1 1
+        // 0 0 0 1 0 <= this is x << 1    (we call this a mask)
+        // 0 0 0 1 0 => not 0 so we have a 1 in index 1
+
+        // 1 0 1 1 1
+        // 0 0 1 0 0 <= this is x << 2    (we call this a mask)
+        // 0 0 1 0 0 => not 0 so we have a 1 in index 1
+
+        // 1 0 1 1 1
+        // 0 1 0 0 0 <= this is x << 3    (we call this a mask)
+        // 0 0 0 0 0 => 0 so we have a 1 in index 3
+
+        // 1 0 1 1 1
+        // 1 0 0 0 0<= this is x << 4     (we call this a mask)
+        // 1 0 0 0 0 => not 0 so we have a 1 in index 4
+
+        int countOf1 = 0;
+        int mask = 1;
+
+        // 32 bits in a java int but constraints say largest number is 105 which only has 7 bits
+        // 0 <= n <= 105      
+        // 64 32 16 8 4 2 1
+        // 1  1  0  1 0 0 1  
+        for ( int i = 0; i <= 7; i++ ) {
+
+            if ( ( number & mask ) != 0 ) {
+                countOf1++;
+            }
+
+            mask = mask << 1;
+        }
+
+        return countOf1;
+    }
+
+
     @Override
     public int[] countBits( int n ) {
 
-        return new int[] {};
+        int[] countsToReturn = new int[n + 1];
+        int number = 0;
+
+        for ( int i = 0; i <= n; i++ ) {
+
+            countsToReturn[i] = count1s( number );
+            number++;
+        }
+
+        return countsToReturn;
     }
 }

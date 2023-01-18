@@ -22,7 +22,7 @@ public abstract class AbstractFirstNonRepeatingCharacterTest {
 
     protected FirstNonRepeatingCharacterAPI firstNonRepeatingCharacterAPI;
 
-    public void firstNonRepeat_1Test() {
+    void firstNonRepeat_1Test() {
 
         String string = "asdfsdafdasfjdfsafnnunl";
         char c = firstNonRepeatingCharacterAPI.firstNonRepeat( string );

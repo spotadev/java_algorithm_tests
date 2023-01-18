@@ -22,7 +22,7 @@ public class AbstractMedian2SortedArraysDuplicatesRemovedTest {
 
     protected Median2SortedArraysDuplicatesRemovedAPI median2SortedArrays;
 
-    public void findMedianUsingThirdArray_evenLengthMergedTest() {
+    void findMedianUsingThirdArray_evenLengthMergedTest() {
 
         int[] num1 = { 1, 3, 4, 5, 6, 7, 8 };
         int[] num2 = { 2, 3, 4, 5, 6 };
@@ -33,7 +33,7 @@ public class AbstractMedian2SortedArraysDuplicatesRemovedTest {
     }
 
 
-    public void findMedianUsingThirdArray_oddLengthMergedTest() {
+    void findMedianUsingThirdArray_oddLengthMergedTest() {
 
         int[] num1 = { 1, 3, 4, 5, 6, 7, 8 };
         int[] num2 = { 2, 3, 4, 5, 6, 9 };
@@ -44,7 +44,7 @@ public class AbstractMedian2SortedArraysDuplicatesRemovedTest {
     }
 
 
-    public void findMedianUsingTreeSet_evenLengthMergedTest() {
+    void findMedianUsingTreeSet_evenLengthMergedTest() {
 
         int[] num1 = { 1, 3, 4, 5, 6, 7, 8 };
         int[] num2 = { 2, 3, 4, 5, 6 };
@@ -55,7 +55,7 @@ public class AbstractMedian2SortedArraysDuplicatesRemovedTest {
     }
 
 
-    public void findMedianUsingTreeSet_oddLengthMergedTest() {
+    void findMedianUsingTreeSet_oddLengthMergedTest() {
 
         int[] num1 = { 1, 3, 4, 5, 6, 7, 8 };
         int[] num2 = { 2, 3, 4, 5, 6, 9 };
@@ -66,7 +66,7 @@ public class AbstractMedian2SortedArraysDuplicatesRemovedTest {
     }
 
 
-    public void findMedianUsingThirdArray_test_O_Notation() {
+    void findMedianUsingThirdArray_test_O_Notation() {
 
         int[] num1 = { 1, 2, 3, 4, 5, 6, 7, 8 };
         int[] num2 = { 9, 10, 11, 12, 13, 14, 15, 16 };
@@ -100,7 +100,7 @@ public class AbstractMedian2SortedArraysDuplicatesRemovedTest {
     }
 
 
-    public void findMedianUsingTreeSet_test_O_Notation() {
+    void findMedianUsingTreeSet_test_O_Notation() {
 
         int[] num1 = { 1, 2, 3, 4, 5, 6, 7, 8 };
         int[] num2 = { 9, 10, 11, 12, 13, 14, 15, 16 };

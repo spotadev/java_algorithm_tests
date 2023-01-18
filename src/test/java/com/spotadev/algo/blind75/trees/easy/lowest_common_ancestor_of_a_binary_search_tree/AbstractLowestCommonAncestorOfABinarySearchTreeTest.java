@@ -22,7 +22,7 @@ public abstract class AbstractLowestCommonAncestorOfABinarySearchTreeTest {
 
     protected LowestCommonAncestorOfABinarySearchTreeAPI lowestCommonAncestorOfABinarySearchTree;
 
-    public void lowestCommonAncestorTest_1() {
+    void lowestCommonAncestorTest_1() {
 
         TreeNode root = new TreeNode( 6 );
         TreeNode node_2 = new TreeNode( 2 );
@@ -53,7 +53,7 @@ public abstract class AbstractLowestCommonAncestorOfABinarySearchTreeTest {
     }
 
 
-    public void lowestCommonAncestorTest_2() {
+    void lowestCommonAncestorTest_2() {
 
         TreeNode root = new TreeNode( 6 );
         TreeNode node_2 = new TreeNode( 2 );

@@ -27,7 +27,7 @@ public class AbstractTwoSumTest {
     /**
      *     [2, 3, 4, 5, 5] target = 7 --> numbers: 2 and 5, indices: 0 and 4
      */
-    public void twoSum_1Test() {
+    void twoSum_1Test() {
 
         int[] arr = { 2, 3, 4, 5, 5 };
         int goal = 7;
@@ -40,7 +40,7 @@ public class AbstractTwoSumTest {
     /**
      *     [1, 3, 5, 6, 2] target = 8 --> numbers: 5 and 3, indices: 1 and 2   
      **/
-    public void twoSum_2Test() {
+    void twoSum_2Test() {
 
         int[] arr = { 1, 3, 5, 6, 2 };
         int goal = 8;
@@ -53,7 +53,7 @@ public class AbstractTwoSumTest {
     /**
      *     [2, 3, 6, 8, 9] target = 9 --> numbers: 6 and 3, indices: 0 and 1
      **/
-    public void twoSum_3Test() {
+    void twoSum_3Test() {
 
         int[] arr = { 2, 3, 6, 8, 9 };
         int goal = 9;
@@ -66,7 +66,7 @@ public class AbstractTwoSumTest {
     /**
      *     [9, 2, 4, 5, 6] target = 14 --> numbers: 5 and 9, indices: 0 and 4
      **/
-    public void twoSum_4Test() {
+    void twoSum_4Test() {
 
         int[] arr = { 9, 2, 4, 5, 6 };
         int goal = 14;

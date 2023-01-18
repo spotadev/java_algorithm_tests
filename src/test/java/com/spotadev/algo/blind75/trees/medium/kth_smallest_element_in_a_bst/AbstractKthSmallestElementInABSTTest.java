@@ -22,7 +22,7 @@ public abstract class AbstractKthSmallestElementInABSTTest {
 
     protected KthSmallestElementInABSTAPI kthSmallestElementInABST;
 
-    public void kthSmallest_1() {
+    void kthSmallest_1() {
 
         TreeNode root = new TreeNode( 3 );
         TreeNode node_1 = new TreeNode( 1 );
@@ -38,7 +38,7 @@ public abstract class AbstractKthSmallestElementInABSTTest {
     }
 
 
-    public void kthSmallest_2() {
+    void kthSmallest_2() {
 
         TreeNode root = new TreeNode( 5 );
         TreeNode node_3 = new TreeNode( 3 );

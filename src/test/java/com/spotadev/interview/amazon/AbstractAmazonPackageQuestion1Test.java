@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class AbstractAmazonPackageQuestion1Test {
 
-    public void solutionTest() {
+    void solutionTest() {
 
         List<Integer> packageWeights = new ArrayList<>();
         AmazonPackageQuestion1.getHeaviestPackage( packageWeights );

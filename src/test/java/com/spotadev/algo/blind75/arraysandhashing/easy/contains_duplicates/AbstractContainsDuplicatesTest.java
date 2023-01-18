@@ -22,7 +22,7 @@ public abstract class AbstractContainsDuplicatesTest {
 
     protected ContainsDuplicatesAPI containsDuplicates;
 
-    public void containsDuplicateTest_1() {
+    void containsDuplicateTest_1() {
 
         boolean hasDuplicates =
                 containsDuplicates.containsDuplicate( new int[] { 1, 2, 3, 1 } );
@@ -31,7 +31,7 @@ public abstract class AbstractContainsDuplicatesTest {
     }
 
 
-    public void containsDuplicateTest_2() {
+    void containsDuplicateTest_2() {
 
         boolean hasDuplicates =
                 containsDuplicates.containsDuplicate( new int[] { 1, 2, 3, 4 } );
@@ -40,7 +40,7 @@ public abstract class AbstractContainsDuplicatesTest {
     }
 
 
-    public void containsDuplicateTest_3() {
+    void containsDuplicateTest_3() {
 
         boolean hasDuplicates =
                 containsDuplicates.containsDuplicate( new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 } );

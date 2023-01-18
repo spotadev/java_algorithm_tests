@@ -25,7 +25,7 @@ public abstract class AbstractRemoveDuplicatesArrayTest {
 
     protected RemoveDuplicatesArrayAPI removeDuplicatesArray;
 
-    public void unique_1Test() {
+    void unique_1Test() {
 
         int[] arr = { 1, 3, 4, 4, 5, 8, 4, 2, 2 };
         List<Integer> outputList = removeDuplicatesArray.unique( arr );
@@ -36,7 +36,7 @@ public abstract class AbstractRemoveDuplicatesArrayTest {
     }
 
 
-    public void unique_2Test() {
+    void unique_2Test() {
 
         int[] arr = { 2, 3, 4, 5, 5, 1, 1, 7, 8 };
         List<Integer> outputList = removeDuplicatesArray.unique( arr );
@@ -47,7 +47,7 @@ public abstract class AbstractRemoveDuplicatesArrayTest {
     }
 
 
-    public void unique_3Test() {
+    void unique_3Test() {
 
         int[] arr = { 3, 5, 6, 9, 4, 3, 12 };
         List<Integer> outputList = removeDuplicatesArray.unique( arr );
@@ -58,7 +58,7 @@ public abstract class AbstractRemoveDuplicatesArrayTest {
     }
 
 
-    public void unique_4Test() {
+    void unique_4Test() {
 
         int[] arr = { 13, 5, 3, 5, 8, 13, 14, 5, 9 };
         List<Integer> outputList = removeDuplicatesArray.unique( arr );

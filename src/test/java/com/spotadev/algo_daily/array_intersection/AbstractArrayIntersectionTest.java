@@ -11,7 +11,7 @@ public abstract class AbstractArrayIntersectionTest {
 
     protected ArrayIntersectionAPI arrayIntersection;
 
-    public void intersection_1_Test() {
+    protected void intersection_1_Test() {
 
         int[] num1 = { 1, 2, 3, 4, 5 };
         int[] num2 = { 2, 3 };
@@ -21,7 +21,7 @@ public abstract class AbstractArrayIntersectionTest {
     }
 
 
-    public void intersection_2_Test() {
+    void intersection_2_Test() {
 
         int[] num1 = { 3, 5, 6, 7 };
         int[] num2 = { 5, 6, 8 };
@@ -31,7 +31,7 @@ public abstract class AbstractArrayIntersectionTest {
     }
 
 
-    public void intersection_3_Test() {
+    void intersection_3_Test() {
 
         int[] num1 = { 1, 2, 2, 1 };
         int[] num2 = { 2, 2 };

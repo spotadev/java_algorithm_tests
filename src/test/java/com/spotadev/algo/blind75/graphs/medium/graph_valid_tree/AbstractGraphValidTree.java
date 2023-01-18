@@ -22,7 +22,7 @@ public class AbstractGraphValidTree {
 
     protected GraphValidTreeAPI graphValidTree;
 
-    public void validTreeTest_1() {
+    void validTreeTest_1() {
 
         int n = 5;
         int[][] edges = new int[][] { { 0, 1 }, { 0, 2 }, { 0, 3 }, { 1, 4 } };
@@ -31,7 +31,7 @@ public class AbstractGraphValidTree {
     }
 
 
-    public void validTreeTest_2() {
+    void validTreeTest_2() {
 
         int n = 5;
         int[][] edges = new int[][] { { 0, 1 }, { 1, 2 }, { 2, 3 }, { 1, 3 }, { 1, 4 } };
@@ -40,7 +40,7 @@ public class AbstractGraphValidTree {
     }
 
 
-    public void validTreeTest_3() {
+    void validTreeTest_3() {
 
         int n = 2;
         int[][] edges = { { 1, 0 } };

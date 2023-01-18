@@ -22,28 +22,28 @@ public class AbstractFindMinimumInRotatedSortedArrayTest {
 
     protected FindMinimumInRotatedSortedArrayAPI findMinimumInRotatedSortedArray;
 
-    public void findMinTest_1() {
+    void findMinTest_1() {
 
         int min = findMinimumInRotatedSortedArray.findMin( new int[] { 3, 4, 5, 1, 2 } );
         Assert.assertEquals( min, 1 );
     }
 
 
-    public void findMinTest_2() {
+    void findMinTest_2() {
 
         int min = findMinimumInRotatedSortedArray.findMin( new int[] { 4, 5, 6, 7, 0, 1, 2 } );
         Assert.assertEquals( min, 0 );
     }
 
 
-    public void findMinTest_3() {
+    void findMinTest_3() {
 
         int min = findMinimumInRotatedSortedArray.findMin( new int[] { 11, 13, 15, 17 } );
         Assert.assertEquals( min, 11 );
     }
 
 
-    public void findMinTest_4() {
+    void findMinTest_4() {
 
         int min = findMinimumInRotatedSortedArray.findMin( new int[] { 4, 5, 1, 2, 3 } );
         Assert.assertEquals( min, 1 );

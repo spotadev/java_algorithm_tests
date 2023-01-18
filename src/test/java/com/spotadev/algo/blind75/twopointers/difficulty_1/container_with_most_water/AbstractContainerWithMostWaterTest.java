@@ -24,14 +24,14 @@ public abstract class AbstractContainerWithMostWaterTest {
 
     protected ContainerWithMostWaterAPI containerWithMostWater;
 
-    public void maxAreaTest_1() {
+    void maxAreaTest_1() {
 
         int max = containerWithMostWater.maxArea( new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 } );
         Assert.assertEquals( max, 49 );
     }
 
 
-    public void maxAreaTest_2() {
+    void maxAreaTest_2() {
 
         int max = containerWithMostWater.maxArea( new int[] { 1, 1 } );
         Assert.assertEquals( max, 1 );

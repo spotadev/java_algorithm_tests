@@ -22,7 +22,7 @@ public abstract class AbstractDesignAddAndSearchWordsDataStructureTest {
 
     protected DesignAddAndSearchWordsDataStructureAPI wordDictionary;
 
-    public void testingTest_1() {
+    void testingTest_1() {
 
         wordDictionary.addWord( "bad" );
         wordDictionary.addWord( "dad" );
@@ -34,7 +34,7 @@ public abstract class AbstractDesignAddAndSearchWordsDataStructureTest {
     }
 
 
-    public void testingTest_2() {
+    void testingTest_2() {
 
         DesignAddAndSearchWordsDataStructureAPI wordDictionary = null;
 
@@ -70,7 +70,7 @@ public abstract class AbstractDesignAddAndSearchWordsDataStructureTest {
     }
 
 
-    public void testingTest_3() {
+    void testingTest_3() {
 
         DesignAddAndSearchWordsDataStructureAPI wordDictionary = null;
 
@@ -104,7 +104,7 @@ public abstract class AbstractDesignAddAndSearchWordsDataStructureTest {
     }
 
 
-    public void testingTest_4() {
+    void testingTest_4() {
 
         DesignAddAndSearchWordsDataStructureAPI wordDictionary = null;
 

@@ -20,7 +20,7 @@ public abstract class AbstractMaximumProductSubarrayTest {
 
     protected MaximumProductSubarrayAPI maximumProductSubarray;
 
-    public void maxProductTest() {
+    void maxProductTest() {
 
         int[] nums = {};
         int max = maximumProductSubarray.maxProduct( nums );

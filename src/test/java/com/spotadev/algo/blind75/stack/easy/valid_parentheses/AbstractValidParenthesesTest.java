@@ -26,7 +26,7 @@ public abstract class AbstractValidParenthesesTest {
 
     protected ValidParenthesesAPI validParentheses;
 
-    public void isValidTest_1() {
+    void isValidTest_1() {
 
         String s = "()";
         boolean valid = validParentheses.isValid( s );
@@ -35,7 +35,7 @@ public abstract class AbstractValidParenthesesTest {
     }
 
 
-    public void isValidTest_2() {
+    void isValidTest_2() {
 
         String s = "()[]{}";
         boolean valid = validParentheses.isValid( s );
@@ -44,7 +44,7 @@ public abstract class AbstractValidParenthesesTest {
     }
 
 
-    public void isValidTest_3() {
+    void isValidTest_3() {
 
         String s = "(]";
         boolean valid = validParentheses.isValid( s );
@@ -53,7 +53,7 @@ public abstract class AbstractValidParenthesesTest {
     }
 
 
-    public void isValidTest_4() {
+    void isValidTest_4() {
 
         String s = "[";
         boolean valid = validParentheses.isValid( s );
@@ -62,7 +62,7 @@ public abstract class AbstractValidParenthesesTest {
     }
 
 
-    public void isValidTest_5() {
+    void isValidTest_5() {
 
         String s = "([)]";
         boolean valid = validParentheses.isValid( s );

@@ -22,7 +22,7 @@ public class AbstractMedian2SortedArraysTest {
 
     protected Median2SortedArraysAPI median2SortedArrays;
 
-    public void findMedianUsingThirdArray_evenLengthMergedTest() {
+    void findMedianUsingThirdArray_evenLengthMergedTest() {
 
         int[] num1 = { 2, 2, 4, 4 };
         int[] num2 = { 2, 2, 4, 4 };

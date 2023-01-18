@@ -22,7 +22,7 @@ public class AbstractBattleShipTest {
 
     protected BattleShipAPI battleShip;
 
-    public void getResultTest_1() {
+    void getResultTest_1() {
 
         String[] rows = { ".##.#", "#.#..", "#...#", "#.##." };
         Result result = battleShip.getResult( rows );

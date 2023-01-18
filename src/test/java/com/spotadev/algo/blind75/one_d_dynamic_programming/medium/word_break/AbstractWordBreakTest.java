@@ -22,7 +22,7 @@ public abstract class AbstractWordBreakTest {
 
     protected WordBreakAPI wordBreak;
 
-    public void wordBreakTest() {
+    void wordBreakTest() {
 
         String s = null;
         List<String> wordDic = null;

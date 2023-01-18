@@ -15,9 +15,6 @@ package com.spotadev.interview.karat;
 
 import org.testng.Assert;
 
-import com.spotadev.interview.karat.KaratInterviewAPI;
-import com.spotadev.interview.karat.KaratInterview_JD;
-
 /**
  * @author John Dickerson - 23 Jun 2022
  */
@@ -27,7 +24,7 @@ public abstract class AbstractKaratInterviewTest {
 
     protected KaratInterviewAPI karatInterview = new KaratInterview_JD();
 
-    public void findWordtest_1() {
+    void findWordtest_1() {
 
         String string = "tcabnihjs";
         String result = karatInterview.findWord( string, words );
@@ -35,7 +32,7 @@ public abstract class AbstractKaratInterviewTest {
     }
 
 
-    public void findWordtest_2() {
+    void findWordtest_2() {
 
         String string = "tbcanihjs";
         String result = karatInterview.findWord( string, words );
@@ -43,7 +40,7 @@ public abstract class AbstractKaratInterviewTest {
     }
 
 
-    public void findWordtest_3() {
+    void findWordtest_3() {
 
         String string = "baykkjl";
         String result = karatInterview.findWord( string, words );
@@ -51,7 +48,7 @@ public abstract class AbstractKaratInterviewTest {
     }
 
 
-    public void findWordtest_4() {
+    void findWordtest_4() {
 
         String string = "bbabylkkj";
         String result = karatInterview.findWord( string, words );
@@ -59,7 +56,7 @@ public abstract class AbstractKaratInterviewTest {
     }
 
 
-    public void findWordtest_5() {
+    void findWordtest_5() {
 
         String string = "ccc";
         String result = karatInterview.findWord( string, words );
@@ -67,7 +64,7 @@ public abstract class AbstractKaratInterviewTest {
     }
 
 
-    public void findWordtest_6() {
+    void findWordtest_6() {
 
         String string = "breadmaking";
         String result = karatInterview.findWord( string, words );

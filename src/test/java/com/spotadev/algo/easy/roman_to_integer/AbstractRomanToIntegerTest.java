@@ -74,21 +74,21 @@ public class AbstractRomanToIntegerTest {
 
     protected RomanToIntegerAPI romanToInteger;
 
-    public void romanToIntTest_1() {
+    void romanToIntTest_1() {
 
         int number = romanToInteger.romanToInt( "III" );
         Assert.assertEquals( number, 3 );
     }
 
 
-    public void romanToIntTest_2() {
+    void romanToIntTest_2() {
 
         int number = romanToInteger.romanToInt( "LVIII" );
         Assert.assertEquals( number, 58 );
     }
 
 
-    public void romanToIntTest_3() {
+    void romanToIntTest_3() {
 
         int number = romanToInteger.romanToInt( "MCMXCIV" );
         Assert.assertEquals( number, 1994 );

@@ -22,7 +22,7 @@ public abstract class AbstractLenghOfLastWordTest {
 
     protected LengthOflastWordAPI lengthOfLastWord;
 
-    public void lengthOfLastWordTest_1() {
+    void lengthOfLastWordTest_1() {
 
         String s = "Hello World";
         int length = lengthOfLastWord.lengthOfLastWord( s );
@@ -30,7 +30,7 @@ public abstract class AbstractLenghOfLastWordTest {
     }
 
 
-    public void lengthOfLastWordTest_2() {
+    void lengthOfLastWordTest_2() {
 
         String s = "   fly me   to   the moon  ";
         int length = lengthOfLastWord.lengthOfLastWord( s );
@@ -38,7 +38,7 @@ public abstract class AbstractLenghOfLastWordTest {
     }
 
 
-    public void lengthOfLastWordTest_3() {
+    void lengthOfLastWordTest_3() {
 
         String s = "luffy is still joyboy";
         int length = lengthOfLastWord.lengthOfLastWord( s );
@@ -46,7 +46,7 @@ public abstract class AbstractLenghOfLastWordTest {
     }
 
 
-    public void lengthOfLastWordTest_4() {
+    void lengthOfLastWordTest_4() {
 
         String s = "b";
         int length = lengthOfLastWord.lengthOfLastWord( s );

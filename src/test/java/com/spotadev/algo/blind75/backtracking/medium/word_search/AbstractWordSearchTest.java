@@ -22,7 +22,7 @@ public abstract class AbstractWordSearchTest {
 
     protected WordSearchAPI wordSearch;
 
-    public void existTest_1() {
+    void existTest_1() {
 
         char[][] board = new char[][] {
 
@@ -37,7 +37,7 @@ public abstract class AbstractWordSearchTest {
     }
 
 
-    public void existTest_2() {
+    void existTest_2() {
 
         char[][] board = new char[][] {
 
@@ -52,7 +52,7 @@ public abstract class AbstractWordSearchTest {
     }
 
 
-    public void existTest_3() {
+    void existTest_3() {
 
         char[][] board = new char[][] {
 
@@ -67,7 +67,7 @@ public abstract class AbstractWordSearchTest {
     }
 
 
-    public void existTest_4() {
+    void existTest_4() {
 
         char[][] board = new char[][] {
 
@@ -81,7 +81,7 @@ public abstract class AbstractWordSearchTest {
     }
 
 
-    public void existTest_5() {
+    void existTest_5() {
 
         char[][] board = new char[][] {
 

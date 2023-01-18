@@ -20,7 +20,7 @@ public abstract class AbstractRotateImageTest {
 
     protected RotateImageAPI rotateImage;
 
-    public void rotateTest() {
+    void rotateTest() {
 
         int[][] matrix = new int[][] {};
         rotateImage.rotate( null );

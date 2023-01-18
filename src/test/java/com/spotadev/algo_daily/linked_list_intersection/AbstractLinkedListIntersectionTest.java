@@ -37,7 +37,7 @@ public abstract class AbstractLinkedListIntersectionTest {
     }
 
 
-    public void getIntersectionTest() {
+    void getIntersectionTest() {
 
         int[] numbers1 = { 4, 5, 6, 7, 8, 9, 10 };
         LinkedList list1 = createLinkedList( numbers1 );

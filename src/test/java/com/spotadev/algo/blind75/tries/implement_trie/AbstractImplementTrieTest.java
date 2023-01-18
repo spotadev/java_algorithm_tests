@@ -22,7 +22,7 @@ public abstract class AbstractImplementTrieTest {
 
     protected ImplementTrieAPI implementTrie;
 
-    public void testingTest() {
+    void testingTest() {
 
         implementTrie.insert( "apple" );
         Assert.assertTrue( implementTrie.search( "apple" ) );

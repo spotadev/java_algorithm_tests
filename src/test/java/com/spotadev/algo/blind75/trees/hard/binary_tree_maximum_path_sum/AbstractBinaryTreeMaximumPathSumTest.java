@@ -22,7 +22,7 @@ public abstract class AbstractBinaryTreeMaximumPathSumTest {
 
     protected BinaryTreeMaximumPathSumAPI binaryTreeMaximumPathSum;
 
-    public void maxPathSumTest() {
+    void maxPathSumTest() {
 
         TreeNode root = new TreeNode( 1 );
         TreeNode node_2 = new TreeNode( 2 );
@@ -34,7 +34,7 @@ public abstract class AbstractBinaryTreeMaximumPathSumTest {
     }
 
 
-    public void maxPathSumTest_2() {
+    void maxPathSumTest_2() {
 
         TreeNode root = new TreeNode( -10 );
         TreeNode node_9 = new TreeNode( 9 );
@@ -50,7 +50,7 @@ public abstract class AbstractBinaryTreeMaximumPathSumTest {
     }
 
 
-    public void maxPathSumTest_3() {
+    void maxPathSumTest_3() {
 
         TreeNode root = new TreeNode( -3 );
         int maxPathSum = binaryTreeMaximumPathSum.maxPathSum( root );

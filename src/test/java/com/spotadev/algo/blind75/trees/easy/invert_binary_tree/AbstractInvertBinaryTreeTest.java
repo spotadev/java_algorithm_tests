@@ -36,7 +36,7 @@ public abstract class AbstractInvertBinaryTreeTest {
     *     
     *     Output: [4,7,2,9,6,3,1]
     */
-    public void invertTreeTreeTest_1() {
+    void invertTreeTreeTest_1() {
 
         TreeNode node_4_in = new TreeNode( 4 );
 
@@ -81,7 +81,7 @@ public abstract class AbstractInvertBinaryTreeTest {
     }
 
 
-    public void invertTreeTreeTest_2() {
+    void invertTreeTreeTest_2() {
 
         TreeNode node_2_in = new TreeNode( 2 );
 
@@ -102,11 +102,10 @@ public abstract class AbstractInvertBinaryTreeTest {
     }
 
 
-    public void invertTreeTreeTest_3() {
+    void invertTreeTreeTest_3() {
 
         TreeNode root_in = null;
         TreeNode result = invertBinaryTree.invertTree( root_in );
         Assert.assertNull( result );
     }
-
 }

@@ -20,7 +20,7 @@ public class AbstractSumOfTwoIntegersTest {
 
     protected SumOfTwoIntegersAPI sumOfTwoIntegers;
 
-    public void getSumTest() {
+    void getSumTest() {
 
         int a = -1;
         int b = -1;

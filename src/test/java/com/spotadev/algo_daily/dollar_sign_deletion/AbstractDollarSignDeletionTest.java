@@ -22,7 +22,7 @@ public abstract class AbstractDollarSignDeletionTest {
 
     protected DollarSignDeletionAPI dollarSignDeletionAPI;
 
-    public void isDollarDeleteEqual_1Test() {
+    void isDollarDeleteEqual_1Test() {
 
         String[] array = { "f$st", "st" };
         boolean dollarDeleteEqual = dollarSignDeletionAPI.isDollarDeleteEqual( array );
@@ -30,7 +30,7 @@ public abstract class AbstractDollarSignDeletionTest {
     }
 
 
-    public void getFinalStr_1Test() {
+    void getFinalStr_1Test() {
 
         String string = "f$st";
         String finalString = dollarSignDeletionAPI.getFinalStr( string );

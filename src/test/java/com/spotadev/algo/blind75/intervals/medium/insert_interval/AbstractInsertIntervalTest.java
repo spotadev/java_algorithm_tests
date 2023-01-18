@@ -20,7 +20,7 @@ public abstract class AbstractInsertIntervalTest {
 
     protected InsertIntervalAPI insertInterval;
 
-    public void insertTest() {
+    void insertTest() {
 
         int[][] intervals = {};
         int[] newInterval = {};

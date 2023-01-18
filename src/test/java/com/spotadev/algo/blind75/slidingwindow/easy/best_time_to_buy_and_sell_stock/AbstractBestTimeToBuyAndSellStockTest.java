@@ -22,14 +22,14 @@ public abstract class AbstractBestTimeToBuyAndSellStockTest {
 
     protected BestTimeToBuyAndSellStockAPI bestTimeToBuyAndSellStock;
 
-    public void maxProfitTest_1() {
+    void maxProfitTest_1() {
 
         int profit = bestTimeToBuyAndSellStock.maxProfit( new int[] { 7, 1, 5, 3, 6, 4 } );
         Assert.assertEquals( profit, 5 );
     }
 
 
-    public void maxProfitTest_2() {
+    void maxProfitTest_2() {
 
         int profit = bestTimeToBuyAndSellStock.maxProfit( new int[] { 7, 6, 4, 3, 1 } );
         Assert.assertEquals( profit, 0 );

@@ -20,7 +20,7 @@ public class AbstractCoinChangeTest {
 
     protected CoinChangeAPI coinChange;
 
-    public void coinChange() {
+    void coinChange() {
 
         int[] coins = {};
         int amount = -1;

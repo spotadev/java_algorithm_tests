@@ -22,7 +22,7 @@ public abstract class AbstractValidateBinarySearchTreeTest {
 
     protected ValidateBinarySearchTreeAPI validateBinarySearchTree;
 
-    public void isValidBSTTest_1() {
+    void isValidBSTTest_1() {
 
         TreeNode root = new TreeNode( 2 );
         TreeNode node_1 = new TreeNode( 1 );
@@ -35,7 +35,7 @@ public abstract class AbstractValidateBinarySearchTreeTest {
     }
 
 
-    public void isValidBSTTest_2() {
+    void isValidBSTTest_2() {
 
         TreeNode root = new TreeNode( 5 );
         TreeNode node_1 = new TreeNode( 1 );
@@ -52,7 +52,7 @@ public abstract class AbstractValidateBinarySearchTreeTest {
     }
 
 
-    public void isValidBSTTest_3() {
+    void isValidBSTTest_3() {
 
         TreeNode root = new TreeNode( 5 );
         TreeNode node_3 = new TreeNode( 3 );

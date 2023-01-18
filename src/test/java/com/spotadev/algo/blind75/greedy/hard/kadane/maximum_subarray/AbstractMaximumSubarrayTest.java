@@ -30,7 +30,7 @@ public class AbstractMaximumSubarrayTest {
     }
 
 
-    public void maxSubArrayTest_2() {
+    void maxSubArrayTest_2() {
 
         int[] nums = { 1 };
         int max = maximumSubarray.maxSubArray( nums );
@@ -38,7 +38,7 @@ public class AbstractMaximumSubarrayTest {
     }
 
 
-    public void maxSubArrayTest_3() {
+    void maxSubArrayTest_3() {
 
         int[] nums = { 5, 4, -1, 7, 8 };
         int max = maximumSubarray.maxSubArray( nums );
@@ -46,7 +46,7 @@ public class AbstractMaximumSubarrayTest {
     }
 
 
-    public void maxSubArrayTest_4() {
+    void maxSubArrayTest_4() {
 
         int[] nums = { -1 };
         int max = maximumSubarray.maxSubArray( nums );

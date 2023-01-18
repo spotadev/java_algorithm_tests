@@ -25,7 +25,7 @@ public class AbstractCloneGraphTest {
 
     protected CloneGraphAPI cloneGraph;
 
-    public void cloneGraphTest_1() {
+    void cloneGraphTest_1() {
 
         Node node1 = new Node( 1 );
         Node node2 = new Node( 2 );
@@ -78,7 +78,7 @@ public class AbstractCloneGraphTest {
     }
 
 
-    public void cloneGraphTest_2() {
+    void cloneGraphTest_2() {
 
         Node node1 = new Node( 1 );
         Node clonedNode1 = cloneGraph.cloneGraph( node1 );
@@ -87,7 +87,7 @@ public class AbstractCloneGraphTest {
     }
 
 
-    public void cloneGraphTest_3() {
+    void cloneGraphTest_3() {
 
         Node clonedNode1 = cloneGraph.cloneGraph( null );
         Assert.assertNull( clonedNode1 );

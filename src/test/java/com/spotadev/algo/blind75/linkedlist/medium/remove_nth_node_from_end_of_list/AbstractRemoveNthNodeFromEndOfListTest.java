@@ -69,7 +69,7 @@ public class AbstractRemoveNthNodeFromEndOfListTest {
     }
 
 
-    public void removeNthFromEndTest_1() {
+    void removeNthFromEndTest_1() {
 
         ListNode head = createNode( new int[] { 1, 2, 3, 4, 5 } );
         ListNode listNode = removeNthNodeFromEndOfList.removeNthFromEnd( head, 2 );
@@ -77,7 +77,7 @@ public class AbstractRemoveNthNodeFromEndOfListTest {
     }
 
 
-    public void removeNthFromEndTest_2() {
+    void removeNthFromEndTest_2() {
 
         ListNode head = createNode( new int[] { 1 } );
         ListNode listNode = removeNthNodeFromEndOfList.removeNthFromEnd( head, 1 );
@@ -85,7 +85,7 @@ public class AbstractRemoveNthNodeFromEndOfListTest {
     }
 
 
-    public void removeNthFromEndTest_3() {
+    void removeNthFromEndTest_3() {
 
         ListNode head = createNode( new int[] { 1, 2 } );
         ListNode listNode = removeNthNodeFromEndOfList.removeNthFromEnd( head, 1 );

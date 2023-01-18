@@ -24,7 +24,7 @@ public abstract class AbstractCombinationSumTest {
 
     protected CombinationSumAPI combinationSum;
 
-    public void combinationSumTest_1() {
+    void combinationSumTest_1() {
 
         int[] candidates = new int[] { 2, 3, 6, 7 };
         int target = 7;
@@ -37,7 +37,7 @@ public abstract class AbstractCombinationSumTest {
     }
 
 
-    public void combinationSumTest_2() {
+    void combinationSumTest_2() {
 
         int[] candidates = new int[] { 2, 3, 5 };
         int target = 8;
@@ -56,7 +56,7 @@ public abstract class AbstractCombinationSumTest {
     }
 
 
-    public void combinationSumTest_3() {
+    void combinationSumTest_3() {
 
         int[] candidates = new int[] { 2 };
         int target = 1;

@@ -22,7 +22,7 @@ public class AbstractBinarySearchTest {
 
     protected BinarySearchAPI binarySearch;
 
-    public void binarySearchTest() {
+    void binarySearchTest() {
 
         int[] numbers = { 10, 20, 30, 40, 50, 60 };
         int result = binarySearch.binarySearch( numbers, 50 );

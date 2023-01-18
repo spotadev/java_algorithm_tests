@@ -20,7 +20,7 @@ public abstract class AbstractUniquePathsTest {
 
     protected UniquePathsAPI uniquePaths;
 
-    public void uniquePathsTest() {
+    void uniquePathsTest() {
 
         int m = -1;
         int n = -1;

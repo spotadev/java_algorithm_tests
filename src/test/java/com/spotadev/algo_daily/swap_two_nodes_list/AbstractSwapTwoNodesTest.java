@@ -24,7 +24,7 @@ public class AbstractSwapTwoNodesTest {
 
     protected SwapTwoNodesAPI swapTwoNodes;
 
-    public void createLinkedListNode( LinkedListNode head, int[] nodes ) {
+    void createLinkedListNode( LinkedListNode head, int[] nodes ) {
 
         for ( int i = 0; i < nodes.length; i++ ) {
 
@@ -38,7 +38,7 @@ public class AbstractSwapTwoNodesTest {
     /**
      *     input: 1 -> 2 -> 3 -> 4   => output: 2 -> 1 -> 4 -> 3
      **/
-    public void swapEveryTwo_1Test() {
+    void swapEveryTwo_1Test() {
 
         LinkedListNode head = new LinkedListNode( 1 );
         createLinkedListNode( head, new int[] { 2, 3, 4 } );
@@ -50,7 +50,7 @@ public class AbstractSwapTwoNodesTest {
     /** 
      *     input: 10 -> 20 -> 50 -> 40 => output: 20 -> 10 -> 40 -> 50
      **/
-    public void swapEveryTwo_2Test() {
+    void swapEveryTwo_2Test() {
 
         LinkedListNode head = new LinkedListNode( 10 );
         createLinkedListNode( head, new int[] { 20, 50, 40 } );
@@ -62,7 +62,7 @@ public class AbstractSwapTwoNodesTest {
     /**
      *     input: 4 -> 5 -> 6 -> 7  => output: 5 -> 4 -> 7 -> 6
      **/
-    public void swapEveryTwo_3Test() {
+    void swapEveryTwo_3Test() {
 
         LinkedListNode head = new LinkedListNode( 4 );
         createLinkedListNode( head, new int[] { 5, 6, 7 } );

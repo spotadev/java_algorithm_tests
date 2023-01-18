@@ -54,7 +54,7 @@ public class AbstractBubbleSortTest {
     }
 
 
-    public void bubbleSortTest() {
+    void bubbleSortTest() {
 
         // This is unsorted array
         int[] someArray = new int[] { 16, 13, 42, 11, 9, 6, 75, 40 };

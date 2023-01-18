@@ -25,7 +25,7 @@ public abstract class AbstractEncodeAndDecodeStringsTest {
 
     protected EncodeAndDecodeStringsAPI encodeAndDecodeStrings;
 
-    public void encodeDecodeTest() {
+    void encodeDecodeTest() {
 
         List<String> toEncode = new ArrayList<>();
         toEncode.add( "Hello" );

@@ -16,7 +16,6 @@ package com.spotadev.algo.blind75.arraysandhashing.medium.top_k_frequent_element
 import java.util.Arrays;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 13 Jun 2022
@@ -25,16 +24,14 @@ public class AbstractTopKFrequentElementsTest {
 
     protected TopKFrequentElementsAPI topKFrequentElements;
 
-    @Test
-    public void topKFrequentTest_1() {
+    void topKFrequentTest_1() {
 
         int[] mostFrequent = topKFrequentElements.topKFrequent( new int[] { 1, 1, 1, 2, 2, 3 }, 2 );
         Assert.assertTrue( Arrays.equals( mostFrequent, new int[] { 1, 2 } ) );
     }
 
 
-    @Test
-    public void topKFrequentTest_2() {
+    void topKFrequentTest_2() {
 
         int[] mostFrequent = topKFrequentElements.topKFrequent( new int[] { 1 }, 1 );
         Assert.assertTrue( Arrays.equals( mostFrequent, new int[] { 1 } ) );

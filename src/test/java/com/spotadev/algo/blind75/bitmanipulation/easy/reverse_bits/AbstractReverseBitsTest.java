@@ -20,7 +20,7 @@ public class AbstractReverseBitsTest {
 
     protected ReverseBitsAPI reverseBits;
 
-    public void reverseBits() {
+    void reverseBits() {
 
         int n = -1;
         int result = reverseBits.reverseBits( n );

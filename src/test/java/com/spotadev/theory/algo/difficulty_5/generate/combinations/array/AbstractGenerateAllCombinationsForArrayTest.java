@@ -24,7 +24,7 @@ import com.spotadev.algo.theory.generate.combinations.array.GenerateAllCombinati
  */
 public class AbstractGenerateAllCombinationsForArrayTest {
 
-    public void getAllCombinations_4n_2r_Test() {
+    void getAllCombinations_4n_2r_Test() {
 
         int n = 4;
         int r = 2;
@@ -41,7 +41,7 @@ public class AbstractGenerateAllCombinationsForArrayTest {
     }
 
 
-    public void getAllCombinations_4n_3r_Test() {
+    void getAllCombinations_4n_3r_Test() {
 
         int n = 4;
         int r = 3;
@@ -56,7 +56,7 @@ public class AbstractGenerateAllCombinationsForArrayTest {
     }
 
 
-    public void getAllCombinations_4n_4r_Test() {
+    void getAllCombinations_4n_4r_Test() {
 
         int n = 4;
         int r = 4;

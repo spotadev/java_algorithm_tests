@@ -20,7 +20,7 @@ public abstract class AbstractLongestPalindromicSubstringTest {
 
     protected LongestPalindromicSubstringAPI longestPalindromicSubstring;
 
-    public void longestPalindromeTest() {
+    void longestPalindromeTest() {
 
         String s = null;
         String result = longestPalindromicSubstring.longestPalindrome( null );

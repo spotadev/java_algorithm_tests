@@ -99,7 +99,7 @@ public class AbstractMergeSortTest {
     }
 
 
-    public void mergeSortTest() {
+    void mergeSortTest() {
 
         //Unsorted array
         Integer[] unsortedArray = { 5, 89, 34, 62, 17, 28, 46 };

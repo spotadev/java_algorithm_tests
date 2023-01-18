@@ -11,24 +11,39 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo_daily.product_except_self;
+package com.spotadev.algo.blind75.bitmanipulation.easy.missing_number;
 
-import java.util.Arrays;
-
-import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 3 Jan 2023
+ * @author John Dickerson - 18 Jan 2023
  */
-public abstract class AbstractProductExceptSelfTest {
+public class MissingNumber_JDTest extends AbstractMissingNumberTest {
 
-    protected ProductExceptSelfAPI productExceptSelf;
+    @BeforeClass
+    public void setUp() {
 
-    void productExceptSelfTest() {
+    }
 
-        int[] numArray = { 1, 2, 4, 16 };
-        int[] products = productExceptSelf.productExceptSelf( numArray );
-        int[] expectedProducts = { 128, 64, 32, 8 };
-        Assert.assertTrue( Arrays.equals( products, expectedProducts ) );
+
+    @Test
+    public void missingNumber_1Test() {
+
+        super.missingNumber_1Test();
+    }
+
+
+    @Test
+    public void missingNumber_2Test() {
+
+        super.missingNumber_2Test();
+    }
+
+
+    @Test
+    public void missingNumber_3Test() {
+
+        super.missingNumber_3Test();
     }
 }

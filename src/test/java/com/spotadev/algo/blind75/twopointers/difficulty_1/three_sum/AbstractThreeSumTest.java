@@ -61,7 +61,7 @@ public abstract class AbstractThreeSumTest {
     }
 
 
-    public void threeSumTest_1() {
+    void threeSumTest_1() {
 
         List<List<Integer>> lists = threeSum.threeSum( new int[] { -1, 0, 1, 2, -1, -4 } );
         String visualRepresentation = createVisualRepresentation( lists );
@@ -69,7 +69,7 @@ public abstract class AbstractThreeSumTest {
     }
 
 
-    public void threeSumTest_2() {
+    void threeSumTest_2() {
 
         List<List<Integer>> lists = threeSum.threeSum( new int[] {} );
         String visualRepresentation = createVisualRepresentation( lists );
@@ -77,7 +77,7 @@ public abstract class AbstractThreeSumTest {
     }
 
 
-    public void threeSumTest_3() {
+    void threeSumTest_3() {
 
         List<List<Integer>> lists = threeSum.threeSum( new int[] { 0 } );
         String visualRepresentation = createVisualRepresentation( lists );
@@ -85,7 +85,7 @@ public abstract class AbstractThreeSumTest {
     }
 
 
-    public void threeSumTest_4() {
+    void threeSumTest_4() {
 
         List<List<Integer>> lists = threeSum.threeSum( new int[] { 0, 0, 0, 0 } );
         String visualRepresentation = createVisualRepresentation( lists );
@@ -93,7 +93,7 @@ public abstract class AbstractThreeSumTest {
     }
 
 
-    public void threeSumTest_5() {
+    void threeSumTest_5() {
 
         List<List<Integer>> lists = threeSum.threeSum( new int[] { -2, 0, 1, 1, 2 } );
         String visualRepresentation = createVisualRepresentation( lists );

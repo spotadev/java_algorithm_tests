@@ -16,8 +16,6 @@ package com.spotadev.algo.easy.longest_common_prefix;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 /**
  * @author John Dickerson - 17 Apr 2022
@@ -28,15 +26,7 @@ public abstract class AbstractLongestCommonPrefixTest {
 
     protected LongestCommonPrefixAPI longestCommonPrefix;
 
-    @BeforeClass
-    public void setUp() {
-
-        longestCommonPrefix = new LongestCommonPrefix_JD();
-    }
-
-
-    @Test
-    public void longestCommonPrefixTest_1() {
+    void longestCommonPrefixTest_1() {
 
         String[] strs = { "flower", "flow", "flight" };
         String prefix = longestCommonPrefix.longestCommonPrefix( strs );
@@ -45,8 +35,7 @@ public abstract class AbstractLongestCommonPrefixTest {
     }
 
 
-    @Test
-    public void longestCommonPrefixTest_2() {
+    void longestCommonPrefixTest_2() {
 
         String[] strs = { "dog", "racecar", "car" };
         String prefix = longestCommonPrefix.longestCommonPrefix( strs );

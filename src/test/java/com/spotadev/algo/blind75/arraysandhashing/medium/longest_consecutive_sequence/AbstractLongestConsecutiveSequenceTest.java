@@ -22,7 +22,7 @@ public abstract class AbstractLongestConsecutiveSequenceTest {
 
     protected LongestConsecutiveSequenceAPI longestConsecutiveSequence;
 
-    public void longestConsecutiveTest_1() {
+    void longestConsecutiveTest_1() {
 
         int longest =
                 longestConsecutiveSequence.longestConsecutive( new int[] { 100, 4, 200, 1, 3, 2 } );
@@ -31,7 +31,7 @@ public abstract class AbstractLongestConsecutiveSequenceTest {
     }
 
 
-    public void longestConsecutiveTest_2() {
+    void longestConsecutiveTest_2() {
 
         int longest =
                 longestConsecutiveSequence.longestConsecutive( new int[] { 0, 3, 7, 2, 5, 8, 4, 6,
@@ -41,7 +41,7 @@ public abstract class AbstractLongestConsecutiveSequenceTest {
     }
 
 
-    public void longestConsecutiveTest_3() {
+    void longestConsecutiveTest_3() {
 
         int longest =
                 longestConsecutiveSequence.longestConsecutive( new int[] {} );

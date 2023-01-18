@@ -22,7 +22,7 @@ public class AbstractFibonnaciSequenceTest {
 
     protected FibonnaciSequenceAPI fibonnaciSequenceAPI;
 
-    public void fibonacciSequence_1Test() {
+    void fibonacciSequence_1Test() {
 
         int n = 5;
         int result = fibonnaciSequenceAPI.fibonacciSequence( n );
@@ -30,7 +30,7 @@ public class AbstractFibonnaciSequenceTest {
     }
 
 
-    public void fibonacciSequence_2Test() {
+    void fibonacciSequence_2Test() {
 
         int n = 6;
         int result = fibonnaciSequenceAPI.fibonacciSequence( n );

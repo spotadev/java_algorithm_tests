@@ -20,7 +20,7 @@ public abstract class AbstractDecodeWaysTest {
 
     protected DecodeWaysAPI decodeWays;
 
-    public void numDecodingsTest() {
+    void numDecodingsTest() {
 
         String s = null;
         int numberDecodings = decodeWays.numDecodings( s );

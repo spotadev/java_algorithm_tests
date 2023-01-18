@@ -20,7 +20,7 @@ public abstract class AbstractMergeIntervalsTest {
 
     protected MergeIntervalsAPI mergeIntervals;
 
-    public void mergeTest() {
+    void mergeTest() {
 
         int[][] intervals = new int[][] {};
         int[][] result = mergeIntervals.merge( intervals );

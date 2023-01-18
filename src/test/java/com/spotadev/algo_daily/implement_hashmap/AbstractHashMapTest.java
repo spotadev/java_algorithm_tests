@@ -22,7 +22,7 @@ public abstract class AbstractHashMapTest {
 
     protected HashMapAPI<Integer, String> hashMap;
 
-    public void doTest() {
+    void doTest() {
 
         hashMap.put( 1, "JD" );
         hashMap.put( 101, "RK" );

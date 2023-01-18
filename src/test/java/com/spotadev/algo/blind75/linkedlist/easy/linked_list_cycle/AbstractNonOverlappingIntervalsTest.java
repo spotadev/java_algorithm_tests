@@ -45,7 +45,7 @@ public abstract class AbstractNonOverlappingIntervalsTest {
     }
 
 
-    public void hasCycleTest_1() {
+    void hasCycleTest_1() {
 
         ListNode head = createNode( 1, new int[] { 3, 2, 0, -4 } );
         boolean hasCycle = linkedListCycle.hasCycle( head );
@@ -53,7 +53,7 @@ public abstract class AbstractNonOverlappingIntervalsTest {
     }
 
 
-    public void hasCycleTest_2() {
+    void hasCycleTest_2() {
 
         ListNode head = createNode( 0, new int[] { 1, 2 } );
         boolean hasCycle = linkedListCycle.hasCycle( head );
@@ -61,7 +61,7 @@ public abstract class AbstractNonOverlappingIntervalsTest {
     }
 
 
-    public void hasCycleTest_3() {
+    void hasCycleTest_3() {
 
         ListNode head = createNode( -1, new int[] { 1 } );
         boolean hasCycle = linkedListCycle.hasCycle( head );
@@ -69,7 +69,7 @@ public abstract class AbstractNonOverlappingIntervalsTest {
     }
 
 
-    public void hasCycleTest_4() {
+    void hasCycleTest_4() {
 
         ListNode head = createNode( -1, new int[] { 1, 2 } );
         boolean hasCycle = linkedListCycle.hasCycle( head );

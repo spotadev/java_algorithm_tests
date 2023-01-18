@@ -291,7 +291,7 @@ public class AbstractHeapSortTest {
     }
 
 
-    public void heapSortTest() {
+    void heapSortTest() {
 
         // The array to be sorted
         int[] unsortedArray = new int[] { 16, 12, 54, 37, 8, 2, 7 };

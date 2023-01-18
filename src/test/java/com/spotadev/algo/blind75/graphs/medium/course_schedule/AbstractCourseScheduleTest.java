@@ -22,7 +22,7 @@ public class AbstractCourseScheduleTest {
 
     protected CourseScheduleAPI courseSchedule;
 
-    public void canFinishTest_1() {
+    void canFinishTest_1() {
 
         int numCourses = 2;
         int[][] prerequisites = new int[][] { { 1, 0 } };
@@ -31,7 +31,7 @@ public class AbstractCourseScheduleTest {
     }
 
 
-    public void canFinishTest_2() {
+    void canFinishTest_2() {
 
         int numCourses = 2;
         int[][] prerequisites = new int[][] { { 1, 0 }, { 0, 1 } };

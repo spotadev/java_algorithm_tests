@@ -106,7 +106,7 @@ public abstract class AbstractMergeKSortedListsTest {
     }
 
 
-    public void mergeKListsTest_1() {
+    void mergeKListsTest_1() {
 
         int[][] ints = { { 1, 4, 5 }, { 1, 3, 4 }, { 2, 6 } };
         int[] output = { 1, 1, 2, 3, 4, 4, 5, 6 };
@@ -116,7 +116,7 @@ public abstract class AbstractMergeKSortedListsTest {
     }
 
 
-    public void mergeKListsTest_2() {
+    void mergeKListsTest_2() {
 
         int[][] ints = {};
         int[] output = {};
@@ -126,7 +126,7 @@ public abstract class AbstractMergeKSortedListsTest {
     }
 
 
-    public void mergeKListsTest_3() {
+    void mergeKListsTest_3() {
 
         int[][] ints = { {} };
         int[] output = {};

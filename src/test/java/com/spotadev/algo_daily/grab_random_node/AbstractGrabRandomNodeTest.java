@@ -24,7 +24,7 @@ public class AbstractGrabRandomNodeTest {
 
     protected GrabRandomNodeAPI grabRandomNode;
 
-    public void fetchRandomNodeTest() {
+    void fetchRandomNodeTest() {
 
         LinkedListNode headNode = new LinkedListNode( 1 );
         LinkedListNode node2 = new LinkedListNode( 2 );

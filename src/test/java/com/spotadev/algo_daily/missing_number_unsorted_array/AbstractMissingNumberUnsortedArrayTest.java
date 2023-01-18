@@ -22,7 +22,7 @@ public abstract class AbstractMissingNumberUnsortedArrayTest {
 
     protected MissingNumberUnsortedArrayAPI missingNumberUnsortedArray;
 
-    public void missingInUnsortedTest() {
+    void missingInUnsortedTest() {
 
         int[] numbers = { 2, 5, 1, 4, 9, 6, 3, 7 };
         int lowerBound = 1;

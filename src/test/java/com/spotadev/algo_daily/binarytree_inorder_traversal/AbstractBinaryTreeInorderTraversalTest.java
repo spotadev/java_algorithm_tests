@@ -26,7 +26,7 @@ public class AbstractBinaryTreeInorderTraversalTest {
 
     protected BinaryTreeInorderTraversalAPI binaryTreeInorderTraversal;
 
-    public void inorderTraversal_1_Test() {
+    void inorderTraversal_1_Test() {
 
         Node node4 = new Node( 4 );
         Node node5 = new Node( 5 );
@@ -43,7 +43,7 @@ public class AbstractBinaryTreeInorderTraversalTest {
     }
 
 
-    public void inorderTraversal_2_Test() {
+    void inorderTraversal_2_Test() {
 
         Node node1 = new Node( 1 );
         Node node2 = new Node( 2 );

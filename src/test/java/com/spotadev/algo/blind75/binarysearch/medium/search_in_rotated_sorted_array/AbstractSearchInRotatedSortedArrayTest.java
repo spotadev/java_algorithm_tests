@@ -22,28 +22,28 @@ public class AbstractSearchInRotatedSortedArrayTest {
 
     protected SearchInRotatedSortedArrayAPI searchInRotatedSortedArray;
 
-    public void searchTest_1() {
+    void searchTest_1() {
 
         int result = searchInRotatedSortedArray.search( new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0 );
         Assert.assertEquals( result, 4 );
     }
 
 
-    public void searchTest_2() {
+    void searchTest_2() {
 
         int result = searchInRotatedSortedArray.search( new int[] { 4, 5, 6, 7, 0, 1, 2 }, 3 );
         Assert.assertEquals( result, -1 );
     }
 
 
-    public void searchTest_3() {
+    void searchTest_3() {
 
         int result = searchInRotatedSortedArray.search( new int[] { 1 }, 0 );
         Assert.assertEquals( result, -1 );
     }
 
 
-    public void searchTest_4() {
+    void searchTest_4() {
 
         int result = searchInRotatedSortedArray.search( new int[] { 5, 1, 3 }, 2 );
         Assert.assertEquals( result, -1 );

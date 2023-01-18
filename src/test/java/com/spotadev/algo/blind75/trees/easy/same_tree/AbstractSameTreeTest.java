@@ -22,7 +22,7 @@ public abstract class AbstractSameTreeTest {
 
     protected SameTreeAPI sameTree;
 
-    public void isSameTreeTest_1() {
+    void isSameTreeTest_1() {
 
         TreeNode p = new TreeNode( 1 );
         p.left = new TreeNode( 2 );
@@ -37,7 +37,7 @@ public abstract class AbstractSameTreeTest {
     }
 
 
-    public void isSameTreeTest_2() {
+    void isSameTreeTest_2() {
 
         TreeNode p = new TreeNode( 1 );
         p.left = new TreeNode( 2 );
@@ -50,7 +50,7 @@ public abstract class AbstractSameTreeTest {
     }
 
 
-    public void isSameTreeTest_3() {
+    void isSameTreeTest_3() {
 
         TreeNode p = new TreeNode( 1 );
         p.left = new TreeNode( 2 );

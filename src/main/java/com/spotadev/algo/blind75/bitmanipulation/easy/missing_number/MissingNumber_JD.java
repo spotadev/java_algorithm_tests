@@ -63,6 +63,34 @@ public class MissingNumber_JD implements MissingNumberAPI {
     @Override
     public int missingNumber( int[] nums ) {
 
-        return -1;
+        // 1, 2, 3, 4, 5 = 15 = ( n(n+1) ) / 2
+
+        // we know number 1 number is missing so the array would ordinarily be 1 bigger
+        int n = nums.length + 1;
+
+        // we work out sum of the sequence using the formula.  This saves us going through
+        // the loop twice
+        int sum = ( n * ( n + 1 ) ) / 2;
+        int maxNumber = -1;
+
+        for ( int i = 0; i < nums.length; i++ ) {
+
+            // The idea is the remaining sum will be the missing number
+            sum = sum - nums[i];
+
+            // we are finding out maxNumber for case Example 2 above
+            if ( nums[i] > maxNumber ) {
+
+                maxNumber = nums[i];
+            }
+        }
+
+        // This logic is for Example 2 above
+        if ( sum == 0 ) {
+
+            return maxNumber + 1;
+        }
+
+        return sum;
     }
 }

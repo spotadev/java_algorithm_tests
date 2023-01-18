@@ -22,7 +22,7 @@ public abstract class AbstractAddBinaryTest {
 
     protected AddBinaryAPI addBinary;
 
-    public void addBinaryTest_1() {
+    void addBinaryTest_1() {
 
         String a = "11";
         String b = "1";
@@ -31,7 +31,7 @@ public abstract class AbstractAddBinaryTest {
     }
 
 
-    public void addBinaryTest_2() {
+    void addBinaryTest_2() {
 
         String a = "1010";
         String b = "1011";
@@ -43,7 +43,7 @@ public abstract class AbstractAddBinaryTest {
     //    100
     // 110010
     // 110110
-    public void addBinaryTest_3() {
+    void addBinaryTest_3() {
 
         String a = "100";
         String b = "110010";
@@ -55,7 +55,7 @@ public abstract class AbstractAddBinaryTest {
     //  101111
     //      10
     //  110001
-    public void addBinaryTest_4() {
+    void addBinaryTest_4() {
 
         String a = "101111";
         String b = "10";

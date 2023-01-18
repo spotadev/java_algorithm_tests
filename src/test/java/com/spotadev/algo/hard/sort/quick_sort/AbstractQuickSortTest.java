@@ -171,7 +171,7 @@ public class AbstractQuickSortTest {
     }
 
 
-    public void heapSortTest() {
+    void heapSortTest() {
 
         // The array to be sorted
         int[] unsortedArray = new int[] { 14, 21, 5, 62, 1, 12, 7 };

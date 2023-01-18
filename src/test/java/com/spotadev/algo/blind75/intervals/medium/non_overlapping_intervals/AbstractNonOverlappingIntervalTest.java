@@ -20,7 +20,7 @@ public abstract class AbstractNonOverlappingIntervalTest {
 
     protected NonOverlappingIntervalsAPI nonOverlappingIntervals;
 
-    public void eraseOverlapIntervalsTest() {
+    void eraseOverlapIntervalsTest() {
 
         int[][] intervals = {};
         int result = nonOverlappingIntervals.eraseOverlapIntervals( null );

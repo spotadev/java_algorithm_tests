@@ -11,34 +11,34 @@
     Author : John Dickerson
     ================================================================================================
 */
-package com.spotadev.algo.easy.palidrome;
+package com.spotadev.algo.blind75.bitmanipulation.easy.missing_number;
 
 import org.testng.Assert;
 
 /**
- * @author John Dickerson - 16 Apr 2022
+ * @author John Dickerson - 18 Jan 2023
  */
-public abstract class AbstractPalidromeTest {
+public abstract class AbstractMissingNumberTest {
 
-    protected PalidromeAPI palidrome;
+    private MissingNumberAPI missingNumberAPI;
 
-    void isPalindromeTest_1() {
+    void missingNumber_1Test() {
 
-        boolean isPalidrome = palidrome.isPalindrome( 121 );
-        Assert.assertTrue( isPalidrome );
+        int result = missingNumberAPI.missingNumber( new int[] {} );
+        Assert.assertEquals( result, 1 );
     }
 
 
-    void isPalindromeTest_2() {
+    void missingNumber_2Test() {
 
-        boolean isPalidrome = palidrome.isPalindrome( -121 );
-        Assert.assertFalse( isPalidrome );
+        int result = missingNumberAPI.missingNumber( new int[] {} );
+        Assert.assertEquals( result, 1 );
     }
 
 
-    void isPalindromeTest_3() {
+    void missingNumber_3Test() {
 
-        boolean isPalidrome = palidrome.isPalindrome( 10 );
-        Assert.assertFalse( isPalidrome );
+        int result = missingNumberAPI.missingNumber( new int[] {} );
+        Assert.assertEquals( result, 1 );
     }
 }

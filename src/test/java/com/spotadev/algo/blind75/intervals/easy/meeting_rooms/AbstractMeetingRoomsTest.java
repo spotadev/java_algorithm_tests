@@ -23,7 +23,7 @@ public abstract class AbstractMeetingRoomsTest {
 
     protected MeetingRoomAPI meetingRooms;
 
-    public void canAttendMeetingsTest() {
+    void canAttendMeetingsTest() {
 
         List<Interval> intervals = new ArrayList<>();
         meetingRooms.canAttendMeetings( intervals );

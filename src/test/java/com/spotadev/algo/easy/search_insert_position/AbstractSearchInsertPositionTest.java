@@ -22,7 +22,7 @@ public class AbstractSearchInsertPositionTest {
 
     protected SearchInsertPositionAPI searchInsertPosition;
 
-    public void searchInsertTest_1() {
+    void searchInsertTest_1() {
 
         int[] nums = { 1, 3, 5, 6 };
         int result = searchInsertPosition.searchInsert( nums, 5 );
@@ -30,7 +30,7 @@ public class AbstractSearchInsertPositionTest {
     }
 
 
-    public void searchInsertTest_2() {
+    void searchInsertTest_2() {
 
         int[] nums = { 1, 3, 5, 6 };
         int result = searchInsertPosition.searchInsert( nums, 2 );
@@ -38,7 +38,7 @@ public class AbstractSearchInsertPositionTest {
     }
 
 
-    public void searchInsertTest_3() {
+    void searchInsertTest_3() {
 
         int[] nums = { 1, 3, 5, 6 };
         int result = searchInsertPosition.searchInsert( nums, 7 );

@@ -50,7 +50,7 @@ public abstract class AbstractPacificAtlanticWaterflowTest {
     }
 
 
-    public void pacificAtlanticTest_1() {
+    void pacificAtlanticTest_1() {
 
         int[][] heights = new int[][] {
                 { 1, 2, 2, 3, 5 },
@@ -76,7 +76,7 @@ public abstract class AbstractPacificAtlanticWaterflowTest {
     }
 
 
-    public void pacificAtlanticTest_2() {
+    void pacificAtlanticTest_2() {
 
         int[][] heights = new int[][] {
                 { 2, 1 },

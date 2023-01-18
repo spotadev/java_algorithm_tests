@@ -26,7 +26,7 @@ public class AbstractLinkedListTest {
 
     protected LinkedListAPI linkedList;
 
-    public String listToString( LinkedListNode head ) {
+    String listToString( LinkedListNode head ) {
 
         final ArrayList<String> toPrint = new ArrayList<String>();
         LinkedListNode currNode = head;
@@ -41,7 +41,7 @@ public class AbstractLinkedListTest {
     }
 
 
-    public void prependOnlyTest() {
+    void prependOnlyTest() {
 
         linkedList.prepend( 25 );
         linkedList.prepend( 15 );
@@ -52,7 +52,7 @@ public class AbstractLinkedListTest {
     }
 
 
-    public void prependThanAppendTest() {
+    void prependThanAppendTest() {
 
         linkedList.prepend( 25 );
         linkedList.prepend( 15 );
@@ -67,7 +67,7 @@ public class AbstractLinkedListTest {
     }
 
 
-    public void prependAppendMixedTest() {
+    void prependAppendMixedTest() {
 
         linkedList.prepend( 15 );
         linkedList.append( 5 );

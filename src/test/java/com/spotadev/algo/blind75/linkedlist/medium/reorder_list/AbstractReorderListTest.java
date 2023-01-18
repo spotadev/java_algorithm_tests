@@ -53,7 +53,7 @@ public abstract class AbstractReorderListTest {
     }
 
 
-    public void reorderListTest_1() {
+    void reorderListTest_1() {
 
         ListNode listNode = createListNode( new int[] { 1, 2, 3, 4 } );
         reorderList.reorderList( listNode );
@@ -61,7 +61,7 @@ public abstract class AbstractReorderListTest {
     }
 
 
-    public void reorderListTest_2() {
+    void reorderListTest_2() {
 
         ListNode listNode = createListNode( new int[] { 1, 2, 3, 4, 5 } );
         reorderList.reorderList( listNode );

@@ -22,7 +22,7 @@ public abstract class AbstractSubtreeOfAnotherTreeTest {
 
     protected SubtreeOfAnotherTreeAPI subtreeOfAnotherTree;
 
-    public void isSubtreeTest_1() {
+    void isSubtreeTest_1() {
 
         TreeNode root = new TreeNode( 3 );
 
@@ -42,7 +42,7 @@ public abstract class AbstractSubtreeOfAnotherTreeTest {
     }
 
 
-    public void isSubtreeTest_2() {
+    void isSubtreeTest_2() {
 
         TreeNode root = new TreeNode( 3 );
 

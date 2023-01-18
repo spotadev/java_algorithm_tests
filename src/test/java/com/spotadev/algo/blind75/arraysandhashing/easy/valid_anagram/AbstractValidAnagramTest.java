@@ -22,14 +22,14 @@ public abstract class AbstractValidAnagramTest {
 
     protected ValidAnagramAPI validAnagram;
 
-    public void isAnagramTest_1() {
+    void isAnagramTest_1() {
 
         boolean valid = validAnagram.isAnagram( "anagram", "nagaram" );
         Assert.assertTrue( valid );
     }
 
 
-    public void isAnagramTest_2() {
+    void isAnagramTest_2() {
 
         boolean valid = validAnagram.isAnagram( "rat", "cat" );
         Assert.assertFalse( valid );

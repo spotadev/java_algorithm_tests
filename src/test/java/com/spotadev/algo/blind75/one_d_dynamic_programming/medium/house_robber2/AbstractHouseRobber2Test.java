@@ -20,7 +20,7 @@ public abstract class AbstractHouseRobber2Test {
 
     protected HouseRobber2API houseRobber2;
 
-    public void robTest() {
+    void robTest() {
 
         int[] nums = {};
         int results = houseRobber2.rob( nums );

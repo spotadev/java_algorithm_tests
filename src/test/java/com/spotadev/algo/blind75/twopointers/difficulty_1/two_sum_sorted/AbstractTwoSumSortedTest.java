@@ -24,21 +24,21 @@ public abstract class AbstractTwoSumSortedTest {
 
     protected TwoSumSortedAPI twoSumSorted;
 
-    public void twoSumTest_1() {
+    void twoSumTest_1() {
 
         int[] indexes = twoSumSorted.twoSum( new int[] { 2, 7, 11, 15 }, 9 );
         Assert.assertEquals( indexes, new int[] { 1, 2 } );
     }
 
 
-    public void twoSumTest_2() {
+    void twoSumTest_2() {
 
         int[] indexes = twoSumSorted.twoSum( new int[] { 2, 3, 4 }, 6 );
         Assert.assertEquals( indexes, new int[] { 1, 3 } );
     }
 
 
-    public void twoSumTest_3() {
+    void twoSumTest_3() {
 
         int[] indexes = twoSumSorted.twoSum( new int[] { -1, 0 }, -1 );
         Assert.assertEquals( indexes, new int[] { 1, 2 } );

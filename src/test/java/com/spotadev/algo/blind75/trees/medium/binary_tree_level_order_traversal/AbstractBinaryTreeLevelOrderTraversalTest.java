@@ -24,7 +24,7 @@ public abstract class AbstractBinaryTreeLevelOrderTraversalTest {
 
     protected BinaryTreeLevelOrderTraversalAPI binaryTreeLevelOrderTraversal;
 
-    public void levelOrderTest_1() {
+    void levelOrderTest_1() {
 
         TreeNode root = new TreeNode( 3 );
         TreeNode node_9 = new TreeNode( 9 );
@@ -49,7 +49,7 @@ public abstract class AbstractBinaryTreeLevelOrderTraversalTest {
     }
 
 
-    public void levelOrderTest_2() {
+    void levelOrderTest_2() {
 
         TreeNode root = new TreeNode( 1 );
 

@@ -20,7 +20,7 @@ public abstract class AbstractPalindromicSubstringsTest {
 
     protected PalindromicSubstringsAPI palindromicSubstrings;
 
-    public void countSubstringsTest() {
+    void countSubstringsTest() {
 
         String s = null;
         int count = palindromicSubstrings.countSubstrings( null );

@@ -20,7 +20,7 @@ public abstract class AbstractLongestIncreasingSubsequenceTest {
 
     protected LongestIncreasingSubsequenceAPI longestIncreasingSubsequence;
 
-    public void lengthOfLISTest() {
+    void lengthOfLISTest() {
 
         int[] nums = new int[] {};
         int length = longestIncreasingSubsequence.lengthOfLIS( nums );
