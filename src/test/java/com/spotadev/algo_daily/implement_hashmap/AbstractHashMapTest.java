@@ -16,6 +16,12 @@ package com.spotadev.algo_daily.implement_hashmap;
 import org.testng.Assert;
 
 /**
+ * https://algodaily.com/challenges/implement-a-hash-map
+ * 
+ * Implement a hash map
+ * 
+ * Use an array-based implementation
+ *
  * @author John Dickerson - 2 Jan 2023
  */
 public abstract class AbstractHashMapTest {

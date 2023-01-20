@@ -16,6 +16,43 @@ package com.spotadev.algo.blind75.graphs.medium.number_connected_components_in_a
 import org.testng.Assert;
 
 /**
+ * https://neetcode.io/
+ * 
+ * https://www.youtube.com/watch?v=8f1XPm4WOUc
+ * 
+ * This is locked:
+ * 
+ *      https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+ * 
+ * This solution is not using:
+ * 
+ *     Union Find
+ * 
+ * No metrics because locked.
+ * 
+ * Note you need premium membership on leetcode to access this one.
+ * 
+ * You have a graph of n nodes. You are given an Integer n and an array of edges where
+ * 
+ *      edges[i] = [ai, bi] 
+ *      
+ * indicates that there is an edge between:
+ * 
+ *      ai and bi
+ *      
+ * in the graph.
+ * 
+ * Return the number of connected components in the graph.
+ * 
+ * Example 1
+ * 
+ *      0-1      3
+ *        |      |
+ *        2      4
+ *        
+ * Input: n = 5, edges = { {0,1}, {1,2}, {3,4} }
+ * Output: 2
+ * 
  * @author John Dickerson - 17 Jun 2022
  */
 public abstract class AbstractNumberConnectedComponentsInAnUndirectedGraphTest {

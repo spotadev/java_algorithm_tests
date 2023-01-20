@@ -17,6 +17,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
+ * Write a binary search that returns the index of the number in an array.
+ * 
  * @author johndickerson - 30 Dec 2022
  */
 public class BinarySearch_JDTest extends AbstractBinarySearchTest {

@@ -17,8 +17,6 @@ import java.util.List;
 
 /**
  * 
- * 
- * 
  * @author John Dickerson - 4 Apr 2022
  */
 public class AmazonPackageQuestion1 {

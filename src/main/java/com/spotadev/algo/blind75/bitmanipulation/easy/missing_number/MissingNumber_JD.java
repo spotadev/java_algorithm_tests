@@ -60,13 +60,14 @@ package com.spotadev.algo.blind75.bitmanipulation.easy.missing_number;
  */
 public class MissingNumber_JD implements MissingNumberAPI {
 
+    // 0, 1, 2, 3, 4
     @Override
     public int missingNumber( int[] nums ) {
 
         // 1, 2, 3, 4, 5 = 15 = ( n(n+1) ) / 2
 
         // we know number 1 number is missing so the array would ordinarily be 1 bigger
-        int n = nums.length + 1;
+        int n = nums.length;
 
         // we work out sum of the sequence using the formula.  This saves us going through
         // the loop twice

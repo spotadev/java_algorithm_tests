@@ -17,7 +17,40 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 6 May 2022
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=G0_I-ZF0S38
+ * 
+ * https://leetcode.com/problems/reverse-linked-list/
+ * 
+ *     Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List.
+ *     Memory Usage: 41.9 MB, less than 86.96% of Java online submissions for Reverse Linked List.
+ * 
+ * Given the head of a singly linked list, reverse the list, and return the reversed list.
+ * 
+ * Example 1:
+ * 
+ *     Input: head = [1,2,3,4,5]
+ *     Output: [5,4,3,2,1]
+ * 
+ * Example 2:
+ * 
+ *     Input: head = [1,2]
+ *     Output: [2,1]
+ * 
+ * Example 3:
+ * 
+ *     Input: head = []
+ *     Output: []
+ * 
+ * Constraints:
+ * 
+ *     The number of nodes in the list is the range [0, 5000].
+ *     -5000 <= Node.val <= 5000
+ * 
+ * Follow up: A linked list can be reversed either iteratively or recursively. Could you 
+ * implement both?
+ * 
+ * @author John Dickerson - 13 Jun 2022
  */
 public class ReverseLinkedList_JDTest extends AbstractReverseLinkedListTest {
 

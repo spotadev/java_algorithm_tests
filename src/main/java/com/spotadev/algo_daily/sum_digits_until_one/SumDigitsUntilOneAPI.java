@@ -50,7 +50,6 @@ package com.spotadev.algo_daily.sum_digits_until_one;
  *      
  * @author Karema99 - 29 Aug 2022
  */
-
 public interface SumDigitsUntilOneAPI {
 
     int sumDigits( int input );

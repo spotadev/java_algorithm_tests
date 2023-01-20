@@ -72,7 +72,6 @@ package com.spotadev.algo.blind75.tries.medium.design_add_and_search_words_data_
  *          WordDictionary obj = new WordDictionary();
  *          obj.addWord(word);
  *          boolean param_2 = obj.search(word);
-
  * 
  * @author John Dickerson - 13 May 2022
  */

@@ -17,7 +17,47 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author John Dickerson - 2 May 2022
+ * https://neetcode.io/
+ * https://www.youtube.com/watch?v=jJXJ16kPFWg
+ * 
+ * https://leetcode.com/problems/valid-palindrome/
+ * 
+ * Optimised Solution
+ * 
+ *     Runtime: 5 ms, faster than 65.46% of Java online submissions for Valid Palindrome.
+ *     Memory Usage: 43.7 MB, less than 54.31% of Java online submissions for Valid Palindrome.
+ * 
+ * A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and 
+ * removing all non-alphanumeric characters, it reads the same forward and backward. 
+ * Alphanumeric characters include letters and numbers.
+ * 
+ * Given a string s, return true if it is a palindrome, or false otherwise.
+ * 
+ * Example 1:
+ * 
+ *     Input: s = "A man, a plan, a canal: Panama"
+ *     Output: true
+ *     Explanation: "amanaplanacanalpanama" is a palindrome.
+ * 
+ * Example 2:
+ * 
+ *     Input: s = "race a car"
+ *     Output: false
+ *     Explanation: "raceacar" is not a palindrome.
+ * 
+ * Example 3:
+ * 
+ *     Input: s = " "
+ *     Output: true
+ *     Explanation: s is an empty string "" after removing non-alphanumeric characters.
+ *     Since an empty string reads the same forward and backward, it is a palindrome.
+ * 
+ * Constraints:
+ * 
+ *     1 <= s.length <= 2 * 10^5
+ *     s consists only of printable ASCII characters.
+ * 
+ * @author John Dickerson - 14 Jun 2022
  */
 public class ValidPalindrome_Fast_JDTest extends AbstractValidPalindromeTest {
 

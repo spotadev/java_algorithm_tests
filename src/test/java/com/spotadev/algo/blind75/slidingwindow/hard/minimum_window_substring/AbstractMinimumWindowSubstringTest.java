@@ -16,6 +16,15 @@ package com.spotadev.algo.blind75.slidingwindow.hard.minimum_window_substring;
 import org.testng.Assert;
 
 /**
+ * See MimimumWindowSubstring for the question.  
+ * 
+ * This was the fastest solution from leetcode.  The performance was 1 ms which was 32 times 
+ * faster than my solution in MimimumWindowSubstring.
+ * 
+ * The main performance enhancement he has is not using a map.  As char can be cast to int,
+ * wherever you want to use a Map where the key is a Character you can instead use an array
+ * where the index of the array is the Character.  This can speed up performance 32 times
+ * 
  * @author John Dickerson - 14 Jun 2022
  */
 public abstract class AbstractMinimumWindowSubstringTest {

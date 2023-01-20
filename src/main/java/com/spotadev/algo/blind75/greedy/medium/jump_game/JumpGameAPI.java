@@ -43,6 +43,7 @@ package com.spotadev.algo.blind75.greedy.medium.jump_game;
  * 
  *     1 <= nums.length <= 104
  *     0 <= nums[i] <= 105
+ *     
  * @author John Dickerson - 15 May 2022
  */
 public interface JumpGameAPI {

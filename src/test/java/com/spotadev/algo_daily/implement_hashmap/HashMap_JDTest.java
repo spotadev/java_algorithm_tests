@@ -17,6 +17,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
+ * https://algodaily.com/challenges/implement-a-hash-map
+ * 
+ * Implement a hash map
+ * 
+ * Use an array-based implementation
+ *
  * @author John Dickerson - 2 Jan 2023
  */
 public class HashMap_JDTest extends AbstractHashMapTest {

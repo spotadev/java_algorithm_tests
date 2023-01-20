@@ -17,7 +17,18 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * @author johndickerson - 30 Dec 2022
+ * Implement a method with the following method signature:
+ * 
+ *     public void bubbleSort(int[] array, int fromIndex, int toIndex)
+ * 
+ * The data in array should be sorted to a correct ascending order. Create a testng unit test to 
+ * prove your bubble sort works. Print both unsorted and sorted array to the console.
+ *
+ * Time Allocated: 20 minutes
+ *
+ * Difficulty: 5
+ * 
+ * @author Kingsley Muturi - 29th June 2021
  */
 public class BubbleSort_KMTest extends AbstractBubbleSortTest {
 

@@ -20,6 +20,41 @@ import org.testng.Assert;
 import com.spotadev.algo_daily.binarytree_inorder_traversal.BinaryTreeInorderTraversalAPI.Node;
 
 /**
+ * https://algodaily.com/challenges/binary-tree-inorder-traversal
+ * 
+ * Write a function to traverse a binary-tree in-order, and print  out the value of each node
+ * as it passes?
+ *
+ * Example 1
+ * =========
+ * 
+ *      4
+ *      \
+ *      5
+ *      /
+ *      6
+ *  
+ *      output -> [ 4, 6, 5 ]
+ *  
+ * Example 2
+ * =========
+ *                4 
+ *          2          6  
+ *      1      3    5     7
+ *      
+ *      output -> [ 1, 2, 3, 4, 5, 6, 7 ]
+ *
+ *
+ * Constraints
+ * =========== 
+ *  
+ *     Number of vertices in the tree <= 100000
+ * 
+ *     The value of vertices in the tree will be between - 10000000 and 1000000000
+ * 
+ * Time complexity : O(n)
+ * Space complexity: O(1)
+ * 
  * @author John Dickerson - 2 Jan 2023
  */
 public class AbstractBinaryTreeInorderTraversalTest {

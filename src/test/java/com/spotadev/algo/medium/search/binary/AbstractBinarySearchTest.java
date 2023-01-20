@@ -16,6 +16,8 @@ package com.spotadev.algo.medium.search.binary;
 import org.testng.Assert;
 
 /**
+ * Write a binary search that returns the index of the number in an array.
+ * 
  * @author johndickerson - 30 Dec 2022
  */
 public class AbstractBinarySearchTest {

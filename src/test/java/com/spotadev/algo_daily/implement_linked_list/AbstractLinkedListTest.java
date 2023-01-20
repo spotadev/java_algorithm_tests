@@ -20,6 +20,18 @@ import java.util.ArrayList;
 import com.spotadev.algo_daily.implement_linked_list.LinkedListAPI.LinkedListNode;
 
 /**
+ * https://algodaily.com/challenges/implement-a-linked-list
+ * 
+ * Implement a linked list from scratch
+ *
+ * Constraints
+ * 
+ *    The numbers in the node to be added are within the integer limits
+ * 
+ *    Time Complexity for prepending and appending operations: O(1)
+ * 
+ *    Space Complexity for appending and prepending: 0(1)
+ *    
  * @author John Dickerson - 2 Jan 2023
  */
 public class AbstractLinkedListTest {

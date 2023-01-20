@@ -16,6 +16,21 @@ package com.spotadev.algo.easy.reverse_array;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ * Implement a method with the following method signature:
+ * 
+ *     public void reverse( T[] inData, T[] outData )
+ * 
+ * The data in inData should be reversed and put in outData.  Create a testng unit test to prove
+ * your reverse works. You can expect inData and outData to be the same length. Also print both
+ * inData and outData to the console.
+ *
+ * Time Allocated: 10 minutes
+ *
+ * Difficulty: 0
+ * 
+ * @author John Dickerson - 23rd Jun 2021
+ */
 public class ReverseArrayInPlace_JDTest extends AbstractReverseArrayInPlaceTest {
 
     @BeforeClass

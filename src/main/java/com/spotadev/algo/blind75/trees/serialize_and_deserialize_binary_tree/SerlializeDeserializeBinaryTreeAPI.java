@@ -22,8 +22,8 @@ package com.spotadev.algo.blind75.trees.serialize_and_deserialize_binary_tree;
  *      Runtime: 24 ms, faster than 45.03% of Java online submissions for Serialize and Deserialize 
  *      Binary Tree.
  *      
-        Memory Usage: 52.7 MB, less than 43.21% of Java online submissions for Serialize and 
-        Deserialize Binary Tree.
+ *      Memory Usage: 52.7 MB, less than 43.21% of Java online submissions for Serialize and 
+ *      Deserialize Binary Tree.
  * 
  * Serialization is the process of converting a data structure or object into a sequence of bits 
  * so that it can be stored in a file or memory buffer, or transmitted across a network 

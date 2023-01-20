@@ -13,9 +13,6 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.easy.missing_number;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=WnPLSRLSANE
@@ -59,34 +56,72 @@ import org.testng.annotations.Test;
  * Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) 
  * runtime complexity?
  * 
- * @author John Dickerson - 18 Jan 2023
+ * @author John Dickerson - 19 May 2022
  */
-public class MissingNumber_JDTest extends AbstractMissingNumberTest {
+public class MissingNumberBitwise_JD implements MissingNumberAPI {
 
-    @BeforeClass
-    public void setUp() {
+    // The way XOR works is 
+    //     (i) if you the XOR the same number together it gives you 0
+    //     (ii) If you XOR zero with another number it returns the other number
+    //
+    // What this means is that if we have the following arrays:
+    //     0, 1, 3 
+    //     0, 1, 2, 3
+    //
+    // and we XOR all the numbers together all similar numbers will produce 0 and we XOR a number
+    // which has not previously been XOR we get the number itself.  So we end up with then missing
+    // number
+    @Override
+    public int missingNumber( int[] nums ) {
 
-        missingNumberAPI = new MissingNumber_JD();
-    }
+        int result = 0;
 
+        // Here we loop through numbers 0, 1, 2, 3 and XOR them together
+        //
+        //   0000
+        // ^ 0000    0
+        //   0000
+        //
+        //   0000
+        // ^ 0001    1
+        //   0001
+        //
+        //   0001
+        // ^ 0010    2
+        //   0011
+        //
+        //   0011
+        // ^ 0011    3
+        //   0000    <== result
+        //
+        // Our result is 0 but if we had 1 more e.g.0, 1, 2, 3, 4 you can see it would not have 
+        // been 0
 
-    @Test
-    public void missingNumber_1Test() {
+        for ( int i = 0; i <= nums.length; i++ ) {
 
-        super.missingNumber_1Test();
-    }
+            result = result ^ i;
+        }
 
+        // We now loop through numbers 0, 1, 3 and XOR them with the result of the first array
+        //
+        //   0000
+        // ^ 0000
+        //   0000  0
+        //
+        //   0000
+        // ^ 0001
+        //   0001  1
+        // 
+        //   0001
+        // ^ 0011
+        //   0010  3   <== result
+        //
+        // We are left with the result 0010 which is 2 - so we identified the missing number
+        for ( int i = 0; i < nums.length; i++ ) {
 
-    @Test
-    public void missingNumber_2Test() {
+            result = result ^ nums[i];
+        }
 
-        super.missingNumber_2Test();
-    }
-
-
-    @Test
-    public void missingNumber_3Test() {
-
-        super.missingNumber_3Test();
+        return result;
     }
 }

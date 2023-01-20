@@ -16,6 +16,32 @@ package com.spotadev.algo_daily.least_missing_positive_number;
 import org.testng.Assert;
 
 /**
+ * https://algodaily.com/challenges/least-missing-positive-number/info-screen-A1NXHBmDNI4
+ * 
+ * Given an unsorted array of integers, 
+ * 
+ *     e.g. [0, 3, -1, -2, 1], 
+ *
+ * Find the least missing positive number.
+ * 
+ *     [0, 3, -1, -2, 1] => [-2, -1, 0, 1, 3]
+ *     
+ * We can see that the positive numbers are 0, 1, 3 and that the least missing positive number is 2
+ *
+ * Constraints
+ * 
+ *     Length of the array <= 100000
+ *     
+ *     The array can be empty
+ *     
+ *     The array will contain values between -100000 and 100000
+ *     
+ *     The final answer will always fit in the integer range
+ *     
+ *     Expected time complexity : O(n)
+ *     
+ *     Expected space complexity : O(1)
+ *     
  * @author John Dickerson - 2 Jan 2023
  */
 public class AbstractLeastMissingPositiveNumberTest {

@@ -61,12 +61,12 @@ import org.testng.annotations.Test;
  * 
  * @author John Dickerson - 18 Jan 2023
  */
-public class MissingNumber_JDTest extends AbstractMissingNumberTest {
+public class MissingNumberBitwise_JDTest extends AbstractMissingNumberTest {
 
     @BeforeClass
     public void setUp() {
 
-        missingNumberAPI = new MissingNumber_JD();
+        missingNumberAPI = new MissingNumberBitwise_JD();
     }
 
 
