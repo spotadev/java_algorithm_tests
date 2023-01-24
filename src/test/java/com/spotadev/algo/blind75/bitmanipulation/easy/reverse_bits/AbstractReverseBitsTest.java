@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.easy.reverse_bits;
 
+import org.testng.Assert;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=UcoN6UjAI64
@@ -61,9 +63,10 @@ public class AbstractReverseBitsTest {
 
     protected ReverseBitsAPI reverseBits;
 
-    void reverseBits() {
+    void reverseBits_1Test() {
 
-        int n = -1;
+        int n = 43261596;
         int result = reverseBits.reverseBits( n );
+        Assert.assertEquals( result, 964176192 );
     }
 }

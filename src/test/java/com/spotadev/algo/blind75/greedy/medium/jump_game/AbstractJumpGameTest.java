@@ -54,8 +54,16 @@ public class AbstractJumpGameTest {
 
     void canJumpTest_1() {
 
-        int[] nums = {};
+        int[] nums = { 2, 3, 1, 1, 4 };
         boolean canJump = jumpGame.canJump( nums );
         Assert.assertTrue( canJump );
+    }
+
+
+    void canJumpTest_2() {
+
+        int[] nums = { 3, 2, 1, 0, 4 };
+        boolean canJump = jumpGame.canJump( nums );
+        Assert.assertFalse( canJump );
     }
 }

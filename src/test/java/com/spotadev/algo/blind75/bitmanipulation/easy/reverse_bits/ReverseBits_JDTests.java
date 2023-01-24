@@ -70,8 +70,8 @@ public class ReverseBits_JDTests extends AbstractReverseBitsTest {
 
 
     @Test
-    public void reverseBits() {
+    public void reverseBits_1Test() {
 
-        super.reverseBits();
+        super.reverseBits_1Test();
     }
 }

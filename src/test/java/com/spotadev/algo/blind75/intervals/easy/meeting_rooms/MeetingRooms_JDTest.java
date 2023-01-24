@@ -55,8 +55,15 @@ public class MeetingRooms_JDTest extends AbstractMeetingRoomsTest {
 
 
     @Test
-    public void canAttendMeetingsTest() {
+    public void canAttendMeetings_1Test() {
 
-        super.canAttendMeetingsTest();
+        super.canAttendMeetings_1Test();
+    }
+
+
+    @Test
+    public void canAttendMeetings_2Test() {
+
+        super.canAttendMeetings_2Test();
     }
 }

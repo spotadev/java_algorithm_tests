@@ -50,6 +50,25 @@ public class JumpGame_JD implements JumpGameAPI {
     @Override
     public boolean canJump( int[] nums ) {
 
+        // We start at right of the array and work backwards. 
+        // We create a goal index and set it at the last index of the array.
+        // Then we work backwards from the goalIndex and see if we can reach the goalIndex.
+        // If we can reach the goal index we shift the goalIndex back.
+        int goalIndex = nums.length - 1;
+
+        for ( int i = nums.length - 2; i >= 0; i-- ) {
+
+            if ( i + nums[i] >= goalIndex ) {
+
+                goalIndex = i;
+            }
+        }
+
+        if ( goalIndex == 0 ) {
+
+            return true;
+        }
+
         return false;
     }
 }

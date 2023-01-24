@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bits;
 
+import org.testng.Assert;
+
 import com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit.NumberOf1BitsAPI;
 
 /**
@@ -34,7 +36,7 @@ import com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit.NumberOf1B
  * 
  * Example 1:
  * 
- *     Input: n = 00000000000000000000000000001011
+ *     Input: n = 00000000000000000000000000001011   (11)
  *     Output: 3
  *     
  *     Explanation: The input binary string 00000000000000000000000000001011 has a 
@@ -42,7 +44,7 @@ import com.spotadev.algo.blind75.bitmanipulation.easy.number_of_1_bit.NumberOf1B
  * 
  * Example 2:
  * 
- *     Input: n = 00000000000000000000000010000000
+ *     Input: n = 00000000000000000000000010000000 (128)
  *     Output: 1
  *     
  *     Explanation: The input binary string 00000000000000000000000010000000 has a 
@@ -68,9 +70,18 @@ public class AbstractNumberOf1BitsTest {
 
     protected NumberOf1BitsAPI numberOf1Bits;
 
-    void hammingWeightTest() {
+    void hammingWeight_1Test() {
 
-        int n = -1;
-        int result = numberOf1Bits.hammingWeight( 0 );
+        int n = 11;
+        int result = numberOf1Bits.hammingWeight( n );
+        Assert.assertEquals( result, 3 );
+    }
+
+
+    void hammingWeight_2Test() {
+
+        int n = 128;
+        int result = numberOf1Bits.hammingWeight( n );
+        Assert.assertEquals( result, 1 );
     }
 }

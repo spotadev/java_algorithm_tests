@@ -51,8 +51,29 @@ public class SumOfTwoIntegers_JDTest extends AbstractSumOfTwoIntegersTest {
 
 
     @Test
-    public void getSumTest() {
+    public void getSum_1Test() {
 
-        super.getSumTest();
+        super.getSum_1Test();
+    }
+
+
+    @Test
+    public void getSum_2Test() {
+
+        super.getSum_2Test();
+    }
+
+
+    @Test
+    public void getSum_3Test() {
+
+        super.getSum_3Test();
+    }
+
+
+    @Test
+    public void getSum_4Test() {
+
+        super.getSum_4Test();
     }
 }

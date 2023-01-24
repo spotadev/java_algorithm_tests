@@ -14,6 +14,7 @@
 package com.spotadev.algo.blind75.greedy.medium.jump_game;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 /**
  * https://neetcode.io/
@@ -57,8 +58,16 @@ public class JumpGame_JDTest extends AbstractJumpGameTest {
     }
 
 
+    @Test
     public void canJumpTest_1() {
 
         super.canJumpTest_1();
+    }
+
+
+    @Test
+    public void canJumpTest_2() {
+
+        super.canJumpTest_2();
     }
 }

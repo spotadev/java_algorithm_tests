@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.bitmanipulation.medium.sum_of_two_integers;
 
+import org.testng.Assert;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=gVUrDV4tZfY
@@ -42,10 +44,38 @@ public class AbstractSumOfTwoIntegersTest {
 
     protected SumOfTwoIntegersAPI sumOfTwoIntegers;
 
-    void getSumTest() {
+    void getSum_1Test() {
 
-        int a = -1;
-        int b = -1;
+        int a = 1;
+        int b = 2;
         int result = sumOfTwoIntegers.getSum( a, b );
+        Assert.assertEquals( result, 3 );
+    }
+
+
+    void getSum_2Test() {
+
+        int a = 2;
+        int b = 3;
+        int result = sumOfTwoIntegers.getSum( a, b );
+        Assert.assertEquals( result, 5 );
+    }
+
+
+    void getSum_3Test() {
+
+        int a = 3;
+        int b = 3;
+        int result = sumOfTwoIntegers.getSum( a, b );
+        Assert.assertEquals( result, 6 );
+    }
+
+
+    public void getSum_4Test() {
+
+        int a = 231;
+        int b = 232;
+        int result = sumOfTwoIntegers.getSum( a, b );
+        Assert.assertEquals( result, 463 );
     }
 }

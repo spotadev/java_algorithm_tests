@@ -77,9 +77,15 @@ public class NumberOf1BitsTest extends AbstractNumberOf1BitsTest {
 
 
     @Test
-    public void hammingWeightTest() {
+    public void hammingWeight_1Test() {
 
-        int n = -1;
-        int result = numberOf1Bits.hammingWeight( 0 );
+        super.hammingWeight_1Test();
+    }
+
+
+    @Test
+    public void hammingWeight_2Test() {
+
+        super.hammingWeight_2Test();
     }
 }

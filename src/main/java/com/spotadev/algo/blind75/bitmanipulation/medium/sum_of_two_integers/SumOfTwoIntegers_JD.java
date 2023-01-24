@@ -43,7 +43,37 @@ public class SumOfTwoIntegers_JD implements SumOfTwoIntegersAPI {
     @Override
     public int getSum( int a, int b ) {
 
-        return -1;
-    }
+        int mask = 1;
+        int carryMask;
+        int addMask;
+        int result = 0;
 
+        for ( int i = 0; i < 32; i++ ) {
+
+            boolean aHas1 = ( a & mask ) > 0;
+            boolean bHas1 = ( b & mask ) > 0;
+
+            if ( aHas1 ^ bHas1 ) {
+
+                addMask = 1 << i;
+            }
+            else {
+                addMask = 0;
+            }
+
+            if ( aHas1 && bHas1 ) {
+
+                carryMask = 1 << i + 1;
+            }
+            else {
+                carryMask = 0;
+            }
+
+            result = result | addMask;
+            result = result | carryMask;
+            mask = mask << 1;
+        }
+
+        return result;
+    }
 }

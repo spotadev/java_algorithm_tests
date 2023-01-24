@@ -63,6 +63,44 @@ public class ReverseBits_JD implements ReverseBitsAPI {
     @Override
     public int reverseBits( int n ) {
 
-        return -1;
+        boolean[] numbers = new boolean[32];
+        int mask = 1;
+
+        for ( int i = 0; i < 32; i++ ) {
+
+            if ( ( n & mask ) > 0 ) {
+
+                numbers[i] = true;
+            }
+
+            mask = mask << 1;
+        }
+
+        int leftIndex = 0;
+        int rightIndex = 31;
+
+        while ( leftIndex < rightIndex ) {
+
+            boolean temp = numbers[leftIndex];
+            numbers[leftIndex] = numbers[rightIndex];
+            numbers[rightIndex] = temp;
+            leftIndex++;
+            rightIndex--;
+        }
+
+        int value = 1;
+        int sum = 0;
+
+        for ( int i = 0; i < 32; i++ ) {
+
+            if ( numbers[i] ) {
+
+                sum = sum + value;
+            }
+
+            value = value * 2;
+        }
+
+        return sum;
     }
 }

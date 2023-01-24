@@ -68,6 +68,26 @@ public class NumberOf1Bits_JD implements NumberOf1BitsAPI {
     @Override
     public int hammingWeight( int n ) {
 
-        return -1;
+        int mask = 1;
+
+        // 3  =   11
+        // mask = 01
+        // &      01 
+
+        int count = 0;
+
+        for ( int i = 0; i < 32; i++ ) {
+
+            int result = n & mask;
+
+            if ( ( result & mask ) > 0 ) {
+
+                count++;
+            }
+
+            mask = mask << 1;
+        }
+
+        return count;
     }
 }
