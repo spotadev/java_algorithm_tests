@@ -13,6 +13,9 @@
 */
 package com.spotadev.algo.blind75.intervals.medium.insert_interval;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=A8NUOmlwOlM&feature=youtu.be
@@ -57,9 +60,67 @@ package com.spotadev.algo.blind75.intervals.medium.insert_interval;
  */
 public class InsertInterval_JD implements InsertIntervalAPI {
 
+    static int START = 0;
+    static int END = 1;
+
+    private int[][] convertToArray( List<Pair<Integer, Integer>> pairs ) {
+
+        int[][] toReturn = new int[pairs.size()][];
+
+        for ( int i = 0; i < toReturn.length; i++ ) {
+
+            toReturn[i] = new int[] { pairs.get( i ).left, pairs.get( i ).right };
+        }
+
+        return toReturn;
+    }
+
+
+    private void addNewInterviewToBeginningOfIntervals(
+            List<Pair<Integer, Integer>> pairs, int[] newInterval, int[][] intervals, int index ) {
+
+        pairs.add( new Pair<Integer, Integer>( newInterval[START], newInterval[END] ) );
+
+        for ( int j = index; j < intervals.length; j++ ) {
+
+            pairs.add( new Pair<Integer, Integer>( intervals[j][START], intervals[j][END] ) );
+        }
+    }
+
+
+    private int[] mergeInterval( int[] interval, int[] newInterval ) {
+
+        int start = Math.min( interval[START], newInterval[START] );
+        int end = Math.max( interval[END], newInterval[END] );
+        return new int[] { start, end };
+    }
+
+
     @Override
     public int[][] insert( int[][] intervals, int[] newInterval ) {
 
-        return new int[][] {};
+        List<Pair<Integer, Integer>> pairs = new ArrayList<>();
+
+        // Input   [[1,3],[6,9]], newInterval = [2,5]
+        // Output: [[1,5],[6,9]]
+        for ( int i = 0; i < intervals.length; i++ ) {
+
+            if ( newInterval[1] < intervals[i][START] ) {
+
+                addNewInterviewToBeginningOfIntervals( pairs, newInterval, intervals, i );
+                return convertToArray( pairs );
+            }
+            else if ( newInterval[START] > intervals[i][END] ) {
+
+                pairs.add( new Pair<Integer, Integer>( intervals[i][START], intervals[i][END] ) );
+            }
+            else {
+
+                newInterval = mergeInterval( intervals[i], newInterval );
+            }
+        }
+
+        pairs.add( new Pair<Integer, Integer>( newInterval[START], newInterval[END] ) );
+        return convertToArray( pairs );
     }
 }

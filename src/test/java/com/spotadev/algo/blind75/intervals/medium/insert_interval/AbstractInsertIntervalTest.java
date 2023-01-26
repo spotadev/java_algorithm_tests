@@ -13,6 +13,10 @@
 */
 package com.spotadev.algo.blind75.intervals.medium.insert_interval;
 
+import java.util.Arrays;
+
+import org.testng.Assert;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=A8NUOmlwOlM&feature=youtu.be
@@ -59,10 +63,62 @@ public abstract class AbstractInsertIntervalTest {
 
     protected InsertIntervalAPI insertInterval;
 
-    void insertTest() {
+    private String debug( int[][] array ) {
 
-        int[][] intervals = {};
-        int[] newInterval = {};
-        int[][] result = insertInterval.insert( intervals, newInterval );
+        StringBuilder sb = new StringBuilder( "[ " );
+
+        for ( int i = 0; i < array.length; i++ ) {
+
+            int[] child = array[i];
+            sb.append( "[ " );
+            sb.append( child[0] );
+            sb.append( ", " );
+            sb.append( child[1] );
+            sb.append( " ]" );
+        }
+
+        sb.append( " ]" );
+
+        return sb.toString();
+    }
+
+
+    void compare( int[][] actual, int[][] expected ) {
+
+        String actualStr = debug( actual );
+        String expectedStr = debug( expected );
+        String message = "Expected: " + expectedStr + " but got: " + actualStr;
+
+        if ( actual.length != expected.length ) {
+
+            Assert.fail( message );
+        }
+
+        for ( int i = 0; i < expected.length; i++ ) {
+
+            int[] expectedChild = expected[i];
+            int[] actualChild = actual[i];
+            Assert.assertTrue( Arrays.equals( actualChild, expectedChild ), message );
+        }
+    }
+
+
+    void insert_1Test() {
+
+        int[][] intervals = { { 1, 3 }, { 6, 9 } };
+        int[] newInterval = { 2, 5 };
+        int[][] results = insertInterval.insert( intervals, newInterval );
+        int[][] expected = { { 1, 5 }, { 6, 9 } };
+        compare( results, expected );
+    }
+
+
+    void insert_2Test() {
+
+        int[][] intervals = { { 1, 2 }, { 3, 5 }, { 6, 7 }, { 8, 10 }, { 12, 16 } };
+        int[] newInterval = { 4, 8 };
+        int[][] results = insertInterval.insert( intervals, newInterval );
+        int[][] expected = { { 1, 2 }, { 3, 10 }, { 12, 16 } };
+        compare( results, expected );
     }
 }

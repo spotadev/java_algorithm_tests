@@ -68,8 +68,15 @@ public class InsertInterval_JDTest extends AbstractInsertIntervalTest {
 
 
     @Test
-    public void insertTest() {
+    public void insert_1Test() {
 
-        super.insertTest();
+        super.insert_1Test();
+    }
+
+
+    @Test
+    public void insert_2Test() {
+
+        super.insert_2Test();
     }
 }
