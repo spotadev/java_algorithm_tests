@@ -28,13 +28,23 @@ import org.testng.annotations.Test;
  * 
  * Example 1:
  * 
- *     Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
- *     Output: [[1,0,1],[0,0,0],[1,0,1]]
+ *     Input: matrix = [[1,1,1],
+ *                      [1,0,1],[
+ *                      1,1,1]]
+ *                      
+ *     Output: [[1,0,1],
+ *              [0,0,0],
+ *              [1,0,1]]
  * 
  * Example 2:
  * 
- *     Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
- *     Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
+ *     Input: matrix = [[0,1,2,0],
+ *                      [3,4,5,2],
+ *                      [1,3,1,5]]
+ *                      
+ *     Output: [[0,0,0,0],
+ *              [0,4,5,0],
+ *              [0,3,1,0]]
  *  
  * Constraints:
  * 
@@ -49,7 +59,7 @@ import org.testng.annotations.Test;
  * A simple improvement uses O(m + n) space, but still not the best solution.
  * Could you devise a constant space solution?
  * 
- * @author John Dickerson - 13 Jun 2022
+ * @author John Dickerson - 19 May 2022
  */
 public class SetMatrixZeroes_JDTest extends AbstractSetMatrixZeroesTest {
 
@@ -61,8 +71,15 @@ public class SetMatrixZeroes_JDTest extends AbstractSetMatrixZeroesTest {
 
 
     @Test
-    public void setZeroesTest() {
+    public void setZeroes_1Test() {
 
-        super.setZeroesTest();
+        super.setZeroes_1Test();
+    }
+
+
+    @Test
+    public void setZeroes_2Test() {
+
+        super.setZeroes_2Test();
     }
 }

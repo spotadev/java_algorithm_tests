@@ -60,8 +60,58 @@ package com.spotadev.algo.blind75.math_geometry.medium.set_matrix_zeroes;
  */
 public class SetMatrixZeroes_JD implements SetMatrixZeroesAPI {
 
+    private void markCells( int i, int j, int[][] matrix ) {
+
+        for ( int c = 0; c < matrix[i].length; c++ ) {
+
+            if ( matrix[i][c] != 0 ) {
+
+                matrix[i][c] = 400;
+            }
+        }
+
+        for ( int r = 0; r < matrix.length; r++ ) {
+
+            if ( matrix[r][j] != 0 ) {
+
+                matrix[r][j] = 400;
+            }
+        }
+    }
+
+
+    // it says the max and min values are -231 and 231 so was thinking of adding 
+    // -400 and +400 respectively to each cell if it is to be marked zero.
+    // This would manage the algo with zero constant space - i.e. we do not need space at all
+    // other than the matrix we have.
+    //
+    // The alternative could be to create some soem row and column variables to say whether
+    // the row or column should be marked with zeros - this would be a O(m+n) for space.
     @Override
     public void setZeroes( int[][] matrix ) {
 
+        for ( int i = 0; i < matrix.length; i++ ) {
+
+            for ( int j = 0; j < matrix[0].length; j++ ) {
+
+                if ( matrix[i][j] == 0 ) {
+
+                    // put to 400 if not 0 else leave 0
+                    markCells( i, j, matrix );
+                }
+            }
+        }
+
+        for ( int i = 0; i < matrix.length; i++ ) {
+
+            for ( int j = 0; j < matrix[0].length; j++ ) {
+
+                if ( matrix[i][j] == 400 ) {
+
+                    // convert 400 back to 0
+                    matrix[i][j] = 0;
+                }
+            }
+        }
     }
 }
