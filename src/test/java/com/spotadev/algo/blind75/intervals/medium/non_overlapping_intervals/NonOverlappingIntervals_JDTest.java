@@ -62,8 +62,22 @@ public class NonOverlappingIntervals_JDTest extends AbstractNonOverlappingInterv
 
 
     @Test
-    public void eraseOverlapIntervalsTest() {
+    public void eraseOverlapIntervals_1Test() {
 
-        super.eraseOverlapIntervalsTest();
+        super.eraseOverlapIntervals_1Test();
+    }
+
+
+    @Test
+    public void eraseOverlapIntervals_2Test() {
+
+        super.eraseOverlapIntervals_2Test();
+    }
+
+
+    @Test
+    public void eraseOverlapIntervals_3Test() {
+
+        super.eraseOverlapIntervals_3Test();
     }
 }

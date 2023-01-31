@@ -13,6 +13,9 @@
 */
 package com.spotadev.algo.blind75.intervals.medium.non_overlapping_intervals;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=nONCGxWoUfM
@@ -54,6 +57,26 @@ public class NonOverlappingIntervals_JD implements NonOverlappingIntervalsAPI {
     @Override
     public int eraseOverlapIntervals( int[][] intervals ) {
 
-        return -1;
+        Arrays.sort( intervals, Comparator.comparingInt( a -> a[0] ) );
+
+        int[] previous = intervals[0];
+        int count = 0;
+
+        for ( int i = 1; i < intervals.length; i++ ) {
+
+            if ( intervals[i][0] < previous[1] ) {
+
+                // keep one that has the least end
+
+                if ( intervals[i][1] < previous[1] ) {
+
+                    previous = intervals[i];
+                }
+
+                count++;
+            }
+        }
+
+        return count;
     }
 }

@@ -13,6 +13,8 @@
 */
 package com.spotadev.algo.blind75.intervals.medium.non_overlapping_intervals;
 
+import org.testng.Assert;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=nONCGxWoUfM
@@ -53,9 +55,26 @@ public abstract class AbstractNonOverlappingIntervalTest {
 
     protected NonOverlappingIntervalsAPI nonOverlappingIntervals;
 
-    void eraseOverlapIntervalsTest() {
+    void eraseOverlapIntervals_1Test() {
 
-        int[][] intervals = {};
-        int result = nonOverlappingIntervals.eraseOverlapIntervals( null );
+        int[][] intervals = { { 1, 2 }, { 2, 3 }, { 3, 4 }, { 1, 3 } };
+        int result = nonOverlappingIntervals.eraseOverlapIntervals( intervals );
+        Assert.assertEquals( result, 1 );
+    }
+
+
+    void eraseOverlapIntervals_2Test() {
+
+        int[][] intervals = { { 1, 2 }, { 1, 2 }, { 1, 2 } };
+        int result = nonOverlappingIntervals.eraseOverlapIntervals( intervals );
+        Assert.assertEquals( result, 2 );
+    }
+
+
+    void eraseOverlapIntervals_3Test() {
+
+        int[][] intervals = { { 1, 2 }, { 2, 3 } };
+        int result = nonOverlappingIntervals.eraseOverlapIntervals( intervals );
+        Assert.assertEquals( result, 0 );
     }
 }
