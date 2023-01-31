@@ -13,6 +13,10 @@
 */
 package com.spotadev.algo.blind75.intervals.medium.merge_intervals;
 
+import java.util.Arrays;
+
+import org.testng.Assert;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=44H3cEC2fFM
@@ -46,9 +50,24 @@ public abstract class AbstractMergeIntervalsTest {
 
     protected MergeIntervalsAPI mergeIntervals;
 
-    void mergeTest() {
+    void merge_1Test() {
 
-        int[][] intervals = new int[][] {};
+        int[][] intervals = new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
         int[][] result = mergeIntervals.merge( intervals );
+
+        Assert.assertTrue( result.length == 3 );
+        Assert.assertTrue( Arrays.equals( result[0], new int[] { 1, 6 } ) );
+        Assert.assertTrue( Arrays.equals( result[1], new int[] { 8, 10 } ) );
+        Assert.assertTrue( Arrays.equals( result[2], new int[] { 15, 18 } ) );
+    }
+
+
+    void merge_2Test() {
+
+        int[][] intervals = new int[][] { { 1, 4 }, { 4, 5 } };
+        int[][] result = mergeIntervals.merge( intervals );
+
+        Assert.assertTrue( result.length == 1 );
+        Assert.assertTrue( Arrays.equals( result[0], new int[] { 1, 5 } ) );
     }
 }

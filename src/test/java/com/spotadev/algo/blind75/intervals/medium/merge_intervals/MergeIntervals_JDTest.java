@@ -55,8 +55,15 @@ public class MergeIntervals_JDTest extends AbstractMergeIntervalsTest {
 
 
     @Test
-    public void mergeTest() {
+    public void merge_1Test() {
 
-        super.mergeTest();
+        super.merge_1Test();
+    }
+
+
+    @Test
+    public void merge_2Test() {
+
+        super.merge_2Test();
     }
 }

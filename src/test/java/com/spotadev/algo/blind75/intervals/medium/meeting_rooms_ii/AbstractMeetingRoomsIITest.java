@@ -16,6 +16,8 @@ package com.spotadev.algo.blind75.intervals.medium.meeting_rooms_ii;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.testng.Assert;
+
 /**
  * https://neetcode.io/
  * https://www.youtube.com/watch?v=FdzJmTCVyJU
@@ -51,9 +53,22 @@ public abstract class AbstractMeetingRoomsIITest {
 
     protected MeetingRoomsIIAPI meetingRoomsII;
 
-    void minMeetingRoomsTest() {
+    void minMeetingRooms_1Test() {
 
         List<Interval> intervals = new ArrayList<>();
-        meetingRoomsII.minMeetingRooms( intervals );
+        intervals.add( new Interval( 0, 30 ) );
+        intervals.add( new Interval( 5, 10 ) );
+        intervals.add( new Interval( 15, 20 ) );
+        int numberMeetingRooms = meetingRoomsII.minMeetingRooms( intervals );
+        Assert.assertEquals( numberMeetingRooms, 2 );
+    }
+
+
+    void minMeetingRooms_2Test() {
+
+        List<Interval> intervals = new ArrayList<>();
+        intervals.add( new Interval( 2, 7 ) );
+        int numberMeetingRooms = meetingRoomsII.minMeetingRooms( intervals );
+        Assert.assertEquals( numberMeetingRooms, 1 );
     }
 }

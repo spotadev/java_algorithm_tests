@@ -57,8 +57,15 @@ public class MeetingRoomsII_JDTest extends AbstractMeetingRoomsIITest {
 
 
     @Test
-    public void minMeetingRoomsTest() {
+    public void minMeetingRooms_1Test() {
 
-        super.minMeetingRoomsTest();
+        super.minMeetingRooms_1Test();
+    }
+
+
+    @Test
+    public void minMeetingRooms_2Test() {
+
+        super.minMeetingRooms_2Test();
     }
 }
