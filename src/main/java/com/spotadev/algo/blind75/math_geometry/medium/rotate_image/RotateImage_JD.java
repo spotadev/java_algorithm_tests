@@ -27,14 +27,39 @@ package com.spotadev.algo.blind75.math_geometry.medium.rotate_image;
  * 
  * Example 1:
  *
- *     Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
- *     Output: [[7,4,1],[8,5,2],[9,6,3]]
+ *     Input: matrix = [[1,2,3],
+ *                      [4,5,6],
+ *                      [7,8,9]]
+ *     
+ *     Rows to columns, intermediary algo step:
+ *     
+ *          1  4  7   Then we swap 7 with 1 
+ *          2  5  8   Then we swap 8 with 2
+ *          3  6  9   Then we swap 9 with 3
+ *     
+ *     Output: [[7,4,1],
+ *              [8,5,2],
+ *              [9,6,3]]
  * 
  * Example 2:
  * 
- * 
- *     Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
- *     Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+ *     Input: matrix = [[5,1,9,11],
+ *                      [2,4,8,10],
+ *                      [13,3,6,7],
+ *                      [15,14,12,16]]
+ *                      
+ *     Rows to columns, intermediary algo step:
+ *     
+ *               5  2 13 15    Then we swap 15 with 5 and 13 with 2
+ *               1  4  3 14    Then we swap 14 with 1 and 3 with 2
+ *               9  8  6 12    Then we swap 12 with 9 and 6 with 8
+ *              11 10  7 16    Then we swap 16 with 11 and 7 with 10
+ *              
+ *     
+ *     Output: [[15,13,2,5],
+ *              [14,3,4,1],
+ *              [12,6,8,9],
+ *              [16,7,10,11]]
  *  
  * Constraints:
  * 
@@ -49,5 +74,33 @@ public class RotateImage_JD implements RotateImageAPI {
     @Override
     public void rotate( int[][] matrix ) {
 
+        // here we are transforming rows to columns
+        for ( int i = 0; i < matrix.length; i++ ) {
+
+            // Notice how j = i
+            for ( int j = i; j < matrix[0].length; j++ ) {
+
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
+            }
+        }
+
+        // here we are rotating values in each row
+        for ( int i = 0; i < matrix[0].length; i++ ) {
+
+            int left = 0;
+            int right = matrix[0].length - 1;
+            int[] row = matrix[i];
+
+            while ( left < right ) {
+
+                int temp = row[left];
+                row[left] = row[right];
+                row[right] = temp;
+                left++;
+                right--;
+            }
+        }
     }
 }
