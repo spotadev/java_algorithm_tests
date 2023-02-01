@@ -53,8 +53,15 @@ public class SprialMatrix_JDTest extends AbstractSprialMatrixTest {
 
 
     @Test
-    public void spiralOrderTest() {
+    public void spiralOrder_1Test() {
 
-        super.spiralOrderTest();
+        super.spiralOrder_1Test();
+    }
+
+
+    @Test
+    public void spiralOrder_2Test() {
+
+        super.spiralOrder_2Test();
     }
 }
